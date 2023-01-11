@@ -1,0 +1,68 @@
+:root {
+    --font-color: #222222;
+    --bg-color: #ffffff;
+    --line-color: rgba(84, 84, 84, 0.2);
+    --line-color-lighter: hsla(0, 0%, 33%, 0.082);
+    /* text and background */
+    --text-yellow: rgb(238, 255, 110);
+    --text-magenta: rgb(229, 147, 235);
+    --text-cyan: rgba(101, 219, 213, 0.84);
+    --text-blue: #53ccf8;
+    --bg-shadow: #555;
+}
+
+[data-theme="dark"] {
+    --font-color: #f5f5f7;
+    --bg-color: #111;
+    --line-color: rgba(145, 145, 145, 0.215);
+    --line-color-lighter: #55555540;
+
+    /* text and background */
+    --text-yellow: rgb(238, 255, 110);
+    --text-magenta: rgb(229, 147, 235);
+    --text-cyan: rgba(101, 219, 213, 0.84);
+    --text-blue: #53ccf8;
+    --bg-shadow: #847e7e;
+}
+
+.blog * {
+    margin: 4px 0;
+    padding: 4px 0;
+}
+
+.blog h1 {
+    font-size: 1.8em;
+    padding-bottom: 8px;
+}
+
+.blog p {
+    font-size: 1em;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+}
+
+.blog .hashtag {
+    display: inline-block;
+    background-color: var(--text-cyan);
+    color: #222;
+    padding: 1.5px 4px;
+    margin-right: 8px;
+    font-size: 1em;
+    font-weight: 550;
+    letter-spacing: 0.3px;
+    transition: all 0.08s linear;
+    cursor: pointer;
+}
+
+.blog .hashtag::before {
+    content: '#';
+    font-size: 1.01em;
+    padding-right: 2px;
+    opacity: 0.7;
+    color: rgb(85, 85, 85);
+}
+
+.blog .hashtag:hover,
+.blog .hashtag:active {
+    box-shadow: 3.35px 3.35px 0 var(--bg-shadow);
+}
