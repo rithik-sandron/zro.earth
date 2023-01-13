@@ -1,40 +1,19 @@
 {
-  "name": "ken",
-  "homepage": "https://rithik-sandron.github.io/blog/",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
-  },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6"
   }
 }
