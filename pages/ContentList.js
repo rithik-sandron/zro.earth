@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link'
 
-export default function ContentList({ posts }) {
+export default function ContentList({ posts = [] }) {
     return (
         <div className='content-list-container blog'>
             {
