@@ -26,7 +26,7 @@ jobs:
         run: npm run build && npm run export && touch ./out/.nojekyll
 
       - name: Deploy
-        uses: rithik-sandron/blog@1.0.0
+        uses: rithik-sandron/blog@4.1.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
