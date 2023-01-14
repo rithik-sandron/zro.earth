@@ -159,3 +159,7 @@ body::-webkit-scrollbar-thumb {
     display: inline;
     margin-right: 8px;
 }
+
+.title {
+    display: block;
+}

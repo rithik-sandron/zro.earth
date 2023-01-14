@@ -59,7 +59,7 @@ export default function Header() {
     return (
         <div className="flex">
             <div className='header'>
-                <Link as={`/blog`} href="/blog">
+                <Link as={`/`} href="/">
                     <span className='panel-item title'>Ken</span>
                 </Link>
                 <span className='panel-item' onClick={switchTheme} id='face'>Light</span>
