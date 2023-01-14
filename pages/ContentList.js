@@ -13,7 +13,7 @@ export default function ContentList({ posts }) {
                             href="/posts/[slug]"
                         >
                             <div className='content-list-item'>
-                                {/* <span className='post'>{x.date}</span> */}
+                                <time className='post'>{x.date}</time>
                                 <span className='post'>{x.title}</span>
                             </div>
                         </Link>

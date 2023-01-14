@@ -2,8 +2,9 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "next build && next export && touch out/.nojekyll",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
