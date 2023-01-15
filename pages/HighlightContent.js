@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-export default function HighlightContent({ post }) {
+export default function HighlightContent({ post = {} }) {
+
+    console.log(post.slug)
     return (
         <Link
             as={`/posts/${post.slug}`}
