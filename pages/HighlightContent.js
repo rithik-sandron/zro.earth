@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 export default function HighlightContent({ post }) {
     return (
-        <Link key={post.slug}
+        <Link
             as={`/posts/${post.slug}`}
             href="/posts/[slug]" >
             <div className='head-content'>
