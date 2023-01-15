@@ -1,17 +1,17 @@
 import { getAllPosts } from '../lib/api.js'
-import Head from 'next/head'
 import Header from './Header'
+import HighlightContent from './HighlightContent'
 import ContentList from './ContentList'
 
 export default function Index({ allPosts }) {
-  const morePosts = allPosts.slice(1)
+  const headPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
+
   return (
     <div id='common-body'>
-      <Head>
-        <title>Ken</title>
-      </Head>
       <Header />
-      <ContentList posts={morePosts}/>
+      <HighlightContent post={headPost} />
+      <ContentList posts={morePosts} />
     </div>
   )
 }

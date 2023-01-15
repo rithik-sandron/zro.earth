@@ -16,7 +16,7 @@
     --font-color: #f5f5f7;
     --bg-color: #111;
     --line-color: rgba(145, 145, 145, 0.215);
-    --line-color-lighter: #55555540;
+    --line-color-lighter: #555;
 
     /* text and background */
     --text-yellow: rgb(238, 255, 110);
@@ -24,7 +24,7 @@
     --text-cyan: rgba(101, 219, 213, 0.683);
     --text-cyan-select: rgba(101, 219, 213, 0.498);
     --text-blue: #53ccf8;
-    --bg-shadow: #847e7e;
+    --bg-shadow: #dedede50;
 }
 
 .blog {
@@ -35,8 +35,7 @@
 }
 
 .blog time {
-    font-size: 12px;
-    color: var(--text-magenta);
+    font-size: 14px;
     vertical-align: middle;
     margin-top: 1.8px;
 }

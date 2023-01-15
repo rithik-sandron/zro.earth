@@ -15,13 +15,7 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <div id='common-body'>
-      <Head>
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="theme-color" content="#000" />
-      </Head>
       <Header />
-
       <main>
         {router.isFallback ?
           <h2>Loading…</h2>
