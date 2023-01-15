@@ -6,7 +6,6 @@ body {
 }
 
 a {
-    display: block;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -95,7 +94,6 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     max-width: 900px;
     letter-spacing: 0.5px;
-    cursor: pointer;
     font-size: 1rem;
     margin-top: 1.1em;
     text-decoration: none;
@@ -206,8 +204,9 @@ body::-webkit-scrollbar-thumb {
 
 .head-content > .image {
     display: block;
-    background-color: rgb(156, 190, 221);
+    /* background-color: rgb(156, 190, 221); */
     margin-top: 0;
+    max-height: 30vh;
     padding-top: 0;
     border-bottom: none;
     border-radius: 8px;
@@ -218,7 +217,7 @@ body::-webkit-scrollbar-thumb {
 
 .headline {
     display: block;
-    font-size: 2em;
+    font-size: 1.6em;
     padding: 0.4em 0 0.8em 0;
     width: 90%;
     max-width: 900px;
