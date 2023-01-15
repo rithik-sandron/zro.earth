@@ -58,32 +58,6 @@
     line-height: 22px;
 }
 
-.blog .hashtag {
-    display: inline;
-    background-color: var(--text-cyan);
-    color: #222;
-    padding: 1.5px 4px;
-    margin: 6px;
-    font-size: 0.8em;
-    font-weight: 550;
-    letter-spacing: 0.3px;
-    transition: all 0.08s linear;
-    cursor: pointer;
-}
-
-.blog .hashtag::before {
-    content: '#';
-    font-size: 1.01em;
-    padding-right: 2px;
-    opacity: 0.7;
-    color: rgb(85, 85, 85);
-}
-
-.blog .hashtag:hover,
-.blog .hashtag:active {
-    box-shadow: 3.35px 3.35px 0 var(--bg-shadow);
-}
-
 
 
 

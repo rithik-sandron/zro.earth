@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 export default function HighlightContent({ post =
-    { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "" }
+    { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }
 }) {
 
     return (
@@ -9,7 +9,14 @@ export default function HighlightContent({ post =
             as={`/posts/${post.slug}`}
             href="/posts/[slug]" >
             <div className='head-content'>
-                {/* <time className='post'>{post.date}</time> */}
+                <div className='hashtag-container'>
+                    {
+                        post.tagsWithColors.map(tag => {
+                            return (
+                                <span style={{ color: tag.color, backgroundColor: tag.color+'30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>)
+                        })
+                    }
+                </div>
                 <h1 className='post'>{post.title}</h1>
                 <img src={post.coverImage} className='image' />
             </div>
