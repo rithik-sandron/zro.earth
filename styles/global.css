@@ -36,8 +36,11 @@ body::-webkit-scrollbar-thumb {
 
 #face {
     display: flex;
-    width: 2em;
-    height: 2em;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.4em;
     background-color: var(--font-color);
     margin-left: 8px;
 }
@@ -45,8 +48,7 @@ body::-webkit-scrollbar-thumb {
 #theme {
     display: block;
     margin: auto;
-    width: 1.2em;
-    height: 1.2em;
+    padding: 0.6em;
     border-radius: 50%;
     background-color: var(--bg-color);
 }

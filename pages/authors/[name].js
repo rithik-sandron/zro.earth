@@ -6,7 +6,6 @@ export default function Author(props) {
             <div className="flex-item-1">
                 <h1>San</h1>
                 <p>
-
                 </p>
             </div>
         </Layout>

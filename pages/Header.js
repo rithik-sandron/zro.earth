@@ -90,7 +90,7 @@ export default function Header() {
                     <span className='panel-item' id='ken'>Ken</span>
                 </Link>
                 <span className='panel-item' onClick={switchTheme} id='face'>
-                    <span id='theme'/>
+                    <span id='theme'></span>
                 </span>
 
             </div>
