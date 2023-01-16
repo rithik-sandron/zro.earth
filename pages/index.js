@@ -1,19 +1,17 @@
 import { getAllPosts, hashCode } from '../lib/api.js'
-import Header from './Header'
 import HighlightContent from './HighlightContent'
 import ContentList from './ContentList'
+import Layout from '../components/Layout.js';
+import React from 'react';
 
-export default function Index({ allPosts, color }) {
+export default function Index({ allPosts }) {
   const headPost = allPosts[0];
   const morePosts = allPosts.slice(1);
-  console.log(allPosts)
-
   return (
-    <div id='common-body'>
-      <Header />
+    <Layout>
       <HighlightContent post={headPost} />
       <ContentList posts={morePosts} />
-    </div>
+    </Layout>
   )
 }
 

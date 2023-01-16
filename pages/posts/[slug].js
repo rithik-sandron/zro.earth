@@ -4,7 +4,9 @@ import ErrorPage from 'next/error'
 import { getPostBySlug, getAllPosts, hashCode } from '../../lib/api.js'
 import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
-import Header from '../Header'
+import Layout from '../../components/Layout.js'
+import React from 'react'
+import Link from 'next/link.js'
 
 
 
@@ -12,14 +14,13 @@ export default function Post({ morePosts, preview,
   post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }
 }) {
 
-  console.log(post)
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+  
   return (
-    <div id='common-body'>
-      <Header />
+    <Layout>
       <main>
         {router.isFallback ?
           <h2>Loading…</h2>
@@ -30,18 +31,23 @@ export default function Post({ morePosts, preview,
               <meta property="og:image" content={post.coverImage} />
             </Head>
 
-            <div className='author-flex-container'>
-              <img className='profile-image' src={post.author.picture} alt={post.author.name} />
-              <div className='author-flex'>
-                <span className='author-item'>{post.author.name}</span>
-                <time className='author-item' dateTime={post.date}>{post.date}</time>
+            <Link
+              as={`/authors/${post.author.name}`}
+              href="/authors/[name]">
+              <div className='author-flex-container'>
+                <img className='profile-image' src={post.author.picture} alt={post.author.name} />
+                <div className='author-flex'>
+                  <span className='author-item'>{post.author.name}</span>
+                  <time className='author-item' dateTime={post.date}>{post.date}</time>
+                </div>
               </div>
-            </div>
+            </Link>
+
             <div className='hashtag-container'>
               {
                 post.tagsWithColors.map(tag => {
                   return (
-                    <span style={{ color: tag.color, backgroundColor: tag.color+'30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>)
+                    <span style={{ color: tag.color, backgroundColor: tag.color + '30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>)
                 })
               }
             </div>
@@ -52,7 +58,7 @@ export default function Post({ morePosts, preview,
           </article>
         }
       </main>
-    </div>
+    </Layout>
   )
 }
 

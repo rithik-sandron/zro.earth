@@ -14,7 +14,7 @@
 
 [data-theme="dark"] {
     --font-color: #f5f5f7;
-    --bg-color: #111;
+    --bg-color: #000;
     --line-color: rgba(145, 145, 145, 0.215);
     --line-color-lighter: #555;
 
