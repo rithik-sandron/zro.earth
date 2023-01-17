@@ -2,15 +2,40 @@ import { getAllPosts, hashCode } from '../lib/api.js'
 import HighlightContent from './HighlightContent'
 import ContentList from './ContentList'
 import Layout from '../components/Layout.js';
-import React from 'react';
+import Search from "../components/Search";
+
+import React, { useState, useEffect } from 'react';
 
 export default function Index({ allPosts }) {
   const headPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+  const [search, setSearch] = useState('');
+  const [f, setf] = useState([]);
+
+  useEffect(() => {
+    document.getElementById('search-ken').focus();
+  }, [])
+
+  useEffect(() => {
+    if (search !== "") {
+      const seachQuery = search.trim().toLowerCase();
+      const res = allPosts.filter(x => {
+        return (x.title.toLowerCase().includes(seachQuery) ||
+          x.date.toLowerCase().includes(seachQuery) ||
+          x.author.name.toLowerCase().includes(seachQuery)
+        )
+      })
+      setf(res)
+    }
+  }, [search])
+
+  console.log(f)
+
   return (
     <Layout>
-      <HighlightContent post={headPost} />
-      <ContentList posts={morePosts} />
+      <Search search={search} setSearch={setSearch} />
+      {search === "" && <HighlightContent post={headPost} />}
+      <ContentList posts={search !== "" ? f : morePosts} search={search} />
     </Layout>
   )
 }

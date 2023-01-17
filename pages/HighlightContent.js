@@ -5,22 +5,24 @@ export default function HighlightContent({ post =
 }) {
 
     return (
-        <Link
-            as={`/posts/${post.slug}`}
-            href="/posts/[slug]" >
-            <div className='head-content'>
-                <div className='hashtag-container'>
-                    {
-                        post.tagsWithColors.map(tag => {
-                            return (
-                                <span style={{ color: tag.color, backgroundColor: tag.color+'30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>)
-                        })
-                    }
-                </div>
+
+        <div className='head-content'>
+            <div className='hashtag-container'>
+                {
+                    post.tagsWithColors.map(tag => {
+                        return (
+                            <span style={{ color: tag.color, backgroundColor: tag.color + '30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>)
+                    })
+                }
+            </div>
+            <Link
+                as={`/posts/${post.slug}`}
+                href="/posts/[slug]" >
                 <h1 className='post'>{post.title}</h1>
                 <img src={post.coverImage} className='image' />
-            </div>
-        </Link>
+            </Link>
+
+        </div >
 
     );
 }

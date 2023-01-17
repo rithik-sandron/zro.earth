@@ -1,15 +1,15 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link'
 
-export default function ContentList({ posts = [] }) {
-
+export default function ContentList({
+    posts = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] } }) {
     return (
         <div className='content-list-container blog'>
             {
                 posts.map(x => {
                     return (
-                        <>
+                        <div key={x.slug}>
                             <div className='hashtag-container'>
                                 {
                                     x.tagsWithColors.map(tag => {
@@ -18,7 +18,7 @@ export default function ContentList({ posts = [] }) {
                                     })
                                 }
                             </div>
-                            <Link key={x.slug}
+                            <Link
                                 as={`/posts/${x.slug}`}
                                 href="/posts/[slug]"
                             >
@@ -27,7 +27,7 @@ export default function ContentList({ posts = [] }) {
                                     <span className='post'>{x.title}</span>
                                 </div>
                             </Link>
-                        </>
+                        </div>
                     );
                 })
             }
