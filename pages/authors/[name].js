@@ -1,6 +1,5 @@
 import Layout from "../../components/Layout";
 export default function Author(props) {
-    console.log(props)
     return (
         <Layout>
             <div className="flex-item-1">

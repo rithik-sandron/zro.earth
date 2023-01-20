@@ -29,8 +29,6 @@ export default function Index({ allPosts }) {
     }
   }, [search])
 
-  console.log(f)
-
   return (
     <Layout>
       <Search search={search} setSearch={setSearch} />
