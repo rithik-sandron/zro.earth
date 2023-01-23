@@ -3,6 +3,7 @@ import HighlightContent from './HighlightContent'
 import ContentList from './ContentList'
 import Layout from '../components/Layout.js';
 import Search from "../components/Search";
+import Header from "./Header";
 
 import React, { useState, useEffect } from 'react';
 
@@ -14,7 +15,7 @@ export default function Index({ allPosts }) {
   const [f, setf] = useState([]);
 
   useEffect(() => {
-    document.getElementById('search-ken').focus();
+    // document.getElementById('search-ken').focus();
 
     let image = new Image();
     image.src = headPost.coverImage;
@@ -47,6 +48,7 @@ export default function Index({ allPosts }) {
   return (
     <Layout bg={bg}>
       {search === "" && <HighlightContent post={headPost} bg={bg} />}
+      <Header bg={bg}/>
       <Search search={search} setSearch={setSearch} />
       <ContentList posts={search !== "" ? f : morePosts} search={search} />
     </Layout>
