@@ -46,7 +46,7 @@ export default function Index({ allPosts }) {
   }, [search])
 
   return (
-    <Layout bg={bg}>
+    <Layout bg={bg} isHomePage>
       {search === "" && <HighlightContent post={headPost} bg={bg} />}
       <Header bg={bg}/>
       <Search search={search} setSearch={setSearch} />

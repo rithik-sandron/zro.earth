@@ -21,7 +21,7 @@ export default function Post({ morePosts, preview,
   
   return (
     <Layout>
-      <main>
+      <main style={{paddingTop: '2em' }}>
         {router.isFallback ?
           <h2>Loading…</h2>
           :

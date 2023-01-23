@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb {
 .headline {
     display: block;
     color: var(--font-color);
-    font-size: calc(1em + 0.6vw);
+    font-size: calc(1.3em + 0.6vw);
     width: fit-content;
     margin: 0;
     line-height: 32px;
@@ -51,14 +51,14 @@ body::-webkit-scrollbar-thumb {
     margin: 0;
     width: fit-content;
     height: fit-content;
-    padding: 0.4em 0;
+    padding: 0.3em 0;
     /* background-color: var(--font-color); */
 }
 
 #theme {
     display: block;
     margin: auto;
-    padding: 0.6em;
+    padding: 0.7em;
     border-radius: 50%;
     background-color: var(--font-color);
 }
@@ -69,7 +69,7 @@ body::-webkit-scrollbar-thumb {
     /* background-color: var(--font-color); */
     color: var(--font-color);
     font-weight: 700;
-    font-size: calc(1em + 0.6vw);
+    font-size: calc(1.3em + 0.6vw);
     width: fit-content;
     padding: 0;
     line-height: 32px;
@@ -225,7 +225,7 @@ body::-webkit-scrollbar-thumb {
 
 .head-content h1 {
     display: block;
-    font-size: calc(5em + 1vw);
+    font-size: calc(4em + 0.8vw);
     color: #222;
     line-height: 1.05em;
     margin: auto;
