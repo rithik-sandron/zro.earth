@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb {
 .headline {
     display: block;
     color: var(--font-color);
-    font-size: calc(1.3em + 0.6vw);
+    font-size: calc(1em + 0.8vw);
     width: fit-content;
     margin: 0;
     line-height: 32px;
@@ -52,13 +52,12 @@ body::-webkit-scrollbar-thumb {
     width: fit-content;
     height: fit-content;
     padding: 0.3em 0;
-    /* background-color: var(--font-color); */
 }
 
 #theme {
     display: block;
     margin: auto;
-    padding: 0.7em;
+    padding: 0.6em;
     border-radius: 50%;
     background-color: var(--font-color);
 }
@@ -66,10 +65,9 @@ body::-webkit-scrollbar-thumb {
 #ken {
     display: block;
     text-decoration: none;
-    /* background-color: var(--font-color); */
     color: var(--font-color);
     font-weight: 700;
-    font-size: calc(1.3em + 0.6vw);
+    font-size: calc(2.3em + 0.8vw);
     width: fit-content;
     padding: 0;
     line-height: 32px;
@@ -114,6 +112,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     max-width: 900px;
     padding: 8px 0;
+    padding-top: 1em;
 }
 
 .panel-item {
@@ -192,42 +191,33 @@ body::-webkit-scrollbar-thumb {
     display: inline;
 }
 
-/* #logo {
-    font-size: 50em;
-    position: absolute;
-    top: -300px;
-    left: -60px;
-    right: 0;
-    bottom: 0;
-    width: fit-content;
-    opacity: 0.6;
-    margin: 0 auto;
-    color: indianred;
-} */
-
 .head-content {
     display: flex;
+    gap: 24px;
     margin: 0;
     margin: auto;
-    width: 100vw;
-    height: calc(100vh - 48px);
+    width: 90%;
+    height: fit-content;
+    margin: 1em auto;
+    max-width: 900px;
 }
 
 .head-content-container {
+    display: inline-block;
     align-self: flex-start;
-    display: block;
     width: 90%;
     max-width: 900px;
     padding: 0;
     margin: 0 auto;
-    padding-top: 2em;
+    padding: 0.6em;
+    border-radius: 0.6em;
 }
 
 .head-content h1 {
     display: block;
-    font-size: calc(4em + 0.8vw);
-    color: #222;
-    line-height: 1.05em;
+    font-size: calc(1.6em + 0.8vw);
+    color: var(--font-color);
+    line-height: 1.2em;
     margin: auto;
     margin-bottom: 0.6em;
 }
@@ -237,12 +227,12 @@ body::-webkit-scrollbar-thumb {
     margin-top: 0;
     width: 100%;
     height: 100%;
-    border-bottom: none;
     border-radius: 1px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     object-fit: fill;
-    border: 1px solid var(--line-color);
+    border: none;
+    border-radius: 12px;
 }
 
 .hashtag-container {

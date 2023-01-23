@@ -3,33 +3,30 @@ import HighlightContent from './HighlightContent'
 import ContentList from './ContentList'
 import Layout from '../components/Layout.js';
 import Search from "../components/Search";
-import Header from "./Header";
-
 import React, { useState, useEffect } from 'react';
 
 export default function Index({ allPosts }) {
-  const headPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  let headPosts = [allPosts[0], allPosts[1]];
+  const morePosts = allPosts.slice(2);
   const [search, setSearch] = useState('');
-  const [bg, setBg] = useState('');
   const [f, setf] = useState([]);
 
   useEffect(() => {
-    // document.getElementById('search-ken').focus();
+    headPosts.forEach(headPost => {
+      headPost.bgColor = '';
+      let image = new Image();
+      image.src = headPost.coverImage;
+      image.onload = () => {
+        let canvas = document.createElement('canvas');
+        canvas.width = image.width;
+        canvas.height = image.height;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(image, 0, 0);
+        let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        headPost.bgColor = `rgb(${imageData.data[0]}, ${imageData.data[1]}, ${imageData.data[2]}, 1)`;
+      }
+    })
 
-    let image = new Image();
-    image.src = headPost.coverImage;
-    image.onload = () => {
-      let canvas = document.createElement('canvas');
-      canvas.width = image.width;
-      canvas.height = image.height;
-      const ctx = canvas.getContext("2d");
-      ctx.drawImage(image, 0, 0);
-      let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      setBg(`rgb(${imageData.data[0]},
-        ${imageData.data[1]},
-        ${imageData.data[2]}, 1)`);
-    }
   }, [])
 
   useEffect(() => {
@@ -46,10 +43,9 @@ export default function Index({ allPosts }) {
   }, [search])
 
   return (
-    <Layout bg={bg} isHomePage>
-      {search === "" && <HighlightContent post={headPost} bg={bg} />}
-      <Header bg={bg}/>
+    <Layout>
       <Search search={search} setSearch={setSearch} />
+      {search === "" && <HighlightContent posts={headPosts} />}
       <ContentList posts={search !== "" ? f : morePosts} search={search} />
     </Layout>
   )
