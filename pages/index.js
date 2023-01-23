@@ -10,10 +10,25 @@ export default function Index({ allPosts }) {
   const headPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   const [search, setSearch] = useState('');
+  const [bg, setBg] = useState('');
   const [f, setf] = useState([]);
 
   useEffect(() => {
     document.getElementById('search-ken').focus();
+
+    let image = new Image();
+    image.src = headPost.coverImage;
+    image.onload = () => {
+      let canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = image.height;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(image, 0, 0);
+      let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      setBg(`rgb(${imageData.data[0]},
+        ${imageData.data[1]},
+        ${imageData.data[2]}, 1)`);
+    }
   }, [])
 
   useEffect(() => {
@@ -30,9 +45,9 @@ export default function Index({ allPosts }) {
   }, [search])
 
   return (
-    <Layout>
+    <Layout bg={bg}>
+      {search === "" && <HighlightContent post={headPost} bg={bg} />}
       <Search search={search} setSearch={setSearch} />
-      {search === "" && <HighlightContent post={headPost} />}
       <ContentList posts={search !== "" ? f : morePosts} search={search} />
     </Layout>
   )

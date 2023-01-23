@@ -2,7 +2,7 @@
 export default function Search({ search, setSearch }) {
 
     return (
-        <div className='search-container'>
+        <div className='search-container' id='search-container'>
             <input className="search-box" id='search-ken'
             type='text' 
             placeholder="Search posts, author, tags.." 
