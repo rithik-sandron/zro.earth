@@ -105,7 +105,7 @@ body::-webkit-scrollbar-thumb {
 
 .flex-item-1 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: fit-content;
     width: 100%;
     margin: 0 auto;
@@ -134,7 +134,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: flex-start;
     gap: 0.4em;
-    margin-bottom: 1.2em;
+    margin: 1.2em 0 1.4em 0;
 }
 
 .author-flex {
@@ -210,13 +210,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head-content h1 {
-    font-size: calc(2em + 1vw);
+    font-size: calc(3em + 1vw);
     color: var(--font-color);
     line-height: 1.2em;
     margin: 0 auto;
     padding: 0;
     width: 90%;
     height: fit-content;
+    cursor: pointer;
+}
+
+.head-content h1:hover, h1:active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .head-content .image {
@@ -292,7 +298,7 @@ body::-webkit-scrollbar-thumb {
 
     .head-content-container h1 {
         padding-top: 0;
-        margin-top: -5em;
+        margin-top: -2em;
     }
 
     .head-content-container .image {
@@ -307,6 +313,6 @@ body::-webkit-scrollbar-thumb {
 
 
     .head-content-container h1 {
-        padding-top: 4em;
+        padding-top: 2.7em;
     }
 }

@@ -12,8 +12,8 @@ export default function HighlightContent({ bg, fore, posts =
                         <Link
                             as={`/posts/${post.slug}`}
                             href="/posts/[slug]" >
-                            <img src={post.coverImage} className='image' 
-                            style={{ boxShadow: `4px 10px 27px ${fore.substring(0, fore.length-1)},0.5)` }}/>
+                            <img src={post.coverImage} className='image' alt='coverImage'
+                                style={{ border: `0.5px solid ${fore}`, boxShadow: `4px 10px 27px ${fore.substring(0, fore.length - 1)},0.5)` }} />
                         </Link>
                         <h1 className='post' style={{
                             color: fore

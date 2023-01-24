@@ -48,8 +48,8 @@ export default function Index({ allPosts }) {
 
   return (
     <Layout bg={bg} fore={fore}>
-      {/* <Search search={search} setSearch={setSearch} /> */}
       {(search === "" && bg)&& <HighlightContent posts={headPosts} bg={bg} fore={fore} />}
+      <Search search={search} setSearch={setSearch} />
       <ContentList posts={search !== "" ? f : morePosts} search={search} />
     </Layout>
   )

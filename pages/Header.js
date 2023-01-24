@@ -91,11 +91,11 @@ export default function Header({ bg, fore }) {
                 <Link as={`/`} href="/">
                     <span className='panel-item' id='ken'
                         style={{
-                            color: fore ? fore : theme ? dark : light
-                        }}>0</span>
+                            color: fore ? fore : theme ? light : dark
+                        }}>Zero.</span>
                 </Link>
                 <h1 id='date' className="headline" style={{
-                    color: fore ? fore : theme ? dark : light
+                    color: fore ? fore : theme ? light : dark
                 }} />
 
                 <span className='panel-item' onClick={switchTheme} id='face'>

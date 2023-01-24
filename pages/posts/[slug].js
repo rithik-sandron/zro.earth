@@ -18,10 +18,10 @@ export default function Post({ morePosts, preview,
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
-  
+
   return (
     <Layout>
-      <main style={{paddingTop: '2em' }}>
+      <main style={{ paddingTop: '1em' }}>
         {router.isFallback ?
           <h2>Loading…</h2>
           :
@@ -31,6 +31,15 @@ export default function Post({ morePosts, preview,
               <meta property="og:image" content={post.coverImage} />
             </Head>
 
+            <div className='hashtag-container'>
+              {
+                post.tagsWithColors.map(tag => {
+                  return (
+                    <span style={{ color: tag.color, backgroundColor: tag.color + '30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>)
+                })
+              }
+            </div>
+            <h1>{post.title}</h1>
             <Link
               as={`/authors/${post.author.name}`}
               href="/authors/[name]">
@@ -42,16 +51,6 @@ export default function Post({ morePosts, preview,
                 </div>
               </div>
             </Link>
-
-            <div className='hashtag-container'>
-              {
-                post.tagsWithColors.map(tag => {
-                  return (
-                    <span style={{ color: tag.color, backgroundColor: tag.color + '30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>)
-                })
-              }
-            </div>
-            <h1>{post.title}</h1>
 
             <img className='image' src={post.coverImage} alt={`Cover Image for ${post.title}`} />
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
