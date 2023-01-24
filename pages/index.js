@@ -6,10 +6,12 @@ import Search from "../components/Search";
 import React, { useState, useEffect } from 'react';
 
 export default function Index({ allPosts }) {
-  let headPosts = [allPosts[0], allPosts[1]];
+  let headPosts = [allPosts[0]];
   const morePosts = allPosts.slice(2);
   const [search, setSearch] = useState('');
   const [f, setf] = useState([]);
+  const [bg, setBg] = useState('');
+  const [fore, setFore] = useState('');
 
   useEffect(() => {
     headPosts.forEach(headPost => {
@@ -24,6 +26,8 @@ export default function Index({ allPosts }) {
         ctx.drawImage(image, 0, 0);
         let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         headPost.bgColor = `rgb(${imageData.data[0]}, ${imageData.data[1]}, ${imageData.data[2]}, 1)`;
+        setBg(`rgb(${imageData.data[0]}, ${imageData.data[1]}, ${imageData.data[2]})`);
+        setFore(`rgb(${255 - imageData.data[0]}, ${255 - imageData.data[1]}, ${255 - imageData.data[2]})`);
       }
     })
 
@@ -43,9 +47,9 @@ export default function Index({ allPosts }) {
   }, [search])
 
   return (
-    <Layout>
-      <Search search={search} setSearch={setSearch} />
-      {search === "" && <HighlightContent posts={headPosts} />}
+    <Layout bg={bg} fore={fore}>
+      {/* <Search search={search} setSearch={setSearch} /> */}
+      {(search === "" && bg)&& <HighlightContent posts={headPosts} bg={bg} fore={fore} />}
       <ContentList posts={search !== "" ? f : morePosts} search={search} />
     </Layout>
   )

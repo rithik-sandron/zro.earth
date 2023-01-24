@@ -10,6 +10,8 @@ a {
     padding: 0;
     text-decoration: none;
     color: var(--font-color);
+    width: fit-content;
+    height: fit-content;
 }
 
 body::-webkit-scrollbar {
@@ -36,7 +38,6 @@ body::-webkit-scrollbar-thumb {
 
 .headline {
     display: block;
-    color: var(--font-color);
     font-size: calc(1em + 0.8vw);
     width: fit-content;
     margin: 0;
@@ -65,7 +66,6 @@ body::-webkit-scrollbar-thumb {
 #ken {
     display: block;
     text-decoration: none;
-    color: var(--font-color);
     font-weight: 700;
     font-size: calc(2.3em + 0.8vw);
     width: fit-content;
@@ -105,14 +105,11 @@ body::-webkit-scrollbar-thumb {
 
 .flex-item-1 {
     display: flex;
-    justify-content: space-between;
-    gap: 24px;
+    justify-content: space-evenly;
     height: fit-content;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    max-width: 900px;
-    padding: 8px 0;
-    padding-top: 1em;
+    padding: 1em 0;
 }
 
 .panel-item {
@@ -192,47 +189,51 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head-content {
-    display: flex;
-    gap: 24px;
-    margin: 0;
-    margin: auto;
-    width: 90%;
+    display: block;
+    width: 100%;
     height: fit-content;
-    margin: 1em auto;
-    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 2em;
 }
 
 .head-content-container {
-    display: inline-block;
-    align-self: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     width: 90%;
-    max-width: 900px;
+    gap: 0;
     padding: 0;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0.6em;
-    border-radius: 0.6em;
+    margin-top: 3em;
+    height: calc(100vh - 9em);
 }
 
 .head-content h1 {
-    display: block;
-    font-size: calc(1.6em + 0.8vw);
+    font-size: calc(2em + 1vw);
     color: var(--font-color);
     line-height: 1.2em;
-    margin: auto;
-    margin-bottom: 0.6em;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    height: fit-content;
 }
 
 .head-content .image {
     display: block;
-    margin-top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 1px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    object-fit: fill;
+    padding: 0;
+    border-radius: 2px;
+    object-fit: cover;
     border: none;
-    border-radius: 12px;
+    width: calc(20em + 20vmin);
+    height: calc(20em + 20vmin);
+    margin: 0 auto;
+    transition: all 0.1s ease-in-out;
+}
+
+.head-content .image:hover {
+    width: calc(22em + 20vmin);
+    height: calc(22em + 20vmin);
 }
 
 .hashtag-container {
@@ -266,7 +267,7 @@ body::-webkit-scrollbar-thumb {
     padding: 1.4em 0 1em 0;
 }
 
-.search-container > input {
+.search-container>input {
     display: block;
     outline: none;
     border: none;
@@ -281,4 +282,31 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.3em;
     letter-spacing: 0.3px;
     border-radius: 1px;
+}
+
+@media screen and (min-width: 101px) and (max-width: 800px) {
+    .head-content-container {
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+
+    .head-content-container h1 {
+        padding-top: 0;
+        margin-top: -5em;
+    }
+
+    .head-content-container .image {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .head-content-container {
+        gap: 48px;
+    }
+
+
+    .head-content-container h1 {
+        padding-top: 4em;
+    }
 }

@@ -1,22 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
-export default function HighlightContent({ posts =
+export default function HighlightContent({ bg, fore, posts =
     [{ title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }]
 }) {
-    console.log(posts)
+    console.log('called')
     return (
-        <div className='head-content'>
+        <div className='head-content' style={{ backgroundColor: bg }}>
             {posts.map(post => {
                 return (
-                    <div key={post.slug} className='head-content-container' style={{ backgroundColor: post.bgColor }} >
-                        <div className='head-content-wrap'>
-                            <Link
-                                as={`/posts/${post.slug}`}
-                                href="/posts/[slug]" >
-                                <h1 className='post'>{post.title}</h1>
-                                <img src={post.coverImage} className='image' />
-                            </Link>
-                        </div>
+                    <div key={post.slug} className='head-content-container'>
+                        <Link
+                            as={`/posts/${post.slug}`}
+                            href="/posts/[slug]" >
+                            <img src={post.coverImage} className='image' 
+                            style={{ boxShadow: `4px 10px 27px ${fore.substring(0, fore.length-1)},0.5)` }}/>
+                        </Link>
+                        <h1 className='post' style={{
+                            color: fore
+                        }}>{post.title}</h1>
                     </div>
                 );
             })

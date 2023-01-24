@@ -1,9 +1,9 @@
 import Header from "../pages/Header";
 
-export default function Layout({ children }) {
+export default function Layout({ bg, fore, children }) {
     return (
         <div id='common-body'>
-            <Header />
+            <Header bg={bg} fore={fore}/>
             {children}
         </div>
     )

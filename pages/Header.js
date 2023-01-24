@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
-export default function Header() {
+export default function Header({ bg, fore }) {
 
     const months = [
         'January',
@@ -81,14 +81,22 @@ export default function Header() {
             <Head>
                 <title>Zero</title>
                 <link rel="shortcut icon" href="/favicon/favicon.ico" />
-                <meta name="msapplication-TileColor" content={theme ? dark : light} />
-                <meta name="theme-color" content={theme ? dark : light} />
+                <meta name="msapplication-TileColor" content={bg ? bg : theme ? dark : light} />
+                <meta name="theme-color" content={bg ? bg : theme ? dark : light} />
             </Head>
-            <div className='flex-item-1'>
+            <div className='flex-item-1' style={{
+                backgroundColor: bg ? bg : theme ? dark : light,
+                color: fore ? fore : theme ? dark : light
+            }}>
                 <Link as={`/`} href="/">
-                    <span className='panel-item' id='ken'>0.</span>
+                    <span className='panel-item' id='ken'
+                        style={{
+                            color: fore ? fore : theme ? dark : light
+                        }}>0</span>
                 </Link>
-                <h1 id='date' className="headline" />
+                <h1 id='date' className="headline" style={{
+                    color: fore ? fore : theme ? dark : light
+                }} />
 
                 <span className='panel-item' onClick={switchTheme} id='face'>
                     <span id='theme'></span>
