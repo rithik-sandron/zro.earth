@@ -86,7 +86,7 @@ export default function Header({ bg, fore }) {
             </Head>
             <div className='flex-item-1' style={{
                 backgroundColor: bg ? bg : theme ? dark : light,
-                color: fore ? fore : theme ? dark : light
+                color: fore ? fore : theme ? dark : light,
             }}>
                 <Link as={`/`} href="/">
                     <span className='panel-item' id='ken'

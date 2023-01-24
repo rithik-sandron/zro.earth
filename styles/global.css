@@ -222,8 +222,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 4px;
 }
 
-.head-content h1:hover,
-h1:active {
+.head-content h1:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
@@ -296,7 +295,8 @@ h1:active {
 @media screen and (min-width: 101px) and (max-width: 800px) {
     .head-content-container {
         flex-wrap: wrap;
-        gap: 48px;
+        gap: 24px;
+        margin-top: 0;
     }
 
     .head-content-container h1 {
