@@ -12,7 +12,7 @@ export default function HighlightContent({ bg = '', fore = '', posts =
                 `conic-gradient(from 80deg at 2px 2px, #0000 75%, ${fore} 0),
             linear-gradient(90deg, ${fore} 15%, ${bg} 0 58%, #0000 10%, ${bg} 0 90%, ${fore} 0),
             conic-gradient(from 30deg at 70% 10%, ${fore} 65%, ${bg} 0)`,
-            backgroundSize: `64em 64em`
+            backgroundSize: `54em 64em`
 
         }}>
             {posts.map(post => {

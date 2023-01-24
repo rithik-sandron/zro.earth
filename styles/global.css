@@ -218,8 +218,6 @@ body::-webkit-scrollbar-thumb {
     width: 90%;
     height: fit-content;
     cursor: pointer;
-    border: 2px solid;
-    border-radius: 4px;
 }
 
 .head-content h1:hover {
@@ -239,10 +237,10 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.1s ease-in-out;
 }
 
-.head-content .image:hover {
+/* .head-content .image:hover {
     width: calc(22em + 20vmin);
     height: calc(22em + 20vmin);
-}
+} */
 
 .hashtag-container {
     display: flex;
