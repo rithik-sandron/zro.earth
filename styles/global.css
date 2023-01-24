@@ -205,12 +205,12 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 3em;
-    height: calc(100vh - 9em);
+    margin-top: 1.6em;
+    height: calc(100vh - 7.6em);
 }
 
 .head-content h1 {
-    font-size: calc(3em + 1vw);
+    font-size: calc(2.2em + 1vw);
     color: var(--font-color);
     line-height: 1.2em;
     margin: 0 auto;
@@ -218,6 +218,8 @@ body::-webkit-scrollbar-thumb {
     width: 90%;
     height: fit-content;
     cursor: pointer;
+    border: 2px solid;
+    border-radius: 4px;
 }
 
 .head-content h1:hover,
