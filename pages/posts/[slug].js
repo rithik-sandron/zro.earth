@@ -40,6 +40,8 @@ export default function Post({ morePosts, preview,
               }
             </div>
             <h1>{post.title}</h1>
+            <img className='image' src={post.coverImage} alt={`Cover Image for ${post.title}`} />
+            
             <Link
               as={`/authors/${post.author.name}`}
               href="/authors/[name]">
@@ -51,8 +53,7 @@ export default function Post({ morePosts, preview,
                 </div>
               </div>
             </Link>
-
-            <img className='image' src={post.coverImage} alt={`Cover Image for ${post.title}`} />
+            
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </article>
         }

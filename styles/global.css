@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb {
     display: block;
     text-decoration: none;
     font-weight: 700;
-    font-size: calc(1.6em + 0.8vw);
+    font-size: calc(1.2em + 0.8vw);
     width: fit-content;
     padding: 0;
     line-height: 32px;
@@ -105,9 +105,10 @@ body::-webkit-scrollbar-thumb {
 
 .flex-item-1 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: fit-content;
-    width: 100%;
+    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1em 0;
 }
@@ -134,7 +135,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: flex-start;
     gap: 0.4em;
-    margin: 1.2em 0 1.4em 0;
+    margin: 1.6em 0 0 0;
 }
 
 .author-flex {
@@ -173,7 +174,7 @@ body::-webkit-scrollbar-thumb {
     text-decoration: underline;
     text-underline-offset: 4px;
     line-height: 24px;
-    margin-bottom: 1em;
+    margin-bottom: 1.6em;
 }
 
 .view-count {
@@ -225,16 +226,17 @@ body::-webkit-scrollbar-thumb {
 .head-content h1:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
+    text-decoration-thickness: 0.3em;
 }
 
 .head-content .image {
     display: block;
     padding: 0;
     border-radius: 2px;
-    object-fit: cover;
+    object-fit:cover;
     border: none;
     width: calc(20em + 20vmin);
-    height: calc(20em + 20vmin);
+    height: calc(16em + 20vmin);
     margin: 0 auto;
     transition: all 0.1s ease-in-out;
 }
@@ -281,7 +283,7 @@ body::-webkit-scrollbar-thumb {
     border: none;
     width: calc(90% - 24px);
     margin: auto;
-    background-color: var(--bg-color);
+    background-color: inherit;
     color: var(--font-color);
     box-shadow: none;
     padding: 8px 12px 9px 12px;
@@ -292,7 +294,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 1px;
 }
 
-@media screen and (min-width: 101px) and (max-width: 800px) {
+@media screen and (min-width: 101px) and (max-width: 750px) {
     .head-content-container {
         flex-wrap: wrap;
         gap: 24px;
@@ -309,7 +311,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width:751px) {
     .head-content-container {
         gap: 48px;
     }

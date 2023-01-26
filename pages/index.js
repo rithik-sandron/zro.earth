@@ -6,7 +6,7 @@ import Search from "../components/Search";
 import React, { useState, useEffect } from 'react';
 
 export default function Index({ allPosts }) {
-  const headPosts = allPosts[5];
+  const headPosts = allPosts[4];
   const morePosts = allPosts;
   const [search, setSearch] = useState('');
   const [f, setf] = useState([]);
