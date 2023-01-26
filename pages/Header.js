@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
-export default function Header({ bg, fore }) {
+export default function Header({ bg='', fore='' }) {
 
     const months = [
         'January',

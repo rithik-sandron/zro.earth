@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb {
     display: block;
     text-decoration: none;
     font-weight: 700;
-    font-size: calc(2.3em + 0.8vw);
+    font-size: calc(1.6em + 0.8vw);
     width: fit-content;
     padding: 0;
     line-height: 32px;
@@ -206,18 +206,20 @@ body::-webkit-scrollbar-thumb {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 1.6em;
-    height: calc(100vh - 7.6em);
+    height: fit-content;
 }
 
 .head-content h1 {
-    font-size: calc(2.2em + 1vw);
+    font-size: calc(2.4em + 1vw);
     color: var(--font-color);
     line-height: 1.2em;
+    letter-spacing: 0.3px;
     margin: 0 auto;
     padding: 0.1em 0.2em;
     width: 90%;
     height: fit-content;
     cursor: pointer;
+    font-weight: 800;
 }
 
 .head-content h1:hover {
@@ -298,8 +300,8 @@ body::-webkit-scrollbar-thumb {
     }
 
     .head-content-container h1 {
-        padding-top: 0;
-        margin-top: -2em;
+        margin-top: 0.6em;
+        margin-bottom: 1em;
     }
 
     .head-content-container .image {
@@ -314,6 +316,19 @@ body::-webkit-scrollbar-thumb {
 
 
     .head-content-container h1 {
-        margin-top: 2.7em;
+        margin: 2em 0;
+    }
+
+    .head-content-container .image {
+        margin-top: 1em;
+        margin-bottom: 6em;
     }
 }
+
+
+
+
+  .gallery-cell {
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }

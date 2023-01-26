@@ -6,31 +6,28 @@ import Search from "../components/Search";
 import React, { useState, useEffect } from 'react';
 
 export default function Index({ allPosts }) {
-  let headPosts = [allPosts[0]];
-  const morePosts = allPosts.slice(2);
+  const headPosts = allPosts[5];
+  const morePosts = allPosts;
   const [search, setSearch] = useState('');
   const [f, setf] = useState([]);
   const [bg, setBg] = useState('');
   const [fore, setFore] = useState('');
 
   useEffect(() => {
-    headPosts.forEach(headPost => {
-      headPost.bgColor = '';
-      let image = new Image();
-      image.src = headPost.coverImage;
-      image.onload = () => {
-        let canvas = document.createElement('canvas');
-        canvas.width = image.width;
-        canvas.height = image.height;
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(image, 0, 0);
-        let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        headPost.bgColor = `rgb(${imageData.data[0]}, ${imageData.data[1]}, ${imageData.data[2]}, 1)`;
-        setBg(`rgb(${imageData.data[0]}, ${imageData.data[1]}, ${imageData.data[2]})`);
-        setFore(`rgb(${255 - imageData.data[0]}, ${255 - imageData.data[1]}, ${255 - imageData.data[2]})`);
-      }
-    })
+    let image = new Image();
+    image.src = headPosts.coverImage;
+    image.onload = () => {
+      let canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = image.height;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(image, 0, 0);
+      let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const imageLength = Math.round((imageData.data.length - 1) / 3);
 
+      setBg(`rgb(${imageData.data[imageLength]}, ${imageData.data[imageLength + 1]}, ${imageData.data[imageLength + 2]})`);
+      setFore(`rgb(${255 - imageData.data[imageLength]}, ${255 - imageData.data[imageLength + 1]}, ${255 - imageData.data[imageLength + 2]})`);
+    }
   }, [])
 
   useEffect(() => {
@@ -48,7 +45,7 @@ export default function Index({ allPosts }) {
 
   return (
     <Layout bg={bg} fore={fore}>
-      {(search === "" && bg)&& <HighlightContent posts={headPosts} bg={bg} fore={fore} />}
+      {(search === "" && bg) && <HighlightContent post={headPosts} bg={bg} fore={fore} />}
       <Search search={search} setSearch={setSearch} />
       <ContentList posts={search !== "" ? f : morePosts} search={search} />
     </Layout>
