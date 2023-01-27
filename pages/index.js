@@ -6,7 +6,7 @@ import Search from "../components/Search";
 import React, { useState, useEffect } from 'react';
 
 export default function Index({ allPosts }) {
-  const headPosts = allPosts[4];
+  const headPosts = allPosts[7];
   const morePosts = allPosts;
   const [search, setSearch] = useState('');
   const [f, setf] = useState([]);
@@ -36,9 +36,11 @@ export default function Index({ allPosts }) {
       const res = allPosts.filter(x => {
         return (x.title.toLowerCase().includes(seachQuery) ||
           x.date.toLowerCase().includes(seachQuery) ||
-          x.author.name.toLowerCase().includes(seachQuery)
+          x.author.name.toLowerCase().includes(seachQuery) ||
+          x.tagsWithColors.filter(y => y.tag.toLowerCase().includes(seachQuery)).length > 0
         )
       })
+
       setf(res)
     }
   }, [search])
@@ -47,6 +49,7 @@ export default function Index({ allPosts }) {
     <Layout bg={bg} fore={fore}>
       {(search === "" && bg) && <HighlightContent post={headPosts} bg={bg} fore={fore} />}
       <Search search={search} setSearch={setSearch} />
+      {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>}
       <ContentList posts={search !== "" ? f : morePosts} search={search} />
     </Layout>
   )
@@ -57,7 +60,7 @@ export const getStaticProps = async () => {
     'title',
     'date',
     'slug',
-    'author',
+    // 'author',
     'coverImage',
     'tags',
     'tagsWithColors'

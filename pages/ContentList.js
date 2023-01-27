@@ -13,20 +13,25 @@ export default function ContentList({
                         <div key={x.slug}>
                             <div className='hashtag-container'>
                                 {
-
                                     x.tagsWithColors.map(tag => {
                                         return (
-
-                                <span style={{ color: tag.color, backgroundColor: tag.color + '30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>)
+                                            <Link
+                                                style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
+                                                as={`/tags/${tag.tag}`}
+                                                href="/tags/[tag]">
+                                                <span style={{ color: tag.color, backgroundColor: tag.color + '30' }} className='hashtag' key={tag.tag}>{tag.tag}</span>
+                                            </Link>
+                                        )
                                     })
                                 }
                             </div>
                             <Link
+                                style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
                                 as={`/posts/${x.slug}`}
                                 href="/posts/[slug]"
                             >
                                 <div className='content-list-item'>
-                                    <time className='post'>{x.date}</time>
+                                    {/* <time className='post'>{x.date}</time> */}
                                     <span className='post'>{x.title}</span>
                                 </div>
                             </Link>

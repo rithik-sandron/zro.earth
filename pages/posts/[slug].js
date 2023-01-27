@@ -10,7 +10,7 @@ import Link from 'next/link.js'
 
 
 
-export default function Post({ morePosts, preview,
+export default function Post({ 
   post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }
 }) {
 

@@ -10,6 +10,7 @@ export default function HighlightContent({ bg = '', fore = '', post =
             backgroundColor: bg
         }}>
             <Link
+                style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
                 as={`/posts/${post.slug}`}
                 href="/posts/[slug]" >
                 <div key={post.slug} className='head-content-container'>
