@@ -194,7 +194,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: 500;
     letter-spacing: .4px;
     line-height: 28px;
-    font-size: 1.4em;
+    font-size: calc(1.2em + 0.6vw);
 }
 
 .head-content {
