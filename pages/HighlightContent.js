@@ -17,9 +17,9 @@ export default function HighlightContent({
         >
             <Link
                 style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
-                as={`/posts/${post.slug}`}
+                as={`/posts/${slug}`}
                 href={`/posts/[slug]`} >
-                <div key={post.slug} className='head-content-container'>
+                <div key={slug} className='head-content-container'>
 
                     <img src={coverImage} className='image' alt='coverImage'
                         style={{ border: `1px solid ${fore}`, boxShadow: `12px 12px 0 ${fore}` }}
