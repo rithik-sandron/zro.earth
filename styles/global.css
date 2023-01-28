@@ -16,7 +16,11 @@ a {
     color: transparent;
 }
 
-a:active, a:link, a:visited, a:hover, a:focus {
+a:active,
+a:link,
+a:visited,
+a:hover,
+a:focus {
     text-decoration: none;
     border: none;
     outline: 0;
@@ -46,7 +50,7 @@ body::-webkit-scrollbar-thumb {
 
 .headline {
     display: block;
-    font-size: calc(1em + 0.8vw);
+    font-size: calc(0.9em + 0.8vw);
     width: fit-content;
     margin: 0;
     line-height: 32px;
@@ -68,7 +72,7 @@ body::-webkit-scrollbar-thumb {
     display: block;
     margin: auto;
     padding: 0.6em;
-    border-radius: 50%;
+    border-radius: 10%;
     background-color: var(--font-color);
 }
 
@@ -116,7 +120,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-between;
     height: fit-content;
-    width: 80%;
+    width: 85%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1em 0;
@@ -241,7 +245,7 @@ body::-webkit-scrollbar-thumb {
     display: block;
     padding: 0;
     border-radius: 2px;
-    object-fit:cover;
+    object-fit: cover;
     border: none;
     width: calc(20em + 20vmin);
     height: calc(16em + 20vmin);
@@ -318,9 +322,18 @@ body::-webkit-scrollbar-thumb {
     .head-content-container .image {
         width: 90%;
     }
+
+    .list-container {
+        width: 90%;
+    }
 }
 
 @media screen and (min-width:751px) {
+
+    .list-container {
+        width: 70%;
+    }
+
     .head-content-container {
         gap: 48px;
     }
@@ -336,10 +349,77 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-  .footer {
+.footer {
     display: block;
     width: 100%;
     height: fit-content;
     margin: 0 auto;
     padding: 16px 0;
-  }
+}
+
+.list-container {
+    background-color: aquamarine;
+    max-width: 900px;
+    height: fit-content;
+    margin: auto;
+    margin: 5em auto;
+    counter-reset: section;
+    letter-spacing: 0.6px;
+}
+
+.list-head {
+    font-size: 2em;
+    padding: 0.8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #222;
+    text-transform: capitalize;
+}
+
+.post-title {
+    margin: 0.2em 0;
+    padding: 0.6em;
+    font-size: 1.3em;
+    border-top: 0.5px solid #22222260;
+    color: #222;
+    display: flex;
+    line-height: 32px;
+}
+
+.post-title::before {
+    padding-right: 1em;
+    padding-left: 0.2em;
+    font-size: 2em;
+    font-weight: 800;
+    counter-increment: section;
+    content: counter(section);
+    color: #222;
+    align-self: center;
+}
+
+
+.tip-container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 0.6em 1em;
+    letter-spacing: 0.2px;
+    justify-content: center;
+}
+
+.tip-head {
+    display: inline-block;
+    font-size: 1.2em;
+    min-width: fit-content;
+    line-height: 28px;
+    padding-right: 0.6em;
+}
+
+.tip-head::after {
+    content: ':';
+}
+
+.tip-title {
+    font-size: 1.2em;
+    line-height: 28px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 export default function HighlightContent({ bg = '', fore = '', post =
-    { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }
+    { title: "", date: "", slug: "", list: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }
 }) {
 
 
@@ -11,8 +11,8 @@ export default function HighlightContent({ bg = '', fore = '', post =
         }}>
             <Link
                 style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
-                as={`/posts/${post.slug}`}
-                href="/posts/[slug]" >
+                as={`/posts/${post.list + "/" + post.slug}`}
+                href={`/posts/${post.list}/[slug]`} >
                 <div key={post.slug} className='head-content-container'>
 
                     <img src={post.coverImage} className='image' alt='coverImage'

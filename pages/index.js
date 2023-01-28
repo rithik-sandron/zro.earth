@@ -1,14 +1,14 @@
-import { getAllPosts, hashCode } from '../lib/api.js'
+import { getAllPosts } from '../lib/api.js'
 import HighlightContent from './HighlightContent'
-import ContentList from './ContentList'
 import Layout from '../components/Layout.js';
-import Search from "../components/Search";
+// import Search from "../components/Search";
 import React, { useState, useEffect } from 'react';
+import List from './List.js';
+import Tip from './Tips.js';
 
-export default function Index({ allPosts }) {
-  const headPosts = allPosts[7];
-  const morePosts = allPosts;
-  const [search, setSearch] = useState('');
+export default function Index({ news, anime, movies, tips }) {
+  const headPosts = news[6];
+  // const [search, setSearch] = useState('');
   const [f, setf] = useState([]);
   const [bg, setBg] = useState('');
   const [fore, setFore] = useState('');
@@ -30,51 +30,73 @@ export default function Index({ allPosts }) {
     }
   }, [])
 
-  useEffect(() => {
-    if (search !== "") {
-      const seachQuery = search.trim().toLowerCase();
-      const res = allPosts.filter(x => {
-        return (x.title.toLowerCase().includes(seachQuery) ||
-          x.date.toLowerCase().includes(seachQuery) ||
-          x.author.name.toLowerCase().includes(seachQuery) ||
-          x.tagsWithColors.filter(y => y.tag.toLowerCase().includes(seachQuery)).length > 0
-        )
-      })
+  // useEffect(() => {
+  //   if (search !== "") {
+  //     const seachQuery = search.trim().toLowerCase();
+  //     const allPosts = [...anime, ...news, ...movies];
+  //     const res = allPosts.filter(x => {
+  //       return (x.title.toLowerCase().includes(seachQuery) ||
+  //         x.date.toLowerCase().includes(seachQuery) ||
+  //         x.author.name.toLowerCase().includes(seachQuery)
+  //         // x.tagsWithColors.filter(y => y.tag.toLowerCase().includes(seachQuery)).length > 0
+  //       )
+  //     })
 
-      setf(res)
-    }
-  }, [search])
+  //     setf(res)
+  //   }
+  // }, [search])
 
   return (
     <Layout bg={bg} fore={fore}>
-      {(search === "" && bg) && <HighlightContent post={headPosts} bg={bg} fore={fore} />}
-      <Search search={search} setSearch={setSearch} />
-      {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>}
-      <ContentList posts={search !== "" ? f : morePosts} search={search} />
+      <Tip bg={bg} fore={fore} post={tips[0]} title='quick tip' />
+      <HighlightContent post={headPosts} bg={bg} fore={fore} />
+      {/* <Search search={search} setSearch={setSearch} /> */}
+      {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
+      {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
+
+
+      <List bg={bg} fore={fore} posts={news} />
+      <List bg={bg} fore={fore} posts={anime} />
+      <List bg={bg} fore={fore} posts={movies} />
     </Layout>
   )
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
+  const news = getAllPosts('news', [
     'title',
+    'author',
+    'list',
     'date',
     'slug',
-    // 'author',
     'coverImage',
-    'tags',
-    'tagsWithColors'
   ])
 
-  allPosts.forEach(x => {
-    x.tagsWithColors = [];
-    x.tags.forEach(y => {
-      let color = hashCode(y);
-      x.tagsWithColors.push({ tag: y, color: color });
-    })
-  })
+  const anime = getAllPosts('anime', [
+    'title',
+    'author',
+    'list',
+    'date',
+    'slug',
+    'coverImage',
+  ])
+
+  const movies = getAllPosts('movies', [
+    'title',
+    'author',
+    'list',
+    'date',
+    'slug',
+    'coverImage',
+  ])
+
+  const tips = getAllPosts('tips', [
+    'content',
+    'date',
+    'slug',
+  ])
 
   return {
-    props: { allPosts },
+    props: { news, anime, movies, tips },
   }
 }

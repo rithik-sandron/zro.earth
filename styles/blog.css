@@ -421,7 +421,7 @@ ul>li {
     width: 100%;
     object-fit: contain;
     margin: 1em auto;
-    margin-bottom: 0;
+    margin: 2em 0;
 }
 
 .blog .profile-image {
