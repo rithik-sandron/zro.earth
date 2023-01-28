@@ -368,8 +368,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .list-head {
-    font-size: calc(1.5em + 0.2vw);
-    padding: 0.8em;
+    font-size: calc(1.2em + 0.6vw);
+    padding: 0.4em 0.8em;
     font-weight: 500;
     letter-spacing: 1px;
     color: #222;
@@ -379,17 +379,17 @@ body::-webkit-scrollbar-thumb {
 .post-title {
     margin: 0.2em 0;
     padding: 0.6em;
-    font-size: calc(1.1em + 0.3vw);
+    font-size: calc(1em + 0.3vw);
     border-top: 0.5px solid #22222260;
     color: #222;
     display: flex;
-    line-height: 32px;
+    line-height: 24px;
 }
 
 .post-title::before {
-    padding-right: 1em;
+    padding-right: 0.8em;
     padding-left: 0.2em;
-    font-size: calc(1.6em + 0.2vw);
+    font-size: calc(1.4em + 0.2vw);
     font-weight: 800;
     counter-increment: section;
     content: counter(section);
@@ -405,20 +405,16 @@ body::-webkit-scrollbar-thumb {
     padding: 0.6em 1em;
     letter-spacing: 0.2px;
     justify-content: center;
-    font-size: calc(0.9em + 0.3vw);
+    font-size: calc(0.8em + 0.3vw);
+    line-height: calc(1.2em + 0.3vw);
 }
 
 .tip-head {
     display: inline-block;
     min-width: fit-content;
-    line-height: 28px;
     padding-right: 0.6em;
 }
 
 .tip-head::after {
     content: ':';
-}
-
-.tip-title {
-    line-height: 28px;
 }

@@ -7,7 +7,7 @@ export default function Tips({ bg, fore, title, post =
     return (
         <div className='tip-container'
         style={{ backgroundColor: fore, color: bg }}>
-            <span className='tip-head'>{title}</span>
+            {/* <span className='tip-head'>{title}</span> */}
             <span className='tip-title'>{post.content}</span>
         </div>
     )
