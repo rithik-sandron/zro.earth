@@ -60,8 +60,8 @@ body::-webkit-scrollbar-thumb {
 
 #face {
     display: flex;
-    margin: 0.4em 0;
-    padding: 0.2em;
+    margin: 0.5em 0;
+    padding: 0;
     width: fit-content;
     height: fit-content;
     background-color: var(--bg-color);
@@ -71,8 +71,7 @@ body::-webkit-scrollbar-thumb {
 #theme {
     display: block;
     margin: auto;
-    padding: 0.6em;
-    border-radius: 10%;
+    padding: 0.5em;
     background-color: var(--font-color);
 }
 
@@ -406,7 +405,7 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 0.2px;
     justify-content: center;
     font-size: calc(0.8em + 0.3vw);
-    line-height: calc(1.2em + 0.3vw);
+    line-height: calc(1.4em + 0.3vw);
 }
 
 .tip-head {

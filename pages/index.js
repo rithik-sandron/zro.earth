@@ -7,15 +7,15 @@ import List from './List.js';
 import Tip from './Tips.js';
 
 export default function Index({ news, anime, movies, tips }) {
-  const headPosts = news[6];
+  const heroPost = news[4];
   // const [search, setSearch] = useState('');
-  const [f, setf] = useState([]);
+  // const [f, setf] = useState([]);
   const [bg, setBg] = useState('');
   const [fore, setFore] = useState('');
 
   useEffect(() => {
     let image = new Image();
-    image.src = headPosts.coverImage;
+    image.src = heroPost.coverImage;
     image.onload = () => {
       let canvas = document.createElement('canvas');
       canvas.width = image.width;
@@ -48,21 +48,30 @@ export default function Index({ news, anime, movies, tips }) {
 
   return (
     <Layout bg={bg} fore={fore}>
-      <Tip bg={bg} fore={fore} post={tips[0]} title='quick tip' />
-      <HighlightContent post={headPosts} bg={bg} fore={fore} />
+      <HighlightContent
+        bg={bg}
+        fore={fore}
+        title={heroPost.title}
+        coverImage={heroPost.coverImage}
+        author={heroPost.author}
+        slug={heroPost.slug}
+        list={heroPost.list}
+      />
+      <Tip post={tips[0]} title='quick tip' />
       {/* <Search search={search} setSearch={setSearch} /> */}
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
       {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
 
 
-      <List bg={bg} fore={fore} posts={news} />
-      <List bg={bg} fore={fore} posts={anime} />
-      <List bg={bg} fore={fore} posts={movies} />
+      <List posts={news} />
+      <List posts={anime} />
+      <List posts={movies} />
     </Layout>
   )
 }
 
 export const getStaticProps = async () => {
+
   const news = getAllPosts('news', [
     'title',
     'author',

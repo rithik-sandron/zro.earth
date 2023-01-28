@@ -1,25 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
-export default function HighlightContent({ bg = '', fore = '', post =
-    { title: "", date: "", slug: "", list: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }
+export default function HighlightContent({
+    bg = '',
+    fore = '',
+    title = '',
+    coverImage = '',
+    slug = '',
+    list = ''
 }) {
 
-
     return (
-        <div className='head-content' style={{
-            backgroundColor: bg
-        }}>
+        <div className='head-content'
+            style={{
+                backgroundColor: bg
+            }}
+        >
             <Link
                 style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
-                as={`/posts/${post.list + "/" + post.slug}`}
-                href={`/posts/${post.list}/[slug]`} >
-                <div key={post.slug} className='head-content-container'>
+                as={`/posts/${list + "/" + slug}`}
+                href={`/posts/${list}/[slug]`} >
+                <div key={slug} className='head-content-container'>
 
-                    <img src={post.coverImage} className='image' alt='coverImage'
-                        style={{ border: `1px solid ${fore}`, boxShadow: `12px 12px 0 ${fore}` }} />
+                    <img src={coverImage} className='image' alt='coverImage'
+                        style={{ border: `1px solid ${fore}`, boxShadow: `12px 12px 0 ${fore}` }}
+                    />
                     <h1 className='post' style={{
                         color: fore,
-                    }}>{post.title}</h1>
+                    }}>{title}</h1>
                 </div>
             </Link>
 

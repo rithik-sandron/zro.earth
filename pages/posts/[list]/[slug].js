@@ -13,8 +13,8 @@ import Link from 'next/link.js'
 export default function Post({
   post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }
 }) {
-
-  const router = useRouter()
+  console.log('sdfsd')
+  const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -39,7 +39,7 @@ export default function Post({
               as={`/authors/${post.author.name}`}
               href="/authors/[name]">
               <div className='author-flex-container'>
-                <img className='profile-image' src={post.author.picture} alt={post.author.name} />
+                {/* <img className='profile-image' src={post.author.picture} alt={post.author.name} /> */}
                 <div className='author-flex'>
                   <span className='author-item'>{post.author.name}</span>
                   <time className='author-item' dateTime={post.date}>{post.date}</time>
@@ -56,8 +56,7 @@ export default function Post({
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params)
-  const post = getPostBySlug('movies', params.slug, [
+  const post = getPostBySlug(params.list, params.slug, [
     'title',
     'date',
     'list',
@@ -80,8 +79,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts('movies', ['slug', 'list'])
-
+  const posts = getAllPosts('', ['slug', 'list']);
   return {
     paths: posts.map((post) => {
       return {
