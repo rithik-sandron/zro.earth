@@ -15,8 +15,8 @@ export default function List({ posts = [
                 return (<Link
                     key={post.slug}
                     style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
-                    as={`/posts/${post.list + "/" + post.slug}`}
-                    href={`/posts/${post.list}/[slug]`} >
+                    as={`/posts/${post.slug}`}
+                    href={`/posts/[slug]`} >
                     <div className='post-title'>{post.title}</div>
                 </Link>)
             })}

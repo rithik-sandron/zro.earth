@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 
-import { getPostBySlug, getAllPosts } from '../../../lib/api.js'
+import { getPostBySlug, getAllPosts } from '../../lib/api.js'
 import Head from 'next/head'
-import markdownToHtml from '../../../lib/markdownToHtml'
-import Layout from '../../../components/Layout.js'
+import markdownToHtml from '../../lib/markdownToHtml'
+import Layout from '../../components/Layout.js'
 import React from 'react'
 import Link from 'next/link.js'
 
@@ -31,7 +31,7 @@ export default function Post({
               <meta property="og:image" content={post.coverImage} />
             </Head>
 
-
+           
             <h1>{post.title}</h1>
             <img className='image' src={post.coverImage} alt={`Cover Image for ${post.title}`} />
 
@@ -57,7 +57,7 @@ export default function Post({
 
 export async function getStaticProps({ params }) {
   console.log(params)
-  const post = getPostBySlug('movies', params.slug, [
+  const post = getPostBySlug('anime', params.slug, [
     'title',
     'date',
     'list',
@@ -80,7 +80,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts('movies', ['slug', 'list'])
+  const posts = getAllPosts('', ['slug', 'list'])
 
   return {
     paths: posts.map((post) => {

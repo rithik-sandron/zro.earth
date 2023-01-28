@@ -11,8 +11,8 @@ export default function HighlightContent({ bg = '', fore = '', post =
         }}>
             <Link
                 style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
-                as={`/posts/${post.list + "/" + post.slug}`}
-                href={`/posts/${post.list}/[slug]`} >
+                as={`/posts/${post.slug}`}
+                href={`/posts/[slug]`} >
                 <div key={post.slug} className='head-content-container'>
 
                     <img src={post.coverImage} className='image' alt='coverImage'
