@@ -368,7 +368,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .list-head {
-    font-size: 2em;
+    font-size: calc(1.5em + 0.2vw);
     padding: 0.8em;
     font-weight: 500;
     letter-spacing: 1px;
@@ -379,7 +379,7 @@ body::-webkit-scrollbar-thumb {
 .post-title {
     margin: 0.2em 0;
     padding: 0.6em;
-    font-size: 1.3em;
+    font-size: calc(1.1em + 0.3vw);
     border-top: 0.5px solid #22222260;
     color: #222;
     display: flex;
@@ -389,7 +389,7 @@ body::-webkit-scrollbar-thumb {
 .post-title::before {
     padding-right: 1em;
     padding-left: 0.2em;
-    font-size: 2em;
+    font-size: calc(1.6em + 0.2vw);
     font-weight: 800;
     counter-increment: section;
     content: counter(section);
@@ -400,16 +400,16 @@ body::-webkit-scrollbar-thumb {
 
 .tip-container {
     display: flex;
-    width: 100%;
+    width: calc(100% - 2em);
     height: fit-content;
     padding: 0.6em 1em;
     letter-spacing: 0.2px;
     justify-content: center;
+    font-size: calc(0.9em + 0.3vw);
 }
 
 .tip-head {
     display: inline-block;
-    font-size: 1.2em;
     min-width: fit-content;
     line-height: 28px;
     padding-right: 0.6em;
@@ -420,6 +420,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 .tip-title {
-    font-size: 1.2em;
     line-height: 28px;
 }
