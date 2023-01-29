@@ -7,7 +7,7 @@ export default function Layout({ bg, fore, children }) {
         <div id='common-body'>
             <Header bg={bg} fore={fore} />
             {children}
-            <Footer bg={bg} fore={fore} />
+            {/* <Footer bg={bg} fore={fore} /> */}
         </div>
     )
 }

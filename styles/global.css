@@ -323,14 +323,14 @@ body::-webkit-scrollbar-thumb {
     }
 
     .list-container {
-        width: 90%;
+        width: 82%;
     }
 }
 
 @media screen and (min-width:751px) {
 
     .list-container {
-        width: 70%;
+        width: 80%;
     }
 
     .head-content-container {
@@ -365,6 +365,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     font-size: calc(0.9em + 0.4vw);
     line-height: calc(1.4em + 0.3vw);
+    margin-bottom: 3em;
 }
 
 .tip-head {
@@ -381,9 +382,9 @@ body::-webkit-scrollbar-thumb {
     max-width: 900px;
     height: fit-content;
     margin: auto;
-    margin: 3em auto;
-    padding: 0.6em;
-    border-radius: 0.4em;
+    margin: 0em auto;
+    padding: 2em 0.6em;
+    /* border-radius: 0.4em; */
     letter-spacing: 0.6px;
 }
 
@@ -472,7 +473,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     padding: 0;
     margin: 0;
-    margin-left: 1em;
+    margin-left: 24px;
 }
 
 .post-container:last-child {
@@ -492,7 +493,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
     margin: 0;
     position: absolute;
-    left: -0.8em;
+    left: -12px;
     margin-top: 1em;
 }
 

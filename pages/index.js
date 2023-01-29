@@ -65,7 +65,7 @@ export default function Index({ news, anime, movies, tips }) {
 
       <List posts={news} bg='#C3F0C8' fore= '#222'/>
       <List posts={anime} bg='#FFC864' fore= '#222' />
-      <List posts={movies} bg='rgb(255, 140, 130)' fore= '#222'/>
+      <List posts={movies} bg='rgb(255, 160, 130)' fore= '#222'/>
     </Layout>
   )
 }
