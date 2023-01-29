@@ -10,6 +10,10 @@
     --text-cyan-select: rgba(101, 219, 213, 0.498);
     --text-blue: #53ccf8;
     --bg-shadow: #555;
+
+    --news: #C3F0C8;
+    --anime: #FFC864;
+    --movies: rgb(255, 112, 112);
 }
 
 [data-theme="dark"] {
@@ -25,6 +29,10 @@
     --text-cyan-select: rgba(101, 219, 213, 0.498);
     --text-blue: #53ccf8;
     --bg-shadow: #dedede50;
+
+    --news: #C3F0C8;
+    --anime: #FFC864;
+    --movies: rgb(255, 112, 112);
 }
 
 .blog {
@@ -65,6 +73,7 @@
     max-width: 900px;
     margin: 0 auto;
 }
+
 .blog hr {
     display: block;
     border: 0;

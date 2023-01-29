@@ -7,7 +7,7 @@ import List from './List.js';
 import Tip from './Tips.js';
 
 export default function Index({ news, anime, movies, tips }) {
-  const heroPost = news[4];
+  const heroPost = news[2];
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
   const [bg, setBg] = useState('');
@@ -57,16 +57,15 @@ export default function Index({ news, anime, movies, tips }) {
         slug={heroPost.slug}
         list={heroPost.list}
       />
-      <Tip bg={bg}
-        fore={fore} post={tips[0]} title='quick tip' />
+      <Tip post={tips[0]} title='quick tip' />
       {/* <Search search={search} setSearch={setSearch} /> */}
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
       {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
 
 
-      <List posts={news} />
-      <List posts={anime} />
-      <List posts={movies} />
+      <List posts={news} bg='#C3F0C8' fore= '#222'/>
+      <List posts={anime} bg='#FFC864' fore= '#222' />
+      <List posts={movies} bg='rgb(255, 140, 130)' fore= '#222'/>
     </Layout>
   )
 }
@@ -104,6 +103,7 @@ export const getStaticProps = async () => {
     'content',
     'date',
     'slug',
+    'list'
   ])
 
   return {
