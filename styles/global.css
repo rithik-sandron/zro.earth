@@ -147,7 +147,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: flex-start;
     gap: 0.4em;
-    margin: 1.6em 0 0 0;
+    margin: 3em 0 0 0;
 }
 
 .author-flex {
@@ -212,7 +212,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    width: 90%;
+    width: 75%;
     gap: 0;
     padding: 0;
     max-width: 1200px;
@@ -222,13 +222,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head-content h1 {
-    font-size: calc(2.4em + 1vw);
-    color: var(--font-color);
+    display: block;
+    font-size: calc(1.6em + 2vw);
     line-height: 1.2em;
     letter-spacing: 0.3px;
     margin: 0 auto;
-    padding: 0.1em 0.2em;
-    width: 90%;
     height: fit-content;
     cursor: pointer;
     font-weight: 800;
@@ -246,8 +244,8 @@ body::-webkit-scrollbar-thumb {
     border-radius: 2px;
     object-fit: cover;
     border: none;
-    width: calc(20em + 20vmin);
-    height: calc(16em + 20vmin);
+    height: calc(15em + 20vmin);
+    width: calc(15em + 20vmin);
     margin: 0 auto;
     transition: all 0.1s ease-in-out;
 }

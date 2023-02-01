@@ -7,7 +7,7 @@ import List from './List.js';
 import Tip from './Tips.js';
 
 export default function Index({ news, anime, movies, tips }) {
-  const heroPost = news[3];
+  const heroPost = news[4];
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
   const [bg, setBg] = useState('');

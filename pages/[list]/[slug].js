@@ -21,7 +21,7 @@ export default function Post({
 
   return (
     <Layout>
-      <main style={{ paddingTop: '1em' }}>
+      <main>
         <article className='blog'>
           <Head>
             <title>{post.title} </title>
