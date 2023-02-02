@@ -46,49 +46,8 @@ export default function Index({ news, anime, movies, tips }) {
   //   }
   // }, [search])
 
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ]
-
-  const days = [
-    'Sun',
-    'Mon',
-    'Tue',
-    'Wed',
-    'Thu',
-    'Fri',
-    'Sat'
-  ]
-
-  // useEffect(() => {
-  //   const d = new Date();
-  //   const year = d.getFullYear();
-  //   const date = d.getDate();
-  //   const dayName = days[d.getDay()];
-  //   const monthName = months[d.getMonth()];
-  //   const time = d.toLocaleTimeString();
-  //   const formatted = `${dayName}, ${date} ${monthName} ${year}`;
-  //   document.getElementById('date').innerHTML = formatted;
-  // }, [])
-
   return (
     <Layout bg={bg} fore={fore}>
-
-      {/* <h1 id='date' className="headline" style={{
-        backgroundColor: bg, color: fore
-      }} /> */}
-
       <HighlightContent
         bg={bg}
         fore={fore}

@@ -38,19 +38,19 @@ export default function Tips({ post =
         document.getElementById('date').innerHTML = formatted;
     }, [])
 
-    useEffect(() => {
-        // time
-        setInterval(() => {
-            const d = new Date();
-            const year = d.getFullYear();
-            const date = d.getDate();
-            const dayName = days[d.getDay()];
-            const monthName = months[d.getMonth()];
-            const time = d.toLocaleTimeString();
-            const formatted = `${dayName}, ${date} ${monthName} ${year}`;
-            document.getElementById('date').innerHTML = formatted;
-        }, 1000)
-    }, []);
+    // useEffect(() => {
+    //     // time
+    //     setInterval(() => {
+    //         const d = new Date();
+    //         const year = d.getFullYear();
+    //         const date = d.getDate();
+    //         const dayName = days[d.getDay()];
+    //         const monthName = months[d.getMonth()];
+    //         const time = d.toLocaleTimeString();
+    //         const formatted = `${dayName}, ${date} ${monthName} ${year}`;
+    //         document.getElementById('date').innerHTML = formatted;
+    //     }, 1000)
+    // }, []);
 
     return (
         <div className='list-container'
