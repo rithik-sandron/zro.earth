@@ -46,7 +46,7 @@
 .blog {
     width: 90%;
     max-width: 900px;
-    margin: 1em auto;
+    margin: 0 auto;
 }
 
 .blog time {
@@ -603,7 +603,7 @@ ul>li {
 }
 
 .blog td {
-    font-size: calc(1em + 0.1vw);
+    font-size: calc(1.05em + 0.1vw);
     padding: 0.6em 1em;
 }
 

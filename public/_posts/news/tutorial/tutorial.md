@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial to create a new markdown file to create an article'
-coverImage: '3.png'
+coverImage: 'g.gif'
 date: '2023-01-13'
 list: news
 ---

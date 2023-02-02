@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import List from './List.js';
 import Tip from './Tips.js';
 
-export default function Index({ news, anime, movies, tips }) {
+export default function Index({ news, anime, movies, dev, tips }) {
   const heroPost = news[4];
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
@@ -63,6 +63,7 @@ export default function Index({ news, anime, movies, tips }) {
 
       <Tip post={tips[0]} title='quick tip' />
       <List posts={news} bg='#03C988' fore='#222' />
+      <List posts={dev} bg='#7743DB' fore='#222' />
       <List posts={anime} bg='#FC7300' fore='#222' />
       <List posts={movies} bg='#F55050' fore='#222' />
     </Layout>
@@ -98,6 +99,16 @@ export const getStaticProps = async () => {
     'coverImage',
   ])
 
+  const dev = getAllPosts('dev', [
+    'title',
+    'author',
+    'list',
+    'date',
+    'slug',
+    'coverImage',
+  ])
+
+
   const tips = getAllPosts('tips', [
     'content',
     'date',
@@ -106,6 +117,6 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { news, anime, movies, tips },
+    props: { news, anime, movies, dev, tips },
   }
 }
