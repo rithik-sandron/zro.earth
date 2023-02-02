@@ -301,7 +301,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 1px;
 }
 
-@media screen and (min-width: 101px) and (max-width: 800px) {
+@media screen and (min-width: 101px) and (max-width: 700px) {
     .head-content-container {
         flex-wrap: wrap;
         gap: 24px;
@@ -309,13 +309,14 @@ body::-webkit-scrollbar-thumb {
     }
 
     .head-content-container h1 {
-        margin-top: 0.6em;
-        margin-bottom: 1em;
+        margin-bottom: 0.6em;
+        margin-top: 0.2em;
     }
 
     .head-content-container .image {
-        height: calc(18em + 20vmin);
-        width: calc(100% - 12px);
+        width: 95%;
+        height: calc(10em + 20vmin);
+        margin-left: -0.8em;
     }
 
     .list-container {
@@ -323,7 +324,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media screen and (min-width:801px) {
+@media screen and (min-width:701px) {
 
     .list-container {
         width: 80%;
