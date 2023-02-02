@@ -234,12 +234,12 @@ body::-webkit-scrollbar-thumb {
 .head-content h1 {
     display: block;
     width: calc(100% - 2em);
-    font-size: 2.2em;
-    line-height: 1.4em;
+    font-size: calc(1em + 0.6vw);
+    line-height: 1.3em;
     letter-spacing: 0.3px;
     cursor: pointer;
     font-weight: 800;
-    padding: 1em;
+    padding: 0.6em 1em;
     margin: 0 auto;
 }
 
@@ -250,7 +250,7 @@ body::-webkit-scrollbar-thumb {
     border: none;
     transition: all 0.1s ease-in-out;
     width: 100%;
-    max-height: calc(350px + 12vw);
+    max-height: calc(200px + 16vw);
 }
 
 .search-container {
