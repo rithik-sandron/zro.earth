@@ -56,7 +56,7 @@ export default function Post({
             href="/authors/[name]">
             <div className='author-flex-container'>
               <img className='profile-image' src={post.author.picture} alt={post.author.name}
-                style={{ border: `1px solid ${fore}`, boxShadow: `5px 5px 0 ${fore}` }}
+                style={{ border: `1px solid ${fore}`, boxShadow: `3px 3px 0 ${fore}` }}
               />
                 <div className='author-flex'>
                   <span className='author-item'>{post.author.name}</span>

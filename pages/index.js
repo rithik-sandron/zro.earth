@@ -57,6 +57,7 @@ export default function Index({ news, anime, movies, dev, tips }) {
         slug={heroPost.slug}
         list={heroPost.list}
       />
+
       {/* <Search search={search} setSearch={setSearch} /> */}
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
       {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
