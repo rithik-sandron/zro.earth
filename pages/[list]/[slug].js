@@ -1,6 +1,3 @@
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-
 import { getPostBySlug, getAllPosts } from '../../lib/api.js'
 import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
@@ -14,23 +11,16 @@ export default function Post({
   post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", tagsWithColors: [{ tag: "", color: "" }] }
 }) {
 
-  // const router = useRouter()
-  // if (!router.isFallback && !post?.slug) {
-  //   return <ErrorPage statusCode={404} />
-  // }
-
   return (
     <Layout>
       <main>
         <article className='blog'>
           <Head>
-            <title>{post.title} </title>
+            <title>{post.title}</title>
             <meta property="og:image" content={post.coverImage} />
           </Head>
 
           <h1>{post.title}</h1>
-          <img className='image' src={post.coverImage} alt={`Cover Image for ${post.title}`} />
-
           <Link
             as={`/authors/${post.author.name}`}
             href="/authors/[name]">
@@ -42,7 +32,8 @@ export default function Post({
               </div>
             </div>
           </Link>
-
+          
+          <img className='post-image' src={post.coverImage} alt={`Cover Image for ${post.title}`} />
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
 

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial to crate a new markdwon file to create an article'
+title: 'Tutorial to create a new markdown file to create an article'
 coverImage: '4.png'
 date: '2023-01-13'
 list: news

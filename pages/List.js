@@ -9,9 +9,12 @@ export default function List({ bg = '', fore = '', posts = [
 
     return (
 
-        <div className='list-container'
-            style={{ backgroundColor: bg, color: fore }}>
-            <div className='list-head'>{title}</div>
+        <div className='list-container'>
+            <div className='list-head'
+                style={{
+                    borderTop: `18px solid ${bg}`
+                }}
+            >{title}</div>
             <div className='session'>
                 {posts.map(post => {
 

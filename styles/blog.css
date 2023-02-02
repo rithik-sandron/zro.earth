@@ -112,11 +112,11 @@
     letter-spacing: 0.01em;
     font-size: calc(2.2em + 1.3vw);
     /* color: var(--block-highlight-text-color); */
-    line-height: calc(1em + 0.4vw);
+    line-height: calc(1.1em + 0.4vw);
     text-decoration: underline;
     text-underline-offset: 3px;
-    background-color: #55555530;
-    padding: 0.2em;
+    /* background-color: #55555530; */
+    padding: 0.2em 0;
 }
 
 .blog h2 {

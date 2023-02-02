@@ -46,8 +46,49 @@ export default function Index({ news, anime, movies, tips }) {
   //   }
   // }, [search])
 
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ]
+
+  const days = [
+    'Sun',
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat'
+  ]
+
+  // useEffect(() => {
+  //   const d = new Date();
+  //   const year = d.getFullYear();
+  //   const date = d.getDate();
+  //   const dayName = days[d.getDay()];
+  //   const monthName = months[d.getMonth()];
+  //   const time = d.toLocaleTimeString();
+  //   const formatted = `${dayName}, ${date} ${monthName} ${year}`;
+  //   document.getElementById('date').innerHTML = formatted;
+  // }, [])
+
   return (
     <Layout bg={bg} fore={fore}>
+
+      {/* <h1 id='date' className="headline" style={{
+        backgroundColor: bg, color: fore
+      }} /> */}
+
       <HighlightContent
         bg={bg}
         fore={fore}
@@ -57,15 +98,14 @@ export default function Index({ news, anime, movies, tips }) {
         slug={heroPost.slug}
         list={heroPost.list}
       />
-      <Tip post={tips[0]} title='quick tip' />
       {/* <Search search={search} setSearch={setSearch} /> */}
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
       {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
 
-
-      <List posts={news} bg='#C3F0C8' fore= '#222'/>
-      <List posts={anime} bg='#FFC864' fore= '#222' />
-      <List posts={movies} bg='rgb(255, 160, 130)' fore= '#222'/>
+      <Tip post={tips[0]} title='quick tip' />
+      <List posts={news} bg='#03C988' fore='#222' />
+      <List posts={anime} bg='#FC7300' fore='#222' />
+      <List posts={movies} bg='#F55050' fore='#222' />
     </Layout>
   )
 }
