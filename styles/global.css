@@ -311,7 +311,6 @@ body::-webkit-scrollbar-thumb {
     padding: 1em;
     letter-spacing: 0.2px;
     font-size: calc(0.85em + 0.3vw);
-    line-height: calc(1.4em + 0.3vw);
     margin: 0 auto;
     max-width: 880px;
 }
@@ -343,7 +342,7 @@ body::-webkit-scrollbar-thumb {
 .tip-title {
     margin-left: 2.7em;
     font-size: calc(1em + 0.3vw);
-    line-height: calc(1.5em + 0.3vw);
+    line-height: calc(1.4em + 0.1vw);
 }
 
 .list-container {

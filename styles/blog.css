@@ -50,7 +50,6 @@
 }
 
 .blog time {
-    font-size: 14px;
     vertical-align: middle;
     margin-top: 1.8px;
 }
@@ -182,6 +181,7 @@ ul>li {
     align-items: center;
     font-size: calc(1.1em + 0.1vw);
     line-height: 1.6em;
+    padding: 4px 0;
 }
 
 .blog .o-list {
@@ -206,9 +206,9 @@ ul>li {
 .blog .u-list::before {
     content: '';
     background-color: var(--font-color);
-    height: 7px;
-    width: 7px;
-    min-width: 6px;
+    height: 8px;
+    width: 8px;
+    min-width: 8px;
     margin-right: 16px;
     margin-left: 8px;
     margin-top: 10px;
@@ -466,19 +466,6 @@ ul>li {
     margin-right: -50vw;
 }
 
-.block {
-    margin: 0;
-    font-size: calc(1.2em + 0.1vw);
-    line-height: 32px;
-    display: block;
-    background-color: #50c0fc3e;
-    border-top: 12px solid #1a74a4b3;
-    letter-spacing: 1px;
-    padding: 1em;
-    margin: 1em 0;
-    border-radius: 2px;
-}
-
 .tag {
     display: inline;
     border-radius: 2px;
@@ -498,20 +485,15 @@ ul>li {
 
 .tag-hash {
     display: inline-block;
-    border-radius: 4px;
-    color: var(--block-highlight-text-color);
     font-weight: 600;
-    font-family: monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 22px;
-    text-transform: uppercase;
     text-decoration: underline;
-    text-underline-offset: 2px;
-    font-size: 13px;
+    text-underline-offset: 4px;
 }
 
 .tag-hash::before {
     content: '# ';
-    font-family: monospace;
     display: inline-block;
     border-radius: 4px;
     color: var(--block-highlight-text-color);
@@ -554,6 +536,7 @@ ul>li {
     max-width: calc(100%);
     width: fit-content;
     overflow-x: auto;
+    margin: 1em 0;
 }
 
 .blog table::-webkit-scrollbar {
@@ -731,13 +714,15 @@ ul>li {
 
 .blog .card {
     width: fit-content;
-    padding: 4px 8px;
+    padding: 1em;
+    margin: 1em 0;
     border-radius: 4px;
     border: 1px solid var(--line-color);
-    background-color: var(--line-color-lighter);
-    font-size: 14px;
+    background-color: #7979794b;
+    box-shadow: 12px 12px 0 #7978787c;
     line-height: 22px;
-    margin: 12px 0;
+    font-size: calc(1.1em + 0.1vw);
+    line-height: calc(1.3em + 0.1vw);
 }
 
 .blog .ken-accordion {
@@ -765,7 +750,6 @@ ul>li {
 
 .blog .accordion-expand {
     cursor: pointer;
-    font-size: 14px;
     margin: 0;
     padding: 0;
 }
@@ -788,7 +772,6 @@ ul>li {
 
 .blog .accordion-close {
     cursor: pointer;
-    font-size: 14px;
     margin: 0;
     padding: 0;
 }
@@ -815,7 +798,6 @@ ul>li {
 @media screen and (min-width: 401px) and (max-width: 600px) {
 
     .blog td {
-        font-size: 13px;
         font-weight: 400;
     }
 
@@ -875,7 +857,6 @@ ul>li {
     padding: 0;
     margin: 0;
     margin-top: 4px;
-    font-size: 12px;
     line-height: 18px;
     font-weight: 300;
     letter-spacing: 0.02em;
@@ -924,7 +905,6 @@ ul>li {
     display: flex;
     align-items: center;
     font-family: monospace;
-    font-size: 14px;
     cursor: pointer;
 }
 
@@ -970,7 +950,6 @@ ul>li {
 .currentTime,
 .duration {
     font-family: monospace;
-    font-size: 12px;
     margin: 0 16px;
     height: fit-content;
 }
@@ -1072,4 +1051,39 @@ ul>li {
 .progressBar:active::-moz-range-thumb {
     transform: scale(1.2);
     background: var(--selectedKnobby);
+}
+
+.block {
+    --bbg-color: rgb(41, 151, 255);
+    --dot-color: rgba(246, 246, 246, 0.35);
+    line-height: calc(1.4em + 0.1vw);
+    letter-spacing: 0.4px;
+    margin: 1em 0;
+    padding: 0.6em;
+    color: var(--bg-color, black);
+    background-color: var(--bbg-color, white);
+    display: grid;
+    gap: 1rem;
+    background-size: 0.5em 0.5em;
+    box-shadow: 12px 12px 0 rgb(49, 74, 121);
+    font-size: calc(1.4em + 0.1vw);
+
+}
+
+.block::before {
+    --qHeight: 4rem;
+    content: "";
+    margin-left: calc(1em * -1);
+    margin-top: calc(1em * -1);
+    height: var(--qHeight);
+    width: calc(var(--qHeight) * 1.1);
+    background-image:
+        radial-gradient(circle at bottom right,
+            transparent calc(var(--qHeight) / 4 - 1px),
+            var(--accent-color, black) calc(var(--qHeight) / 4) calc(var(--qHeight) / 2),
+            transparent calc(var(--qHeight) / 2 + 1px)),
+        linear-gradient(var(--accent-color, black), var(--accent-color, black));
+    background-size: calc(var(--qHeight) / 2) calc(var(--qHeight) / 2);
+    background-position: top left, bottom left;
+    background-repeat: space no-repeat;
 }
