@@ -208,7 +208,7 @@ ul>li {
     background-color: var(--font-color);
     height: 8px;
     width: 8px;
-    min-width: 8px;
+    min-width: 8px; 
     margin-right: 16px;
     margin-left: 8px;
     margin-top: 10px;
@@ -713,16 +713,17 @@ ul>li {
 }
 
 .blog .card {
+    display: block;
     width: fit-content;
-    padding: 1em;
+    padding: 0.6em 1.1em;
     margin: 1em 0;
-    border-radius: 4px;
     border: 1px solid var(--line-color);
     background-color: #7979794b;
     box-shadow: 12px 12px 0 #7978787c;
     line-height: 22px;
     font-size: calc(1.1em + 0.1vw);
     line-height: calc(1.3em + 0.1vw);
+    width: 90%;
 }
 
 .blog .ken-accordion {
@@ -1059,7 +1060,7 @@ ul>li {
     line-height: calc(1.4em + 0.1vw);
     letter-spacing: 0.4px;
     margin: 1em 0;
-    padding: 0.6em;
+    padding: 0.9em;
     color: var(--bg-color, black);
     background-color: var(--bbg-color, white);
     display: grid;
@@ -1067,7 +1068,7 @@ ul>li {
     background-size: 0.5em 0.5em;
     box-shadow: 12px 12px 0 rgb(49, 74, 121);
     font-size: calc(1.4em + 0.1vw);
-
+    width: 90%;
 }
 
 .block::before {
