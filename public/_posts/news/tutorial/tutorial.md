@@ -50,7 +50,7 @@ let b = 12;
 ---
 
 ### Table
-| Number | Title | Year |
+| No | Title | Year |
 | 1 | Harry Potter and the Philosopher’s Stone | 2001 |
 ||||
 | 2 | Harry Potter and the Chamber of Secrets  | 2002 |

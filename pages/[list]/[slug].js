@@ -102,7 +102,7 @@ export default function Post({
 
 
   return (
-    <Layout>
+    <Layout bg={bg} fore={fore}>
       <main>
 
         <article>
@@ -116,12 +116,12 @@ export default function Post({
               maxWidth: '1200px', margin: 'auto'
             }}>
             <div key={post.slug} >
-              <img src={post.coverImage} className='post-image' alt='coverImage' />
               <h1 style={{
-                fontSize: 'calc(3em + 0.8vw)',
-                padding: '0.4em', margin: '0',
+                fontSize: 'calc(1.6em + 1.8vw)',
+                padding: '0.4em 1em', margin: '0',
                 color: fore, backgroundColor: bg
               }}>{post.title}</h1>
+              <img src={post.coverImage} className='post-image' alt='coverImage' />
             </div>
           </div>
 

@@ -51,7 +51,7 @@
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
-    font-size: calc(1.1em + 0.3vw);
+    font-size: calc(1em + 0.2vw);
 }
 
 /* Reset */
@@ -89,19 +89,19 @@ h3 {
 }
 
 h1 {
-    font-size: calc(2em + 0.8vw);
+    font-size: calc(1.8em + 0.8vw);
     font-weight: 600;
 }
 
 h2 {
-    font-size: calc(1.5em + 0.8vw);
-    font-weight: 500;
+    font-size: calc(1.4em + 0.8vw);
+    font-weight: 600;
     line-height: 1.2;
 }
 
 h3 {
     font-size: calc(1.15em + 0.8vw);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.3;
 }
 
@@ -253,7 +253,7 @@ blockquote {
     padding: 0.5em;
     background-color: var(--color-blue);
     box-shadow: 12px 12px 0 rgb(49, 74, 121);
-    font-size: calc(1.1em + 0.4vw);
+    font-size: calc(1.1em + 0.2vw);
     width: calc(100% - 1em - 12px);
     line-height: 1.4;
 }
@@ -292,6 +292,7 @@ tbody {
 td,
 th {
     padding: 0.4em;
+    font-size: calc(0.93em + 0.1vw);
 }
 
 tr {

@@ -47,7 +47,7 @@ export default function Index({ news, anime, movies, dev, tips }) {
   // }, [search])
 
   return (
-    <Layout bg={bg} fore={fore}>
+    <Layout>
       <HighlightContent
         bg={bg}
         fore={fore}

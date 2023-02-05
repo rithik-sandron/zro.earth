@@ -25,18 +25,28 @@ export default function Header({ bg = '', fore = '' }) {
     }
 
     return (
-        <div className="flex" id='head'>
+        <div className="flex" id='head'
+            style={{
+                backgroundColor: bg, color: fore
+            }}>
             <Head>
                 <title>Zero</title>
                 <link rel="shortcut icon" href="/favicon/favicon.ico" />
                 <meta name="msapplication-TileColor" content={theme ? dark : light} />
                 <meta name="theme-color" content={theme ? dark : light} />
             </Head>
-            <div className='flex-item-1'>
+            <div className='flex-item-1'
+
+            >
                 <Link as={`/`} href="/"
-                    style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
+                    style={{
+                        border: 'none', textDecoration: "none", color: 'transparent'
+                    }}
                 >
-                    <span className='panel-item' id='ken' />
+                    <span className='panel-item' id='ken'
+                        style={{
+                            color: fore
+                        }}>Zero</span>
                 </Link>
 
                 <span className='panel-item' onClick={switchTheme} id='face'>
