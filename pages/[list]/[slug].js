@@ -115,10 +115,11 @@ export default function Post({
             style={{
               maxWidth: '1200px', margin: 'auto'
             }}>
-            <div key={post.slug} >
+            <div key={post.slug}
+             >
               <h1 style={{
                 fontSize: 'calc(1.6em + 1.8vw)',
-                padding: '0.4em 1em', margin: '0',
+                padding: '0.4em 5%', margin: '0',
                 color: fore, backgroundColor: bg
               }}>{post.title}</h1>
               <img src={post.coverImage} className='post-image' alt='coverImage' />
