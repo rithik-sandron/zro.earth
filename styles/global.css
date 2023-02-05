@@ -153,7 +153,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: flex-start;
     gap: 1em;
     width: 90%;
-    margin: 3em auto;
+    margin: 2em auto;
     max-width: 1200px;
     margin-bottom: 0;
 }
@@ -165,7 +165,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .author-item {
-    padding: 0.4em 8px;
+    padding: 0.2em 8px;
     font-weight: 600;
     letter-spacing: 0.3px;
     font-size: calc(1em + 0.2vw);
@@ -173,10 +173,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .profile-image {
-    height: 4em;
-    width: 3em;
+    height: 3.6em;
+    width: 3.6em;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: 50%;
 }
 
 .content-list-container {
@@ -253,6 +253,16 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.1s ease-in-out;
     width: 100%;
     max-height: calc(200px + 16vw);
+}
+
+.post-image {
+    display: block;
+    padding: 0;
+    object-fit: cover;
+    border: none;
+    transition: all 0.1s ease-in-out;
+    width: 100%;
+    max-height: calc(250px + 16vw);
 }
 
 .search-container {
