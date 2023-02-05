@@ -50,11 +50,12 @@ body::-webkit-scrollbar-thumb {
 
 .headline {
     display: block;
-    font-size: calc(0.9em + 0.8vw);
+    font-size: calc(1.4em + 0.8vw);
     width: 100%;
     margin: 0;
     padding-bottom: 1em;
     padding-left: 0.5em;
+    font-weight: 700;
 }
 
 #face {
@@ -147,15 +148,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .author-flex-container {
-    display: block;
     color: var(--font-color);
     display: flex;
-    justify-content: flex-start;
     gap: 1em;
     width: 90%;
-    margin: 2em auto;
     max-width: 1200px;
-    margin-bottom: 0;
+    padding-bottom: 2em;
+    padding-left: calc(2em + 1.2vw);
+    margin: 0;
 }
 
 .author-flex {
@@ -165,9 +165,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .author-item {
-    padding: 0.2em 8px;
+    padding: 0.2em 0.1em;
     font-weight: 600;
-    letter-spacing: 0.3px;
     font-size: calc(1em + 0.2vw);
     align-self: flex-start;
 }
@@ -320,7 +319,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     padding: 1em;
     letter-spacing: 0.2px;
-    font-size: calc(0.85em + 0.3vw);
+    font-size: calc(0.85em + 0.2vw);
     margin: 0 auto;
     max-width: 880px;
 }
@@ -340,12 +339,12 @@ body::-webkit-scrollbar-thumb {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    box-shadow: 3px 3px 0 rgba(154, 150, 31, 0.588);
-    border: 2px solid;
     margin: 0;
     margin-right: 1em;
     margin-bottom: 3px;
-    background-color: yellow;
+    background-color: #fd0;
+    border: 2px solid rgba(183, 161, 18, 0.639);
+    box-shadow: 2.5px 2.5px 0 rgba(183, 161, 18, 0.639);
     vertical-align: middle;
 }
 
@@ -378,7 +377,7 @@ body::-webkit-scrollbar-thumb {
 .post-title {
     margin: 0.2em 0;
     padding: 0.8em;
-    font-size: calc(1em + 0.3vw);
+    font-size: calc(1em + 0.2vw);
     color: var(--font-color);
     display: flex;
     line-height: 24px;
@@ -388,13 +387,12 @@ body::-webkit-scrollbar-thumb {
 
 .post-title:hover,
 .post-title:active {
-    color: #000;
     padding: 0.8em 1em;
 }
 
 
 .session {
-    border-left: 2px solid #505054;
+    border-left: 2px solid var(--font-color);
     position: relative;
     padding: 0;
     margin: 0;
@@ -411,19 +409,13 @@ body::-webkit-scrollbar-thumb {
     content: '';
     width: 18px;
     height: 18px;
-    background: white;
-    border: 2px solid #525252;
-    box-shadow: 3px 3px 0 #515151c3;
+    background: var(--bg-color);
+    border: 2px solid var(--font-color);
+    box-shadow: 3px 3px 0 #55555580;
     border-radius: 50%;
     padding: 0;
     margin: 0;
     position: absolute;
     left: -12px;
     margin-top: 1em;
-}
-
-.time {
-    color: #2a2839;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
 }

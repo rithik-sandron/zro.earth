@@ -32,8 +32,8 @@ export default function Header({ bg = '', fore = '' }) {
             <Head>
                 <title>Zero</title>
                 <link rel="shortcut icon" href="/favicon/favicon.ico" />
-                <meta name="msapplication-TileColor" content={theme ? dark : light} />
-                <meta name="theme-color" content={theme ? dark : light} />
+                <meta name="msapplication-TileColor" content={bg ? bg : theme ? dark : light} />
+                <meta name="theme-color" content={bg ? bg : theme ? dark : light} />
             </Head>
             <div className='flex-item-1'
 

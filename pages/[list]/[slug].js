@@ -113,32 +113,39 @@ export default function Post({
 
           <div
             style={{
-              maxWidth: '1200px', margin: 'auto'
+              maxWidth: '1200px', margin: 'auto',
+              backgroundColor: bg
             }}>
             <div key={post.slug}
-             >
+            >
               <h1 style={{
                 fontSize: 'calc(1.6em + 1.8vw)',
-                padding: '0.4em 5%', margin: '0',
-                color: fore, backgroundColor: bg
+                margin: '0 auto',
+                width: '90%',
+                padding: '0.5em 0 0.7em 0',
+                color: fore
               }}>{post.title}</h1>
+              <Link
+                as={`/authors/${post.author.name}`}
+                href="/authors/[name]">
+                <div className='author-flex-container'
+                  style={{
+                    color: fore, backgroundColor: bg
+                  }}>
+                  <img className='profile-image' src={post.author.picture} alt={post.author.name}
+                  // style={{ border: `1px solid ${fore}`, boxShadow: `3px 3px 0 ${fore}` }}
+                  />
+                  <div className='author-flex'>
+                    <span className='author-item'>{post.author.name}</span>
+                    <time className='author-item' dateTime={post.date}>{post.date}</time>
+                  </div>
+                </div>
+              </Link>
               <img src={post.coverImage} className='post-image' alt='coverImage' />
             </div>
           </div>
 
-          <Link
-            as={`/authors/${post.author.name}`}
-            href="/authors/[name]">
-            <div className='author-flex-container'>
-              <img className='profile-image' src={post.author.picture} alt={post.author.name}
-              // style={{ border: `1px solid ${fore}`, boxShadow: `3px 3px 0 ${fore}` }}
-              />
-              <div className='author-flex'>
-                <span className='author-item'>{post.author.name}</span>
-                <time className='author-item' dateTime={post.date}>{post.date}</time>
-              </div>
-            </div>
-          </Link>
+
 
           {/* <img className='post-image' src={post.coverImage} alt={`Cover Image for ${post.title}`} /> */}
           <div dangerouslySetInnerHTML={{ __html: post.content }} className='blog' />
