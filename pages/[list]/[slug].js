@@ -119,10 +119,10 @@ export default function Post({
             <div key={post.slug}
             >
               <h1 style={{
-                fontSize: 'calc(1.6em + 1.8vw)',
+                fontSize: 'calc(1.65em + 1.8vw)',
                 margin: '0 auto',
                 width: '90%',
-                padding: '0.5em 0 0.7em 0',
+                padding: '0.2em 0 0.5em 0',
                 color: fore
               }}>{post.title}</h1>
               <Link

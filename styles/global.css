@@ -153,8 +153,8 @@ body::-webkit-scrollbar-thumb {
     gap: 1em;
     width: 90%;
     max-width: 1200px;
-    padding-bottom: 2em;
-    padding-left: calc(2em + 1.2vw);
+    padding-bottom: 1.4em;
+    padding-left: calc(1em + 2vw);
     margin: 0;
 }
 
