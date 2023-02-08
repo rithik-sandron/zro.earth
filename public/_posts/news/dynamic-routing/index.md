@@ -1,6 +1,6 @@
 ---
 title: 'Dynamic Routing and Static Generation'
-coverImage: 'san.jpeg'
+coverImage: '2.jpg'
 date: '2023-01-13'
 list: news
 ---

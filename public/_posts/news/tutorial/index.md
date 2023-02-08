@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial to create a new markdown file to create an article'
-coverImage: 'g.gif'
+coverImage: '1.jpg'
 date: '2023-01-13'
 list: news
 ---
@@ -17,6 +17,7 @@ This is paragrpagh on my new fake blog! How exciting! I'm sure I'll write a lot 
 
 ### Inline elements:
 - *Italic*
+- _Strike through_
 - **Bold**
 - `green code` 
 - ``amber code``

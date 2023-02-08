@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-import styles from '../styles/list.module.css'
+import styles from '../styles/List.module.css'
 
 export default function Tips({ post =
     { content: "", date: "", slug: "", coverImage: "" }

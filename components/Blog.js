@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/blog.module.css'
+import Image from './Image';
+import styles from '../styles/Blog.module.css'
 
 export default function Blog({
     post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "" }
@@ -21,11 +21,8 @@ export default function Blog({
                     <div className={styles.author} dateTime={post.date}>{post.date}</div>
                 </div>
                 <Image
-                    src={post.coverImage}
-                    alt={`Cover Image for ${post.title}`}
-                    className={styles.image}
-                    width={900}
-                    height={630}
+                    url={post.coverImage}
+                    alt={post.title}
                 />
             </div>
 

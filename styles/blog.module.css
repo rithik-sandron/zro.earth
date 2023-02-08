@@ -13,7 +13,7 @@
     margin: 0 auto;
     width: 100%;
     margin-bottom: 3em;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .container h1 {
@@ -31,18 +31,6 @@
     font-weight: 500;
     font-size: calc(1.1em + 0.2vw);
     max-width: 900px;
-}
-
-.image {
-    display: block;
-    padding: 0;
-    object-fit: cover;
-    border: none;
-    transition: all 0.1s ease-in-out;
-    width: 100%;
-    max-height: calc(260px + 16vw);
-    max-width: 900px;
-    margin: auto;
 }
 
 .time {
@@ -169,32 +157,18 @@
     color: rgb(22, 80, 134);
 }
 
-.green,
-.red,
-.amber {
+.blog *>code {
     font-family: monospace;
     text-transform: none;
     font-weight: 600;
 }
 
-.green {
-    color: var(--color-green);
-}
-
-.red {
-    color: var(--color-red);
-}
-
-.amber {
-    color: var(--color-amber);
-}
-
-.tag-notify {
+.blog sup {
     display: inline-block;
     border-radius: 4px;
 }
 
-.tag-notify::after {
+.blog sup::after {
     content: '';
     border-radius: 50%;
     display: inline-block;
@@ -204,14 +178,11 @@
     background-color: #E10600;
 }
 
-.tag-hash {
-    border-bottom: 0.1em solid var(--color-blue);
-    font-weight: 600;
-}
-
-.tag-hash::before {
-    content: '# ';
-    border-radius: 4px;
+.blog hash {
+    font-weight: 500;
+    font-style: oblique;
+    border-bottom: 0.14em solid;
+    letter-spacing: 0.04em;
 }
 
 .blog mark {
@@ -223,20 +194,21 @@
 
 .blog blockquote {
     display: block;
-    padding: 0.5em;
+    padding: 0.6em 1em;
     background-color: var(--color-blue);
     box-shadow: 12px 12px 0 rgb(49, 74, 121);
     font-size: calc(1.1em + 0.2vw);
     width: calc(100% - 1em - 12px);
-    line-height: 1.4;
+    line-height: 1.8;
 }
 
-.multi-line-code {
-    display: block;
+.blog code>pre {
     white-space: pre;
-    padding: 0.6em;
+    padding: 0.6em 1em;
     background-color: var(--line-color);
-    line-height: 1.6;
+    border: 0.5px solid #555555;
+    border-radius: 4px;
+    line-height: 1.8;
     overflow-x: auto;
 }
 
@@ -246,7 +218,7 @@
     font-family: monospace;
 }
 
-.blog .blog table {
+.blog table {
     display: flex;
     width: fit-content;
     border-radius: 4px;

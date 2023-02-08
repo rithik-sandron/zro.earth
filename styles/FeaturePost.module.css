@@ -1,0 +1,32 @@
+.content {
+  display: block;
+  width: calc(90% - 14px);
+  padding-right: 14px;
+  margin: 0 auto;
+  margin-bottom: 2.4em;
+  margin-top: 2em;
+  max-width: 900px;
+}
+
+.container {
+  display: grid;
+  flex-direction: row-reverse;
+  gap: 0;
+  padding: 0;
+  margin: 0 auto;
+  height: inherit;
+  max-height: 800px;
+  color: var(--font-color);
+}
+
+.title {
+  display: block;
+  width: calc(100% - 0.8em);
+  font-size: calc(1.8em + 0.6vw);
+  line-height: 1.3em;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  padding: 0.4em;
+  margin: 0 auto;
+  font-weight: 600;
+}

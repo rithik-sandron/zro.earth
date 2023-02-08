@@ -1,5 +1,5 @@
 import { getAllPosts } from '../lib/api.js'
-import HighlightContent from '../components/HighlightContent'
+import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout.js';
 // import Search from "../components/Search";
 import List from '../components/List.js';
@@ -67,7 +67,7 @@ export default function Index({ news =
 
   return (
     <Layout>
-      <HighlightContent
+      <FeaturePost
         title={heroPost.title}
         coverImage={heroPost.coverImage}
         author={heroPost.author}

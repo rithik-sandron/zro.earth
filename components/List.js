@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../styles/list.module.css'
+import styles from '../styles/List.module.css'
 
 export default function List({ bg = '', fore = '', posts = [
     { date: "", slug: "", list: "" }]
