@@ -1,13 +1,13 @@
-import Footer from "../pages/Footer";
-import Header from "../pages/Header";
+import Header from "./Header";
+import Meta from './Meta'
+import styles from '../styles/Layout.module.css'
 
-export default function Layout({ bg, fore, children }) {
-    
-    return (
-        <div id='common-body'>
-            <Header bg={bg} fore={fore} />
-            {children}
-            {/* <Footer bg={bg} fore={fore} /> */}
-        </div>
-    )
+export default function Layout({ children, bg = '', fore = '' }) {
+  return (
+    <div id={styles.common}>
+      <Header bg={bg} fore={fore} />
+      {children}
+      {/* <Footer bg={bg} fore={fore} /> */}
+    </div>
+  );
 }

@@ -1,0 +1,60 @@
+.flex {
+  display: block;
+}
+
+.flexContainer {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em 0 1em 0;
+  justify-content: space-between;
+}
+
+.panel {
+  display: inline;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.panel-item:active {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+#face {
+  display: flex;
+  margin: 0.5em 0;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--bg-color);
+
+}
+
+#theme {
+  display: block;
+  margin: auto;
+  padding: 0.5em;
+  background-color: var(--font-color);
+}
+
+#ken {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: calc(2.8em + 0.8vw);
+  width: fit-content;
+  padding: 0;
+  line-height: 32px;
+  border-radius: 1px;
+  color: var(--font-color);
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,33 +1,36 @@
 
 import React, { useEffect } from "react";
+import styles from '../styles/list.module.css'
+
 export default function Tips({ post =
     { content: "", date: "", slug: "", coverImage: "" }
 }) {
 
-    const months = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
-    ]
-    const days = [
-        'Sun',
-        'Mon',
-        'Tue',
-        'Wed',
-        'Thu',
-        'Fri',
-        'Sat'
-    ]
     useEffect(() => {
+        const months = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December'
+        ]
+        const days = [
+            'Sun',
+            'Mon',
+            'Tue',
+            'Wed',
+            'Thu',
+            'Fri',
+            'Sat'
+        ]
+
         const d = new Date();
         const year = d.getFullYear();
         const date = d.getDate();
@@ -53,13 +56,13 @@ export default function Tips({ post =
     // }, []);
 
     return (
-        <div className='list-container'
+        <div className={styles.container}
             style={{ display: 'flex', flexDirection: 'column' }}
         >
-            <h1 id='date' className="headline" />
+            <h1 id='date' className={styles.headline} />
 
-            <span className='tip-not'>Today's Tip</span>
-            <span className='tip-title'>{post.content}</span>
+            <span className={styles.tipTitle}>Today&apos;s Tip</span>
+            <span className={styles.tipContent}>{post.content}</span>
         </div>
     )
 }

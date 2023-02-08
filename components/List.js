@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import styles from '../styles/list.module.css'
 
 export default function List({ bg = '', fore = '', posts = [
     { date: "", slug: "", list: "" }]
@@ -9,23 +10,23 @@ export default function List({ bg = '', fore = '', posts = [
 
     return (
 
-        <div className='list-container'>
-            <div className='list-head'
+        <div className={styles.container}>
+            <div className={styles.head}
                 style={{
                     borderTop: `18px solid ${bg}`
                 }}
             >{title}</div>
-            <div className='session'>
+            <div className={styles.list}>
                 {posts.map(post => {
 
                     return (
-                        <Link
+                        <Link passHref
                             key={post.slug}
                             style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
                             as={`/${post.list}/${post.slug}`}
                             href={`/[list]/[slug]`} >
-                            <div className='post-container'>
-                                <div className='post-title'>{post.title}</div>
+                            <div className={styles.post}>
+                                <div className={styles.title}>{post.title}</div>
                             </div>
                         </Link>
                     )

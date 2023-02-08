@@ -1,34 +1,53 @@
 import { getAllPosts } from '../lib/api.js'
-import HighlightContent from './HighlightContent'
+import HighlightContent from '../components/HighlightContent'
 import Layout from '../components/Layout.js';
 // import Search from "../components/Search";
-import React, { useState, useEffect } from 'react';
-import List from './List.js';
-import Tip from './Tips.js';
+import List from '../components/List.js';
+import Tip from '../components/Tips.js';
 
-export default function Index({ news, anime, movies, dev, tips }) {
+export default function Index({ news =
+  {
+    'title': '',
+    'author': '',
+    'list': '',
+    'date': '',
+    'slug': '',
+    'coverImage': '',
+  }, anime =
+  {
+    'title': '',
+    'author': '',
+    'list': '',
+    'date': '',
+    'slug': '',
+    'coverImage': '',
+  }, movies =
+  {
+    'title': '',
+    'author': '',
+    'list': '',
+    'date': '',
+    'slug': '',
+    'coverImage': '',
+  }, dev =
+  {
+    'title': '',
+    'author': '',
+    'list': '',
+    'date': '',
+    'slug': '',
+    'coverImage': '',
+  }, tips =
+  {
+    'author': '',
+    'list': '',
+    'date': '',
+    'slug': '',
+  } }) {
+
   const heroPost = news[4];
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
-  const [bg, setBg] = useState('');
-  const [fore, setFore] = useState('');
-
-  useEffect(() => {
-    let image = new Image();
-    image.src = heroPost.coverImage;
-    image.onload = () => {
-      let canvas = document.createElement('canvas');
-      canvas.width = image.width;
-      canvas.height = image.height;
-      const ctx = canvas.getContext("2d");
-      ctx.drawImage(image, 0, 0);
-      let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      const imageLength = Math.round((imageData.data.length - 1) / 3);
-
-      setBg(`rgb(${imageData.data[imageLength]}, ${imageData.data[imageLength + 1]}, ${imageData.data[imageLength + 2]})`);
-      setFore(`rgb(${255 - imageData.data[imageLength]}, ${255 - imageData.data[imageLength + 1]}, ${255 - imageData.data[imageLength + 2]})`);
-    }
-  }, [])
 
   // useEffect(() => {
   //   if (search !== "") {
@@ -49,8 +68,6 @@ export default function Index({ news, anime, movies, dev, tips }) {
   return (
     <Layout>
       <HighlightContent
-        bg={bg}
-        fore={fore}
         title={heroPost.title}
         coverImage={heroPost.coverImage}
         author={heroPost.author}
@@ -80,6 +97,7 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'coverImage',
+    // 'count'
   ])
 
   const anime = getAllPosts('anime', [
@@ -89,6 +107,7 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'coverImage',
+    // 'count'
   ])
 
   const movies = getAllPosts('movies', [
@@ -98,6 +117,7 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'coverImage',
+    // 'count'
   ])
 
   const dev = getAllPosts('dev', [
@@ -107,6 +127,7 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'coverImage',
+    // 'count'
   ])
 
 
@@ -114,7 +135,8 @@ export const getStaticProps = async () => {
     'content',
     'date',
     'slug',
-    'list'
+    'list',
+    // 'count'
   ])
 
   return {

@@ -33,14 +33,6 @@ This is paragrpagh on my new fake blog! How exciting! I'm sure I'll write a lot 
 
 ---
 
-### Accordion
->a click me
-++
-> This is paragrpagh on my new fake blog! How exciting! I'm sure I'll write a lot more interesting things in the future.
-++
-
----
-
 ### Code blocks
 ```
 const a = "qwerty"
