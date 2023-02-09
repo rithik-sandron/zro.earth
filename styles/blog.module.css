@@ -70,11 +70,16 @@
 }
 
 .blog p,
-.blog li {
+.blog li,
+.blog dl {
     line-height: 1.4;
     margin: 1em 0;
     margin-bottom: 0;
     letter-spacing: 0.03em;
+}
+
+.blog dl {
+    margin-left: -0.6em;
 }
 
 .blog p {
@@ -96,43 +101,19 @@
 .blog ol li:before {
     content: counters(number, ".") ". ";
     font-weight: 700;
-    margin-right: 0.4em;
+    margin-right: 1em;
 }
 
 .blog ul li {
     margin-left: 1em;
-    padding-left: 0.4em;
+    padding-left: 0.8em;
 }
 
-.blog .checkbox {
+.blog dd {
     display: flex;
-    align-items: baseline;
-    margin: 0;
-    margin-bottom: 0.4em;
-}
-
-.blog .checked::before {
-    content: '';
-    display: flex;
-    margin-right: 0.8em;
-    margin-left: 3px;
-    height: 0.6em;
-    width: 0.3em;
-    border-bottom: 0.2em solid var(--color-green);
-    border-right: 0.2em solid var(--color-green);
-    transform: rotate(45deg);
-}
-
-.blog .unchecked::before {
-    content: '';
-    width: 0.6em;
-    height: 0.6em;
-    border: 0.15em solid var(--color-red);
-    display: flex;
+    gap: 1em;
     flex-direction: row;
-    align-self: center;
-    margin-right: 0.7em;
-    border-radius: 50%;
+    margin: 0.4em 0;
 }
 
 .blog em {
@@ -178,7 +159,7 @@
     background-color: #E10600;
 }
 
-.blog hash {
+.blog span {
     font-weight: 500;
     font-style: oblique;
     border-bottom: 0.14em solid;
@@ -195,11 +176,14 @@
 .blog blockquote {
     display: block;
     padding: 0.6em 1em;
-    background-color: var(--color-blue);
-    box-shadow: 12px 12px 0 rgb(49, 74, 121);
+    background-color: rgba(74, 176, 249, 0.296);
+    border-radius: 4px;
+    border: 0.5px solid rgba(23, 157, 252, 0.753);
     font-size: calc(1.1em + 0.2vw);
-    width: calc(100% - 1em - 12px);
+    /* width: calc(100% - 1em - 12px); */
     line-height: 1.8;
+    letter-spacing: 0.05em;
+    font-weight: 500;
 }
 
 .blog code>pre {

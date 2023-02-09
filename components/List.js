@@ -2,20 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/List.module.css'
 
-export default function List({ bg = '', fore = '', posts = [
+export default function List({ bg = '', posts = [
     { date: "", slug: "", list: "" }]
 }) {
 
-    const title = posts[0].list;
-
     return (
-
         <div className={styles.container}>
             <div className={styles.head}
                 style={{
-                    borderTop: `18px solid ${bg}`
+                    borderTop: `8px solid ${bg}`
                 }}
-            >{title}</div>
+            >{posts[0].list}</div>
             <div className={styles.list}>
                 {posts.map(post => {
 

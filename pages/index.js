@@ -2,50 +2,26 @@ import { getAllPosts } from '../lib/api.js'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout.js';
 // import Search from "../components/Search";
-import List from '../components/List.js';
 import Tip from '../components/Tips.js';
+import Lists from '../components/Lists.js';
 
-export default function Index({ news =
-  {
+
+export default function Index({
+  list = [{
     'title': '',
-    'author': '',
+    'author': { name: "", picture: "" },
     'list': '',
     'date': '',
     'slug': '',
     'coverImage': '',
-  }, anime =
-  {
-    'title': '',
-    'author': '',
-    'list': '',
-    'date': '',
-    'slug': '',
-    'coverImage': '',
-  }, movies =
-  {
-    'title': '',
-    'author': '',
-    'list': '',
-    'date': '',
-    'slug': '',
-    'coverImage': '',
-  }, dev =
-  {
-    'title': '',
-    'author': '',
-    'list': '',
-    'date': '',
-    'slug': '',
-    'coverImage': '',
-  }, tips =
-  {
+  }],
+  tips = {
     'author': '',
     'list': '',
     'date': '',
     'slug': '',
   } }) {
-
-  const heroPost = news[4];
+  const heroPost = list[0][4];
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
 
@@ -80,10 +56,7 @@ export default function Index({ news =
       {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
 
       <Tip post={tips[0]} title='quick tip' />
-      <List posts={news} bg='#03C988' fore='#222' />
-      <List posts={dev} bg='#7743DB' fore='#222' />
-      <List posts={anime} bg='#FC7300' fore='#222' />
-      <List posts={movies} bg='#F55050' fore='#222' />
+      <Lists list={list}/>
     </Layout>
   )
 }
@@ -97,7 +70,6 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'coverImage',
-    // 'count'
   ])
 
   const anime = getAllPosts('anime', [
@@ -107,7 +79,6 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'coverImage',
-    // 'count'
   ])
 
   const movies = getAllPosts('movies', [
@@ -117,7 +88,6 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'coverImage',
-    // 'count'
   ])
 
   const dev = getAllPosts('dev', [
@@ -127,7 +97,6 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'coverImage',
-    // 'count'
   ])
 
 
@@ -136,10 +105,8 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'list',
-    // 'count'
   ])
-
   return {
-    props: { news, anime, movies, dev, tips },
+    props: { list: [news, anime, movies, dev], tips: tips },
   }
 }
