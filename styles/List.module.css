@@ -13,7 +13,8 @@
   width: 50%;
   font-size: calc(1.4em + 0.6vw);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 0.4em 0;
+  padding: 0.3em 0;
+  margin-bottom: 0.4em;
   font-weight: 700;
   letter-spacing: -0.2px;
   text-transform: capitalize;
@@ -53,7 +54,7 @@
   content: '';
   width: 18px;
   height: 18px;
-  background: var(--bg-color);
+  background: rgb(247, 247, 247);
   border: 2px solid var(--font-color);
   box-shadow: 3px 3px 0 #55555580;
   border-radius: 50%;
@@ -68,7 +69,7 @@
 .tipTitle {
   display: inline-block;
   padding: 0;
-  padding: 0 0.6em 0.6em 0.6em;
+  padding: 0 0.6em 0.6em 0;
   margin: 0;
   font-size: calc(1em + 0.3vw);
   font-weight: 600;
@@ -90,7 +91,7 @@
 }
 
 .tipContent {
-  margin-left: 2.7em;
+  margin-left: 2em;
   font-size: calc(1em + 0.3vw);
   line-height: calc(1.4em + 0.1vw);
 }

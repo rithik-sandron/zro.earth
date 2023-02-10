@@ -6,7 +6,9 @@ export default function FeaturePost({
     title = '',
     coverImage = '',
     slug = '',
-    list = ''
+    list = '',
+    bg = '',
+    fore = ''
 }) {
 
     return (
@@ -16,13 +18,15 @@ export default function FeaturePost({
                 as={`/${list}/${slug}`}
                 href={`/[list]/[slug]`} >
                 <div key={slug} className={styles.container}
-                    style={{ border: `1px solid`, boxShadow: `14px 14px 0` }}
+                    style={{ border: `1px solid ${fore}`, boxShadow: `14px 14px 0 ${fore}` }}
                 >
-                    <Image
+                    {coverImage && <Image
                         url={coverImage}
                         alt={title}
-                    />
-                    <h1 className={styles.title}>{title}</h1>
+                    />}
+                    <h1
+                        style={{ backgroundColor: bg, color: fore }}
+                        className={styles.title}>{title}</h1>
                 </div>
             </Link>
         </div >

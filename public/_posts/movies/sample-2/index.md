@@ -1,5 +1,5 @@
 ---
-title: 'Dynamic Routing and Static Generation'
+title: 'ra. Fringilla ut morbi tincidunt augue interdum ve'
 coverImage: '2.png'
 date: '2023-01-13'
 list: movies

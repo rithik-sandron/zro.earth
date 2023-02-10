@@ -9,7 +9,8 @@ export default function Footer({ url, alt }) {
         oultine: 'none',
         transition: 'all 0.1s ease -in -out',
         width: '100%',
-        maxHeight: 'calc(360px + 12vw)',
+        height: '36vh',
+        maxHeight: '36vh',
         maxWidth: '900px',
         margin: 'auto',
     }

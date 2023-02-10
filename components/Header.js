@@ -27,14 +27,20 @@ export default function Header({ bg = '', fore = '' }) {
   }
 
   return (
-    <div className={styles.flex} id={styles.head}>
+    <div className={styles.flex} id={styles.head}
+    style={{ 
+      backgroundColor: bg ? bg : theme ? dark : light,
+      color: fore ? fore : theme ? dark : light
+
+     }}>
       <Head>
         <title>Zero</title>
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="msapplication-TileColor" content={bg ? bg : theme ? dark : light} />
         <meta name="theme-color" content={bg ? bg : theme ? dark : light} />
       </Head>
-      <div className={styles.flexContainer}>
+      <div className={styles.flexContainer}
+      >
         <Link passHref as={`/`} href="/"
           style={{
             border: 'none', textDecoration: "none", color: 'transparent'

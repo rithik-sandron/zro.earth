@@ -1,5 +1,5 @@
 ---
-title: 'Dynamic Routing and Static Generation'
+title: ' dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi'
 coverImage: '1.png'
 date: '2023-01-13'
 list: movies

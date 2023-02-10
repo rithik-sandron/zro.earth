@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/List.module.css'
 
-export default function List({ bg = '', posts = [
+export default function List({ posts = [
     { date: "", slug: "", list: "" }]
 }) {
 
@@ -10,7 +10,7 @@ export default function List({ bg = '', posts = [
         <div className={styles.container}>
             <div className={styles.head}
                 style={{
-                    borderTop: `8px solid ${bg}`
+                    borderBottom: `0.4em solid ${posts[0].color.bg}`
                 }}
             >{posts[0].list}</div>
             <div className={styles.list}>

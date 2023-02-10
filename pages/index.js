@@ -1,27 +1,28 @@
-import { getAllPosts } from '../lib/api.js'
+import { getAllPosts } from '../lib/api'
 import FeaturePost from '../components/FeaturePost'
-import Layout from '../components/Layout.js';
+import Layout from '../components/Layout';
 // import Search from "../components/Search";
-import Tip from '../components/Tips.js';
-import Lists from '../components/Lists.js';
+import Tip from '../components/Tips';
+import Lists from '../components/Lists';
 
 
 export default function Index({
+  tipIndex = 0,
   list = [{
+    'color': { bg: "", fore: "" },
     'title': '',
     'author': { name: "", picture: "" },
     'list': '',
     'date': '',
     'slug': '',
     'coverImage': '',
-  }],
-  tips = {
-    'author': '',
-    'list': '',
-    'date': '',
-    'slug': '',
-  } }) {
-  const heroPost = list[0][4];
+  }]
+}) {
+  // console.log(list)
+  const heroPost = list[0][0];
+  const tip = list[tipIndex][0];
+  list = list.slice(0, tipIndex);
+
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
 
@@ -43,70 +44,41 @@ export default function Index({
 
   return (
     <Layout>
+      <Tip post={tip} title='quick tip' />
+
       <FeaturePost
         title={heroPost.title}
         coverImage={heroPost.coverImage}
         author={heroPost.author}
         slug={heroPost.slug}
         list={heroPost.list}
+        bg={heroPost.color.bg}
+        fore={heroPost.color.fore}
       />
 
       {/* <Search search={search} setSearch={setSearch} /> */}
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
       {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
 
-      <Tip post={tips[0]} title='quick tip' />
-      <Lists list={list}/>
+      <Lists list={list} />
     </Layout>
   )
 }
 
 export const getStaticProps = async () => {
 
-  const news = getAllPosts('news', [
+  const list = getAllPosts([
     'title',
     'author',
     'list',
     'date',
     'slug',
-    'coverImage',
-  ])
-
-  const anime = getAllPosts('anime', [
-    'title',
-    'author',
-    'list',
-    'date',
-    'slug',
-    'coverImage',
-  ])
-
-  const movies = getAllPosts('movies', [
-    'title',
-    'author',
-    'list',
-    'date',
-    'slug',
-    'coverImage',
-  ])
-
-  const dev = getAllPosts('dev', [
-    'title',
-    'author',
-    'list',
-    'date',
-    'slug',
-    'coverImage',
-  ])
-
-
-  const tips = getAllPosts('tips', [
+    // 'coverImage',
     'content',
-    'date',
-    'slug',
-    'list',
+    'color',
   ])
+
   return {
-    props: { list: [news, anime, movies, dev], tips: tips },
+    props: { list: list.list, tipIndex: list.tipIndex },
   }
 }

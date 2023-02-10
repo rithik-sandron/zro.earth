@@ -1,4 +1,4 @@
-import { getPostBySlug, getAllPosts } from '../../lib/api.js'
+import { getPostBySlug, getAllPostsAsPath } from '../../lib/api.js'
 import markdownToHtml from '../../lib/markdownToHtml'
 import Layout from '../../components/Layout.js'
 import Blog from '../../components/Blog.js'
@@ -9,8 +9,9 @@ export default function Post({
 }) {
 
   return (
-    // <Layout bg={bg} fore={fore}>
-    <Layout>
+    <Layout
+    // bg={post.color.bg} fore={post.color.fore}
+    >
       <main>
         <Blog
           post={post}
@@ -21,9 +22,9 @@ export default function Post({
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts('', ['slug', 'list'])
+  const list = getAllPostsAsPath(['slug', 'list'])
   return {
-    paths: posts.map(post => {
+    paths: list.map(post => {
       return {
         params: {
           slug: post.slug,
@@ -31,12 +32,11 @@ export async function getStaticPaths() {
         },
       }
     }),
-    fallback: false,
+    fallback: false
   }
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params)
   const post = getPostBySlug(params.list, params.slug, [
     'title',
     'date',
@@ -45,6 +45,7 @@ export async function getStaticProps({ params }) {
     'author',
     'content',
     'coverImage',
+    'color',
   ])
 
   const content = await markdownToHtml(post.content || '')
