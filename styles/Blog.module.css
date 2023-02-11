@@ -12,14 +12,14 @@
     gap: 1em;
     margin: 0 auto;
     width: 100%;
-    margin-bottom: 2em;
-    margin-top: 1em;
+    padding-bottom: 2em;
+    padding-top: 1em;
 }
 
 .container h1 {
     font-size: calc(1.65em + 1.8vw);
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     max-width: 900px;
     font-weight: 600;
 }
@@ -28,12 +28,11 @@
     display: flex;
     width: 90%;
     margin: auto;
-    gap: 1em;
-    font-weight: 200;
+    gap: 0.6em;
+    font-weight: 300;
     font-size: calc(0.9em + 0.2vw);
     max-width: 900px;
     letter-spacing: 0.04em;
-    color: #888;
 }
 
 .blog hr {

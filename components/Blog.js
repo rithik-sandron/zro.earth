@@ -15,19 +15,21 @@ export default function Blog({
             </Head>
 
             <div
-                // style={{ backgroundColor: post.color.bg, color: post.color.fore }}
+                style={{ backgroundColor: post.color.bg, color: post.color.fore }}
             >
-                <div key={post.slug} className={styles.container}>
+                <div key={post.slug} className={styles.container}
+                >
                     <h1>{post.title}</h1>
-                    <div className={styles.author}>
-                        <div>by {post.author.name},</div>
+                    <div className={styles.author}
+                        style={{ color: post.color.fore }}>
+                        <div>{post.author.name},</div>
                         <div>{post.date}</div>
                     </div>
                 </div>
-                <Image
+                {/* <Image
                     url={post.coverImage}
                     alt={post.title}
-                />
+                /> */}
             </div>
 
             <div dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />

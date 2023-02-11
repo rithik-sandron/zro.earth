@@ -10,7 +10,7 @@ export default function Post({
 
   return (
     <Layout
-    // bg={post.color.bg} fore={post.color.fore}
+    bg={post.color.bg} fore={post.color.fore}
     >
       <main>
         <Blog

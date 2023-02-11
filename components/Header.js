@@ -28,11 +28,11 @@ export default function Header({ bg = '', fore = '' }) {
 
   return (
     <div className={styles.flex} id={styles.head}
-    style={{ 
-      backgroundColor: bg ? bg : theme ? dark : light,
-      color: fore ? fore : theme ? dark : light
+      style={{
+        backgroundColor: bg ? bg : theme ? dark : light,
+        color: fore ? fore : theme ? dark : light
 
-     }}>
+      }}>
       <Head>
         <title>Zero</title>
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
@@ -46,7 +46,9 @@ export default function Header({ bg = '', fore = '' }) {
             border: 'none', textDecoration: "none", color: 'transparent'
           }}
         >
-          <span className={styles.panel} id={styles.ken}>Zero</span>
+          <span className={styles.panel} id={styles.ken}
+            style={{ color: fore }}
+          >Zero</span>
         </Link>
 
         <span className={styles.panel} onClick={switchTheme} id={styles.face}>
