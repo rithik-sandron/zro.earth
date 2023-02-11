@@ -41,11 +41,10 @@ export default function Header({ bg = '', fore = '' }) {
       </Head>
       <div className={styles.flexContainer}
       >
-        <Link passHref as={`/`} href="/"
+        <Link as={`/`} href="/"
           style={{
             border: 'none', textDecoration: "none", color: 'transparent'
-          }}
-        >
+          }}>
           <span className={styles.panel} id={styles.ken}
             style={{ color: fore }}
           >Zero</span>

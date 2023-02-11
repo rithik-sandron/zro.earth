@@ -9,13 +9,9 @@ export default function Post({
 }) {
 
   return (
-    <Layout
-    bg={post.color.bg} fore={post.color.fore}
-    >
+    <Layout bg={post.color.bg} fore={post.color.fore}>
       <main>
-        <Blog
-          post={post}
-        />
+        <Blog post={post} />
       </main>
     </Layout>
   )

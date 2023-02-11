@@ -17,7 +17,7 @@ export default function List({ posts = [
                 {posts.map(post => {
 
                     return (
-                        <Link passHref
+                        <Link
                             key={post.slug}
                             style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
                             as={`/${post.list}/${post.slug}`}

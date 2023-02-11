@@ -13,7 +13,7 @@ export default function FeaturePost({
 
     return (
         <div className={styles.content}>
-            <Link passHref
+            <Link
                 style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
                 as={`/${list}/${slug}`}
                 href={`/[list]/[slug]`} >
