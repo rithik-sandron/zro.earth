@@ -1,5 +1,4 @@
 import Header from "./Header";
-import Meta from './Meta'
 import styles from '../styles/Layout.module.css'
 
 export default function Layout({ children, bg = '', fore = '' }) {

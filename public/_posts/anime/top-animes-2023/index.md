@@ -2,7 +2,7 @@
 title: 'top-animes-2023'
 coverImage: 'san.jpeg'
 date: '2023-01-13'
-list: news
+list: anime
 ---
 An h1 header
 

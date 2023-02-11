@@ -40,15 +40,16 @@
 #theme {
   display: block;
   margin: auto;
-  padding: 0.5em;
+  padding: 0.6em;
   background-color: var(--font-color);
+  border-radius: 50%;
 }
 
 #ken {
   display: block;
   text-decoration: none;
   font-weight: 700;
-  font-size: calc(2.8em + 0.8vw);
+  font-size: calc(2em + 0.8vw);
   width: fit-content;
   padding: 0;
   line-height: 32px;

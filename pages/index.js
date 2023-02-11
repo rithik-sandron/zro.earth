@@ -18,8 +18,9 @@ export default function Index({
     'coverImage': '',
   }]
 }) {
-  // console.log(list)
-  const heroPost = list[0][0];
+  const heroPost = list[3][0];
+  const heroPost2 = list[3][1];
+  const heroPost3 = list[3][2];
   const tip = list[tipIndex][0];
   list = list.slice(0, tipIndex);
 
@@ -46,15 +47,9 @@ export default function Index({
     <Layout>
       <Tip post={tip} title='quick tip' />
 
-      <FeaturePost
-        title={heroPost.title}
-        coverImage={heroPost.coverImage}
-        author={heroPost.author}
-        slug={heroPost.slug}
-        list={heroPost.list}
-        bg={heroPost.color.bg}
-        fore={heroPost.color.fore}
-      />
+      <FeaturePost post={heroPost} />
+      <FeaturePost post={heroPost2} />
+      <FeaturePost post={heroPost3} />
 
       {/* <Search search={search} setSearch={setSearch} /> */}
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
@@ -73,7 +68,7 @@ export const getStaticProps = async () => {
     'list',
     'date',
     'slug',
-    // 'coverImage',
+    'coverImage',
     'content',
     'color',
   ])

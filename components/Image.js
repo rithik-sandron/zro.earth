@@ -1,5 +1,5 @@
 import Image from "next/image";
-export default function Footer({ url, alt }) {
+export default function Footer({ url, alt, border }) {
 
     const style = {
         display: 'block',
@@ -9,10 +9,12 @@ export default function Footer({ url, alt }) {
         oultine: 'none',
         transition: 'all 0.1s ease -in -out',
         width: '100%',
-        height: '36vh',
-        maxHeight: '36vh',
+        height: '30vh',
+        maxHeight: '30vh',
         maxWidth: '900px',
         margin: 'auto',
+        borderTopLeftRadius: border && `12px`,
+        borderTopRightRadius: border && `12px`
     }
 
     return (

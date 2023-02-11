@@ -3,8 +3,8 @@
   width: calc(90% - 14px);
   padding-right: 14px;
   margin: 0 auto;
-  margin-bottom: 2.4em;
-  margin-top: 2em;
+  margin-bottom: 4em;
+  margin-top: 1.4em;
   max-width: 900px;
 }
 
@@ -17,6 +17,7 @@
   height: inherit;
   max-height: 800px;
   color: var(--font-color);
+  border-radius: 12px;
 }
 
 .title {
@@ -29,4 +30,6 @@
   padding: 0.4em;
   margin: 0 auto;
   font-weight: 600;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }

@@ -2,18 +2,26 @@ import { getPostBySlug, getAllPostsAsPath } from '../../lib/api.js'
 import markdownToHtml from '../../lib/markdownToHtml'
 import Layout from '../../components/Layout.js'
 import Blog from '../../components/Blog.js'
-
+import { useRouter } from 'next/router'
 
 export default function Post({
   post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "" }
 }) {
 
+  const router = useRouter()
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
+
   return (
-    <Layout bg={post.color.bg} fore={post.color.fore}>
+    <Layout bg={post.color.bg} fore={post.color.fore}
+      title={post.title}
+      coverImage={post.coverImage}
+    >
       <main>
         <Blog post={post} />
       </main>
-    </Layout>
+    </Layout >
   )
 }
 

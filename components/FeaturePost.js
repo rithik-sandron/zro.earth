@@ -1,34 +1,43 @@
-import Link from 'next/link';
 import Image from './Image';
 import styles from '../styles/FeaturePost.module.css'
+import { useRouter } from 'next/router';
 
-export default function FeaturePost({
-    title = '',
-    coverImage = '',
-    slug = '',
-    list = '',
-    bg = '',
-    fore = ''
+
+export default function FeaturePost({ post = {
+    title: '',
+    coverImage: '',
+    slug: '',
+    list: '',
+    color: { bg: "", fore: "" },
+}
 }) {
+
+    const router = useRouter();
+
+    function link(url) { router.push(url); }
 
     return (
         <div className={styles.content}>
-            <Link
+            {/* <Link
                 style={{ border: 'none', textDecoration: "none", color: 'transparent' }}
                 as={`/${list}/${slug}`}
-                href={`/[list]/[slug]`} >
-                <div key={slug} className={styles.container}
-                    style={{ border: `1px solid ${fore}`, boxShadow: `14px 14px 0 ${fore}` }}
-                >
-                    {coverImage && <Image
-                        url={coverImage}
-                        alt={title}
-                    />}
-                    <h1
-                        style={{ backgroundColor: bg, color: fore }}
-                        className={styles.title}>{title}</h1>
-                </div>
-            </Link>
+                href={`/[list]/[slug]`} > */}
+            <div key={post.slug} className={styles.container}
+                style={{ border: `2px solid ${post.color.fore}`, boxShadow: `-8px 8px 0 ${post.color.fore}` }}
+                onClick={() => link(post.list + "/" + post.slug)}>
+                {post.coverImage && <Image
+                    url={post.coverImage}
+                    alt={post.title}
+                    border
+                />}
+                <h1
+                    style={{
+                        backgroundColor: post.color.bg, color: post.color.fore,
+                        borderRadius: !post.coverImage && `12px`
+                    }}
+                    className={styles.title}>{post.title}</h1>
+            </div>
+            {/* </Link> */}
         </div >
     );
 }

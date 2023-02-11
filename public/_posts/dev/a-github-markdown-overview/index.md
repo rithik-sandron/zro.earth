@@ -2,7 +2,7 @@
 title: 'a github markdown overview'
 coverImage: '4.png'
 date: '2023-01-13'
-list: news
+list: dev
 ---
 
 This is intended as a quick reference and showcase. For more complete info, see John Gruber's original spec and the Github-flavored Markdown info page.

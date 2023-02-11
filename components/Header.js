@@ -1,9 +1,15 @@
-import Link from "next/link";
 import styles from '../styles/Header.module.css'
 import React, { useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from "next/router";
 
-export default function Header({ bg = '', fore = '' }) {
+export default function Header({ bg = '', fore = '', title = 'Zero', coverImage = '' }) {
+
+  const router = useRouter()
+
+  function back() {
+    if (router.route !== '/') router.back();
+  }
 
 
   const [theme, setTheme] = useState(false);
@@ -34,21 +40,24 @@ export default function Header({ bg = '', fore = '' }) {
 
       }}>
       <Head>
-        <title>Zero</title>
+        <title>{title}</title>
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="msapplication-TileColor" content={bg ? bg : theme ? dark : light} />
         <meta name="theme-color" content={bg ? bg : theme ? dark : light} />
+        {coverImage && <meta property="og:image" content={coverImage} />}
       </Head>
       <div className={styles.flexContainer}
       >
-        <Link as={`/`} href="/"
+        {/* <Link as={`/`} href="/"
           style={{
             border: 'none', textDecoration: "none", color: 'transparent'
-          }}>
-          <span className={styles.panel} id={styles.ken}
-            style={{ color: fore }}
-          >Zero</span>
-        </Link>
+          }}> */}
+        <span className={styles.panel} id={styles.ken}
+          onClick={back}
+          style={{ color: fore ? fore : theme ? light : dark }}
+        >Zero</span>
+
+        {/* </Link> */}
 
         <span className={styles.panel} onClick={switchTheme} id={styles.face}>
           <span id={styles.theme}></span>
