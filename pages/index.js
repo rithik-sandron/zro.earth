@@ -8,7 +8,6 @@ import Lists from '../components/Lists';
 
 export default function Index({
   tipIndex = 0,
-  blocks = [],
   list = [{
     'color': { bg: "", fore: "" },
     'title': '',
@@ -51,7 +50,7 @@ export default function Index({
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
       {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
 
-      <Lists list={list} blocks={blocks} />
+      <Lists list={list} />
     </Layout>
   )
 }
@@ -69,17 +68,7 @@ export const getStaticProps = async () => {
     'color',
   ])
 
-  function getRandomArb(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
-  }
-
-  let blocks = []
-
-  for (let i = 0; i < 17; i++) {
-    blocks.push(`b${getRandomArb(0, 16)}`);
-  }
-
   return {
-    props: { list: list.list, tipIndex: list.tipIndex, blocks: blocks }
+    props: { list: list.list, tipIndex: list.tipIndex }
   }
 }

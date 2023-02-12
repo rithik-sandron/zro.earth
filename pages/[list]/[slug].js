@@ -5,7 +5,7 @@ import Blog from '../../components/Blog.js'
 import { useRouter } from 'next/router'
 
 export default function Post({
-  blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "" }
+  post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "" }
 }) {
 
   const router = useRouter()
@@ -19,7 +19,7 @@ export default function Post({
       coverImage={post.coverImage}
     >
       <main>
-        <Blog post={post} blocks={blocks}/>
+        <Blog post={post} />
       </main>
     </Layout >
   )
@@ -51,16 +51,6 @@ export async function getStaticProps({ params }) {
     // 'coverImage',
     'color',
   ])
-
-  function getRandomArb(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
-  }
-
-  let blocks = []
-
-  for (let i = 0; i < 17; i++) {
-    blocks.push(`b${getRandomArb(0, 16)}`);
-  }
 
   const content = await markdownToHtml(post.content || '')
 

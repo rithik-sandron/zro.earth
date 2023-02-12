@@ -1,7 +1,7 @@
 import React from 'react';
 import List from '../components/List.js';
 
-export default function Lists({ blocks=[], list = [{
+export default function Lists({ list = [{
     'title': '',
     'author': { name: "", picture: "" },
     'list': '',
@@ -13,7 +13,7 @@ export default function Lists({ blocks=[], list = [{
     return (
         list.map((item, i) => {
             return (
-                <List posts={item} key={i} blocks={blocks}/>
+                <List posts={item} key={i} />
             )
         })
     )
