@@ -3,7 +3,7 @@ import styles from '../styles/List.module.css'
 import PixelBlock from './PixelBLock';
 import { useRouter } from 'next/router';
 
-export default function List({ posts = [
+export default function List({ blocks=[], posts = [
     { date: "", slug: "", list: "", 'color': { bg: "", fore: "" }, }]
 }) {
 
@@ -17,7 +17,7 @@ export default function List({ posts = [
                 <div className={styles.head}
                     style={{ color: posts[0].color.fore }}
                 >{posts[0].list}</div>
-                <PixelBlock bg={posts[0].color.bg} fore={posts[0].color.fore} />
+                <PixelBlock bg={posts[0].color.bg} fore={posts[0].color.fore} blocks={blocks}/>
 
             </div>
             <div className={styles.list}>

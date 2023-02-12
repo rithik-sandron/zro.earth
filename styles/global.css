@@ -154,7 +154,7 @@ body::-webkit-scrollbar-thumb {
 .barcode {
     display: flex;
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     height: 2em;
     margin: 0 auto;
 }
@@ -166,6 +166,8 @@ body::-webkit-scrollbar-thumb {
     height: 2em;
     width: 1em;
     z-index: 0;
+    overflow-y: visible;
+    overflow-x: hidden;
 }
 
 .barcode .b1 {
@@ -173,7 +175,7 @@ body::-webkit-scrollbar-thumb {
     height: 3em;
     width: 6em;
     margin-right: 1em;
-    margin-top: -1wm;
+    margin-top: -1em;
 }
 
 .barcode .b2 {

@@ -4,7 +4,7 @@ import PixelBlock from './PixelBLock';
 import Image from './Image'
 
 export default function Blog({
-    post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", color: { bg: '', fore: '' } }
+    blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", color: { bg: '', fore: '' } }
 }) {
 
     return (
@@ -20,7 +20,7 @@ export default function Blog({
                         <div>{post.date}</div>
                     </div>
                 </div>
-                <PixelBlock bg={post.color.bg} fore={post.color.fore} />
+                <PixelBlock bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
                 {post.coverImage && <Image
                     url={post.coverImage}
                     alt={post.title}
