@@ -23,7 +23,7 @@
 }
 
 .title {
-  font-size: calc(1.2em + 0.1vw);
+  font-size: calc(1.13em + 0.1vw);
   color: var(--font-color);
   display: flex;
   line-height: 24px;
