@@ -8,7 +8,7 @@ export default function Footer({ url, alt }) {
         border: 'none',
         transition: 'all 0.1s ease -in -out',
         width: '100%',
-        height: '30vh',
+        height: '26vh',
         maxHeight: '30vh',
         maxWidth: '900px',
         margin: '0 auto',

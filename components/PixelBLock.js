@@ -6,10 +6,12 @@ export default function PixelBlock({ bg, fore }) {
         return Math.round(Math.random() * (max - min) + min);
     }
 
+    const blocks = Array(16).fill();
+
     return (
         <div className='barcode' style={{ backgroundColor: bg }}>
             {
-                [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(x => {
+                blocks.map(x => {
                     return <div className={`b${getRandomArb(0, 16)}`} style={{ backgroundColor: fore }} />
                 })
             }

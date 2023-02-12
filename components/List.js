@@ -11,10 +11,6 @@ export default function List({ posts = [
 
     function link(url) { router.push(url); }
 
-    function getRandomArb(min, max) {
-        return Math.round(Math.random() * (max - min) + min);
-    }
-
     return (
         <div className={styles.container}>
             <div className={styles.headingTitleContainer}>

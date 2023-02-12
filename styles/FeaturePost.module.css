@@ -3,7 +3,7 @@
   width: calc(90% - 14px);
   padding-right: 14px;
   margin: 0 auto;
-  margin-bottom: 7em;
+  margin-bottom: 5em;
   max-width: 900px;
 }
 
@@ -29,5 +29,5 @@
   cursor: pointer;
   padding: 0.4em;
   margin: 0 auto;
-  font-weight: 600;
+  font-weight: 700;
 }

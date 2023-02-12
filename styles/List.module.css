@@ -8,7 +8,7 @@
 
 .headingTitleContainer {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
   flex-direction: column-reverse;
 }
 
@@ -23,7 +23,7 @@
 
 .post {
   display: flex;
-  margin: 0.5em;
+  margin: 0.5em 0;
 }
 
 .title {
@@ -42,6 +42,8 @@
   display: inline-block;
   width: 13px;
   height: 13px;
+  min-width: 13px;
+  min-height: 13px;
   padding: 0;
   margin: 0;
   margin-top: 0.34em;
@@ -78,7 +80,6 @@
 
 .tipContent {
   margin-left: 2em;
-  margin-bottom: 1em;
   font-size: calc(1.1em + 0.1vw);
   line-height: calc(1.4em + 0.1vw);
 }
