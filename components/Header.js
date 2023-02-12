@@ -46,17 +46,19 @@ export default function Header({ bg = '', fore = '', title = 'Zero', coverImage 
         <meta name="theme-color" content={bg ? bg : theme ? dark : light} />
         {coverImage && <meta property="og:image" content={coverImage} />}
       </Head>
+     
       <div className={styles.flexContainer}
       >
         {/* <Link as={`/`} href="/"
           style={{
             border: 'none', textDecoration: "none", color: 'transparent'
           }}> */}
+
         <span className={styles.panel} id={styles.ken}
           onClick={back}
           style={{ color: fore ? fore : theme ? light : dark }}
-        >Zero</span>
-
+        >
+          Zero</span>
         {/* </Link> */}
 
         <span className={styles.panel} onClick={switchTheme} id={styles.face}>

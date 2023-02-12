@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../styles/Blog.module.css'
+import PixelBlock from './PixelBLock';
 import Image from './Image'
 
 export default function Blog({
@@ -19,12 +20,12 @@ export default function Blog({
                         <div>{post.date}</div>
                     </div>
                 </div>
-                
-            </div>
-            {post.coverImage && <Image
+                <PixelBlock bg={post.color.bg} fore={post.color.fore} />
+                {post.coverImage && <Image
                     url={post.coverImage}
                     alt={post.title}
                 />}
+            </div>
             <div dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>
     );

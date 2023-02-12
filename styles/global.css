@@ -150,6 +150,140 @@ body::-webkit-scrollbar-thumb {
     border-radius: 1px;
 }
 
-img[loading='lazy'] {
-    clip-path: inset(0.6px);
+
+.barcode {
+    display: flex;
+    width: 100%;
+    height: 2em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.barcode>div {
+    float: left;
+    transform-origin: 0 0;
+    height: 2em;
+    width: 1em;
+    z-index: 0;
+}
+
+.barcode .b1 {
+    align-self: flex-end;
+    height: 3em;
+    width: 6em;
+    margin-right: 1em;
+    margin-top: -1wm;
+}
+
+.barcode .b2 {
+    align-self: flex-start;
+    height: 4em;
+    width: 1.5em;
+    margin-right: 1em;
+    margin-top: -1em;
+}
+
+.barcode .b3 {
+    align-self: flex-start;
+    height: 3em;
+    width: 3em;
+}
+
+.barcode .b4 {
+    align-self: flex-start;
+    height: 2em;
+    width: 4em;
+    margin-right: 2em;
+    margin-top: -0.5em;
+}
+
+.barcode .b5 {
+    align-self: flex-start;
+    height: 1em;
+    width: 3em;
+    margin-right: 2em;
+}
+
+.barcode .b6 {
+    align-self: flex-end;
+    height: 0.5em;
+    width: 8em;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.barcode .b7 {
+    align-self: flex-start;
+    height: 0.5em;
+    width: 4em;
+    margin-right: 2em;
+}
+
+.barcode .b8 {
+    align-self: flex-start;
+    height: 1em;
+    width: 3em;
+    margin-right: 1em;
+}
+
+.barcode .b9 {
+    align-self: flex-start;
+    height: 3em;
+    width: 5em;
+    margin-right: 1em;
+}
+
+.barcode .b10 {
+    align-self: flex-start;
+    height: 4em;
+    width: 1em;
+}
+
+.barcode .b11 {
+    align-self: flex-start;
+    height: 1em;
+    width: 2em;
+}
+
+.barcode .b12 {
+    align-self: flex-start;
+    height: 2.5em;
+    width: 1em;
+}
+
+.barcode .b13 {
+    align-self: flex-end;
+    height: 2em;
+    width: 2em;
+    margin-right: 1em;
+}
+
+.barcode .b14 {
+    align-self: flex-end;
+    height: 2em;
+    width: 5em;
+}
+
+.barcode .b15 {
+    align-self: flex-end;
+    height: 1em;
+    width: 4em;
+    margin-right: 1em;
+    margin-top: -1em;
+}
+
+.barcode .b16 {
+    align-self: flex-end;
+    height: 4em;
+    width: 5em;
+    margin-right: 0.4em;
+    margin-top: -1em;
+}
+
+.barcode .b17 {
+    align-self: flex-start;
+    height: 2em;
+    width: 3em;
+    margin-top: -0.5em;
+    margin-right: -0.5em;
 }

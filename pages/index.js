@@ -18,9 +18,7 @@ export default function Index({
     'coverImage': '',
   }]
 }) {
-  const heroPost = list[3][0];
-  const heroPost2 = list[3][1];
-  const heroPost3 = list[3][2];
+  const heroPost = list[3][2];
   const tip = list[tipIndex][0];
   list = list.slice(0, tipIndex);
 
@@ -46,11 +44,8 @@ export default function Index({
   return (
     <Layout>
       <Tip post={tip} title='quick tip' />
-
       <FeaturePost post={heroPost} />
-      <FeaturePost post={heroPost2} />
-      <FeaturePost post={heroPost3} />
-
+      
       {/* <Search search={search} setSearch={setSearch} /> */}
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
       {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
