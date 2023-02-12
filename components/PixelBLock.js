@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function PixelBlock({ bg, fore }) {
+export default function PixelBlock({ max, bg, fore }) {
     const [blocks, setBlocks] = useState([]);
 
     function getRandomArb(min, max) {
@@ -20,7 +20,7 @@ export default function PixelBlock({ bg, fore }) {
         <div className='barcode' style={{ backgroundColor: bg }}>
             {
                 blocks.map((x, i) => {
-                    return <div key={i} className={x} style={{ backgroundColor: fore }} />
+                    return <div key={i} className={x} style={{ backgroundColor: fore, maxHeight: (max && i < 3) && '3em' }} />
                 })
             }
         </div>

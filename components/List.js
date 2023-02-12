@@ -13,13 +13,12 @@ export default function List({ posts = [
 
     return (
         <div className={styles.container}>
-            <div className={styles.headingTitleContainer}>
-                <div className={styles.head}
-                    style={{ color: posts[0].color.fore }}
-                >{posts[0].list}</div>
-                <PixelBlock bg={posts[0].color.bg} fore={posts[0].color.fore} />
-
+            <div className={styles.head}
+                style={{ backgroundColor: posts[0].color.bg, color: posts[0].color.fore }}>
+                {posts[0].list}
             </div>
+            <PixelBlock max bg={posts[0].color.bg} fore={posts[0].color.fore} />
+
             <div className={styles.list}>
                 {posts.map(post => {
                     return (

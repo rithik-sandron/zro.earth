@@ -150,54 +150,43 @@ body::-webkit-scrollbar-thumb {
     border-radius: 1px;
 }
 
-
 .barcode {
     display: flex;
     width: 100%;
     max-width: 900px;
-    height: 2em;
+    height: 3em;
     margin: 0 auto;
 }
 
 .barcode>div {
-    position: relative;
-    float: left;
-    transform-origin: 0 0;
-    height: 2em;
-    width: 1em;
     z-index: 0;
-    overflow-y: visible;
-    overflow-x: hidden;
 }
 
 .barcode .b1 {
     align-self: flex-end;
-    height: 3em;
-    width: 6em;
+    height: 6em;
+    width: 5em;
     margin-right: 1em;
-    margin-top: -1em;
 }
 
 .barcode .b2 {
     align-self: flex-start;
-    height: 4em;
-    width: 1.5em;
+    height: 5em;
+    width: 2em;
     margin-right: 1em;
-    margin-top: -1em;
 }
 
 .barcode .b3 {
     align-self: flex-start;
-    height: 3em;
+    height: 4em;
     width: 3em;
 }
 
 .barcode .b4 {
     align-self: flex-start;
-    height: 2em;
-    width: 4em;
+    height: 2.5em;
+    width: 3em;
     margin-right: 2em;
-    margin-top: -0.5em;
 }
 
 .barcode .b5 {
@@ -209,15 +198,13 @@ body::-webkit-scrollbar-thumb {
 
 .barcode .b6 {
     align-self: flex-end;
-    height: 0.5em;
-    width: 8em;
-    margin-left: -0.5em;
-    margin-right: -0.5em;
+    height: 1.5em;
+    width: 8.5em;
 }
 
 .barcode .b7 {
     align-self: flex-start;
-    height: 0.5em;
+    height: 1em;
     width: 4em;
     margin-right: 2em;
 }
@@ -269,24 +256,20 @@ body::-webkit-scrollbar-thumb {
 
 .barcode .b15 {
     align-self: flex-end;
-    height: 1em;
+    height: 2em;
     width: 4em;
     margin-right: 1em;
-    margin-top: -1em;
 }
 
 .barcode .b16 {
     align-self: flex-end;
-    height: 4em;
+    height: 5em;
     width: 5em;
     margin-right: 0.4em;
-    margin-top: -1em;
 }
 
 .barcode .b17 {
     align-self: flex-start;
-    height: 2em;
-    width: 3em;
-    margin-top: -0.5em;
-    margin-right: -0.5em;
+    height: 2.5em;
+    width: 3.5em;
 }

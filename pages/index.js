@@ -18,7 +18,7 @@ export default function Index({
     'coverImage': '',
   }]
 }) {
-  const heroPost = list[3][0];
+  const heroPost = list[0][1];
   const tip = list[tipIndex][0];
   list = list.slice(0, tipIndex);
 

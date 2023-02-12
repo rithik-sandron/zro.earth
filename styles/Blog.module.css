@@ -169,29 +169,19 @@
 
 
 .blog blockquote {
-    display: flex;
-    flex-direction: column;
-    font-size: calc(1.8em + 0.2vw);
-    /* width: calc(100% - 1em - 12px); */
+    display: block;
+    gap: 1em;
+    font-size: calc(1.15em + 0.1vw);
+    width: calc(100% - 1.6em - 12px);
     line-height: 1.6;
-    letter-spacing: 0.01em;
-    margin: auto;
-    font-weight: 700;
-}
-
-.blog blockquote::before {
-    content: '';
-    display: block;
-    border-top: 0.8em solid;
-    width: 20%;
-}
-
-.blog blockquote::after {
-    content: '';
-    align-self: flex-end;
-    display: block;
-    border-top: 0.8em solid;
-    width: 20%;
+    letter-spacing: 0.025em;
+    margin: 0 auto;
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+    background-color: rgb(133, 205, 243);
+    border: 1px solid rgba(95, 132, 150, 0.91);
+    box-shadow: 12px 12px 0 rgba(95, 132, 150, 0.91);
+    color: #222;
 }
 
 .blog code>pre {
