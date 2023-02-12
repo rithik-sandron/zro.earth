@@ -59,8 +59,7 @@ export async function getStaticProps({ params }) {
       post: {
         ...post,
         content,
-      },
-      blocks: blocks
+      }
     },
   }
 }

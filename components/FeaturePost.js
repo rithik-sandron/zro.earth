@@ -1,6 +1,7 @@
 import Image from './Image';
 import styles from '../styles/FeaturePost.module.css'
 import { useRouter } from 'next/router';
+// import PixelBlock from './PixelBLock';
 
 
 export default function FeaturePost({ post = {
@@ -31,11 +32,14 @@ export default function FeaturePost({ post = {
                     url={post.coverImage}
                     alt={post.title}
                 />}
+                {/* <PixelBlock bg={post.color.bg} fore={post.color.fore} /> */}
+
                 <h1
                     style={{
                         backgroundColor: post.color.bg, color: post.color.fore
                     }}
                     className={styles.title}>{post.title}</h1>
+            
             </div>
             {/* </Link> */}
         </div >
