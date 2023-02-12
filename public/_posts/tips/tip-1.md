@@ -1,5 +1,4 @@
 ---
-title: 'Dynamic Routing and Static Generation'
 date: '2023-01-13'
 list: tips
 ---

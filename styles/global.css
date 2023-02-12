@@ -164,14 +164,14 @@ body::-webkit-scrollbar-thumb {
 
 .barcode .b1 {
     align-self: flex-end;
-    height: 6em;
+    height: 4.5em;
     width: 5em;
     margin-right: 1em;
 }
 
 .barcode .b2 {
     align-self: flex-start;
-    height: 5em;
+    height: 4em;
     width: 2em;
     margin-right: 1em;
 }

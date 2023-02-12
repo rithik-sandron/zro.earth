@@ -2,7 +2,7 @@
   max-width: 900px;
   width: 90%;
   height: fit-content;
-  margin: 3em auto;
+  margin: 2em auto;
   letter-spacing: 0.6px;
 }
 
@@ -14,21 +14,30 @@
   font-weight: 700;
   letter-spacing: -0.4px;
   text-transform: capitalize;
-  height: 1em;
+  height: 0.95em;
 }
 
 .post {
   display: flex;
-  margin: 1em 0;
+  margin: 1.8em 0;
+}
+
+.post:hover {
+  text-decoration: underline;
+}
+
+.post:first-child {
+  margin-top: 2em;
 }
 
 .title {
-  font-size: calc(1.13em + 0.1vw);
+  display: block;
+  font-size: calc(1.1em + 0.1vw);
   color: var(--font-color);
-  display: flex;
   line-height: 24px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .titleBefore {
@@ -76,6 +85,7 @@
   margin-left: 2em;
   font-size: calc(1.1em + 0.1vw);
   line-height: calc(1.4em + 0.1vw);
+  margin-bottom: 1em;
 }
 
 .headline {

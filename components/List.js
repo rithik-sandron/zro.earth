@@ -17,7 +17,7 @@ export default function List({ posts = [
                 style={{ backgroundColor: posts[0].color.bg, color: posts[0].color.fore }}>
                 {posts[0].list}
             </div>
-            <PixelBlock max bg={posts[0].color.bg} fore={posts[0].color.fore} />
+            <PixelBlock bg={posts[0].color.bg} fore={posts[0].color.fore} />
 
             <div className={styles.list}>
                 {posts.map(post => {

@@ -1,15 +1,14 @@
 .content {
   display: block;
-  width: calc(90% - 14px);
-  padding-right: 14px;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 5em;
   max-width: 900px;
 }
 
 .container {
-  display: grid;
-  flex-direction: row-reverse;
+  display: flex;
+  flex-direction: column;
   gap: 0;
   padding: 0;
   margin: 0 auto;
@@ -20,10 +19,15 @@
   cursor: pointer;
 }
 
+.container:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
+
 .title {
   display: block;
   width: calc(100% - 0.8em);
-  font-size: calc(1.8em + 0.6vw);
+  font-size: calc(2em + 0.6vw);
   line-height: 1.3em;
   letter-spacing: 0.3px;
   cursor: pointer;

@@ -11,7 +11,6 @@ export default function Header({ bg = '', fore = '', title = 'Zero', coverImage 
     if (router.route !== '/') router.back();
   }
 
-
   const [theme, setTheme] = useState(false);
 
   const dark = '#000';
