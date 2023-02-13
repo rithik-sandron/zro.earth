@@ -33,7 +33,10 @@ export default function List({ posts = [
                             <div className={styles.titleBefore}
                                 style={{ backgroundColor: posts[0].color.fore }}
                             />
-                            <div className={styles.title}>{post.title}</div>
+                            <div>
+                                <div className={styles.title}>{post.title}</div>
+                                <div className={styles.date}>{post.date}</div>
+                            </div>
                         </div>
                         // </Link>
                     )
