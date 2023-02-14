@@ -3,7 +3,7 @@ import React from "react";
 import styles from '../styles/List.module.css'
 
 export default function Tips({ post =
-    { title: "", date: "", slug: "", coverImage: "" }
+    { title: "", date: "", slug: "", coverImage: "", color: { bg: '', fore: '' } }
 }) {
 
     return (

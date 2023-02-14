@@ -2,8 +2,8 @@
     padding: 0;
     width: 90%;
     max-width: 900px;
-    margin: 2em auto;
-    font-size: calc(1em + 0.2vw);
+    margin: 1em auto;
+    font-size: calc(1.1em + 0.3vw);
 }
 
 .container {
@@ -37,48 +37,51 @@
 
 .blog hr {
     border-top: 1px solid var(--line-color);
-    margin: 0.4em 0;
+    margin: 1.4em 0;
 }
 
 .blog h1,
 .blog h2,
 .blog h3 {
-    margin: 0.6em 0;
+    margin: 0;
+    margin-bottom: 0.1em;
     letter-spacing: 0.005em;
+
 }
 
 .blog h1 {
-    font-size: calc(1.8em + 0.8vw);
-    font-weight: 800;
+    font-size: calc(1.85em + 0.4vw);
+    font-weight: 700;
+    width: fit-content;
+    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+    margin-bottom: 0.6em;
 }
 
 .blog h2 {
-    font-size: calc(1.4em + 0.8vw);
-    font-weight: 700;
+    font-size: calc(1.45em + 0.4vw);
+    font-weight: 600;
     line-height: 1.4;
 }
 
 .blog h3 {
-    font-size: calc(1.15em + 0.8vw);
-    font-weight: 600;
+    font-size: calc(1.35em + 0.4vw);
+    font-weight: 500;
     line-height: 1.4;
 }
 
 .blog p,
 .blog li,
 .blog dl {
-    line-height: 1.6;
-    margin: 1em 0;
+    line-height: 1.5;
+    margin: 0.8em 0;
     margin-bottom: 0;
-    letter-spacing: 0.03em;
-}
-
-.blog dl {
-    margin-left: -0.6em;
+    letter-spacing: 0.02em;
 }
 
 .blog p {
-    margin: 0.4em 0;
+    margin: 0;
 }
 
 .blog ol {
@@ -88,7 +91,6 @@
 
 .blog ol li {
     display: flex;
-    margin: 1em 0;
     margin-bottom: 0;
     counter-increment: number;
 }
@@ -96,12 +98,13 @@
 .blog ol li:before {
     content: counters(number, ".") ". ";
     font-weight: 700;
-    margin-right: 1em;
+    margin-right: 0.7em;
+    margin-left: -0.2em;
 }
 
 .blog ul li {
-    margin-left: 1em;
-    padding-left: 0.8em;
+    margin-left: 1.2em;
+    padding-left: 0.3em;
 }
 
 .blog dd {
@@ -134,9 +137,16 @@
 }
 
 .blog *>code {
+    display: inline-block;
     font-family: monospace;
     text-transform: none;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 0 0.4em;
+    margin: 0.4em 0;
+    width: fit-content;
+    line-height: 1.4;
+    background-color: var(--line-color);
 }
 
 .blog sup {
@@ -162,35 +172,36 @@
 }
 
 .blog mark {
-    padding: 0.05em 0.2em;
-    background-color: #fd0;
+    padding: 0.1em 0.2em;
+    padding-bottom: 0.2em;
+    background-color: rgba(255, 229, 100, 0.657);
     font-weight: 500;
 }
 
-
 .blog blockquote {
     display: block;
-    font-size: calc(1.15em + 0.1vw);
     width: calc(100% - 1.6em - 13px);
     line-height: 1.6;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.03em;
     margin: 0;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0.4em 0.8em;
-    background-color: rgb(133, 205, 243);
-    border: 1px solid rgba(95, 132, 150, 0.91);
-    box-shadow: 12px 12px 0 rgba(95, 132, 150, 0.91);
-    color: #222;
+    background-color: rgba(95, 199, 255, 0.274);
+    border: 1px solid rgba(49, 116, 150, 0.772);
+    margin: 1em 0;
 }
 
 .blog code>pre {
     white-space: pre;
-    padding: 0.6em 1em;
+    letter-spacing: 0.01em;
+    padding: 1em;
     background-color: var(--line-color);
-    border: 0.5px solid #555555;
-    border-radius: 4px;
-    line-height: 1.8;
+    line-height: 2;
     overflow-x: auto;
+    margin: 1em 0;
+    font-weight: 300;
+    font-family: monospace;
+    color: var(--color-green);
 }
 
 .line {
@@ -304,4 +315,11 @@
     overflow: hidden;
     transition: height 0.15s ease-in-out;
     transition: opacity 0.15s ease-in-out;
+}
+
+.blog nav {
+    background-color: var(--line-color);
+    padding: 2em;
+    margin: 0;
+    width: calc(100% - 2em);
 }

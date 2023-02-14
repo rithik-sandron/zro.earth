@@ -4,7 +4,7 @@ import PixelBlock from './PixelBLock';
 import { useRouter } from 'next/router';
 
 export default function List({ posts = [
-    { date: "", slug: "", list: "", 'color': { bg: "", fore: "" }, }]
+    { date: "", slug: "", list: "", color: { bg: "", fore: "" }, }]
 }) {
 
     const router = useRouter();

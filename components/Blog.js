@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from '../styles/Blog.module.css'
 import PixelBlock from './PixelBLock';
 import Image from './Image'
@@ -6,6 +6,23 @@ import Image from './Image'
 export default function Blog({
     blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", color: { bg: '', fore: '' } }
 }) {
+
+    useEffect(() => {
+        var toc =
+            `<nav role='navigation'><h3>Table of contents</h3><ul>`;
+        document.querySelectorAll('.table-content-h1').forEach(heading => {
+            const title = heading.innerText;
+            const link = "#" + heading.id;
+
+            const newLine = `<li style="list-style: none; margin:0; margin-top: 0.4em;font-size: 0.92em"><a href='${link}'>${title}</a></li>`;
+
+            toc += newLine;
+        });
+
+        toc += `</ul></nav>`;
+
+        document.getElementById('article-toc').innerHTML = toc;
+    }, []);
 
     return (
         <article>
@@ -26,7 +43,8 @@ export default function Blog({
                     alt={post.title}
                 />}
             </div>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
+            <div style={{ margin: '0', width: '100%' }} id='article-toc' className={styles.blog} />
+            <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>
     );
 }
