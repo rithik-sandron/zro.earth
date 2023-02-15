@@ -20,27 +20,24 @@
 .post {
   display: flex;
   margin: 1.8em 0;
+  letter-spacing: 1px;
 }
 
 .post:hover {
   text-decoration: underline;
 }
 
-.post:first-child {
-  margin-top: 1em;
-}
-
 .title {
   display: block;
-  font-size: calc(1.1em + 0.1vw);
+  font-size: calc(1.4em + 0.1vw);
   color: var(--font-color);
-  line-height: 24px;
+  line-height: 1.2;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   font-weight: 600;
 }
 
-.titleBefore {
+/* .titleBefore {
   align-self: flex-start;
   display: inline-block;
   width: 10px;
@@ -52,14 +49,14 @@
   margin-top: 0.5em;
   margin-right: 1em;
   border-radius: 50%;
-}
+} */
 
 .date {
   display: block;
   margin-top: 0.4em;
   font-size: 0.9em;
-  font-family: 200;
-  color: #555555;
+  font-family: 300;
+  color: #666666;
 }
 
 .list {

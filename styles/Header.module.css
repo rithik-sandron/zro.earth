@@ -47,10 +47,10 @@
   display: block;
   text-decoration: none;
   font-weight: 700;
-  font-size: calc(2.6em + 0.8vw);
+  font-size: calc(2em + 0.8vw);
   width: fit-content;
   padding: 0;
-  line-height: 32px;
+  line-height: 0.75em;
   border-radius: 1px;
   color: var(--font-color);
   margin: 0;

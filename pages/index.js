@@ -2,7 +2,6 @@ import { getAllPosts } from '../lib/api'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
 // import Search from "../components/Search";
-import Tip from '../components/Tips';
 import Lists from '../components/Lists';
 
 
@@ -19,8 +18,6 @@ export default function Index({
   }]
 }) {
   const heroPost = list[0][1];
-  const tip = list[tipIndex][0];
-  list = list.slice(0, tipIndex);
 
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
@@ -43,7 +40,6 @@ export default function Index({
 
   return (
     <Layout>
-      <Tip post={tip} title='quick tip' />
       <FeaturePost post={heroPost} />
 
       {/* <Search search={search} setSearch={setSearch} /> */}

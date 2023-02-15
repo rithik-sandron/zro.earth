@@ -43,7 +43,7 @@ export default function Blog({
                     alt={post.title}
                 />}
             </div>
-            <div style={{ margin: '0', width: '100%' }} id='article-toc' className={styles.blog} />
+            <div style={{ margin: '0 auto', width: '100%' }} id='article-toc' className={styles.blog} />
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>
     );
