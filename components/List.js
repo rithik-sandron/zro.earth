@@ -19,7 +19,9 @@ export default function List({ posts = [
             </div>
             <PixelBlock bg={posts[0].color.bg} fore={posts[0].color.fore} />
 
-            <div className={styles.list}>
+            <div className={styles.list}
+                style={{ backgroundColor: posts[0].color.bg, color: posts[0].color.fore }}
+                >
                 {posts.map(post => {
                     return (
                         // <Link passHref

@@ -55,20 +55,9 @@
     text-decoration: none;
     margin-bottom: 1em;
     width: fit-content;
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }
-
-.blog h1:before {
-    content: "~~~~~~~~~~~~";
-    font-size: 0.6em;
-    font-weight: 700;
-    font-family: Times New Roman, Serif;
-    color: red;
-    width: 100%;
-    position: absolute;
-    top: 12px;
-    left: -1px;
-    overflow: hidden;
-  }
 
 .blog h2 {
     font-size: calc(1.3em + 0.3vw);
