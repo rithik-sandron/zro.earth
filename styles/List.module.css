@@ -20,7 +20,7 @@
 .post {
   display: flex;
   margin: 1.8em 0;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
 }
 
 .post:hover {
@@ -29,7 +29,7 @@
 
 .title {
   display: block;
-  font-size: calc(1.4em + 0.1vw);
+  font-size: calc(1.3em + 0.1vw);
   color: var(--font-color);
   line-height: 1.2;
   transition: all 0.1s ease-in-out;

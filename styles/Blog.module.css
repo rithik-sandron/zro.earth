@@ -48,27 +48,25 @@
     margin: 0;
     margin-bottom: 0.6em;
     letter-spacing: 0.005em;
-
 }
 
 .blog h1 {
     font-size: calc(1.6em + 0.3vw);
-    font-weight: 700;
-    width: fit-content;
+    font-weight: 800;
     text-decoration: none;
     margin-bottom: 1em;
-    padding-bottom: 0.3em;
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
+    width: 100%;
 }
 
 .blog h2 {
-    font-size: calc(1.2em + 0.3vw);
+    font-size: calc(1.4em + 0.3vw);
     font-weight: 700;
     line-height: 1.4;
 }
 
 .blog h3 {
-    font-size: calc(1.05em + 0.3vw);
+    font-size: calc(1.2em + 0.3vw);
     font-weight: 600;
     line-height: 1.4;
 }
@@ -196,7 +194,7 @@
 .blog code>pre {
     white-space: pre;
     letter-spacing: 0.01em;
-    padding: 1em 2.4em;
+    padding: 1em 2em;
     background-color: #011627;
     line-height: 1.8;
     overflow-x: auto;
@@ -227,7 +225,7 @@
     overflow-x: auto;
     font-size: calc(0.9em + 0.1vw);
     word-break: keep-all;
-    white-space: pre;
+    white-space: normal;
 }
 
 .blog tbody {
