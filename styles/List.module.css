@@ -29,7 +29,7 @@
 
 .title {
   display: block;
-  font-size: calc(1.3em + 0.1vw);
+  font-size: calc(1.25em + 0.1vw);
   color: var(--font-color);
   line-height: 1.2;
   transition: all 0.1s ease-in-out;

@@ -194,7 +194,7 @@
 .blog code>pre {
     white-space: pre;
     letter-spacing: 0.01em;
-    padding: 1em 2em;
+    padding: 1em;
     background-color: #011627;
     line-height: 1.8;
     overflow-x: auto;
@@ -322,4 +322,28 @@
     background-color: var(--line-color);
     padding: 2em;
     width: calc(100% - 4em);
+}
+
+
+
+
+/* Table Styles */
+
+.blog table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.blog td, .blog th {
+    padding: 8px;
+}
+
+.blog td {
+    font-size: calc(1.1em + 0.1vw);
 }
