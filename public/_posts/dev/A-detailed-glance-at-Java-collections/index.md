@@ -7,10 +7,10 @@ list: dev
 # ArrayList
 ```
 Class ArrayList<E>
-	java.lang.Object
-		java.util.AbstractCollection<E>
-			java.util.AbstractList<E>
-				java.util.ArrayList<E>
+ java.lang.Object
+  java.util.AbstractCollection<E>
+   java.util.AbstractList<E>
+    java.util.ArrayList<E>
 ```
 
 ```
@@ -55,9 +55,9 @@ When we take about ArrayList, there is a legacy class ==Vector<E>== which is sim
 # ArrayDeque
 ```
 Class ArrayDeque<E>
-	java.lang.Object
-		java.util.AbstractCollection<E>
-			java.util.ArrayDeque<E>
+ java.lang.Object
+  java.util.AbstractCollection<E>
+   java.util.ArrayDeque<E>
 ```
 
 ```
@@ -101,11 +101,11 @@ Most ArrayDeque operations run in amortized constant time. Exceptions include re
 # LinkedList
 ```
 Class LinkedList<E>
-	java.lang.Object
-		java.util.AbstractCollection<E>
-			java.util.AbstractList<E>
-				java.util.AbstractSequentialList<E>
-					java.util.LinkedList<E>
+ java.lang.Object
+  java.util.AbstractCollection<E>
+   java.util.AbstractList<E>
+    java.util.AbstractSequentialList<E>
+     java.util.LinkedList<E>
 ```
 
 ```

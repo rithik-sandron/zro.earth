@@ -1,6 +1,6 @@
 .blog {
     padding: 0;
-    max-width: 900px;
+    max-width: 634px;
     margin: 1em auto;
     font-size: calc(1em + 0.2vw);
     letter-spacing: 0.02em;
@@ -47,37 +47,49 @@
 .blog h3 {
     margin: 0;
     margin-bottom: 0.6em;
-    letter-spacing: 0.005em;
 }
 
 .blog h1 {
-    font-size: calc(1.6em + 0.3vw);
+    font-size: calc(1.7em + 0.3vw);
     font-weight: 800;
     text-decoration: none;
     margin-bottom: 1em;
-    border-bottom: 1px solid;
-    width: 100%;
+    width: fit-content;
 }
 
+.blog h1:before {
+    content: "~~~~~~~~~~~~";
+    font-size: 0.6em;
+    font-weight: 700;
+    font-family: Times New Roman, Serif;
+    color: red;
+    width: 100%;
+    position: absolute;
+    top: 12px;
+    left: -1px;
+    overflow: hidden;
+  }
+
 .blog h2 {
-    font-size: calc(1.4em + 0.3vw);
+    font-size: calc(1.3em + 0.3vw);
     font-weight: 700;
     line-height: 1.4;
 }
 
 .blog h3 {
-    font-size: calc(1.2em + 0.3vw);
-    font-weight: 600;
+    font-size: calc(1.18em + 0.3vw);
+    font-weight: 700;
     line-height: 1.4;
 }
 
 .blog p,
 .blog li,
 .blog dl {
-    line-height: 1.5;
+    line-height: 1.8;
     margin: 0.8em 0;
     margin-bottom: 0;
     letter-spacing: 0.02em;
+    font-weight: 350;
 }
 
 .blog p {
@@ -140,12 +152,12 @@
     display: inline-block;
     font-family: monospace;
     text-transform: none;
-    font-weight: 500;
-    font-size: calc(0.9em + 0.1vw);
-    padding: 0.2em 0.6em;
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 0.1em 0.6em;
     margin: 0.4em 0;
     width: fit-content;
-    background-color: #011627;
+    background-color: var(--line-color);
     word-break: break-all;
 }
 
@@ -193,18 +205,14 @@
 
 .blog code>pre {
     white-space: pre;
-    letter-spacing: 0.01em;
-    padding: 1em;
-    background-color: #011627;
+    letter-spacing: 0.04em;
+    padding: 1em 0.8em;
     line-height: 1.8;
     overflow-x: auto;
     margin: 1em 0;
-    font-weight: 300;
     font-family: monospace;
-    color: #c3d5fc;
-    font-size: calc(0.9em + 0.1vw);
-    margin-left: -5.6%;
-    margin-right: -5.6%;
+    font-size: 0.9em;
+    background-color: var(--line-color);
 }
 
 .line {
@@ -219,13 +227,11 @@
     border-radius: 4px;
     overflow-y: hidden;
     border-collapse: collapse;
-    border: 0.5px solid #55555580;
-    max-width: 100%;
+    border: 0.5px solid #55555570;
     width: fit-content;
     overflow-x: auto;
-    font-size: calc(0.9em + 0.1vw);
-    word-break: keep-all;
-    white-space: normal;
+    max-width: 100%;
+    white-space: pre;
 }
 
 .blog tbody {
@@ -234,11 +240,12 @@
 
 .blog td,
 .blog th {
-    padding: 0.2em 0;
+    vertical-align: middle;
+    padding: 0.6em;
 }
 
 .blog tr {
-    border-bottom: 0.5px solid #55555560;
+    border-bottom: 0.5px solid #55555550;
 }
 
 .blog tr:last-child {
@@ -246,7 +253,7 @@
 }
 
 .blog th {
-    padding: 0.4em;
+    font-size: 0.95em;
     text-align: left;
     font-weight: 600;
     background-color: var(--line-color);
@@ -261,7 +268,7 @@
 }
 
 .blog td {
-    padding: 0.4em;
+    font-size: 0.9em;
 }
 
 .empty-row {
@@ -322,28 +329,4 @@
     background-color: var(--line-color);
     padding: 2em;
     width: calc(100% - 4em);
-}
-
-
-
-
-/* Table Styles */
-
-.blog table {
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: normal;
-    border: none;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
-    white-space: nowrap;
-}
-
-.blog td, .blog th {
-    padding: 8px;
-}
-
-.blog td {
-    font-size: calc(1.1em + 0.1vw);
 }
