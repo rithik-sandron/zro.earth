@@ -9,7 +9,7 @@ export default function Blog({
 
     useEffect(() => {
         var toc =
-            `<nav role='navigation'><h3>Table of contents</h3><ul>`;
+            `<nav role='navigation'><h3>On this page</h3><ul>`;
         document.querySelectorAll('.table-content-h1').forEach(heading => {
             const title = heading.innerText;
             const link = "#" + heading.id;
