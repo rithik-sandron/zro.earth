@@ -54,13 +54,13 @@ implements **Deque<E>, Cloneable, Serializable**
 ```
 
 ## Most used methods:
-| E	pop() |
-| void push(E e) |
-| E peek() |
-| int size() |
-| void clear() |
-| boolean isEmpty() |
-| <T> T[] toArray(T[] a) |
+| `E pop()` |
+| `void push(E e)` |
+| `E peek()` |
+| `int size()` |
+| `void clear()` |
+| `boolean isEmpty()` |
+| `<T> T[] toArray(T[] a)` |
 
 Hands down the most used data structure for me atleast, is ==Stack==. But in Java stacks are extended from ==Vectors<E>==. The common alternative to a Stack is ==Deque==. Similar to stacks Deque is also a FIFO data structure.
 
