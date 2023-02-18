@@ -16,7 +16,6 @@ export default function Post({
   return (
     <Layout bg={post.color.bg} fore={post.color.fore}
       title={post.title}
-      coverImage={post.coverImage}
     >
       <main>
         <Blog post={post} />

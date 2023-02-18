@@ -21,26 +21,30 @@ heroes.add("Archer");
 heroes.ensureCapacity(50);
 ```
 
-- Not thread safe [unsynchronized].
+- Not thread safe (unsynchronized).
 - Allows null as an element.
 - size, isEmpty, get, set, iterator, and listIterator operations runs in constant.
 
-### To make ArrayList thread safe:
+## To make ArrayList thread safe:
 ```
 List list = Collections.synchronizedList(new ArrayList(...));
 ```
 
-### Time Complexity
+## Time Complexity
 | List                 | Add  | Remove | Get  | Contains | Next | Data Structure |
 | ArrayList            | O(1) |  O(n)  | O(1) |   O(n)   | O(1) | Array          |
 
 
-### Difference between vector and ArrayList
+## Difference between vector and ArrayList
 When we take about ArrayList, there is a legacy class ==Vector<E>== which is similar to arrayList. 
 
-| ArrayList | Vectors |
-| Not Thread safe a.k.a. Unsynchronized | Thread safe a.k.a. Synchronized |
-| ArrayList increases its size based on capacity factor | Vector doubles the current size, which is inefficient is most cases |
+### ArrayList 
+1. Not Thread safe a.k.a. Unsynchronized.
+2. Thread safe a.k.a. Synchronized.
+
+### Vectors
+1. ArrayList increases its size based on capacity factor.
+2. Vector doubles the current size, which is inefficient is most cases.
 
 # ArrayDeque
 ```
@@ -49,7 +53,7 @@ extends **AbstractCollection<E>**
 implements **Deque<E>, Cloneable, Serializable**
 ```
 
-### Most used methods:
+## Most used methods:
 | E	pop() |
 | void push(E e) |
 | E peek() |
@@ -63,16 +67,16 @@ Hands down the most used data structure for me atleast, is ==Stack==. But in Jav
 - Deque is an interface, the concrete is ==ArrayDeque==
 - Array deques have no capacity restrictions; they grow as necessary to support usage.
 - Not thread safe.
-- If the deque is modified at any time after the iterator is created, in any way except through the iterator's own remove method, the iterator will generally throw a ==ConcurrentModificationException==. [fail-fast]
+- If the deque is modified at any time after the iterator is created, in any way except through the iterator's own remove method, the iterator will generally throw a ==ConcurrentModificationException==. (fail-fast)
 
-### To Synchronize ArrayDeque:
+## To Synchronize ArrayDeque:
 ```
 Collections.synchronizedCollections(new ArrayDeque(...));
 ``` 
 
 Most ArrayDeque operations run in amortized constant time. Exceptions include remove, removeFirstOccurrence, removeLastOccurrence, contains, iterator.remove(), and the bulk operations, all of which run in linear time.
 
-### Time Complexity
+## Time Complexity
 | Queue                   |  push    | pop  |   peek   | Remove | Size | Data Structure |
 | ArrayDeque              | O(1)     | O(1) | O(1)     |  O(n)  | O(1) | Linked List    |
 
@@ -83,19 +87,19 @@ extends **AbstractSequentialList<E>**
 implements **List<E>, Deque<E>, Cloneable, Serializable**
 ```
 
-Linked List in Java is a doubly LinkedList implementation of List and Deque. so it can traverse from the beginning or from the end in both ways based on the index [whichever is closer to the index].
+Linked List in Java is a doubly LinkedList implementation of List and Deque. so it can traverse from the beginning or from the end in both ways based on the index (whichever is closer to the index).
 
-- Not thread safe [unsynchronized].
+- Not thread safe (unsynchronized).
 - Allows null as an element.
 - fail-fast similar to Deque mentioned above.
 - size, isEmpty, get, set, iterator, and listIterator operations runs in constant.
 
-### To make LinkedList thread safe:
+## To make LinkedList thread safe:
 ```
 List list = Collections.synchronizedList(new LinkedList(...));
 ```
 
-### Time Complexity
+## Time Complexity
 | List                 | Add  | Remove | Get  | Contains | Next | Data Structure |
 | LinkedList           | O(1) |  O(1)  | O(n) |   O(n)   | O(1) | Linked List    |
 
@@ -112,10 +116,10 @@ A map is a key-value mapping, which means that every key is mapped to one value 
 
 How does HashMap takes constant time for lookup? Its because HashMap hashes its key to generate a unique value.
 
-### Hashing
+## Hashing
 Hashing is the mechanism to convert an arbitrary string to a numeric value with a hash function. hash function returns a hash value in constant time which makes it the ideal choice for storing and retrieving values in constant time.
 
-### Collisions
+## Collisions
 When you provide same keys for different values, HashMap generates same hash from that key and stores all the values to that particular bucket.
 These values are stored ideally in a LinkedList and reference is attached as a value to that particular key. so avoid using same keys to get a better performance. In some cases you would need HashMap and dictionaries working together in a big chunk of key value items.
 
@@ -126,7 +130,7 @@ This implementation provides constant-time performance for the basic operations 
 Iteration over collection views requires time proportional to the "**capacity**" of the HashMap instance (the number of buckets) plus its size (the number of key-value mappings). Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important.
 
 
-### Load Factor and Capacity
+## Load Factor and Capacity
 An instance of HashMap has two parameters that affect its performance: ==initial capacity== and ==load factor==. The capacity is the number of buckets in the hash table, and the initial capacity is simply the capacity at the time the hash table is created.
 
 The **load factor is a measure of how full the hash table is allowed to get before its capacity is automatically increased**. When the number of entries in the hash table exceeds the ==product of the load factor and the current capacity==, the hash table is rehashed (that is, internal data structures are rebuilt) so that the hash table has approximately twice the number of buckets. 
@@ -135,7 +139,7 @@ The **load factor is a measure of how full the hash table is allowed to get befo
 > *no of entries < load factor x current capacity*
 
 
-### Rehashing
+## Rehashing
 Once the capacity of the hashmap is increased, It brings the overhead of rearranging all the key-value pairs in the hash table. It is because we use the modulo of map capacity to get the proper bucket index from the hash, but by the change in capacity, most of earlier stored pair locations will not be accessible and changed.
 
 As a general rule, the default load factor ==(.75)== offers a good tradeoff between time and space costs. Higher values decrease the space overhead but increase the lookup cost (reflected in most of the operations of the HashMap class, including get and put). The expected number of entries in the map and its load factor should be taken into account when setting its initial capacity, so as to minimize the number of rehash operations. If the initial capacity is greater than the maximum number of entries divided by the load factor, no rehash operations will ever occur.
@@ -143,13 +147,13 @@ As a general rule, the default load factor ==(.75)== offers a good tradeoff betw
 - The default initial capacity of HashMap is 16
 - This class permits null element.
 - HashMap also allows us to have null as a key.
-- **Not thread safe** [unsynchronized]
+- **Not thread safe** (unsynchronized)
 - **fail-fast** behavior is not guaranteed.
 
-### To make HashMap thread safe
+## To make HashMap thread safe
 Map m = Collections.synchronizedMap(new HashMap(...))
 
-### Time Complexity
+## Time Complexity
 | Map                   |   Get    | ContainsKey |   Next   | Data Structure |
 | HashMap               | O(1)     |   O(1)      | O(h / n) | Hash Table     |
 
@@ -167,13 +171,13 @@ implements **Set<E>, Cloneable, Serializable**
 This class implements the Set interface, backed by a hash table (actually a HashMap instance). This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly among the buckets. Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important.
 
 - This class permits null element.
-- **Not thread safe** [unsynchronized]
+- **Not thread safe** (unsynchronized)
 - The iterators returned by this class's iterator method are **fail-fast** like other collections.
 
-### To make Hashset thread safe
+## To make Hashset thread safe
 Set s = Collections.synchronizedSet(new HashSet(...));
 
-### Time complexity
+## Time complexity
 | Set       |    Add   |  Remove  | Contains |   Next   | Size | Data Structure |
 | HashSet   |    O(1)  | O(1)     | O(1)     | O(h/n)   | O(1) | Hash Table     |
 

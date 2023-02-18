@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from "next/router";
 
-export default function Header({ bg = '', fore = '', title = 'Zero', coverImage = '' }) {
+export default function Header({ bg = '', fore = '', title = '' }) {
 
   const router = useRouter()
 
@@ -39,11 +39,13 @@ export default function Header({ bg = '', fore = '', title = 'Zero', coverImage 
 
       }}>
       <Head>
-        <title>{title}</title>
+        <title>ZゼRロ</title>
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="msapplication-TileColor" content={bg ? bg : theme ? dark : light} />
         <meta name="theme-color" content={bg ? bg : theme ? dark : light} />
-        {coverImage && <meta property="og:image" content={coverImage} />}
+        <meta property="og:site_name" content='ZゼRロ'/>
+        {title && <meta property="og:title" content={title} />}
+        
       </Head>
 
       <div className={styles.flexContainer}
@@ -66,7 +68,7 @@ export default function Header({ bg = '', fore = '', title = 'Zero', coverImage 
 
       </div>
 
-    </div>
+    </div >
   );
 }
 
