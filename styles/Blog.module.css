@@ -86,29 +86,33 @@
 .blog h2,
 .blog h3 {
     margin: 0;
-    margin-bottom: 0.8em;
 }
 
 .blog h1 {
     font-size: calc(1.65em + 0.3vw);
-    font-weight: 750;
+    font-weight: 700;
     text-decoration: none;
     width: fit-content;
     text-decoration: underline;
     text-underline-offset: 6px;
     margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .blog h2 {
-    font-size: calc(1.1em + 0.3vw);
-    font-weight: 750;
+    font-size: calc(1.04em + 0.3vw);
+    font-weight: 700;
     line-height: 1.4;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-bottom: 1em;
 }
 
 .blog h3 {
-    font-size: calc(0.95em + 0.25vw);
+    font-size: calc(0.95em + 0.2vw);
     font-weight: 700;
     line-height: 1.4;
+    margin-bottom: 0.2em;
 }
 
 .blog p,
@@ -134,6 +138,7 @@
     display: flex;
     margin-bottom: 0;
     counter-increment: number;
+    margin-top: 0.4em;
 }
 
 .blog ol li:before {
