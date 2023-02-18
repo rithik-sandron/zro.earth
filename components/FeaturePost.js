@@ -39,7 +39,7 @@ export default function FeaturePost({ post = {
                         backgroundColor: post.color.bg, color: post.color.fore
                     }}
                     className={styles.title}>{post.title}</h1>
-            
+
             </div>
             {/* </Link> */}
         </div >

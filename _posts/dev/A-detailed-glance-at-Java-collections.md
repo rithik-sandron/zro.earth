@@ -150,7 +150,9 @@ As a general rule, the default load factor ==(.75)== offers a good tradeoff betw
 - **fail-fast** behavior is not guaranteed.
 
 ## To make HashMap thread safe
+```
 Map m = Collections.synchronizedMap(new HashMap(...))
+```
 
 ## Time Complexity
 | Map                   |   Get    | ContainsKey |   Next   | Data Structure |

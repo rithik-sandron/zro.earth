@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0 auto;
     margin-bottom: 1em;
+    margin-top: 1em;
     font-size: calc(0.92em + 0.15vw);
     letter-spacing: 0.03em;
     max-width: 634px;
@@ -219,11 +220,12 @@
 }
 
 .blog mark {
-    padding: 0.2em 0.2em;
-    padding-bottom: 0.24em;
-    background-color: rgba(255, 229, 100, 0.657);
+    padding: 0.1em 0.2em;
+    padding-bottom: 0.2em;
+    background-color: var(--color-yellow);
     font-weight: 500;
     border-radius: 4px;
+    color: var(--font-color);
 }
 
 .blog blockquote {
@@ -234,8 +236,8 @@
     margin: 0;
     font-weight: 500;
     padding: 0.4em 0.8em;
-    background-color: rgba(95, 199, 255, 0.274);
-    border: 1px solid rgba(49, 116, 150, 0.772);
+    background-color: rgba(129, 194, 255, 0.274);
+    border: 1px solid rgba(14, 142, 206, 0.667);
     margin: 1em 0;
     border-radius: 4px;
 }
@@ -249,8 +251,8 @@
     margin: 1em 0;
     font-family: monospace;
     font-size: 0.9em;
-    background-color: var(--line-color);
-    border: 1px solid #55555560;
+    background-color: #9f9f9f1c;
+    border: 1px solid #78787857;
     border-radius: 4px;
 }
 

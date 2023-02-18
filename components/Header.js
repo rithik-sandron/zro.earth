@@ -13,9 +13,6 @@ export default function Header({ bg = '', fore = '', title = '' }) {
 
   const [theme, setTheme] = useState(false);
 
-  const dark = '#000';
-  const light = '#fff';
-
   function switchTheme() {
     if (!theme) {
       document.documentElement.setAttribute("data-theme", "dark");
@@ -34,22 +31,20 @@ export default function Header({ bg = '', fore = '', title = '' }) {
   return (
     <div className={styles.flex} id={styles.head}
       style={{
-        backgroundColor: bg ? bg : theme ? dark : light,
-        color: fore ? fore : theme ? dark : light
-
+        backgroundColor: bg && bg,
+        color: fore && fore
       }}>
       <Head>
         <title>ZゼRロ</title>
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="msapplication-TileColor" content={bg ? bg : theme ? dark : light} />
-        <meta name="theme-color" content={bg ? bg : theme ? dark : light} />
-        <meta property="og:site_name" content='ZゼRロ'/>
+        <meta name="msapplication-TileColor" content={bg ? bg : theme ? 'rgb(15, 18, 22)' : '#fff'} />
+        <meta name="theme-color" content={bg ? bg : theme ? 'rgb(15, 18, 22)' : '#fff'} />
+        <meta property="og:site_name" content='ZゼRロ' />
         {title && <meta property="og:title" content={title} />}
-        
+
       </Head>
 
-      <div className={styles.flexContainer}
-      >
+      <div className={styles.flexContainer}>
         {/* <Link as={`/`} href="/"
           style={{
             border: 'none', textDecoration: "none", color: 'transparent'
@@ -57,14 +52,17 @@ export default function Header({ bg = '', fore = '', title = '' }) {
 
         <span className={styles.panel} id={styles.ken}
           onClick={back}
-          style={{ color: fore ? fore : theme ? light : dark }}
+          style={{ color: fore && fore }}
         >
           Zゼ<br />Rロ</span>
         {/* </Link> */}
 
-        <span className={styles.panel} onClick={switchTheme} id={styles.face}>
-          <span id={styles.theme}></span>
-        </span>
+        <div className={styles.switchWrapper} id={styles.face}>
+          <label className={styles.switch} for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div className={styles.slider} onClick={switchTheme} />
+          </label>
+        </div>
 
       </div>
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function PixelBlock({ isList = false, bg = '', fore='' }) {
+export default function PixelBlock({ isList = false, bg = '', fore = '' }) {
     const [blocks, setBlocks] = useState([]);
 
     function getRandomArb(min, max) {

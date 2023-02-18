@@ -1,5 +1,10 @@
 .flex {
   display: block;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .flexContainer {
@@ -7,7 +12,8 @@
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 1em 0 0 0;
+  padding: 0.2em 0;
+  padding-bottom: 0;
   justify-content: space-between;
 }
 
@@ -30,29 +36,72 @@
 
 #face {
   display: flex;
-  margin: 0.5em 0;
+  margin: 0.3em 0;
   padding: 0;
   width: fit-content;
   height: fit-content;
-}
-
-#theme {
-  display: block;
-  margin: auto;
-  padding: 0.5em;
-  background-color: var(--font-color);
 }
 
 #ken {
   display: block;
   text-decoration: none;
   font-weight: 700;
-  font-size: calc(2em + 0.8vw);
+  font-size: calc(1.2em + 0.8vw);
   width: fit-content;
   padding: 0;
-  line-height: 0.75em;
-  border-radius: 1px;
+  line-height: 0.72em;
   color: var(--font-color);
   margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.switchWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  display: inline-block;
+  height: 1.5em;
+  position: relative;
+  width: 2.4em;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: rgb(33, 37,41);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  border-radius: 24px;
+  transition: all 0.1s ease-in-out;
+}
+
+.slider:before {
+  background-color:#fff;
+  bottom: 4px;
+  content: "";
+  height: 1em;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 1em;
+  border-radius: 50%;
+}
+
+.switch input:checked+.slider {
+  background-color: rgb(225, 225, 225);
+}
+
+.switch input:checked+.slider:before {
+  transform: translateX(0.9em);
+  background-color: rgb(18, 18, 19);
+
 }
