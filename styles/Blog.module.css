@@ -5,15 +5,46 @@
     letter-spacing: 0.03em;
     max-width: 634px;
     line-height: 1.4;
-    width: 90%;
+    width: 95%;
 }
 
-.blog > nav {
-    width: calc(100% - 4em);
+.articleToc {
     background-color: var(--line-color);
-    padding: 2em;
-    padding-top: 1em;
+    display: none;
+}
+
+.articleToc>nav {
     width: calc(100% - 4em);
+    padding: 2em;
+    padding-top: 2em;
+    max-width: 634px;
+    margin: 0 auto;
+}
+
+.articleToc li {
+    list-style: none;
+    margin: 0;
+    margin-top: 0.6em;
+    font-size: 1em;
+}
+
+.articleToc h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.articleToc a {
+    color: var(--color-blue);
+    font-weight: 500;
+    padding-bottom: 0.01em;
+    border-bottom: 0.1em solid;
+}
+
+.articleToc a:hover,
+.articleToc a:active {
+    border-bottom: 0.25em solid rgb(22, 80, 134);
+    color: rgb(22, 80, 134);
 }
 
 .container {
@@ -27,7 +58,7 @@
 }
 
 .container h1 {
-    width: 90%;
+    width: 95%;
     font-size: calc(2.2em + 1.8vw);
     margin: 0 auto;
     max-width: 900px;
@@ -36,7 +67,7 @@
 
 .author {
     display: flex;
-    width: 90%;
+    width: 95%;
     margin: auto;
     gap: 0.6em;
     font-weight: 600;

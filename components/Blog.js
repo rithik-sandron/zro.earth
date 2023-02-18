@@ -10,18 +10,21 @@ export default function Blog({
     useEffect(() => {
         var toc =
             `<nav role='navigation'><h3>On this page</h3><ul>`;
-        document.querySelectorAll('.table-content-h1').forEach(heading => {
-            const title = heading.innerText;
-            const link = "#" + heading.id;
+        let headings = document.querySelectorAll('.table-content-h1');
+        if (headings.length > 3) {
+            headings.forEach(heading => {
+                const title = heading.innerText;
+                const link = "#" + heading.id;
+                const newLine = `<li><a href='${link}'>${title}</a></li>`;
+                toc += newLine;
+            });
 
-            const newLine = `<li style="list-style: none; margin:0; margin-top: 0.4em;font-size: 0.92em"><a href='${link}'>${title}</a></li>`;
+            toc += `</ul></nav>`;
+            let articleToc = document.getElementById('article-toc');
 
-            toc += newLine;
-        });
-
-        toc += `</ul></nav>`;
-
-        document.getElementById('article-toc').innerHTML = toc;
+            articleToc.innerHTML = toc;
+            articleToc.style.display = 'block';
+        }
     }, []);
 
     return (
@@ -37,13 +40,13 @@ export default function Blog({
                         <div>{post.date}</div>
                     </div>
                 </div>
-                <PixelBlock bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
+                <PixelBlock isList bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
                 {post.coverImage && <Image
                     url={post.coverImage}
                     alt={post.title}
                 />}
             </div>
-            <div style={{ margin: '0 auto', width: '100%' }} id='article-toc' className={styles.blog} />
+            <div id='article-toc' className={styles.articleToc} />
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>
     );

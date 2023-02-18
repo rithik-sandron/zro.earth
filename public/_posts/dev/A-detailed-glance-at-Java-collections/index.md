@@ -99,6 +99,84 @@ List list = Collections.synchronizedList(new LinkedList(...));
 | List                 | Add  | Remove | Get  | Contains | Next | Data Structure |
 | LinkedList           | O(1) |  O(1)  | O(n) |   O(n)   | O(1) | Linked List    |
 
+# HashMap
+[HashMap Java docs](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
+
+```
+public class HashMap<K,V>
+extends **AbstractMap<K,V>**
+implements **Map<K,V>, Cloneable, Serializable**
+```
+
+A map is a key-value mapping, which means that every key is mapped to one value and that we can use the key to retrieve the corresponding value from a map. Why do we need a HashMap? **The simple reason is performance**. If we want to find a specific element in a list, the time complexity is O(n) and if the list is sorted, it will be O(log n) using, for example, a binary search.
+
+How does HashMap takes constant time for lookup? Its because HashMap hashes its key to generate a unique value.
+
+### Hashing
+Hashing is the mechanism to convert an arbitrary string to a numeric value with a hash function. hash function returns a hash value in constant time which makes it the ideal choice for storing and retrieving values in constant time.
+
+### Collisions
+When you provide same keys for different values, HashMap generates same hash from that key and stores all the values to that particular bucket.
+These values are stored ideally in a LinkedList and reference is attached as a value to that particular key. so avoid using same keys to get a better performance. In some cases you would need HashMap and dictionaries working together in a big chunk of key value items.
+
+Hash table based implementation of the Map interface. The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls.
+
+This implementation provides constant-time performance for the basic operations (get and put), assuming the hash function disperses the elements properly among the buckets.
+
+Iteration over collection views requires time proportional to the "**capacity**" of the HashMap instance (the number of buckets) plus its size (the number of key-value mappings). Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important.
+
+
+### Load Factor and Capacity
+An instance of HashMap has two parameters that affect its performance: ==initial capacity== and ==load factor==. The capacity is the number of buckets in the hash table, and the initial capacity is simply the capacity at the time the hash table is created.
+
+The **load factor is a measure of how full the hash table is allowed to get before its capacity is automatically increased**. When the number of entries in the hash table exceeds the ==product of the load factor and the current capacity==, the hash table is rehashed (that is, internal data structures are rebuilt) so that the hash table has approximately twice the number of buckets. 
+
+
+> *no of entries < load factor x current capacity*
+
+
+### Rehashing
+Once the capacity of the hashmap is increased, It brings the overhead of rearranging all the key-value pairs in the hash table. It is because we use the modulo of map capacity to get the proper bucket index from the hash, but by the change in capacity, most of earlier stored pair locations will not be accessible and changed.
+
+As a general rule, the default load factor ==(.75)== offers a good tradeoff between time and space costs. Higher values decrease the space overhead but increase the lookup cost (reflected in most of the operations of the HashMap class, including get and put). The expected number of entries in the map and its load factor should be taken into account when setting its initial capacity, so as to minimize the number of rehash operations. If the initial capacity is greater than the maximum number of entries divided by the load factor, no rehash operations will ever occur.
+
+- The default initial capacity of HashMap is 16
+- This class permits null element.
+- HashMap also allows us to have null as a key.
+- **Not thread safe** [unsynchronized]
+- **fail-fast** behavior is not guaranteed.
+
+### To make HashMap thread safe
+Map m = Collections.synchronizedMap(new HashMap(...))
+
+### Time Complexity
+| Map                   |   Get    | ContainsKey |   Next   | Data Structure |
+| HashMap               | O(1)     |   O(1)      | O(h / n) | Hash Table     |
+
+
+
+# HashSet
+[HashSet Java docs](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
+
+```
+public class HashSet<E>
+extends **AbstractSet<E>**
+implements **Set<E>, Cloneable, Serializable**
+```
+
+This class implements the Set interface, backed by a hash table (actually a HashMap instance). This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly among the buckets. Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important.
+
+- This class permits null element.
+- **Not thread safe** [unsynchronized]
+- The iterators returned by this class's iterator method are **fail-fast** like other collections.
+
+### To make Hashset thread safe
+Set s = Collections.synchronizedSet(new HashSet(...));
+
+### Time complexity
+| Set       |    Add   |  Remove  | Contains |   Next   | Size | Data Structure |
+| HashSet   |    O(1)  | O(1)     | O(1)     | O(h/n)   | O(1) | Hash Table     |
+
 # Time complexity of collections @ a glance.
 ## List
 | List                 | Add  | Remove | Get  | Contains | Next | Data Structure |

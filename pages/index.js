@@ -6,7 +6,6 @@ import Lists from '../components/Lists';
 
 
 export default function Index({
-  tipIndex = 0,
   list = [{
     'color': { bg: "", fore: "" },
     'title': '',
@@ -17,7 +16,7 @@ export default function Index({
     'coverImage': '',
   }]
 }) {
-  const heroPost = list[0][1];
+  const heroPost = list[1][0];
 
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
