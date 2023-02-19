@@ -9,8 +9,8 @@ export default function PixelBlock({ isList = false, bg = '', fore = '' }) {
 
     useEffect(() => {
         let tmpblocks = [];
-        for (let i = 0; i < 17; i++) {
-            tmpblocks.push(`b${getRandomArb(0, 16)}`);
+        for (let i = 0; i <= 10; i++) {
+            tmpblocks.push(`b${getRandomArb(0, 10)}`);
         }
         setBlocks(tmpblocks);
     }, [])
@@ -20,7 +20,7 @@ export default function PixelBlock({ isList = false, bg = '', fore = '' }) {
         <div className='barcode' style={{ backgroundColor: bg }}>
             {
                 blocks.map((x, i) => {
-                    return <div key={i} className={x} style={{ backgroundColor: fore, maxHeight: (isList && i < 8) && '2em' }} />
+                    return <div key={i} className={x} style={{ backgroundColor: fore }} />
                 })
             }
         </div>

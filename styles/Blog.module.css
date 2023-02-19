@@ -11,7 +11,7 @@
 }
 
 .articleToc {
-    background-color: var(--line-color);
+    /* background-color: var(--line-color); */
     display: none;
 }
 
@@ -19,7 +19,7 @@
     width: calc(100% - 4em);
     padding: 2em;
     padding-top: 2em;
-    max-width: 634px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -55,8 +55,9 @@
     gap: 1em;
     margin: 0 auto;
     width: 100%;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     padding-top: 1em;
+    position: relative;
 }
 
 .container h1 {
@@ -65,17 +66,19 @@
     margin: 0 auto;
     max-width: 900px;
     font-weight: 800;
+    position: relative;
 }
 
 .author {
     display: flex;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     gap: 0.6em;
     font-weight: 600;
     font-size: calc(0.9em + 0.2vw);
     max-width: 900px;
     letter-spacing: 0.04em;
+    margin-bottom: 1em;
 }
 
 .blog hr {

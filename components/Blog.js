@@ -29,23 +29,21 @@ export default function Blog({
 
     return (
         <article>
-            <div
-                style={{ backgroundColor: post.color.bg, color: post.color.fore }}
-            >
+            <div>
                 <div key={post.slug} className={styles.container}>
                     <h1>{post.title}</h1>
-                    <div className={styles.author}
-                        style={{ color: post.color.fore }}>
+                    <div className={styles.author}>
                         <div>{post.author.name},</div>
                         <div>{post.date}</div>
                     </div>
                 </div>
-                <PixelBlock isList bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
                 {post.coverImage && <Image
                     url={post.coverImage}
                     alt={post.title}
                 />}
             </div>
+            <PixelBlock isList bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
+
             <div id='article-toc' className={styles.articleToc} />
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>
