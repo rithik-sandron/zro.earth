@@ -24,7 +24,7 @@ This is paragrpagh on my new fake blog! How exciting! I'm sure I'll write a lot 
 - ~red code~
 - ==Hightlight==
 - ==#Hashtag==
-- [Space shuttle columbia](https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster).
+- [[Space shuttle columbia]](https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster).
 
 ---
 

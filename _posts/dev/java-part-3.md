@@ -1,6 +1,6 @@
 ---
-title: 'A detailed glance at Java collections'
-date: 'Feb 15 2023'
+title: 'Java part-3'
+date: 'Feb 20 2023'
 list: dev
 ---
 

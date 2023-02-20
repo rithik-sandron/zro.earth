@@ -1,11 +1,17 @@
 ---
-title: 'Java - part 1'
+title: 'Java part-1'
 date: 'Feb 14 2023'
 list: dev
 ---
 
+# This is a 3 part series
+go to [[Java Part-1]](https://blog-six-rouge.vercel.app/dev/java-part-1)
+go to [[Java Part-2]](https://blog-six-rouge.vercel.app/dev/java-part-2)
+go to [[Java Part-3]](https://blog-six-rouge.vercel.app/dev/java-part-3)
+
 # Data types
 Data types are basic building blocks of any programming language. In java there are basically 8 primitive data types. String is also a data but its non primitive since it is a class.
+
 ## Primitives
 - boolean
 - byte
@@ -20,29 +26,33 @@ Data types are basic building blocks of any programming language. In java there 
 - String
 
 ```
-boolean flag = true;
-byte val = 20;
-short no = 10;
-int age = 34; 
-long longNumber = 1234567;
-float k = 11.5f;
-double pi = 3.14d;
-char startsWith = 'V';
-String name = "John"
+**boolean** flag = true;
+**byte** val = 20;
+**short** no = 10;
+**int** age = 34; 
+**long** longNumber = 1234567;
+**float** k = 11.5f;
+**double** pi = 3.14d;
+**char** startsWith = 'V';
+**String** name = "John"
 ```
 
 # Variables and Constants
-variables are attributes that can be changed over time. Whereas constants are attributes taht cannot be changed once initialized.
- variable
+### Variables
+variables are attributes that can be changed over time. Whereas constants are attributes that cannot be changed once initialized.
+
 `<data type> <variable name> = <value>`
+
 ```
 int i = 0;
 char c = 'a';
 ```
 
-## constants
+### Constants
 To declare an attribute as a constant, include a ==final== keyword before a variable.
+
 `final <data type> <variable name> = <value>`
+
 ```
 final double pi = 3.14d;
 ```
@@ -105,10 +115,8 @@ switch(expression) {
 }
 ```
 
----
-
 # Looping statements
-Sometimes we want to run a set of instructions repeatedly until a condtion fails. In such cases we use looping statements.
+Sometimes we want to run a set of instructions repeatedly until a condtion fails or passes. In such cases we use looping statements.
 
 ## For
 ```
@@ -149,7 +157,7 @@ do {
 # Arrays
 Array is a collection of variables or constants of same data type. Somtimes we want to have a list of items say a checklist. In that scenario, creating an array would be more ideal that creating individual variables seperately. Arrays are declared in a similar way to that of other variables.
 
-`<data_type>[] <array_name> = new <data_type>[array_size];`
+`<data type>[] <array name> = new <data type>[array size];`
 
 ```
 String[] hero = String[5];
@@ -161,9 +169,7 @@ we can also do this in one step
 
 `String[] hero = {"archer", "Brute", "Ninja" };`
 
-Array size if immutable. Means size once dclared cannot be decreased or increased.
-here in this case, pushing elements more than declared size `5` would result in runtime error.
-`hero[index]` can be to used access elements at a specific index. `hero[0] = "magitian"` is how you assign elements to the array. `hero.length` gives you the size of the array
+Array size is immutable. Means size once declared cannot be decreased or increased. Here in this case, pushing elements more than declared size `5` would result in runtime error. `hero[index]` can be to used access elements at a specific index. `hero[0] = "magitian"` is how you assign elements to the array. `hero.length` gives you the size of the array
 lets discuss about array methids later on.
 
 # Strings and arrays
@@ -175,13 +181,13 @@ Reference type is basically, the value is stored in
 - Reference variables store values in ==Heap Memory==.
 - Reference variable is used to point object/values.
 
-> Classes, interfaces, arrays, enumerations, and, annotations are reference types in Java. 
+> Classes, interfaces, arrays, enumerations are reference types in Java. IN that sense Strings(since it is a class) are also a reference type.
 
-> Strings and Arrays are reference type.
-
+### Pass by value
 When primitive data types are passed to a function, its value is passed and changing it will only reflect inside the block and not else where.
 This behavior is called `pass by value`.
 
+### Pass by reference
 When a reference type variable is passed to functions,
 the reference is passed, not the value itself.
 so making changes in the variable will reflect in the main function where the variable was passed as asrgs to the function.
@@ -194,8 +200,7 @@ Java String Pool is the special memory region where Strings are stored by the JV
 
 Because of the presence of the String pool in the preceding example, two different variables are pointing to same String object from the pool, thus saving crucial memory resource.
 
-`Arrays` are also similar. its elements can be reassigned to newer values, but ==array size== is immutable.
-If the size of an array is declared as 10 you cannot increase the size.
+`Arrays` are also similar. its elements can be reassigned to newer values, but ==array size== is immutable. If the size of an array is declared as 10 you cannot increase the size.
 
 ## Synchronization
 Being immutable automatically makes the String thread safe since they won't be changed when accessed from multiple threads.
@@ -226,11 +231,32 @@ main();
 
 > variables, constants, condition statements, looping statements and functions are basic building blocks with which we declare basic set of instructions to perform an action.
 
+# Access Modifiers
+Access Modifiers are used to allow or restrict attributes, functions and objects in java. **There are 2 levels and 4 types of access modifiers**.
+
+- public
+- protected
+- default (no need to declare explicitly, if left undeclared: default modifier is applied)
+- private
+
+### class level modifier 
+classes can have **only public or default type** and not any other types.
+but a class can be declared final. when a class is declared final, it cannot be inherited.
+
+### method & attribute level modifier:
+Methods[functions] & attributes can have all four levels of access modifiers.
+
+| Modifier  | w Class | w Package | w Subclass | all |
+| public    | Y | Y | Y | Y |
+| protected | Y | Y | Y | N |
+| default   | Y | Y | N | N |
+| private   | Y | N | N | N |
+
 # OOP
 **Object Oriented Programming** is a whole concept itself. Here's a gist of it.
 Why do we need OOP? ideally before OOP, we provide steps and those steps are executed sequentially. Lets say you want to restrict few sets of instruction only for a certain entity. For instance, In a car its engine, tyre, every other parts are specific to that car. Most times we want to replicate this real time entities in our code. In that sense how do we encapsulate things like a car? well we use Class. 
 
-## Class
+# Class
 Classes encapsulates **attributes**(variables, constants and methods) and only the objects that are created from that class can have those attributes and not others.
 
 > Classes are like blueprints (a car design) from which we create objects (cars) and all the attributes(boy parts of the car) is unique to that object.
@@ -254,7 +280,7 @@ public class Hero {
 
 Here `Hero.java` is the file name, `Hero` is the class name and `String type` and `main()` are attributes of that class. The file name and class name should be the same.
 
-## Object and its creation
+# Object and its creation
 Now that we declared a class, lets create an object from it.
 
 `<Class name> <object name> = new <Class Name>();`
@@ -292,7 +318,7 @@ public Hero(int a, int b) {
 }
 ```
 
-## Java Variable types
+# Java Variable types
 ### Local Variables
 Variables inside a block =={ }== is local variable to that block. 
 
@@ -318,3 +344,73 @@ public class Hero {
   }
 }
 ```
+
+# Inheritance
+We need inheritance to reuse some the features that coes with OOP. Lets say we want create some classes indicating different shapes. Yes the same old example, bare with me. Basic shapes like square, triangle have certain similarities like name of the shape, no of edges and so on. Since these **similarities apply to all basic shapes it would be redundant to include same set of attributes and instructions inside each Shape class we create**. And if there is a change we need to do we might have to do in all the classes we created. This would be a nightmare. In this scenario, we could use inheritance to create a ==Super class== called **Shape** and have all the common attributes declared here. All the other shapes we create can be a ==sub class== to this super class. 
+
+## Extending
+```
+public class Shape {
+  String name;
+  int noOfEdges;
+  
+  void draw() {
+
+  }
+}
+
+public class Triangle **extends** Shape {
+    
+}
+```
+
+When a class inherits a class with **extends keyword** it means that all the attributes of the super class(Shape) is applicable to the sub class(Triangle). so the attributes `name, noOfEdges, draw()` belongs to the sub class when we create an object from it.
+
+> Classes in Java only supports single inheritance. multiple inheritance is not supported meaning a class cannot extend more than one class.
+
+# Types of classes
+There are several types of classes we can create in Java, which comes based on the inheritance we talked about.
+
+- concrete class
+- abstract class 
+- interface
+
+## Concrete class
+classes we normally declare are generally called as concrete classes in Java. In a concrete class ==all methods should be declared and should have a method body==.
+
+## Abstract class
+Class where we can have abstract methods are called abstract classes. **Abstract methods are normal methods that are declared as abstract. Abstract methods do not have a method body**. 
+
+`void draw();`
+
+Generally concrete classes that inherits the abstract class provides the method definition(body) to the abstract methods declared in the respective abstract class it inherited from.
+
+> concrete classes cannot have abstract methods. concrete class extending an abstract class should provide method definition for all abstract methods.
+
+```
+pubic **abstract** class Shape {
+  void draw();
+}
+
+public class Triangle **extends Shape** {
+  void draw() {
+    // methid definition / body
+  }
+}
+```
+
+## Interface
+Interface is similar to abstract classes. INterface came into picture because multiple inheritance is not allowed in Java. Lets say we want a class to inherit from multiple super classes using *extends* keyword. That is simply not possible. but a class can implement multiple interfaces using ==implements keyword==.
+
+## Implementing interfaces
+```
+public class Triangle extends Shape **implements Clonable, Iteratable** {
+
+}
+```
+
+> The class that implements the interfaces should provide method definition to all abstract methods inside all the interfaces it implements.
+
+Consider Interface and abstract class as a menu card in a restaurant. The menu has a basic list of all food items the restaurant has. You can order food by looking at the menu. But food will arrive at your table only when chef completes the order. Likewise interfaces and abstract classes have abstract attributes which a class can implement. But when the class implements it, It should define all the methods.
+
+We will continue covering the basics about Java  in the [[Java Part-2]](https://blog-six-rouge.vercel.app/dev/java-part-2) of this series.
