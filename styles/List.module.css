@@ -36,7 +36,7 @@
 
 .title {
   display: block;
-  font-size: calc(1.15em + 0.1vw);
+  font-size: calc(1.12em + 0.1vw);
   line-height: 1.2;
   cursor: pointer;
   font-weight: 600;
