@@ -3,7 +3,7 @@
     margin: 0 auto;
     margin-bottom: 1em;
     margin-top: 1em;
-    font-size: calc(0.92em + 0.15vw);
+    font-size: calc(0.94em + 0.15vw);
     letter-spacing: 0.03em;
     max-width: 634px;
     line-height: 1.4;
@@ -11,7 +11,6 @@
 }
 
 .articleToc {
-    /* background-color: var(--line-color); */
     display: none;
 }
 
@@ -27,11 +26,11 @@
     list-style: none;
     margin: 0;
     margin-top: 0.6em;
-    font-size: 1em;
+    font-size: 1.06em;
 }
 
 .articleToc h3 {
-    font-size: 1.15em;
+    font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 1em;
 }
@@ -74,7 +73,7 @@
     width: 90%;
     margin: 0 auto;
     gap: 0.6em;
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(0.9em + 0.2vw);
     max-width: 900px;
     letter-spacing: 0.04em;
@@ -93,7 +92,7 @@
 }
 
 .blog h1 {
-    font-size: calc(1.65em + 0.3vw);
+    font-size: calc(1.8em + 0.3vw);
     font-weight: 700;
     text-decoration: none;
     width: fit-content;
@@ -104,7 +103,7 @@
 }
 
 .blog h2 {
-    font-size: calc(1.04em + 0.3vw);
+    font-size: calc(1.2em + 0.3vw);
     font-weight: 700;
     line-height: 1.4;
     text-decoration: underline;
@@ -113,7 +112,7 @@
 }
 
 .blog h3 {
-    font-size: calc(0.95em + 0.2vw);
+    font-size: calc(1.05em + 0.2vw);
     font-weight: 700;
     line-height: 1.4;
     margin-bottom: 0.2em;
@@ -191,8 +190,7 @@
     text-transform: none;
     font-weight: 600;
     font-size: 0.95em;
-    padding: 0 0.4em;
-    margin: 0.4em 0;
+    padding: 0 0.6em;
     width: fit-content;
     background-color: var(--line-color);
     border: 1px solid #55555560;
@@ -229,7 +227,6 @@
     font-weight: 600;
     border-radius: 4px;
     color: var(--font-color);
-
     margin-left: -3px;
     margin-right: -3px;
     transform: rotate(2deg);
@@ -239,12 +236,12 @@
 
 .blog blockquote {
     display: block;
+    font-size: (1.3em + 0.1vw);
     width: calc(100% - 1.6em - 13px);
-    line-height: 1.6;
-    letter-spacing: 0.03em;
-    margin: 0;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
     font-weight: 500;
-    padding: 0.4em 0.8em;
+    padding: 0.6em 1em;
     background-color: rgba(129, 194, 255, 0.274);
     border: 1px solid rgba(14, 142, 206, 0.667);
     margin: 1em 0;

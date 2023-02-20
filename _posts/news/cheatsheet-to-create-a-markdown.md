@@ -1,8 +1,7 @@
 ---
-title: 'Tutorial to create a new markdown file to create an article'
-coverImage: '1.jpg'
-date: '2023-01-13'
-list: anime
+title: 'Cheatsheet to create a markdown'
+date: 'Jan 13 2023'
+list: news
 ---
 
 # Title - Lorem ipsum dolor sit amet
@@ -24,7 +23,7 @@ This is paragrpagh on my new fake blog! How exciting! I'm sure I'll write a lot 
 - ~red code~
 - ==Hightlight==
 - ==#Hashtag==
-- [Space shuttle columbia](https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster).
+- [[Space shuttle columbia]](https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster).
 
 ---
 

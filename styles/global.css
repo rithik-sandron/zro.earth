@@ -1,5 +1,5 @@
 :root {
-    --font-color: rgb(33, 37,41);
+    --font-color: rgb(33, 37, 41);
     --bg-color: #ffffff;
     --line-color: #9f9f9f1c;
     /* text and background */
@@ -214,4 +214,22 @@ body::-webkit-scrollbar-thumb {
     align-self: flex-start;
     height: 4em;
     width: 1em;
+}
+
+p {
+    line-height: 1.5;
+}
+
+mark {
+    padding: 0.1em 0.2em;
+    padding-bottom: 0.2em;
+    background-color: var(--color-yellow);
+    font-weight: 600;
+    border-radius: 4px;
+    color: var(--font-color);
+    margin-left: -3px;
+    margin-right: -3px;
+    transform: rotate(2deg);
+    border-radius: 20% 25% 20% 24%;
+    padding: 4px;
 }

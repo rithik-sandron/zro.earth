@@ -22,7 +22,7 @@
 
 .post {
   display: flex;
-  padding: 1em 0;
+  padding: 0.8em 0;
   letter-spacing: 0.2px;
 }
 
@@ -36,16 +36,17 @@
 
 .title {
   display: block;
-  font-size: calc(1.2em + 0.1vw);
-  line-height: 1.4;
+  font-size: calc(1.15em + 0.1vw);
+  line-height: 1.2;
   cursor: pointer;
   font-weight: 600;
 }
 
 .date {
   display: block;
-  margin-top: 0.1em;
-  font-size: 0.9em;
+  margin-top: 0.4em;
+  font-size: 0.8em;
+  font-weight: 300;
 }
 
 .tipTitle {

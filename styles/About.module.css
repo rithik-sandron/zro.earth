@@ -1,0 +1,39 @@
+.about {
+    display: block;
+    font-size: 1.2em;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 634px;
+    width: 80%;
+    margin: 4em auto
+}
+
+.about h1 {
+    margin: 2em 0 1em 0;
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 600
+}
+
+.about h2 {
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+    font-size: 1.2em;
+    line-height: 1.4;
+    font-weight: 600
+}
+
+.about p {
+    line-height: 1.8;
+    margin: 1em 0;
+}
+
+.about ul {
+    margin-left: 1.2em;
+    line-height: 2;
+}
+
+/* .about h1 {
+    font-size: 1em;
+    font-weight: 600
+} */

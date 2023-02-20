@@ -6,8 +6,7 @@
   display: flex;
   width: 90%;
   max-width: 900px;
-  margin: 0 auto;
-  padding: 0.2em 0;
+  margin: 1em auto;
   padding-bottom: 0;
   justify-content: space-between;
 }
@@ -30,11 +29,14 @@
 }
 
 #face {
-  display: flex;
+  display: block;
   margin: 0.3em 0;
   padding: 0;
+  font-size: 1.2em;
+  font-weight: 600;
   width: fit-content;
   height: fit-content;
+  align-self: center;
 }
 
 #ken {
@@ -46,7 +48,6 @@
   padding: 0;
   line-height: 0.72em;
   color: var(--font-color);
-  margin: 1em 0;
   margin-bottom: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

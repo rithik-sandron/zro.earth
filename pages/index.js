@@ -16,6 +16,7 @@ export default function Index({
     'coverImage': '',
   }]
 }) {
+  console.log(list)
   const heroPost = list[1][0];
 
   // const [search, setSearch] = useState('');

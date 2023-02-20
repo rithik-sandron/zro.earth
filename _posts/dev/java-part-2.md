@@ -4,10 +4,20 @@ date: 'Feb 20 2023'
 list: dev
 ---
 
-static keyword
-this keyword
-super keyword
-final keyword in classes
+# This is a 3 part series
+go to [[Java Part-1]](https://blog-six-rouge.vercel.app/dev/java-part-1)
+go to [[Java Part-2]](https://blog-six-rouge.vercel.app/dev/java-part-2)
+go to [[Java Part-3]](https://blog-six-rouge.vercel.app/dev/java-part-3)
+
+will cover
+- static keyword
+- this keyword
+- super keyword
+- final keyword in classes
+- Memory - heap & stack
+- gc
+- destructor for class
+
 
 # Wrapper classes
 As the name suggests, **wrapper classes are classes encapsulating primitive Java data type from which objcts can be created**. The first question that strikes us is that, why do we need to use Wrappers when we already have primitives?
@@ -48,17 +58,3 @@ here wrapper is converting automativally to a primitive. Internally
 
 ## Wrappers are Immutable
 When arithmetic operations are performed on primitive types, they yield a new value. By Nature primitive types are **Pass by value** and they are immutable. To replicate the behavior, Wrappers of the primitive are also immutable. So when an arithmetic operation is performed on a wrapper, a new object is returned, existing objects are not modified. **Wrappers are also pass by value in nature**.
-
-Memory - heap & stack
-gc
-destructor for class
-
-
-
-
-
-
-
-
- 
-  

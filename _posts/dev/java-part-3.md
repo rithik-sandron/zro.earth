@@ -4,6 +4,11 @@ date: 'Feb 20 2023'
 list: dev
 ---
 
+# This is a 3 part series
+go to [[Java Part-1]](https://blog-six-rouge.vercel.app/dev/java-part-1)
+go to [[Java Part-2]](https://blog-six-rouge.vercel.app/dev/java-part-2)
+go to [[Java Part-3]](https://blog-six-rouge.vercel.app/dev/java-part-3)
+
 # ArrayList
 ```
 public class ArrayList<E>
@@ -103,7 +108,7 @@ List list = Collections.synchronizedList(new LinkedList(...));
 | LinkedList           | O(1) |  O(1)  | O(n) |   O(n)   | O(1) | Linked List    |
 
 # HashMap
-[HashMap Java docs](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
+[[HashMap Java docs]](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
 
 ```
 public class HashMap<K,V>
@@ -161,7 +166,7 @@ Map m = Collections.synchronizedMap(new HashMap(...))
 
 
 # HashSet
-[HashSet Java docs](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
+[[HashSet Java docs]](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)
 
 ```
 public class HashSet<E>

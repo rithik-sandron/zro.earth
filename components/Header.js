@@ -27,7 +27,11 @@ export default function Header({ bg = '', fore = '', title = '' }) {
   const router = useRouter()
 
   function back() {
-    if (router.route !== '/') router.back();
+    if (router.route !== '/') router.push('/');
+  }
+
+  function about() {
+    if (router.route !== '/about') router.push('/about');
   }
 
   return (
@@ -53,7 +57,12 @@ export default function Header({ bg = '', fore = '', title = '' }) {
 
         <span className={styles.panel} id={styles.ken}
           onClick={back}>
-          Zゼ<br />Rロ</span>
+          Zゼ<br />Rロ
+        </span>
+
+        <span className={styles.panel} id={styles.face}
+          onClick={about}>About
+        </span>
         {/* </Link> */}
       </div>
     </div >

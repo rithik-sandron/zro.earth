@@ -10,7 +10,7 @@ go to [[Java Part-2]](https://blog-six-rouge.vercel.app/dev/java-part-2)
 go to [[Java Part-3]](https://blog-six-rouge.vercel.app/dev/java-part-3)
 
 # Data types
-Data types are basic building blocks of any programming language. In java there are basically 8 primitive data types. String is also a data but its non primitive since it is a class.
+Data types are basic building blocks of any programming language. In java there are basically 8 primitive data types. String is also a data type but it is non-primitive since it is a class.
 
 ## Primitives
 - boolean
@@ -38,27 +38,23 @@ Data types are basic building blocks of any programming language. In java there 
 ```
 
 # Variables and Constants
-### Variables
+## Variables
 variables are attributes that can be changed over time. Whereas constants are attributes that cannot be changed once initialized.
-
-`<data type> <variable name> = <value>`
 
 ```
 int i = 0;
 char c = 'a';
 ```
 
-### Constants
+## Constants
 To declare an attribute as a constant, include a ==final== keyword before a variable.
-
-`final <data type> <variable name> = <value>`
 
 ```
 final double pi = 3.14d;
 ```
 
 # Conditional statements
-statements are mosre concept specific and not lanuage specific. you can find statements similar to this across other programming languages too. Statements are used ti run a bunch of steps only when on a specific condition.
+statements are more concept specific and not lanuage specific. You can find statements similar across all programming languages. Conditional Statements are used to run a bunch of instructions only on a specific condition.
 
 ## if
 ```
@@ -154,61 +150,6 @@ do {
 } while (numbers.length < 5)
 ```
 
-# Arrays
-Array is a collection of variables or constants of same data type. Somtimes we want to have a list of items say a checklist. In that scenario, creating an array would be more ideal that creating individual variables seperately. Arrays are declared in a similar way to that of other variables.
-
-`<data type>[] <array name> = new <data type>[array size];`
-
-```
-String[] hero = String[5];
-hero[0] = "archer";
-hero[1] = "Brute";
-```
-
-we can also do this in one step
-
-`String[] hero = {"archer", "Brute", "Ninja" };`
-
-Array size is immutable. Means size once declared cannot be decreased or increased. Here in this case, pushing elements more than declared size `5` would result in runtime error. `hero[index]` can be to used access elements at a specific index. `hero[0] = "magitian"` is how you assign elements to the array. `hero.length` gives you the size of the array
-lets discuss about array methids later on.
-
-# Strings and arrays
-## Reference type
-Reference type is basically, the value is stored in 
-==Heap memory==, instead of storing the value in stack memory like the primitive variables.
-
-- primitives variables store values in ==Stack memory==.
-- Reference variables store values in ==Heap Memory==.
-- Reference variable is used to point object/values.
-
-> Classes, interfaces, arrays, enumerations are reference types in Java. IN that sense Strings(since it is a class) are also a reference type.
-
-### Pass by value
-When primitive data types are passed to a function, its value is passed and changing it will only reflect inside the block and not else where.
-This behavior is called `pass by value`.
-
-### Pass by reference
-When a reference type variable is passed to functions,
-the reference is passed, not the value itself.
-so making changes in the variable will reflect in the main function where the variable was passed as asrgs to the function.
-This behavior is called `pass by reference`.
-
-## immutable
-`String` is the most widely used data structure. Caching the String literals and reusing them saves a lot of ==heap space== because different String variables refer to the same object in the String pool.
-
-Java String Pool is the special memory region where Strings are stored by the JVM. Since Strings are immutable in Java, the JVM optimizes the amount of memory allocated for them by storing only one copy of each literal String in the pool. This process is called interning.
-
-Because of the presence of the String pool in the preceding example, two different variables are pointing to same String object from the pool, thus saving crucial memory resource.
-
-`Arrays` are also similar. its elements can be reassigned to newer values, but ==array size== is immutable. If the size of an array is declared as 10 you cannot increase the size.
-
-## Synchronization
-Being immutable automatically makes the String thread safe since they won't be changed when accessed from multiple threads.
-
-Hence immutable objects, in general, can be shared across multiple threads running simultaneously. They're also thread-safe because if a thread changes the value, then instead of modifying the same, a new String would be created in the String pool. Hence, Strings are safe for multi-threading.
-
-> immutable objects are thread safe.
-
 # Functions
 Functions are basically a block =={ }== of code that runs
 only when function is called.
@@ -231,6 +172,80 @@ main();
 
 > variables, constants, condition statements, looping statements and functions are basic building blocks with which we declare basic set of instructions to perform an action.
 
+# Value type and Reference type
+Reference type is basically, the value is stored in 
+==Heap memory==, instead of storing the value in stack memory like the primitive variables.
+
+- primitives variables are stored in ==Stack memory==.
+- Reference variables are stored in ==Heap Memory==.
+- Reference variable is used to point object/values.
+
+> Classes, interfaces, arrays, enumerations are reference types in Java. In that sense String(since it is a class) is also a reference type.
+
+## Pass by value
+When primitive data types are passed to a function, its value is passed and changing it will only reflect inside the block and not else where.
+This behavior is called **pass by value**.
+
+## Pass by reference
+When a reference type variable is passed to functions,
+the reference is passed, not the value itself.
+so making changes in the variable will reflect in the main function where the variable was passed as asrgs to the function.
+This behavior is called **pass by reference**.
+
+# String
+String is the most widely used data type. WHen a String is initialized its value is stored in **Heap memory**.
+```
+String a = "hero";
+String b = "hero"
+```
+
+In the above example both `a` and `b` have the same value. In this case, Java does not create two seperate memory boxes to store the values. Instead it creates one memory box where `hero` is stored and variables `a` and `b` will point to that same memory box. This special string memory space is called **String pool**. Caching the String literals and reusing them saves a lot of ==heap space== because different String variables refer to the same object in the String pool.
+
+Since **Strings are immutable in Java**, the JVM optimizes the amount of memory allocated for them by storing only one copy of each literal String in the pool. This process is called **interning**. If String was mutable, many variables would be pointing to that one value and changing that value would reflect in all other variables poiting to it. For this reason String are Immutable in Java.
+
+So when you pass a String to a method/function, only the String reference it is pointing to in String pool is passed and not the value itself. When that reference is changed, the Sting would point to different memory box. Technically it is passing the reference of the value it has. So by default String is **pass by value but passes the reference(memory address) of the value**.
+
+# Array
+Array is a collection of variables or constants of same data type. Somtimes we want to have a list of items say a checklist. In that scenario, creating an array would be more ideal that creating individual variables seperately. Arrays are declared in a similar way to that of other variables. Arrays have consecutive memory allocation.
+
+```
+String[] hero = String[5];
+hero[0] = "archer";
+hero[1] = "Brute";
+```
+
+we can also do this in one step
+
+```
+String[] hero = {"archer", "Brute", "Ninja" };
+```
+
+Array size is immutable. Means size once declared cannot be decreased or increased. Here in this case, pushing elements more than declared size **5** would result in runtime error. 
+
+- `hero[index]` can be to used access elements at a specific index. 
+- `hero[0] = "magitian"` is how you assign elements to the array. 
+- `hero.length` gives you the size of the array.
+
+Similar to String, **Array is also pass by value, but passes the reference(memory address) of the starting index of the value it stores.** for example:
+
+```
+int[] numbers = new int[3];
+numbers[0] = 1;
+numbers[1] = 2;
+numbers[2] = 3;
+```
+
+When this array is passed to a function/method, reference(the memory address)  of the `numbers[0]` is passed. Since array memory allocation is sequential, you can fetch the next element in the array with the first index reference.
+
+> So this is why both Arrays and String are immutable and pass by value, but passes only the reference.(the memory address)
+
+# Synchronization
+**Being immutable automatically makes the String thread safe** since they won't be changed when accessed by multiple threads.
+
+Hence immutable objects, in general, can be shared across multiple threads running simultaneously. They're also thread-safe because if a thread changes the value, then instead of modifying the same, a new String would be created in the String pool. Hence, Strings are safe for multi-threading and so are arrays.
+
+> immutable objects are thread safe.
+
 # Access Modifiers
 Access Modifiers are used to allow or restrict attributes, functions and objects in java. **There are 2 levels and 4 types of access modifiers**.
 
@@ -239,11 +254,11 @@ Access Modifiers are used to allow or restrict attributes, functions and objects
 - default (no need to declare explicitly, if left undeclared: default modifier is applied)
 - private
 
-### class level modifier 
+## class level modifier 
 classes can have **only public or default type** and not any other types.
 but a class can be declared final. when a class is declared final, it cannot be inherited.
 
-### method & attribute level modifier:
+## method & attribute level modifier:
 Methods[functions] & attributes can have all four levels of access modifiers.
 
 | Modifier  | w Class | w Package | w Subclass | all |
@@ -257,7 +272,7 @@ Methods[functions] & attributes can have all four levels of access modifiers.
 Why do we need OOP? ideally before OOP, we provide steps and those steps are executed sequentially. Lets say you want to restrict few sets of instruction only for a certain entity. For instance, In a car its engine, tyre, every other parts are specific to that car. Most times we want to replicate this real time entities in our code. In that sense how do we encapsulate things like a car? well we use Class. 
 
 # Class
-Classes encapsulates **attributes**(variables, constants and methods) and only the objects that are created from that class can have those attributes and not others.
+Classes encapsulates **attributes**(variables, constants and methods) togher as one entity and only the objects that are created from that class can have those attributes.
 
 > Classes are like blueprints (a car design) from which we create objects (cars) and all the attributes(boy parts of the car) is unique to that object.
 
@@ -283,8 +298,6 @@ Here `Hero.java` is the file name, `Hero` is the class name and `String type` an
 # Object and its creation
 Now that we declared a class, lets create an object from it.
 
-`<Class name> <object name> = new <Class Name>();`
-
 ```
 Hero object = new Hero();
 ```
@@ -298,7 +311,6 @@ Constructors are special methods inside a class that is used to create an object
 public Hero() {
 
 }
-
 ```
 
 - Constructors have the same name as the class.
