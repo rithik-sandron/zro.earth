@@ -4,13 +4,13 @@
     justify-content: center;
     flex-direction: column;
     max-width: 634px;
-    width: 80%;
+    width: 90%;
     margin: 4em auto
 }
 
 .about h1 {
     margin: 2em 0 1em 0;
-    font-size: 2em;
+    font-size: calc(1.8em + 0.4vw);
     line-height: 1.5;
     font-weight: 600
 }
@@ -18,7 +18,7 @@
 .about h2 {
     margin-top: 2em;
     margin-bottom: 0.6em;
-    font-size: 1.2em;
+    font-size: calc(1.1em + 0.1vw);
     line-height: 1.4;
     font-weight: 600
 }
@@ -26,6 +26,7 @@
 .about p {
     line-height: 1.8;
     margin: 1em 0;
+    font-size: calc(0.9em + 0.1vw);
 }
 
 .about ul {
