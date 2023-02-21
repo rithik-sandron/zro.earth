@@ -24,7 +24,7 @@ export default function About() {
                 <h2>We write about</h2>
                 <ul >
                     <li>Any news we find interesting.</li>
-                    <li>About extensively researched or fun topics we find in web.</li>
+                    <li>Extensively researched or fun topics we find in web.</li>
                     <li>Anime.</li>
                     <li>Movies & shows.</li>
                     <li>Games.</li>
@@ -50,7 +50,7 @@ export default function About() {
                     We do not store anything in browser storage.
                 </p>
 
-                <h2>Made with love ♡ and passion 🔥 for writing.</h2>
+                <p>Made with love ♡ and passion 🔥 for writing.</p>
 
 
             </div>

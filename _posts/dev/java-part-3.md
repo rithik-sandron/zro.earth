@@ -1,5 +1,5 @@
 ---
-title: 'Java part-3'
+title: 'Java part-3 [Collections, time complexity..]'
 date: 'Feb 20 2023'
 list: dev
 ---
@@ -12,9 +12,9 @@ go to [[Java Part-3]](https://blog-six-rouge.vercel.app/dev/java-part-3)
 # ArrayList
 ```
 public class ArrayList<E>
-extends **AbstractList<E>**
+extends AbstractList<E>
 implements 
-**List<E>, RandomAccess, Cloneable, Serializable**
+List<E>, RandomAccess, Cloneable, Serializable
 ```
 
 ArrayList is a RandomAccess collection often known as ==Resizable-array==. ArrayList is one of the List implementations built atop an array. Unlike arrays, ArrayList can grow and shrink in size dynamically.
@@ -54,8 +54,8 @@ When we take about ArrayList, there is a legacy class ==Vector<E>== which is sim
 # ArrayDeque
 ```
 public class ArrayDeque<E>
-extends **AbstractCollection<E>**
-implements **Deque<E>, Cloneable, Serializable**
+extends AbstractCollection<E>
+implements Deque<E>, Cloneable, Serializable
 ```
 
 ## Most used methods:
@@ -87,8 +87,8 @@ Most ArrayDeque operations run in amortized constant time. Exceptions include re
 # LinkedList
 ```
 public class LinkedList<E>
-extends **AbstractSequentialList<E>**
-implements **List<E>, Deque<E>, Cloneable, Serializable**
+extends AbstractSequentialList<E>
+implements List<E>, Deque<E>, Cloneable, Serializable
 ```
 
 Linked List in Java is a doubly LinkedList implementation of List and Deque. so it can traverse from the beginning or from the end in both ways based on the index (whichever is closer to the index).
@@ -112,8 +112,8 @@ List list = Collections.synchronizedList(new LinkedList(...));
 
 ```
 public class HashMap<K,V>
-extends **AbstractMap<K,V>**
-implements **Map<K,V>, Cloneable, Serializable**
+extends AbstractMap<K,V>
+implements Map<K,V>, Cloneable, Serializable
 ```
 
 A map is a key-value mapping, which means that every key is mapped to one value and that we can use the key to retrieve the corresponding value from a map. Why do we need a HashMap? **The simple reason is performance**. If we want to find a specific element in a list, the time complexity is O(n) and if the list is sorted, it will be O(log n) using, for example, a binary search.
@@ -170,8 +170,8 @@ Map m = Collections.synchronizedMap(new HashMap(...))
 
 ```
 public class HashSet<E>
-extends **AbstractSet<E>**
-implements **Set<E>, Cloneable, Serializable**
+extends AbstractSet<E>
+implements Set<E>, Cloneable, Serializable
 ```
 
 This class implements the Set interface, backed by a hash table (actually a HashMap instance). This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly among the buckets. Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important.

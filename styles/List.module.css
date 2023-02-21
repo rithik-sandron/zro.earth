@@ -11,7 +11,7 @@
   display: block;
   width: fit-content;
   /* padding-right: 1em; */
-  font-size: calc(2.2em + 0.4vw);
+  font-size: calc(2em + 0.4vw);
   font-weight: 700;
   letter-spacing: -3px;
   height: 1em;
@@ -36,16 +36,16 @@
 
 .title {
   display: block;
-  font-size: calc(1.12em + 0.1vw);
+  font-size: calc(1.1em + 0.1vw);
   line-height: 1.2;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .date {
   display: block;
   margin-top: 0.4em;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 300;
 }
 

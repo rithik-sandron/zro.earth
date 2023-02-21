@@ -42,7 +42,7 @@ export default function Blog({
                     alt={post.title}
                 />}
             </div>
-            <PixelBlock isList bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
+            <PixelBlock isList fore={post.color.fore} blocks={blocks} />
 
             <div id='article-toc' className={styles.articleToc} />
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />

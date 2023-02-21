@@ -1,5 +1,5 @@
 ---
-title: 'Java part-1'
+title: 'Java part-1 [Basics]'
 date: 'Feb 14 2023'
 list: dev
 ---
@@ -26,15 +26,15 @@ Data types are basic building blocks of any programming language. In java there 
 - String
 
 ```
-**boolean** flag = true;
-**byte** val = 20;
-**short** no = 10;
-**int** age = 34; 
-**long** longNumber = 1234567;
-**float** k = 11.5f;
-**double** pi = 3.14d;
-**char** startsWith = 'V';
-**String** name = "John"
+boolean flag = true;
+byte val = 20;
+short no = 10;
+int age = 34; 
+long longNumber = 1234567;
+float k = 11.5f;
+double pi = 3.14d;
+char startsWith = 'V';
+String name = "John"
 ```
 
 # Variables and Constants
@@ -371,7 +371,7 @@ public class Shape {
   }
 }
 
-public class Triangle **extends** Shape {
+public class Triangle extends Shape {
     
 }
 ```
@@ -400,7 +400,7 @@ Generally concrete classes that inherits the abstract class provides the method 
 > concrete classes cannot have abstract methods. concrete class extending an abstract class should provide method definition for all abstract methods.
 
 ```
-pubic **abstract** class Shape {
+pubic abstract class Shape {
   void draw();
 }
 
@@ -416,7 +416,8 @@ Interface is similar to abstract classes. INterface came into picture because mu
 
 ## Implementing interfaces
 ```
-public class Triangle extends Shape **implements Clonable, Iteratable** {
+public class Triangle extends Shape 
+    implements Clonable, Iteratable {
 
 }
 ```

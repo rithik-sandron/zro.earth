@@ -32,7 +32,11 @@
 .about ul {
     font-size: calc(0.9em + 0.1vw);
     margin-left: 1.2em;
-    line-height: 2;
+    line-height: 1.6;
+}
+
+.about li {
+    margin-bottom: 0.6em;
 }
 
 /* .about h1 {

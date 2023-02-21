@@ -3,7 +3,7 @@
     margin: 0 auto;
     margin-bottom: 1em;
     margin-top: 1em;
-    font-size: calc(0.94em + 0.15vw);
+    font-size: calc(1em + 0.1vw);
     letter-spacing: 0.03em;
     max-width: 634px;
     line-height: 1.4;
@@ -18,7 +18,7 @@
     width: calc(100% - 4em);
     padding: 2em;
     padding-top: 2em;
-    max-width: 900px;
+    max-width: 634px;
     margin: 0 auto;
 }
 
@@ -26,7 +26,7 @@
     list-style: none;
     margin: 0;
     margin-top: 0.6em;
-    font-size: 1.06em;
+    font-size: 1em;
 }
 
 .articleToc h3 {
@@ -108,7 +108,7 @@
     line-height: 1.4;
     text-decoration: underline;
     text-underline-offset: 4px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .blog h3 {
@@ -186,16 +186,16 @@
 
 .blog *>code {
     display: inline-block;
-    font-family: monospace;
     text-transform: none;
-    font-weight: 600;
     font-size: 0.95em;
     padding: 0 0.6em;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
     width: fit-content;
     background-color: var(--line-color);
     border: 1px solid #55555560;
     word-break: break-all;
     border-radius: 4px;
+    font-size: calc(0.9em + 0.1vw);
 }
 
 .blog sup {
@@ -203,13 +203,13 @@
     border-radius: 4px;
 }
 
-.blog sup::after {
+.blog sup::before {
     content: '';
     border-radius: 50%;
     display: inline-block;
-    height: 0.7em;
-    width: 0.7em;
-    margin-left: 0.4em;
+    height: 0.8em;
+    width: 0.8em;
+    margin-right: 0.4em;
     background-color: #E10600;
 }
 
@@ -255,17 +255,16 @@
     line-height: 1.8;
     overflow-x: auto;
     margin: 1em 0;
-    font-family: monospace;
-    font-size: 0.9em;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
     background-color: #9f9f9f1c;
     border: 1px solid #78787857;
     border-radius: 4px;
+    font-size: calc(0.9em + 0.1vw);
 }
 
 .line {
     display: block;
     white-space: pre;
-    font-family: monospace;
 }
 
 .blog table {
@@ -323,51 +322,4 @@
     padding: 0;
     background-color: var(--line-color);
     opacity: 0.6;
-}
-
-.accordion {
-    height: fit-content;
-    width: calc(100% - 2em);
-    transition: height 0.15s ease-in-out;
-    transition: opacity 0.15s ease-in-out;
-    border-radius: 4px;
-    border: 0.08em solid var(--line-color);
-    padding: 0.6em 1.4em;
-    padding-left: 0.6em;
-}
-
-.accordionExpand::before,
-.accordionClose::before {
-    display: inline-block;
-    content: '';
-    border-left: 0.4em solid transparent;
-    border-right: 0.4em solid transparent;
-    border-top: 0.6em solid var(--color-blue);
-    border-radius: 2px;
-    cursor: pointer;
-    margin-right: 0.4em;
-    height: fit-content;
-    transition: opacity 0.15s ease-in-out;
-    transition: height 0.15s ease-in-out;
-    cursor: pointer;
-}
-
-.accordionExpand,
-.accordionClose {
-    display: block;
-    cursor: pointer;
-    margin: 0;
-}
-
-.accordionClose::before {
-    transform: rotate(-90deg);
-}
-
-.accordionItem {
-    display: block;
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: height 0.15s ease-in-out;
-    transition: opacity 0.15s ease-in-out;
 }

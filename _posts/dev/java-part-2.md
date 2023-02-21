@@ -1,5 +1,5 @@
 ---
-title: 'Java - part 2'
+title: 'Java part-2 [OOP, stack, heap, gc..]'
 date: 'Feb 20 2023'
 list: dev
 ---
@@ -34,7 +34,7 @@ All 8 primitive data types have its own wrapper classes. **Since String being a 
 | long | Long |
 | float | Float |
 | double | Double |  
-| char | CHaracter |
+| char | Character |
 
 ## Auto Boxing
 **Automatic boxing** refers to steps that JVM does to convert the primitive values automatically to Wrappers.
@@ -46,7 +46,7 @@ Character ch = 'a';
 Here 12 is a primitive literal, that is converted automatically into a n Integer wrapper. Internally `Integer.valueOf(12)` is what JVM runs to auto box the value. **We do not need to manually convert but we could**.
 
 ## Unboxing
-**automatic unboxing** of wrapper classes to primitive values.
+**Automatic unboxing** of wrapper classes to primitive values.
 
 ```
 Integer i = new Integer(10);
