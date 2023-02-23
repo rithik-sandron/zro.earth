@@ -2,7 +2,7 @@
     --font-color: rgb(33, 37, 41);
     --bg-color: #ffffff;
     --line-color: #78787857;
-    --color-grey: #f6f8fa;
+    --color-grey: #f4f4f4;
     /* text and background */
     --text-cyan: rgba(101, 219, 213, 0.683);
     --text-cyan-select: rgba(101, 219, 213, 0.498);
@@ -19,7 +19,7 @@
     --font-color: rgb(225, 225, 225);
     --bg-color: #050607;
     --line-color: #78787857;
-    --color-grey: rgb(22, 25, 31);
+    --color-grey: rgb(26, 26, 27);
 
     /* text and background */
     --text-cyan: rgba(101, 219, 213, 0.683);

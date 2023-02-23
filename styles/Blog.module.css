@@ -26,10 +26,10 @@
 }
 
 .articleToc li {
+    font-size: calc(1em + 0.1vw);
     list-style: none;
     margin: 0;
     margin-top: 0.6em;
-    font-size: 1em;
 }
 
 .articleToc a {
@@ -270,7 +270,7 @@
     border-radius: 4px;
     overflow-y: hidden;
     border-collapse: collapse;
-    border: 0.5px solid #55555570;
+    border: 1px solid var(--line-color);
     width: fit-content;
     overflow-x: auto;
     max-width: 100%;
@@ -288,7 +288,7 @@
 }
 
 .blog tr {
-    border-bottom: 0.5px solid #55555550;
+    border-bottom: 1px solid var(--line-color);
 }
 
 .blog tr:last-child {
@@ -296,10 +296,14 @@
 }
 
 .blog th {
-    font-size: 0.9em;
     text-align: left;
     font-weight: 700;
-    background-color: var(--line-color);
+    background-color: var(--color-grey);
+    border-right: 1px solid var(--line-color);
+}
+
+.blog th:last-child {
+    border-right: none;
 }
 
 .blog th:first-child {
@@ -311,7 +315,11 @@
 }
 
 .blog td {
-    font-size: 0.9em;
+    border-right: 1px solid var(--line-color);
+}
+
+.blog td:last-child {
+    border-right: none;
 }
 
 .empty-row {
