@@ -18,6 +18,7 @@ export default function List({ posts = [
                 >
                 {posts[0].list}
             </div>
+
             <PixelBlock isList fore={posts[0].color.fore} />
 
             <div className={styles.list}>

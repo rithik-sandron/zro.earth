@@ -12,27 +12,24 @@
 
 .articleToc {
     display: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    max-width: 634px;
+    margin-top: 3em;
+    cursor: pointer;
 }
 
-.articleToc>nav {
-    width: calc(100% - 4em);
-    padding: 2em;
-    padding-top: 2em;
-    max-width: 634px;
-    margin: 0 auto;
+.articleToc>summary {
+    font-size: 1.2em;
+    margin-bottom: 1em;
 }
 
 .articleToc li {
     list-style: none;
     margin: 0;
-    margin-top: 0.6em;
+    margin-top: 0.8em;
     font-size: 1em;
-}
-
-.articleToc h3 {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-bottom: 1em;
 }
 
 .articleToc a {
@@ -99,7 +96,7 @@
     text-decoration: underline;
     text-underline-offset: 6px;
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
 }
 
 .blog h2 {
@@ -191,8 +188,8 @@
     padding: 0 0.6em;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
     width: fit-content;
-    background-color: var(--line-color);
-    border: 1px solid #55555560;
+    background-color: var(--color-grey);
+    border: 1px solid var(--line-color);
     word-break: break-all;
     border-radius: 4px;
     font-size: calc(0.9em + 0.1vw);
@@ -236,28 +233,28 @@
 
 .blog blockquote {
     display: block;
-    font-size: (1.3em + 0.1vw);
     width: calc(100% - 1.6em - 13px);
-    line-height: 1.7;
+    line-height: 1.8;
     letter-spacing: 0.04em;
-    font-weight: 500;
-    padding: 0.6em 1em;
+    padding: 1em;
     background-color: rgba(129, 194, 255, 0.274);
     border: 1px solid rgba(14, 142, 206, 0.667);
     margin: 1em 0;
     border-radius: 4px;
+    font-size: calc(1.05em + 0.1vw);
+
 }
 
 .blog code>pre {
     white-space: pre;
     letter-spacing: 0.04em;
-    padding: 0.5em 1em;
+    padding: 1em;
     line-height: 1.8;
     overflow-x: auto;
     margin: 1em 0;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
-    background-color: #9f9f9f1c;
-    border: 1px solid #78787857;
+    background-color: var(--color-grey);
+    border: 1px solid var(--line-color);
     border-radius: 4px;
     font-size: calc(0.9em + 0.1vw);
 }

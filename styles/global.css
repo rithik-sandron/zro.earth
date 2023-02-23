@@ -1,7 +1,8 @@
 :root {
     --font-color: rgb(33, 37, 41);
     --bg-color: #ffffff;
-    --line-color: #9f9f9f1c;
+    --line-color: #78787857;
+    --color-grey: #f6f8fa;
     /* text and background */
     --text-cyan: rgba(101, 219, 213, 0.683);
     --text-cyan-select: rgba(101, 219, 213, 0.498);
@@ -16,8 +17,9 @@
 
 [data-theme="dark"] {
     --font-color: rgb(225, 225, 225);
-    --bg-color: rgb(18, 18, 19);
-    --line-color: #9f9f9f1c;
+    --bg-color: #0d1117;
+    --line-color: #78787857;
+    --color-grey: rgb(22, 25, 31);
 
     /* text and background */
     --text-cyan: rgba(101, 219, 213, 0.683);

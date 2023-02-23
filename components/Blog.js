@@ -9,7 +9,7 @@ export default function Blog({
 
     useEffect(() => {
         var toc =
-            `<nav role='navigation'><h3>On this page</h3><ul>`;
+            `<summary>On this page</summary><ul>`;
         let headings = document.querySelectorAll('.table-content-h1');
         if (headings.length > 3) {
             headings.forEach(heading => {
@@ -19,7 +19,7 @@ export default function Blog({
                 toc += newLine;
             });
 
-            toc += `</ul></nav>`;
+            toc += `</ul>`;
             let articleToc = document.getElementById('article-toc');
 
             articleToc.innerHTML = toc;
@@ -44,7 +44,9 @@ export default function Blog({
             </div>
             <PixelBlock isList fore={post.color.fore} blocks={blocks} />
 
-            <div id='article-toc' className={styles.articleToc} />
+            <details open id='article-toc' className={styles.articleToc}>
+                
+            </details>
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>
     );

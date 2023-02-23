@@ -26,7 +26,7 @@ Data types are basic building blocks of any programming language. In java there 
 - String
 
 ```
-boolean flag = true;
+* boolean flag = true;
 byte val = 20;
 short no = 10;
 int age = 34; 
