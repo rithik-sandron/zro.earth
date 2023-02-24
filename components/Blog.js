@@ -35,7 +35,7 @@ export default function Blog({
                     <div className={styles.author}>
                         <div>{post.author.name}</div>
                         <div>{post.date}</div>
-                        <div> ☕️ {Math.round(post.lines * 5 / 60)} min read</div>
+                        <div style={{ marginTop: '2px' }}> ☕️ {Math.round(post.lines * 5 / 60)} min read</div>
                     </div>
 
                 </div>

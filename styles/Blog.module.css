@@ -76,7 +76,7 @@
 }
 
 .author > * {
-    align-self: baseline;
+    align-self: first baseline;
 }
 
 .author > *::after {

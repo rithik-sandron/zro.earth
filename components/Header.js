@@ -40,10 +40,9 @@ export default function Header({ title = '' }) {
         <title>ZゼRロ</title>
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="msapplication-TileColor" media="(prefers-color-scheme: light)" content={"#fff"} />
-        <meta name="msapplication-TileColor" media="(prefers-color-scheme: dark)" content={"rgb(18, 18, 19)"} />
+        <meta name="msapplication-TileColor" media="(prefers-color-scheme: dark)" content={"#050607"} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content={"#fff"} />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content={"rgb(18, 18, 19)"} />
-        <meta property="og:site_name" content='ZゼRロ' />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content={"#050607"} />
         <meta property="og:site_name" content='ZゼRロ' />
         {title && <meta property="og:title" content={title} />}
       </Head>
