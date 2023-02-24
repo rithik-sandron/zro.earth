@@ -5,7 +5,7 @@ import Blog from '../../components/Blog.js'
 import { useRouter } from 'next/router'
 
 export default function Post({
-  post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "" }
+  post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, content: "", lines: 0 }
 }) {
 
   const router = useRouter()
@@ -15,7 +15,7 @@ export default function Post({
 
   return (
     <Layout bg={post.color.bg} fore={post.color.fore}
-      title={post.title} >
+      title={post.title}>
       <Blog post={post} />
     </Layout >
   )
@@ -44,17 +44,17 @@ export async function getStaticProps({ params }) {
     'slug',
     'author',
     'content',
-    // 'coverImage',
     'color',
   ])
 
-  const content = await markdownToHtml(post.content || '')
+  const [content, lines] = await markdownToHtml(post.content || '')
 
   return {
     props: {
       post: {
         ...post,
         content,
+        lines
       }
     },
   }

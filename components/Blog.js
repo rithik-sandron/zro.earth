@@ -4,7 +4,7 @@ import PixelBlock from './PixelBLock';
 import Image from './Image'
 
 export default function Blog({
-    blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, coverImage: "", color: { bg: '', fore: '' } }
+    blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, content: "", lines: 0, color: { bg: '', fore: '' } }
 }) {
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export default function Blog({
         if (headings.length > 3) {
             headings.forEach(heading => {
                 const title = heading.innerText;
-                const link = "#" + heading.id;
+                const link = "line-" + heading.id;
                 const newLine = `<li><a href='${link}'>${title}</a></li>`;
                 toc += newLine;
             });
@@ -33,9 +33,11 @@ export default function Blog({
                 <div key={post.slug} className={styles.container}>
                     <h1>{post.title}</h1>
                     <div className={styles.author}>
-                        <div>{post.author.name},</div>
+                        <div>{post.author.name}</div>
                         <div>{post.date}</div>
+                        <div> ☕️ {Math.round(post.lines * 5 / 60)} min read</div>
                     </div>
+
                 </div>
                 {post.coverImage && <Image
                     url={post.coverImage}
@@ -45,7 +47,7 @@ export default function Blog({
             <PixelBlock isList fore={post.color.fore} blocks={blocks} />
 
             <details open id='article-toc' className={styles.articleToc}>
-                
+
             </details>
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>

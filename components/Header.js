@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from "next/router";
 
-export default function Header({ bg = '', fore = '', title = '' }) {
+export default function Header({ title = '' }) {
 
   function setIsDarkTheme() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {

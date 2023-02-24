@@ -36,12 +36,11 @@
     color: var(--color-blue);
     font-weight: 500;
     padding-bottom: 0.01em;
-    border-bottom: 0.1em solid;
+    border-bottom: 0.11em solid;
 }
 
 .articleToc a:hover,
 .articleToc a:active {
-    border-bottom: 0.25em solid rgb(22, 80, 134);
     color: rgb(22, 80, 134);
 }
 
@@ -69,12 +68,24 @@
     display: flex;
     width: 90%;
     margin: 0 auto;
-    gap: 0.6em;
     font-weight: 500;
     font-size: calc(0.9em + 0.2vw);
     max-width: 900px;
     letter-spacing: 0.04em;
     margin-bottom: 1em;
+}
+
+.author > * {
+    align-self: baseline;
+}
+
+.author > *::after {
+    content: '•';
+    margin: 0 0.5em;
+}
+
+.author > *:last-child::after {
+content: '';
 }
 
 .blog hr {
@@ -89,14 +100,14 @@
 }
 
 .blog h1 {
+    display: flex;
     font-size: calc(1.8em + 0.3vw);
     font-weight: 700;
     text-decoration: none;
     width: fit-content;
-    text-decoration: underline;
-    text-underline-offset: 6px;
     margin-top: 1em;
     margin-bottom: 0.6em;
+    cursor: pointer;
 }
 
 .blog h2 {
@@ -172,12 +183,11 @@
     color: var(--color-blue);
     font-weight: 500;
     padding-bottom: 0.01em;
-    border-bottom: 0.15em solid;
+    border-bottom: 0.11em solid;
 }
 
 .blog a:hover,
 .blog a:active {
-    border-bottom: 0.25em solid rgb(22, 80, 134);
     color: rgb(22, 80, 134);
 }
 
