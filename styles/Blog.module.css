@@ -114,13 +114,12 @@
 .blog h1:hover a:before {
     display: inline-block;
     content: '📎';
-    font-size: 0.5em;
+    font-size: 0.4em;
     position: absolute;
-    left: calc(1.2em + 0.1vw);
-    right: 100px;
     max-width: 634px;
     margin: 0 auto;
     margin-top: 14px;
+    margin-left: -1.8em;
 }
 
 .blog h2 {

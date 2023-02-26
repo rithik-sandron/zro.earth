@@ -34,6 +34,10 @@ Primitive types are basic types which covers **characters, numbers and so on**. 
 - Array
 - Classes
 
+- 1 bit of memory is like a one word of space in a paper.
+- 1 byte = 8 bits
+- 2 byte = 16 bits and so on
+  
 | Type    | Size in memory | It stores                                                            |
 | :------ | :------------- | :------------------------------------------------------------------- |
 | boolean | 1 bit          | true or false [1 / 0]                                                |
@@ -44,10 +48,6 @@ Primitive types are basic types which covers **characters, numbers and so on**. 
 | float   | 4 byte         | decimal numbers. Can use to store 6-7 decimal digits                 |
 | double  | 8 byte         | decimal numbers. Can use to store 10-12 decimal digits               |
 | char    | 2 byte         | a single character/letter or ASCII values                            |
-
-- 1 bit of memory is like a one word of space in a paper.
-- 1 byte = 8 bits
-- 2 byte = 16 bits and so on
 
 # Variables and Constants
 Its no use if we store values in memory and dont use them anywhere. To use them we assign these values to a container. When this container is accessed, we get the actual value we stored in the memory. These containers are known variables and constants.
