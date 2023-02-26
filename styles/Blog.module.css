@@ -234,8 +234,9 @@
 .blog span {
     font-weight: 500;
     font-style: oblique;
-    border-bottom: 0.14em solid;
-    letter-spacing: 0.04em;
+    border-bottom: 0.1em solid;
+    letter-spacing: 0.03em;
+    margin: 0 0.3em;
 }
 
 .blog mark {
@@ -293,52 +294,33 @@
 
 .blog table {
     display: block;
-    border: 1px solid var(--line-color);
     border-collapse: collapse;
-    border-radius: 4px;
     overflow-y: hidden;
     overflow-x: auto;
     width: fit-content;
-    max-width: 90%;
+    max-width: 100%;
     font-size: 0.9em;
     table-layout: fixed;
+    background-color: var(--color-grey);
 }
 
 .blog table tr {
-    border-bottom: 1px solid var(--line-color);
-    padding: .35em;
-    
+    border: 1px solid var(--line-color);
+
 }
 
 .blog table th,
 .blog table td {
-    padding: .625em;
+    padding: 0.6em;
     line-height: 1.6;
     text-align: left;
 }
 
 .blog table th {
-    background-color: var(--color-grey);
-    letter-spacing: .05em;
     font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
-    .blog table thead {
-        border: none;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
 
-    .blog table td::before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
+.blog table td {
+    font-size: 0.95em;
 }
