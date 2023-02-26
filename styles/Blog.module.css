@@ -292,24 +292,22 @@
 }
 
 .blog table {
-    display: flex;
+    display: block;
     border: 1px solid var(--line-color);
     border-collapse: collapse;
     border-radius: 4px;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    table-layout: fixed;
     overflow-y: hidden;
     overflow-x: auto;
-    border-bottom: none;
     width: fit-content;
+    max-width: 90%;
     font-size: 0.9em;
+    table-layout: fixed;
 }
 
 .blog table tr {
     border-bottom: 1px solid var(--line-color);
     padding: .35em;
+    
 }
 
 .blog table th,
@@ -321,7 +319,6 @@
 
 .blog table th {
     background-color: var(--color-grey);
-    font-size: .9em;
     letter-spacing: .05em;
     font-weight: bold;
 }

@@ -215,7 +215,7 @@ Set s = Collections.synchronizedSet(new HashSet(...));
 | LinkedBlockingQueue     | O(1)     | O(1) | O(1)     |  O(n)  | O(1) | Linked List      |
 
 ## Map
-| Map                   |   Get    | ContainsKey |   Next   | Data Structure           |
+| Map                   |   Get    | Contains Key |   Next   | Data Structure           |
 | HashMap               | O(1)     |   O(1)      | O(h / n) | Hash Table               |
 | LinkedHashMap         | O(1)     |   O(1)      | O(1)     | Hash Table + Linked List |
 | IdentityHashMap       | O(1)     |   O(1)      | O(h / n) | Array                    |
