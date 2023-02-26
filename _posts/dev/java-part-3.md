@@ -1,6 +1,6 @@
 ---
 title: 'Java part-3 [Collections, time complexity..]'
-date: 'Feb 20 2023'
+date: 'Feb 20, 2023'
 list: dev
 ---
 

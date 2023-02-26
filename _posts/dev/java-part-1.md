@@ -1,6 +1,6 @@
 ---
 title: 'Java part-1 [Basics]'
-date: 'Feb 14 2023'
+date: 'Feb 14, 2023'
 list: dev
 ---
 

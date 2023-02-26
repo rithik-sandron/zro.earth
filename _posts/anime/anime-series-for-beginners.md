@@ -1,5 +1,5 @@
 ---
-title: 'Best Anime Series that Lures in Complete Newbies into the Anime Realm!'
+title: 'Best Anime that lures in newbies into the Anime Realm!'
 date: 'Feb 26, 2023'
 list: anime
 author:

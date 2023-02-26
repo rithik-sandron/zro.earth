@@ -1,6 +1,6 @@
 ---
 title: 'Java part-2 [OOP, stack, heap, gc..]'
-date: 'Feb 20 2023'
+date: 'Feb 20, 2023'
 list: dev
 ---
 
