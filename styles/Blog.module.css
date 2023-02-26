@@ -75,17 +75,17 @@
     margin-bottom: 1em;
 }
 
-.author > * {
+.author>* {
     align-self: first baseline;
 }
 
-.author > *::after {
+.author>*::after {
     content: '•';
     margin: 0 0.5em;
 }
 
-.author > *:last-child::after {
-content: '';
+.author>*:last-child::after {
+    content: '';
 }
 
 .blog hr {
@@ -101,13 +101,26 @@ content: '';
 
 .blog h1 {
     display: flex;
-    font-size: calc(1.8em + 0.3vw);
+    font-size: calc(1.7em + 0.3vw);
     font-weight: 700;
     text-decoration: none;
     width: fit-content;
     margin-top: 1em;
     margin-bottom: 0.6em;
     cursor: pointer;
+    line-height: normal;
+}
+
+.blog h1:hover a:before {
+    display: inline-block;
+    content: '📎';
+    font-size: 0.5em;
+    position: absolute;
+    left: calc(1.2em + 0.1vw);
+    right: 100px;
+    max-width: 634px;
+    margin: 0 auto;
+    margin-top: 14px;
 }
 
 .blog h2 {
@@ -182,8 +195,7 @@ content: '';
 .blog a {
     color: var(--color-blue);
     font-weight: 500;
-    padding-bottom: 0.01em;
-    border-bottom: 0.11em solid;
+    border-bottom: 0.1em solid;
 }
 
 .blog a:hover,
@@ -196,7 +208,7 @@ content: '';
     text-transform: none;
     font-size: 0.95em;
     padding: 0 0.6em;
-    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
     width: fit-content;
     background-color: var(--color-grey);
     border: 1px solid var(--line-color);
@@ -238,7 +250,7 @@ content: '';
     margin-right: -3px;
     transform: rotate(2deg);
     border-radius: 20% 25% 20% 24%;
-    padding:4px;
+    padding: 4px;
 }
 
 .blog blockquote {
@@ -262,7 +274,7 @@ content: '';
     line-height: 1.8;
     overflow-x: auto;
     margin: 1em 0;
-    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
     background-color: var(--color-grey);
     border: 1px solid var(--line-color);
     border-radius: 4px;

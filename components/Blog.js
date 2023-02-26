@@ -14,8 +14,7 @@ export default function Blog({
         if (headings.length > 3) {
             headings.forEach(heading => {
                 const title = heading.innerText;
-                const link = "line-" + heading.id;
-                const newLine = `<li><a href='${link}'>${title}</a></li>`;
+                const newLine = `<li><a href='#${heading.id}'>${title}</a></li>`;
                 toc += newLine;
             });
 
