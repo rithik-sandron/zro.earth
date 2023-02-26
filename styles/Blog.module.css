@@ -110,7 +110,7 @@
     margin-bottom: 0.4em;
     cursor: pointer;
     line-height: normal;
-    margin-left: -1em;
+    margin-left: -0.6em;
 }
 
 .blog h1:before {
@@ -120,7 +120,7 @@
     max-width: 634px;
     margin: 0 auto;
     margin-top: 8px;
-    margin-right: 12px;
+    margin-right: 6px;
 }
 
 .blog h2 {
