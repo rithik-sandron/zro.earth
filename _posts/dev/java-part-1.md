@@ -34,16 +34,16 @@ Primitive types are basic types which covers **characters, numbers and so on**. 
 - Array
 - Classes
 
-| Type    | Size in memory | It stores                                                             |
-| :------ | :------------- | :-------------------------------------------------------------------- |
-| boolean | 1 bit          | true or false [0 / 1]                                                 |
-| byte    | 1 byte         | numbers from -128 to 127                                              |
-| short   | 2 byte         | numbers from -32,768 to 32,767                                        |
-| int     | 4 byte         | numbers from -2,147,483,648 to 2,147,483,647                          |
-| long    | 8 byte         | numbers from -9,223,372,036,854,775,808 to 9,223,372, 036,854,775,807 |
-| float   | 4 byte         | fractional numbers. Sufficient for storing 6 to 7 decimal digits      |
-| double  | 8 byte         | fractional numbers. Sufficient for storing 15 decimal digits          |
-| char    | 2 byte         | a single character/letter or ASCII values                             |
+| Type    | Size in memory | It stores                                                            |
+| :------ | :------------- | :------------------------------------------------------------------- |
+| boolean | 1 bit          | true or false [1 / 0]                                                |
+| byte    | 1 byte         | numbers from -128 to 127                                             |
+| short   | 2 byte         | numbers from -32,768 to 32,767                                       |
+| int     | 4 byte         | numbers from -2,147,483,648 to 2,147,483,647                         |
+| long    | 8 byte         | numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| float   | 4 byte         | decimal numbers. Can use to store 6-7 decimal digits                 |
+| double  | 8 byte         | decimal numbers. Can use to store 10-12 decimal digits               |
+| char    | 2 byte         | a single character/letter or ASCII values                            |
 
 - 1 bit of memory is like a one word of space in a paper.
 - 1 byte = 8 bits
