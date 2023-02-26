@@ -297,6 +297,7 @@
     overflow-x: auto;
     max-width: 100%;
     white-space: pre;
+    font-size: calc(0.85em + 0.1vw);
 }
 
 .blog tbody {
