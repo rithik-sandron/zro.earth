@@ -58,7 +58,7 @@ Timid and meek in nature, Kaneki Ken encounters a beautiful woman— Rize Kamish
 # 6. Samurai Champloo
 ==#Action== ==#Adventure== ==#Comedy== ==#Historical==
 
-Fuu, a waitress encounters a wild samurai— Mugen and a traditional samurai— Jin, who recue her from an inevitable predicament where a group of Samurai harrass her in the tea-house over spilt tea! Join the contraductory samurai duo and the klutzy waitress who set off on a journey to find a Samurai who smells of ***Sunflowers.*** 
+Fuu, a waitress encounters a wild samurai— Mugen and a traditional samurai— Jin, who recue her from an inevitable predicament where a group of Samurai harrass her in the tea-house over spilt tea! Join the contradictory samurai duo and the klutzy waitress who set off on a journey to find a Samurai who smells of ***Sunflowers.*** 
 
 ## Information
 **Episodes: 26**
