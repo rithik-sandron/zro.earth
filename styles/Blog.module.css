@@ -263,7 +263,6 @@
     margin: 1em 0;
     border-radius: 4px;
     font-size: calc(1.05em + 0.1vw);
-
 }
 
 .blog code>pre {
@@ -285,68 +284,65 @@
     white-space: pre;
 }
 
-.blog table {
-    display: flex;
-    width: fit-content;
-    border-radius: 4px;
-    overflow-y: hidden;
-    border-collapse: collapse;
-    border: 1px solid var(--line-color);
-    width: fit-content;
-    overflow-x: auto;
-    max-width: 100%;
-    white-space: pre;
-    font-size: calc(0.85em + 0.1vw);
-}
-
-.blog tbody {
-    display: table-row-group;
-}
-
-.blog td,
-.blog th {
-    vertical-align: middle;
-    padding: 1em;
-}
-
-.blog tr {
-    border-bottom: 1px solid var(--line-color);
-}
-
-.blog tr:last-child {
-    border: none;
-}
-
-.blog th {
-    text-align: left;
-    font-weight: 700;
-    background-color: var(--color-grey);
-    border-right: 1px solid var(--line-color);
-}
-
-.blog th:last-child {
-    border-right: none;
-}
-
-.blog th:first-child {
-    border-top-left-radius: 4px;
-}
-
-.blog th:last-child {
-    border-top-right-radius: 4px;
-}
-
-.blog td {
-    border-right: 1px solid var(--line-color);
-}
-
-.blog td:last-child {
-    border-right: none;
-}
-
-.empty-row {
+.blog .empty-row {
     height: 0.6em;
     padding: 0;
     background-color: var(--line-color);
     opacity: 0.6;
+}
+
+.blog table {
+    display: flex;
+    border: 1px solid var(--line-color);
+    border-collapse: collapse;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    overflow-y: hidden;
+    overflow-x: auto;
+    border-bottom: none;
+    width: fit-content;
+    white-space: pre-line;
+    font-size: 0.9em;
+}
+
+.blog table tr {
+    border-bottom: 1px solid var(--line-color);
+    padding: .35em;
+}
+
+.blog table th,
+.blog table td {
+    padding: .625em;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.blog table th {
+    background-color: var(--color-grey);
+    font-size: .9em;
+    letter-spacing: .05em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .blog table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .blog table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 }
