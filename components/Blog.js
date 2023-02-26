@@ -43,7 +43,7 @@ export default function Blog({
                     alt={post.title}
                 />}
             </div>
-            <PixelBlock isList fore={post.color.fore} blocks={blocks} />
+            <PixelBlock isList fore={post.color.bg} blocks={blocks} />
 
             <details open id='article-toc' className={styles.articleToc}>
 

@@ -48,8 +48,9 @@
   font-size: calc(1.5em + 0.8vw);
   width: fit-content;
   padding: 0;
-  line-height: 0.72em;
+  line-height: 0.8em;
   color: var(--font-color);
   margin-bottom: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: -2px;
+  font-family: Poly Sans,Helvetica,Arial,sans-serif;
 }

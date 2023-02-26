@@ -32,7 +32,7 @@ export default function FeaturePost({ post = {
                     url={post.coverImage}
                     alt={post.title}
                 />}
-                <PixelBlock bg={post.color.bg} fore={post.color.fore} />
+                <PixelBlock bg={post.color.fore} fore={post.color.bg} />
 
                 <h1
                     style={{

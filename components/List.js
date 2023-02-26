@@ -19,7 +19,7 @@ export default function List({ posts = [
                 {posts[0].list}
             </div>
 
-            <PixelBlock isList bg='transparent' fore={posts[0].color.fore} />
+            <PixelBlock isList bg='transparent' fore={posts[0].color.bg} />
 
             <div className={styles.list}>
                 {posts.map(post => {

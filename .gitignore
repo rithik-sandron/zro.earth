@@ -7,4 +7,3 @@ backup/*
 out/*
 package-lock.json
 package-lock.json
-*.md
