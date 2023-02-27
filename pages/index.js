@@ -27,7 +27,6 @@ export default function Index({
     'coverImage': '',
   }
 }) {
-  console.log(feature)
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
 
