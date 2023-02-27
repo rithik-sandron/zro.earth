@@ -9,7 +9,7 @@ export default function Blog({
 
     useEffect(() => {
         var toc =
-            `<summary>On this page</summary><ul>`;
+            `<summary>On this article</summary><ul>`;
         let headings = document.querySelectorAll('.table-content-h1');
         if (headings.length > 3) {
             headings.forEach(heading => {
@@ -43,11 +43,8 @@ export default function Blog({
                     alt={post.title}
                 />}
             </div>
-            <PixelBlock isList bg='transparent' fore={post.color.bg} blocks={blocks} />
-
-            <details open id='article-toc' className={styles.articleToc}>
-
-            </details>
+            <PixelBlock isList bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
+            <details open id='article-toc' className={styles.articleToc} />
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>
     );
