@@ -31,12 +31,11 @@ export default function Blog({
             <div>
                 <div key={post.slug} className={styles.container}>
                     <h1>{post.title}</h1>
-                    <div className={styles.author}>
-                        <div>{post.author.name}</div>
-                        <div>{post.date}</div>
-                        <div style={{ marginTop: '2px' }}>{post.wc}</div>
+                    <div>
+                        <div className={styles.date}>{post.author.name}</div>
+                        <div className={styles.date}>{post.date}</div>
+                        <div className={styles.date}>{post.wc}</div>
                     </div>
-
                 </div>
                 {post.coverImage && <Image
                     url={post.coverImage}

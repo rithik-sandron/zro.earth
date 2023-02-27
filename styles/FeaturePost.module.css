@@ -22,7 +22,7 @@
   display: block;
   width: calc(100% - 0.8em - 1em);
   font-size: calc(2.3em + 0.6vw);
-  line-height: 1.3em;
+  line-height: 1.25;
   letter-spacing: 0.3px;
   cursor: pointer;
   padding: 0.4em;
@@ -38,10 +38,12 @@
 
 .date {
   display: inline-block;
-  margin: 0.4em 0;
+  margin: 0;
   margin-left: 0;
-  font-size: calc(0.4em + 0.2vw);
+  font-size: calc(0.38em + 0.1vw);
   font-weight: 400;
+  line-height: normal;
+  width: fit-content;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
@@ -52,4 +54,5 @@
 
 .date:last-child::after {
   content: '';
+  margin: 0;
 }

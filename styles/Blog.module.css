@@ -45,47 +45,38 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     padding-bottom: 1em;
     padding-top: 1em;
     position: relative;
+    max-width: 900px;
 }
 
 .container h1 {
-    width: 90%;
     font-size: calc(2.2em + 1.8vw);
     margin: 0 auto;
     max-width: 900px;
     font-weight: 800;
     position: relative;
-    font-family: Poly Sans,Helvetica,Arial,sans-serif;
+    margin-bottom: 0.5em;
+    font-family: Poly Sans, Helvetica, Arial, sans-serif;
 }
 
-.author {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    font-weight: 500;
-    font-size: calc(1em + 0.2vw);
-    max-width: 900px;
-    letter-spacing: 0.04em;
-    margin-bottom: 1em;
+.date {
+    display: inline-block;
+    margin: 0.4em auto;
+    font-size: calc(0.85em + 0.2vw);
+    font-weight: 300;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
-.author>* {
-    align-self: first baseline;
-}
-
-.author>*::after {
+.date::after {
     content: '•';
     margin: 0 0.5em;
 }
 
-.author>*:last-child::after {
+.date:last-child::after {
     content: '';
 }
 
@@ -98,7 +89,7 @@
 .blog h2,
 .blog h3 {
     margin: 0;
-    font-family: Poly Sans,Helvetica,Arial,sans-serif;
+    font-family: Poly Sans, Helvetica, Arial, sans-serif;
 }
 
 .blog h1 {
@@ -265,7 +256,7 @@
     margin: 1em 0;
     font-size: calc(1.7em + 0.1vw);
     width: 100%;
-    font-family: Poly Sans,Helvetica,Arial,sans-serif;
+    font-family: Poly Sans, Helvetica, Arial, sans-serif;
 
     text-decoration-line: underline;
     text-decoration-color: var(--color-blue);
