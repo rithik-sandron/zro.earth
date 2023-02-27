@@ -13,11 +13,21 @@ export default function Index({
     'list': '',
     'date': '',
     'slug': '',
+    'wc': '',
     'coverImage': '',
-  }]
+  }],
+  feature = {
+    'color': { bg: "", fore: "" },
+    'title': '',
+    'author': { name: "", picture: "" },
+    'list': '',
+    'date': '',
+    'slug': '',
+    'wc': '',
+    'coverImage': '',
+  }
 }) {
-  const heroPost = list[1][0];
-
+  console.log(feature)
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
 
@@ -39,7 +49,7 @@ export default function Index({
 
   return (
     <Layout>
-      <FeaturePost post={heroPost} />
+      <FeaturePost post={feature} />
 
       {/* <Search search={search} setSearch={setSearch} /> */}
       {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
@@ -58,10 +68,11 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     // 'content',
+    'wc',
     'color',
   ])
 
   return {
-    props: { list: list.list, tipIndex: list.tipIndex }
+    props: { list: list.list, feature: list.feature }
   }
 }

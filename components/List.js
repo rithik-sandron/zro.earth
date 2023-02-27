@@ -4,7 +4,7 @@ import PixelBlock from './PixelBLock';
 import { useRouter } from 'next/router';
 
 export default function List({ posts = [
-    { date: "", slug: "", list: "", color: { bg: "", fore: "" }, }]
+    { date: "", slug: "", list: "", color: { bg: "", fore: "" }, wc: '' }]
 }) {
 
     const router = useRouter();
@@ -14,8 +14,8 @@ export default function List({ posts = [
     return (
         <div className={styles.container}>
             <div className={styles.head}
-                // style={{ color: posts[0].color.bg }}
-                >
+            // style={{ color: posts[0].color.bg }}
+            >
                 {posts[0].list}
             </div>
 
@@ -38,6 +38,7 @@ export default function List({ posts = [
                             <div>
                                 <div className={styles.title}>{post.title}</div>
                                 <div className={styles.date}>{post.date}</div>
+                                <div className={styles.date}>{post.wc}</div>
                             </div>
                         </div>
                         // </Link>

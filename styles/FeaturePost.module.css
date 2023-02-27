@@ -1,7 +1,7 @@
 .content {
   display: block;
   width: 90%;
-  margin: 3em auto;
+  margin: 4em auto;
   max-width: 900px;
 }
 
@@ -19,18 +19,27 @@
 
 .title {
   display: block;
-  width: calc(100% - 0.8em);
-  font-size: calc(2em + 0.6vw);
+  width: calc(100% - 0.8em - 28px);
+  font-size: calc(2.3em + 0.6vw);
   line-height: 1.3em;
   letter-spacing: 0.3px;
   cursor: pointer;
   padding: 0.4em;
-  padding-top: 1em;
   margin: 0 auto;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: Poly Sans, Helvetica, Arial, sans-serif;
 }
 
 .title:hover {
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
+
+.date {
+  display: inline-block;
+  margin: 0.4em 1em;
+  margin-left: 0;
+  font-size: 0.5em;
+  font-weight: 400;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }

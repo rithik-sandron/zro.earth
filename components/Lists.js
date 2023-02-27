@@ -7,6 +7,7 @@ export default function Lists({ list = [[{
     'list': '',
     'date': '',
     'slug': '',
+    'wc': '',
     'coverImage': '',
 }]] }) {
 

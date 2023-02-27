@@ -40,13 +40,16 @@
   line-height: 1.2;
   cursor: pointer;
   font-weight: 500;
+  font-family: Poly Sans,Helvetica,Arial,sans-serif;
 }
 
 .date {
-  display: block;
-  margin-top: 0.4em;
+  display: inline-block;
+  margin: 0.4em 1em;
+  margin-left: 0;
   font-size: 0.7em;
   font-weight: 300;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
 .tipTitle {

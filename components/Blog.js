@@ -4,7 +4,7 @@ import PixelBlock from './PixelBLock';
 import Image from './Image'
 
 export default function Blog({
-    blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, content: "", lines: 0, color: { bg: '', fore: '' } }
+    blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, content: "", wc: 0, color: { bg: '', fore: '' } }
 }) {
 
     useEffect(() => {
@@ -34,7 +34,7 @@ export default function Blog({
                     <div className={styles.author}>
                         <div>{post.author.name}</div>
                         <div>{post.date}</div>
-                        <div style={{ marginTop: '2px' }}> ☕️ {Math.round(post.lines * 5 / 60)} min read</div>
+                        <div style={{ marginTop: '2px' }}>{post.wc}</div>
                     </div>
 
                 </div>
@@ -43,7 +43,7 @@ export default function Blog({
                     alt={post.title}
                 />}
             </div>
-            <PixelBlock isList fore={post.color.bg} blocks={blocks} />
+            <PixelBlock isList bg='transparent' fore={post.color.bg} blocks={blocks} />
 
             <details open id='article-toc' className={styles.articleToc}>
 

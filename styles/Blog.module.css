@@ -262,8 +262,6 @@
     width: calc(100% - 1.6em - 13px);
     line-height: 1.6;
     letter-spacing: 0.04em;
-    /* background-color: rgba(129, 194, 255, 0.274); */
-    /* border: 1px solid rgba(14, 142, 206, 0.667); */
     margin: 1em 0;
     font-size: calc(1.7em + 0.1vw);
     width: 100%;

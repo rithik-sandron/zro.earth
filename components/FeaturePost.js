@@ -9,6 +9,7 @@ export default function FeaturePost({ post = {
     coverImage: '',
     slug: '',
     list: '',
+    wc: '',
     color: { bg: "", fore: "" },
 }
 }) {
@@ -32,14 +33,20 @@ export default function FeaturePost({ post = {
                     url={post.coverImage}
                     alt={post.title}
                 />}
-                <PixelBlock bg={post.color.fore} fore={post.color.bg} />
+                <PixelBlock bg='transparent' fore={post.color.bg} />
 
-                <h1
-                    style={{
-                        backgroundColor: post.color.bg, color: post.color.fore
-                    }}
-                    className={styles.title}>{post.title}</h1>
-
+                <div style={{
+                    border: `0.5em solid ${post.color.fore}`,
+                    borderTop: `0.5em solid ${post.color.bg}`,
+                    // backgroundColor: post.color.bg,
+                    // color: post.color.fore
+                }}
+                    className={styles.title}>
+                    <h1
+                    >{post.title}</h1>
+                    <div className={styles.date}>{post.date}</div>
+                    <div className={styles.date}>{post.wc}</div>
+                </div>
             </div>
             {/* </Link> */}
         </div >

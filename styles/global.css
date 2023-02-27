@@ -139,10 +139,10 @@ body::-webkit-scrollbar-thumb {
 
 .barcode {
     display: flex;
-    width: 100%;
     max-width: 900px;
     height: 2em;
     margin: 0 auto;
+    width: 100%;
 }
 
 .barcode>div {
