@@ -19,7 +19,7 @@
 
 .title {
   display: block;
-  width: calc(100% - 0.8em - 28px);
+  width: calc(100% - 0.8em - 1em);
   font-size: calc(2.3em + 0.6vw);
   line-height: 1.3em;
   letter-spacing: 0.3px;
@@ -39,7 +39,7 @@
   display: inline-block;
   margin: 0.4em 0;
   margin-left: 0;
-  font-size: calc(0.3em + 0.2vw);
+  font-size: calc(0.4em + 0.2vw);
   font-weight: 400;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
