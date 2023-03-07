@@ -7,8 +7,8 @@ export default function About() {
             <div className={styles.about}>
                 <PixelBlock />
                 <h1 >
-                    <mark>ZゼRロ ( 0 / Zero )</mark>
-                    is a blog initiated to express our mind.
+                    ZゼRロ ( Zero )
+                    is a blog 🌍 initiated to express our mind.
                 </h1>
                 <p ><mark>The name Zero (ゼロ in Japanese)</mark>
                  indicates the starting point of us. We started from 0.
@@ -44,7 +44,7 @@ export default function About() {
                 </p>
 
 
-                <h2>Privacy notice</h2>
+                <h2 id='p'>Privacy Policy</h2>
                 <p>
                     We do not collect any sort of data. Even the dark theme is based on your system theme.
                     We do not store anything in browser storage.

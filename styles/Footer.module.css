@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    gap: 1em;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: calc(1em + 0.1vw);
+    padding: 1em 0;
+}
+
+.footer > a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.9;
+}
+
+.footer > a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: inherit;
+    opacity: 1;
+}

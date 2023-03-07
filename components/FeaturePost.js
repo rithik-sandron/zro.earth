@@ -36,10 +36,11 @@ export default function FeaturePost({ post = {
                 <PixelBlock bg='transparent' fore={post.color.bg} />
 
                 <div style={{
-                    border: `0.5em solid ${post.color.fore}`,
-                    borderTop: `0.5em solid ${post.color.bg}`,
-                    // backgroundColor: post.color.bg,
-                    // color: post.color.fore
+                    border: `0.25em solid ${post.color.fore}`,
+                    borderTop: `0.25em solid ${post.color.bg}`,
+                    borderRadius: '8px',
+                    borderTopLeftRadius: '0',
+                    borderTopRightRadius: '0'
                 }}
                     className={styles.title}>
                     <h1
