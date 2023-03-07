@@ -134,7 +134,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 900px;
     height: 2em;
     margin: 0 auto;
-    width: 97.2%;
+    width: 100%;
 }
 
 .barcode>div {

@@ -24,7 +24,7 @@ export default function Header({ title = '', bg = '', fore = '' }) {
     return () => darkTheme.removeEventListener('change', setIsDarkTheme);
   }, []);
 
-  const router = useRouter()
+  const router = useRouter();
 
   function back() {
     if (router.route !== '/') router.push('/');
@@ -66,7 +66,7 @@ export default function Header({ title = '', bg = '', fore = '' }) {
         </span>
         {/* </Link> */}
       </div>
-    </div >
+    </div>
   );
 }
 

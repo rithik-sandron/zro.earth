@@ -33,7 +33,7 @@ export default function FeaturePost({ post = {
                     url={post.coverImage}
                     alt={post.title}
                 />}
-                <PixelBlock bg='transparent' fore={post.color.bg} />
+                <PixelBlock bg='transparent' fore={post.color.bg} width='90%' />
 
                 <div style={{
                     border: `0.25em solid ${post.color.fore}`,
