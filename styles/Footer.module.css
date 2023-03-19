@@ -1,11 +1,13 @@
 .footer {
     display: flex;
-    gap: 1em;
-    width: 90%;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
     justify-content: center;
     margin: 0 auto;
     font-size: calc(1em + 0.1vw);
     padding: 1em 0;
+    text-align: center;
 }
 
 .footer > a {

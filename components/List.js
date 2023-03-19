@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../styles/List.module.css'
-import PixelBlock from './PixelBLock';
 import { useRouter } from 'next/router';
 
 export default function List({ posts = [
@@ -12,13 +11,15 @@ export default function List({ posts = [
     function link(url) { router.push(url); }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container}
+            style={{ backgroundColor: posts[0].color.bg }}
+        >
             <div className={styles.head}
+
             >
                 {posts[0].list}
             </div>
 
-            <PixelBlock bg={posts[0].color.bg} fore={posts[0].color.fore} />
 
             <div className={styles.list}>
                 {posts.map(post => {

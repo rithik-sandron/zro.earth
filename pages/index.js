@@ -22,13 +22,13 @@ export default function Index({
     'title': '',
     'author': { name: "", picture: "" },
     'list': '',
+    'gist': '',
     'date': '',
     'slug': '',
     'wc': '',
     'coverImage': '',
   }
 }) {
-  console.log(feature)
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
 

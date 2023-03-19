@@ -35,7 +35,7 @@ export default function FeaturePost({ post = {
                 />}
 
                 <div className={styles.title}>
-                    <h1 style={{ textDecorationColor: post.color.fore }}
+                    <h1 style={{ textDecorationColor: post.color.bg }}
                     >{post.title}</h1>
                     <div id={styles.gist} className={blog.blog} dangerouslySetInnerHTML={{ __html: post.gist }} />
                     <div className={styles.dateContainer}> 
