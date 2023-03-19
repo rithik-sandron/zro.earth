@@ -2,6 +2,7 @@
 title: 'Java part-2 [OOP, stack, heap, gc..]'
 date: 'Feb 20, 2023'
 list: dev
+gist: ''
 ---
 
 # This is a 3 part series

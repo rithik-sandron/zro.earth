@@ -12,12 +12,11 @@
   width: fit-content;
   /* padding-right: 1em; */
   font-size: calc(2em + 0.4vw);
-  font-weight: 700;
-  letter-spacing: -3px;
-  height: 1em;
+  font-weight: 800;
+  letter-spacing: -1px;
+  height: 1.2em;
   text-transform: capitalize;
   /* clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%); */
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .post {
@@ -36,8 +35,9 @@
 
 .title {
   display: block;
-  font-size: calc(1.1em + 0.1vw);
-  line-height: 1.2;
+  font-size: calc(1.17em + 0.1vw);
+  line-height: 1.4;
+  letter-spacing: 0.3px;
   cursor: pointer;
   font-weight: 500;
   font-family: Poly Sans,Helvetica,Arial,sans-serif;

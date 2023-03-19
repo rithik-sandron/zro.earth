@@ -29,7 +29,9 @@ export default function Blog({
     return (
         <article>
             <div>
+
                 <div key={post.slug} className={styles.container}>
+                    <PixelBlock bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
                     <h1>{post.title}</h1>
                     <div>
                         <div className={styles.date}>{post.author.name}</div>
@@ -42,7 +44,6 @@ export default function Blog({
                     alt={post.title}
                 />}
             </div>
-            <PixelBlock isList bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
             <details open id='article-toc' className={styles.articleToc} />
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>

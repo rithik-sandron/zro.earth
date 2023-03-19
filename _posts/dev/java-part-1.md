@@ -2,6 +2,7 @@
 title: 'Java part-1 [Basics]'
 date: 'Feb 14, 2023'
 list: dev
+gist: ''
 ---
 
 # This is a 3 part series

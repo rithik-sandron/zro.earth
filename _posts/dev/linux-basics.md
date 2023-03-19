@@ -2,6 +2,7 @@
 title: 'Linux basics [basic commands, scripting]'
 date: 'Feb 22, 2023'
 list: dev
+gist: ''
 ---
 
 # Basic commands

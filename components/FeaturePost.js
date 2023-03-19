@@ -1,7 +1,7 @@
 import Image from './Image';
 import styles from '../styles/FeaturePost.module.css'
 import { useRouter } from 'next/router';
-import PixelBlock from './PixelBLock';
+import blog from '../styles/BLog.module.css'
 
 
 export default function FeaturePost({ post = {
@@ -33,20 +33,15 @@ export default function FeaturePost({ post = {
                     url={post.coverImage}
                     alt={post.title}
                 />}
-                <PixelBlock bg='transparent' fore={post.color.bg} width='90%' />
 
-                <div style={{
-                    border: `0.25em solid ${post.color.fore}`,
-                    borderTop: `0.25em solid ${post.color.bg}`,
-                    borderRadius: '8px',
-                    borderTopLeftRadius: '0',
-                    borderTopRightRadius: '0'
-                }}
-                    className={styles.title}>
-                    <h1
+                <div className={styles.title}>
+                    <h1 style={{ textDecorationColor: post.color.fore }}
                     >{post.title}</h1>
-                    <div className={styles.date}>{post.date}</div>
-                    <div className={styles.date}>{post.wc}</div>
+                    <div id={styles.gist} className={blog.blog} dangerouslySetInnerHTML={{ __html: post.gist }} />
+                    <div className={styles.dateContainer}> 
+                        <div className={styles.date}>{post.date}</div>
+                        <div className={styles.date}>{post.wc}</div>
+                    </div>
                 </div>
             </div>
             {/* </Link> */}

@@ -1,4 +1,5 @@
 import { getAllPosts } from '../lib/api'
+import markdownToHtml from '../lib/markdownToHtml'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
 // import Search from "../components/Search";
@@ -27,6 +28,7 @@ export default function Index({
     'coverImage': '',
   }
 }) {
+  console.log(feature)
   // const [search, setSearch] = useState('');
   // const [f, setf] = useState([]);
 
@@ -61,15 +63,18 @@ export default function Index({
 
 export const getStaticProps = async () => {
 
-  const list = getAllPosts([
+  let list = getAllPosts([
     'title',
     'list',
     'date',
     'slug',
-    // 'content',
+    'gist',
     'wc',
     'color',
   ])
+
+  const gist = await markdownToHtml(list.feature.gist || '')
+  list.feature.gist = gist;
 
   return {
     props: { list: list.list, feature: list.feature }

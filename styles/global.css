@@ -139,7 +139,7 @@ body::-webkit-scrollbar-thumb {
 
 .barcode>div {
     background-color: var(--font-color);
-    max-height: 2em;
+    max-height: 3.5em;
 }
 
 .barcode .b1 {

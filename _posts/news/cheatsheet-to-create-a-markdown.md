@@ -2,6 +2,7 @@
 title: 'Cheatsheet to create a markdown'
 date: 'Jan 13 2023'
 list: news
+gist: ''
 ---
 # Text 
 ```
