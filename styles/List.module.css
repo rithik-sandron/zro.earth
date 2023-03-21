@@ -37,7 +37,7 @@
 
 .title {
   display: block;
-  font-size: calc(1.17em + 0.1vw);
+  font-size: calc(1.05em + 0.1vw);
   line-height: 1.4;
   letter-spacing: 0.3px;
   cursor: pointer;
