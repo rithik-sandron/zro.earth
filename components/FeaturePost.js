@@ -1,4 +1,3 @@
-import Image from './Image';
 import styles from '../styles/FeaturePost.module.css'
 import { useRouter } from 'next/router';
 import blog from '../styles/Blog.module.css'
@@ -27,13 +26,7 @@ export default function FeaturePost({ post = {
                 href={`/[list]/[slug]`} > */}
 
             <div key={post.slug} className={styles.container}
-                // style={{ border: `1px solid ${post.color.fore}`, boxShadow: `14px 14px 0 ${post.color.fore}` }}
                 onClick={() => link(post.list + "/" + post.slug)}>
-
-                {post.coverImage && <Image
-                    url={post.coverImage}
-                    alt={post.title}
-                />}
 
                 <div className={styles.title}>
                     <h1 style={{ textDecorationColor: post.color.bg }}

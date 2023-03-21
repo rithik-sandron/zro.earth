@@ -1,8 +1,9 @@
+import React, { useState, useEffect } from 'react';
 import { getAllPosts } from '../lib/api'
 import markdownToHtml from '../lib/markdownToHtml'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
-// import Search from "../components/Search";
+import styles from '../styles/Search.module.css';
 import Lists from '../components/Lists';
 
 
@@ -29,18 +30,16 @@ export default function Index({
     'coverImage': '',
   }
 }) {
-  // const [search, setSearch] = useState('');
-  // const [f, setf] = useState([]);
+  const [search, setSearch] = useState('');
+  const [f, setf] = useState([]);
 
   // useEffect(() => {
   //   if (search !== "") {
   //     const seachQuery = search.trim().toLowerCase();
-  //     const allPosts = [...anime, ...news, ...movies];
   //     const res = allPosts.filter(x => {
   //       return (x.title.toLowerCase().includes(seachQuery) ||
   //         x.date.toLowerCase().includes(seachQuery) ||
   //         x.author.name.toLowerCase().includes(seachQuery)
-  //         // x.tagsWithColors.filter(y => y.tag.toLowerCase().includes(seachQuery)).length > 0
   //       )
   //     })
 
@@ -52,9 +51,8 @@ export default function Index({
     <Layout>
       <FeaturePost post={feature} />
 
-      {/* <Search search={search} setSearch={setSearch} /> */}
-      {/* {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>} */}
-      {/* <ContentList posts={search !== "" ? f : morePosts} search={search} /> */}
+      <input className={styles.search} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
+      {(search !== "" && f.length === 0) && <div style={{ width: '90%', margin: '0 auto', padding: '1em 3.4em' }}>No posts found for your search</div>}
 
       <Lists list={list} />
     </Layout>

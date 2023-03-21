@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from "next/router";
 
-export default function Header({ title = '', bg = '', fore = '' }) {
+export default function Header({ title = '' }) {
 
   function setIsDarkTheme() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -47,14 +47,7 @@ export default function Header({ title = '', bg = '', fore = '' }) {
         {title && <meta property="og:title" content={title} />}
       </Head>
 
-      <div className={styles.flexContainer}
-       
-      >
-
-        {/* <Link as={`/`} href="/"
-          style={{
-            border: 'none', textDecoration: "none", color: 'transparent'
-          }}> */}
+      <div className={styles.flexContainer}>
 
         <span className={styles.panel} id={styles.ken}
           onClick={back}>
@@ -64,7 +57,6 @@ export default function Header({ title = '', bg = '', fore = '' }) {
         <span className={styles.panel} id={styles.face}
           onClick={about}>About
         </span>
-        {/* </Link> */}
       </div>
     </div>
   );

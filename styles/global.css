@@ -105,30 +105,6 @@ body::-webkit-scrollbar-thumb {
     background: var(--text-cyan-select);
 }
 
-.search-container {
-    display: block;
-    padding: 0;
-    margin: 0 auto;
-    padding: 1.4em 0 1em 0;
-}
-
-.search-container>input {
-    display: block;
-    outline: none;
-    border: none;
-    width: calc(90% - 24px);
-    margin: auto;
-    background-color: inherit;
-    color: var(--font-color);
-    box-shadow: none;
-    padding: 8px 12px 9px 12px;
-    border: 1px solid var(--line-color);
-    max-width: 876px;
-    font-size: 1.3em;
-    letter-spacing: 0.3px;
-    border-radius: 1px;
-}
-
 .barcode {
     display: flex;
     max-width: 900px;

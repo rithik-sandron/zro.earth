@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from '../styles/Blog.module.css'
 import PixelBlock from './PixelBLock';
-import Image from './Image'
 
 export default function Blog({
     blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, content: "", wc: 0, color: { bg: '', fore: '' } }
@@ -39,10 +38,10 @@ export default function Blog({
                         <div className={styles.date}>{post.wc}</div>
                     </div>
                 </div>
-                {post.coverImage && <Image
+                {/* {post.coverImage && <Image
                     url={post.coverImage}
                     alt={post.title}
-                />}
+                />} */}
             </div>
             <details open id='article-toc' className={styles.articleToc} />
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />

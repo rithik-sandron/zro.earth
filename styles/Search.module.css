@@ -1,0 +1,17 @@
+.search {
+    display: block;
+    outline: none;
+    border: none;
+    width: calc(90% - 1em);
+    margin: auto;
+    background-color: inherit;
+    color: var(--font-color);
+    box-shadow: none;
+    padding: 0.5em;
+    border: 1px solid var(--line-color);
+    max-width: 900px;
+    font-size: 1.2em;
+    letter-spacing: 0.3px;
+    border-radius: 1em;
+    margin-bottom: 3em;
+}
