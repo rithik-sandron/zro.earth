@@ -8,7 +8,7 @@ export default function About() {
                 <PixelBlock />
                 <h1 >
                     ZゼRロ ( Zero )
-                    is a blog 🌍 initiated to express our mind.
+                    is initiated to express our mind 🌍.
                 </h1>
                 <p ><mark>The name Zero (ゼロ in Japanese)</mark>
                  indicates the starting point of us. We started from 0.

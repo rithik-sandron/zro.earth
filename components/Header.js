@@ -37,13 +37,13 @@ export default function Header({ title = '', bg = '', fore = '' }) {
   return (
     <div className={styles.flex} id={styles.head}>
       <Head>
-        <title>ZゼRロ</title>
+        <title>ZERロ</title>
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="msapplication-TileColor" media="(prefers-color-scheme: light)" content={"#fff"} />
         <meta name="msapplication-TileColor" media="(prefers-color-scheme: dark)" content={"#050607"} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content={"#fff"} />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content={"#050607"} />
-        <meta property="og:site_name" content='ZゼRロ' />
+        <meta property="og:site_name" content='ZERロ' />
         {title && <meta property="og:title" content={title} />}
       </Head>
 

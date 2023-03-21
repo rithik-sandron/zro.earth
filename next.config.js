@@ -24,7 +24,7 @@ module.exports = {
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval';
+    script-src 'self' 'unsafe-eval' vitals.vercel-insights.com;
     style-src 'self' 'unsafe-inline';
     img-src * blob: data:;
     media-src 'none';
