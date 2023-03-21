@@ -1,7 +1,7 @@
 import Image from './Image';
 import styles from '../styles/FeaturePost.module.css'
 import { useRouter } from 'next/router';
-import blog from '../styles/BLog.module.css'
+import blog from '../styles/Blog.module.css'
 
 
 export default function FeaturePost({ post = {
