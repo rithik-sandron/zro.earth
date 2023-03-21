@@ -7,6 +7,7 @@ import blog from '../styles/BLog.module.css'
 export default function FeaturePost({ post = {
     title: '',
     coverImage: '',
+    gist: '',
     slug: '',
     list: '',
     wc: '',
