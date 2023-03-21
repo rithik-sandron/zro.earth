@@ -2,13 +2,16 @@ import Header from "./Header";
 import Footer from "./Footer";
 import styles from '../styles/Layout.module.css'
 
-export default function Layout({ children, title = '' }) {
+export default function Layout({ children, title = '', desc = '' }) {
 
   return (
-    <div id={styles.common}>
-      <Header title={title} />
-      {children}
-      <Footer />
-    </div>
+    <>
+      <Header title={title} desc={desc} />
+      <main id={styles.common}>
+
+        {children}
+        <Footer />
+      </main>
+    </>
   );
 }

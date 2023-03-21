@@ -5,7 +5,7 @@ import Blog from '../../components/Blog.js'
 import { useRouter } from 'next/router'
 
 export default function Post({
-  post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, content: "", wc: '' }
+  post = { title: "", date: "", slug: "", gist: '', author: { name: "", picture: "" }, content: "", wc: '' }
 }) {
 
   const router = useRouter()
@@ -15,7 +15,7 @@ export default function Post({
 
   return (
     <Layout bg={post.color.bg} fore={post.color.fore}
-      title={post.title}>
+      title={post.title} desc={post.gist}>
       <Blog post={post} />
     </Layout >
   )
@@ -37,18 +37,20 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.list, params.slug, [
+  let post = getPostBySlug(params.list, params.slug, [
     'title',
     'date',
     'list',
     'slug',
+    'gist',
     'author',
     'content',
     'wc',
     'color',
   ])
 
-  const content = await markdownToHtml(post.content || '')
+  const content = await markdownToHtml(post.content || '');
+  post.gist = await markdownToHtml(post.gist || '');;
 
   return {
     props: {

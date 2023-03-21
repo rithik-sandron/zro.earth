@@ -4,8 +4,8 @@
     gap: 16px;
     width: 100%;
     justify-content: center;
-    margin: 0 auto;
-    font-size: calc(1em + 0.1vw);
+    margin: 2em auto;
+    font-size: calc(0.75em + 0.1vw);
     padding: 1em 0;
     text-align: center;
 }

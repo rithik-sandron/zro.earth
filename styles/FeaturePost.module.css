@@ -21,7 +21,7 @@
   display: block;
   width: calc(100%);
   font-size: calc(2.3em + 0.6vw);
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: 0.3px;
   cursor: pointer;
   padding: 0.4em 0;
@@ -33,6 +33,7 @@
 
 .title:hover>h1 {
   text-decoration: underline;
+  text-underline-offset: 0.3em;
   text-decoration-thickness: 0.4em;
 }
 
@@ -40,7 +41,7 @@
   display: inline-block;
   margin: 1em 0;
   margin-bottom: 0;
-  font-size: calc(0.4em + 0.1vw);
+  font-size: calc(0.45em + 0.1vw);
   font-weight: 300;
   line-height: 1.6;
   max-width: inherit;
@@ -55,7 +56,7 @@
 .date {
   display: inline-block;
   margin: 1em 0;
-  font-size: calc(0.34em + 0.1vw);
+  font-size: calc(0.32em + 0.1vw);
   font-weight: 500;
   width: fit-content;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;

@@ -2,7 +2,7 @@
 title: 'Linux basics [basic commands, scripting]'
 date: 'Feb 22, 2023'
 list: dev
-gist: ''
+gist: 'Know about basic commands, bash scripting, cron jobs etc...'
 ---
 
 # Basic commands

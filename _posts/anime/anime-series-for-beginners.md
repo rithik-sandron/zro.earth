@@ -4,7 +4,7 @@ date: 'Feb 26, 2023'
 list: anime
 author:
     name: Azula
-gist: '**Ever felt left behind when all your friends talk about Anime and you have no idea what in the world is going on?** Anime has become popular worldwide and it has a separate culture. It might seem a bit overwhelming when a complete beginner tries to dive into this bottemless ocean of Anime. This is the right place for you to begin the transformation of a splendid ***Otaku***' 
+gist: 'Ever felt left behind when all your friends talk about Anime and you have no idea what in the world is going on? Anime has become popular worldwide and it has a separate culture. It might seem a bit overwhelming when a complete beginner tries to dive into this bottemless ocean of Anime. This is the right place for you to begin the transformation of a splendid Otaku.' 
 ---
 
 **Ever felt left behind when all your friends talk about Anime and you have no idea what in the world is going on?** Anime has become popular worldwide and it has a separate culture. It might seem a bit overwhelming when a complete beginner tries to dive into this bottemless ocean of Anime. This is the right place for you to begin the transformation of a splendid ***Otaku***
