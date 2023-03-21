@@ -41,7 +41,7 @@
   display: inline-block;
   margin: 1em 0;
   margin-bottom: 0;
-  font-size: calc(0.45em + 0.1vw);
+  font-size: calc(0.4em + 0.1vw);
   font-weight: 300;
   line-height: 1.6;
   max-width: inherit;
