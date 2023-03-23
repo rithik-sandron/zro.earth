@@ -3,7 +3,7 @@ import styles from '../styles/List.module.css'
 import { useRouter } from 'next/router';
 
 export default function List({ posts = [
-    { date: "", slug: "", list: "", color: { bg: "", fore: "" }, wc: '' }]
+    { 'date': "", 'slug': "", 'list': "", 'color': '', 'wc': '', 'listColor': '' }]
 }) {
 
     const router = useRouter();
@@ -12,9 +12,11 @@ export default function List({ posts = [
 
     return (
         <div className={styles.container}
-            style={{ backgroundColor: posts[0].color.bg }}
         >
             <div className={styles.head}
+                style={{
+                    borderBottom: `1em solid ${posts[0].listColor}`,
+                }}
 
             >
                 {posts[0].list}
@@ -31,9 +33,10 @@ export default function List({ posts = [
                         //     href={`/[list]/[slug]`} >
                         <div className={styles.post}
                             key={post.slug}
-                            onClick={() => link(post.list + "/" + post.slug)}>
+                            onClick={() => link(post.list + "/" + post.slug)}
+                        >
                             <div className={styles.titleBefore}
-                                style={{ backgroundColor: posts[0].color.fore }}
+
                             />
                             <div>
                                 <div className={styles.title}>{post.title}</div>

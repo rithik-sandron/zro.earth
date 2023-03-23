@@ -5,7 +5,12 @@ import Blog from '../../components/Blog.js'
 import { useRouter } from 'next/router'
 
 export default function Post({
-  post = { title: "", date: "", slug: "", gist: '', author: { name: "", picture: "" }, content: "", wc: '' }
+  post = { 'title': "", 'date': "", 'slug': "", 
+  'gist': '', 
+  'author': { name: "", picture: "" }, 
+  'content': "", 
+  'wc': '',
+  'color': '' }
 }) {
 
   const router = useRouter()

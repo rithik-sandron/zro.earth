@@ -3,7 +3,13 @@ import styles from '../styles/Blog.module.css'
 import PixelBlock from './PixelBLock';
 
 export default function Blog({
-    blocks = [], post = { title: "", date: "", slug: "", author: { name: "", picture: "" }, content: "", wc: 0, color: { bg: '', fore: '' } }
+    blocks = [], post = { 'title': "", 
+    'date': "", 
+    'slug': "", 
+    'author': { name: "", picture: "" }, 
+    'content': "", 
+    'wc': 0, 
+    'color':'' }
 }) {
 
     useEffect(() => {
@@ -30,7 +36,7 @@ export default function Blog({
             <div>
 
                 <div key={post.slug} className={styles.container}>
-                    <PixelBlock bg={post.color.bg} fore={post.color.fore} blocks={blocks} />
+                    <PixelBlock bg={post.color} blocks={blocks} />
                     <h1>{post.title}</h1>
                     <div>
                         <div className={styles.date}>{post.author.name}</div>

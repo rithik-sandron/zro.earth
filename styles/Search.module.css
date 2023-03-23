@@ -3,7 +3,7 @@
     outline: none;
     border: none;
     width: calc(90% - 1em);
-    margin: auto;
+    margin: 1em auto;
     background-color: inherit;
     color: var(--font-color);
     box-shadow: none;
@@ -13,5 +13,4 @@
     font-size: 1.2em;
     letter-spacing: 0.3px;
     border-radius: 1em;
-    margin-bottom: 3em;
 }

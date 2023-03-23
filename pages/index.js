@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { getAllPosts } from '../lib/api'
-import markdownToHtml from '../lib/markdownToHtml'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
 import styles from '../styles/Search.module.css';
@@ -9,25 +8,28 @@ import Lists from '../components/Lists';
 
 export default function Index({
   list = [{
-    'color': { bg: "", fore: "" },
+    'color': '',
     'title': '',
     'gist': '',
-    'author': { name: "", picture: "" },
+    'author': { 'name': "", 'picture': "" },
     'list': '',
     'date': '',
     'slug': '',
     'wc': '',
     'coverImage': '',
+    'listColor': ''
+    
   }],
   feature = {
-    'color': { bg: "", fore: "" },
+    'color': '',
     'title': '',
-    'author': { name: "", picture: "" },
+    'author': { 'name': "", 'picture': "" },
     'list': '',
     'gist': '',
     'content': '',
     'date': '',
     'slug': '',
+    'listColor': '',
     'wc': '',
   }
 }) {
@@ -52,22 +54,25 @@ export default function Index({
 
   return (
     <Layout>
-      <FeaturePost post={feature} />
-
       <input className={styles.search} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
       {
-        (search !== "") ?
+        (search !== "") &&
 
-          ((searchList.length !== 0) ?
-            searchList.map(x => {
-              return <FeaturePost post={x} />
-            })
-            :
-
-            <div style={{ width: '90%', textAlign: 'center', maxWidth: '900px', margin: '2em auto' }}>No articles found. Please rephrase your search</div>)
+        ((searchList.length !== 0) ?
+          searchList.map(x => {
+            return <FeaturePost post={x} />
+          })
           :
 
+          <div style={{ width: '90%', textAlign: 'center', maxWidth: '900px', margin: '2em auto' }}>No articles found. Please rephrase your search</div>)
+      }
+
+      {
+        (search === "") &&
+        <>
+          <FeaturePost post={feature} />
           <Lists list={list} />
+        </>
       }
     </Layout >
   )
@@ -84,6 +89,7 @@ export const getStaticProps = async () => {
     'gist',
     'wc',
     'color',
+    'listColor',
   ])
 
   return {

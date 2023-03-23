@@ -1,34 +1,35 @@
 .container {
   max-width: 900px;
-  width: calc(90% - 2em);
+  width: 90%;
   height: fit-content;
   margin: 2em auto;
   letter-spacing: 0.6px;
-  padding: 1em;
-  border-radius: 1em;
 }
 
 .head {
   position: relative;
   display: block;
-  width: fit-content;
+  width: 34%;
   /* padding-right: 1em; */
-  font-size: calc(2em + 0.4vw);
-  font-weight: 800;
-  letter-spacing: -1px;
+  font-size: calc(1.2em + 0.4vw);
+  font-weight: 400;
+  letter-spacing: -0.4px;
   height: 1em;
   text-transform: capitalize;
 }
 
 .post {
   display: flex;
-  padding: 0.8em 0;
+  padding: 0.6em 0;
   letter-spacing: 0.2px;
+  border-bottom: 0.5px solid var(--line-color);
+  margin-bottom: 1em;
 }
 
 .post:first-child {
   padding-top: 1.6em;
 }
+
 
 .post:hover {
   text-decoration: underline;
@@ -36,17 +37,18 @@
 
 .title {
   display: block;
-  font-size: calc(1.05em + 0.1vw);
-  line-height: 1.4;
+  font-size: calc(1.6em + 0.1vw);
+  line-height: 1.2;
   letter-spacing: 0.3px;
   cursor: pointer;
   font-weight: 500;
-  font-family: Poly Sans,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  font-family: Poly Sans, Helvetica, Arial, sans-serif;
 }
 
 .date {
   display: inline-block;
-  margin: 0.4em 0;
+  margin: 0.5em 0;
   margin-left: 0;
   font-size: calc(0.75em + 0.2vw);
   font-weight: 300;

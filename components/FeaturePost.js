@@ -4,13 +4,14 @@ import blog from '../styles/Blog.module.css'
 
 
 export default function FeaturePost({ post = {
-    title: '',
-    coverImage: '',
-    gist: '',
-    slug: '',
-    list: '',
-    wc: '',
-    color: { bg: "", fore: "" },
+    'title': '',
+    'coverImage': '',
+    'gist': '',
+    'slug': '',
+    'list': '',
+    'wc': '',
+    'color': '',
+    'listColor': ''
 }
 }) {
 
@@ -29,7 +30,7 @@ export default function FeaturePost({ post = {
                 onClick={() => link(post.list + "/" + post.slug)}>
 
                 <div className={styles.title}>
-                    <h1 style={{ textDecorationColor: post.color.bg }}
+                    <h1 style={{ textDecorationColor: post.color }}
                     >{post.title}</h1>
                     <div id={styles.gist} className={blog.blog} dangerouslySetInnerHTML={{ __html: post.gist }} />
                     <div className={styles.dateContainer}> 
