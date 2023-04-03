@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { getAllPosts } from '../lib/api'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
-import styles from '../styles/Search.module.css';
 import Lists from '../components/Lists';
 
 
@@ -18,7 +17,7 @@ export default function Index({
     'wc': '',
     'coverImage': '',
     'listColor': ''
-    
+
   }],
   feature = {
     'color': '',
@@ -53,8 +52,8 @@ export default function Index({
   }, [search])
 
   return (
-    <Layout>
-      <input className={styles.search} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
+    <Layout search={search} setSearch={setSearch}>
+
       {
         (search !== "") &&
 
@@ -66,7 +65,6 @@ export default function Index({
 
           <div style={{ width: '90%', textAlign: 'center', maxWidth: '900px', margin: '2em auto' }}>No articles found. Please rephrase your search</div>)
       }
-
       {
         (search === "") &&
         <>

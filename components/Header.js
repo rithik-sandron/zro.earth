@@ -1,9 +1,9 @@
 import styles from '../styles/Header.module.css'
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 import { useRouter } from "next/router";
 
-export default function Header() {
+
+export default function Header({ search, setSearch }) {
 
   function setIsDarkTheme() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -42,6 +42,8 @@ export default function Header() {
           onClick={back}>
           Zゼ<br />Rロ
         </span>
+
+        <input className={styles.search} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
 
         <span className={styles.panel} id={styles.face}
           onClick={about}>About

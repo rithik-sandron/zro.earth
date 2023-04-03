@@ -7,9 +7,8 @@
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  justify-content: space-between;
+  padding: 1em 0 2em 0;
+  justify-content: space-evenly;
 }
 
 .panel {
@@ -53,4 +52,20 @@
   margin-bottom: 0;
   letter-spacing: -2px;
   font-family: Poly Sans,Helvetica,Arial,sans-serif;
+}
+
+.search {
+  display: block;
+  outline: none;
+  border: none;
+  flex-grow: 2;
+  margin: 0 3em;
+  background-color: inherit;
+  color: var(--font-color);
+  box-shadow: none;
+  padding: 0.5em;
+  border: 1px solid var(--line-color);
+  font-size: 1.2em;
+  letter-spacing: 0.3px;
+  border-radius: 1em;
 }

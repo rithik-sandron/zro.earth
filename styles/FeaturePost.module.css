@@ -21,7 +21,7 @@
 .title {
   display: block;
   width: calc(100%);
-  font-size: calc(2.3em + 0.6vw);
+  font-size: calc(2.2em + 0.6vw);
   line-height: 1.2;
   letter-spacing: 0.3px;
   cursor: pointer;
@@ -59,7 +59,7 @@
   display: inline-block;
   margin: 1em 0;
   font-size: calc(0.32em + 0.1vw);
-  font-weight: 500;
+  font-weight: 300;
   width: fit-content;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
