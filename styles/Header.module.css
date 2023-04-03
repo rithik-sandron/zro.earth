@@ -8,7 +8,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 1em 0 2em 0;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .panel {
@@ -44,7 +44,7 @@
   display: block;
   text-decoration: none;
   font-weight: 700;
-  font-size: calc(1.5em + 0.8vw);
+  font-size: 1.75em;
   width: fit-content;
   padding: 0;
   line-height: 0.8em;
@@ -58,8 +58,7 @@
   display: block;
   outline: none;
   border: none;
-  flex-grow: 2;
-  margin: 0 3em;
+  margin: 0;
   background-color: inherit;
   color: var(--font-color);
   box-shadow: none;
