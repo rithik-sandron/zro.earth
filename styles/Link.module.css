@@ -14,8 +14,8 @@
     display: block;
     border-radius: 1.6em;
     border: 0.1em solid var(--line-color);
-    padding: 0.8em  2em;
-    width: inherit;
+    padding: 0.8em 0;
+    width: 100%;
     text-align: center;
     cursor: pointer;
     background-color: var(--bg-color);
