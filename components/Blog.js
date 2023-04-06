@@ -34,7 +34,7 @@ export default function Blog({ post = { 'title': "",
             <div>
                 <div key={post.slug} className={styles.container} style={{backgroundColor: post.color}}>
                     <h1>{post.title}</h1>
-                    <div>
+                    <div className={styles.dateContainer}>
                         <div className={styles.date}>{post.author.name}</div>
                         <div className={styles.date}>{post.date}</div>
                         <div className={styles.date}>{post.wc}</div>

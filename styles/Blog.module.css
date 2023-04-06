@@ -48,19 +48,22 @@
     margin: 0 auto;
     width: calc(100% - 4em);
     padding: 1em 2em;
-    position: relative;
-    max-width: 900px;
 }
 
 .container h1 {
     font-size: calc(2.2em + 1.8vw);
-    margin: 0.5em auto;
+    margin: 1em auto;
     max-width: 900px;
     font-weight: 800;
-    position: relative;
-    margin-bottom: 0.5em;
     margin-top: 0.8em;
     font-family: Poly Sans, Helvetica, Arial, sans-serif;
+    color: #222;
+}
+
+.dateContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #222;
 }
 
 .date {
