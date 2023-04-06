@@ -30,27 +30,6 @@ export default function Tree({ color }) {
                 <div className={styles.links}>
                     <span>open Sea</span>
                 </div>
-
-                <div className={styles.links}>
-                    <span>logo</span>
-                </div>
-
-                <div className={styles.links}>
-                    <span>logo</span>
-
-                </div>
-                <div className={styles.links}>
-                    <span>logo</span>
-
-                </div>
-
-                <div className={styles.links}>
-                    <span>logo</span>
-                </div>
-
-                <div className={styles.links}>
-                    <span>logo</span>
-                </div>
             </div>
         </div>
     )
