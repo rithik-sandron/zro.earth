@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
 export default function Meta({ title = '', desc = '', color = '' }) {
-    console.log(color)
     return (
         <Head>
             <title>{title !== '' ? title : 'ZERロ'}</title>
