@@ -3,6 +3,7 @@ import { getAllPosts } from '../lib/api'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
 import Lists from '../components/Lists';
+import Tree from '../components/Tree';
 
 
 export default function Index({
@@ -46,13 +47,12 @@ export default function Index({
         }
         return pV;
       }, [])
-      console.log(res)
       setSearchList(res)
     }
   }, [search])
 
   return (
-    <Layout search={search} setSearch={setSearch}>
+    <Layout search={search} setSearch={setSearch} color={feature.color}>
 
       {
         (search !== "") &&
@@ -68,6 +68,8 @@ export default function Index({
       {
         (search === "") &&
         <>
+          <Tree color={feature.color} />
+
           <FeaturePost post={feature} />
           <Lists list={list} />
         </>

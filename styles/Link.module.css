@@ -1,0 +1,46 @@
+.linkTree {
+    display: flex;
+    width: 90%;
+    padding: 2em;
+    gap: 1em;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.links {
+    display: block;
+    border-radius: 1.6em;
+    border: 0.1em solid var(--line-color);
+    width: calc(24.9% - 3em);
+    padding: 1em;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    transition: all 0.02s ease-in-out;
+}
+
+.links:hover {
+    opacity: 0.8;
+}
+
+.links:nth-child(5) {
+    width: calc(20% - 3em);
+}
+
+.links:nth-child(6) {
+    width: calc(80% - 3em);
+}
+
+
+.links:nth-child(7) {
+    width: calc(100% - 2em);
+}
+
+.links:nth-child(8) {
+    width: calc(70% - 3em);
+}
+
+.links:nth-child(9) {
+    width: calc(30% - 3em);
+}

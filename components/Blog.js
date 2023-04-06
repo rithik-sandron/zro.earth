@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from '../styles/Blog.module.css'
-import PixelBlock from './PixelBLock';
 
-export default function Blog({
-    blocks = [], post = { 'title': "", 
+export default function Blog({ post = { 'title': "", 
     'date': "", 
     'slug': "", 
     'author': { name: "", picture: "" }, 
@@ -34,9 +32,7 @@ export default function Blog({
     return (
         <article>
             <div>
-
-                <div key={post.slug} className={styles.container}>
-                    <PixelBlock bg={post.color} blocks={blocks} />
+                <div key={post.slug} className={styles.container} style={{backgroundColor: post.color}}>
                     <h1>{post.title}</h1>
                     <div>
                         <div className={styles.date}>{post.author.name}</div>

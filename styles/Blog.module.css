@@ -46,9 +46,8 @@
 
 .container {
     margin: 0 auto;
-    width: 90%;
-    padding-bottom: 1em;
-    padding-top: 2em;
+    width: calc(100% - 4em);
+    padding: 1em 2em;
     position: relative;
     max-width: 900px;
 }

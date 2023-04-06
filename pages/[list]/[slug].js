@@ -20,7 +20,7 @@ export default function Post({
 
   return (
     <Layout bg={post.color.bg} fore={post.color.fore}
-      title={post.title} desc={post.gist}>
+      title={post.title} desc={post.gist} color={post.color}>
       <Blog post={post} />
     </Layout >
   )

@@ -15,7 +15,7 @@ export default function List({ posts = [
         >
             <div className={styles.head}
                 style={{
-                    borderBottom: `1em solid ${posts[0].listColor}`,
+                    backgroundColor: `${posts[0].listColor}`,
                 }}
 
             >

@@ -9,12 +9,14 @@
 .head {
   position: relative;
   display: block;
-  width: 34%;
+  width: fit-content;
   font-size: calc(1.2em + 0.4vw);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.4px;
-  height: 1em;
   text-transform: capitalize;
+  border-radius: 1.4em;
+  padding: 0.7em 1em;
+  padding-right: 4em;
 }
 
 .post {
@@ -36,7 +38,7 @@
 
 .title {
   display: block;
-  font-size: calc(1.5em + 0.1vw);
+  font-size: calc(1.4em + 0.1vw);
   line-height: 1.2;
   letter-spacing: 0.3px;
   cursor: pointer;
