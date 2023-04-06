@@ -46,8 +46,8 @@
 
 .container {
     margin: 0 auto;
-    width: calc(100% - 4em);
-    padding: 1em 2em;
+    width: calc(100% - 1em);
+    padding: 1em;
 }
 
 .container h1 {
@@ -58,6 +58,7 @@
     margin-top: 0.8em;
     font-family: Poly Sans, Helvetica, Arial, sans-serif;
     color: #222;
+    padding: 0;
 }
 
 .dateContainer {

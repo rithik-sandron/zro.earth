@@ -3,29 +3,11 @@
 }
 
 .flexContainer {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: space-between;
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  justify-content: space-between;
-}
-
-.panel {
-  display: inline;
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: none;
-  border: none;
-  border-radius: 1px;
-  margin: 0;
-  padding: 0;
-}
-
-.panel-item:active {
-  border: none;
-  outline: none;
-  text-decoration: none;
 }
 
 #ken {
@@ -52,7 +34,7 @@
   background-color: var(--bg-color);
   color: var(--font-color);
   box-shadow: none;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   border: 1px solid var(--line-color);
   font-size: 1.2em;
   letter-spacing: 0.3px;
