@@ -11,15 +11,11 @@
 }
 
 .footer > a {
-    text-decoration: underline;
     cursor: pointer;
-    color: inherit;
     opacity: 0.9;
 }
 
 .footer > a:hover {
     text-decoration: underline;
-    cursor: pointer;
-    color: inherit;
     opacity: 1;
 }

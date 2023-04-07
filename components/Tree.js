@@ -1,16 +1,9 @@
 import React from 'react';
 import styles from '../styles/Link.module.css';
-import { useRouter } from "next/router";
 import Router from './Router';
 
 
 export default function Tree({ color }) {
-
-    const router = useRouter();
-
-    function about() {
-        if (router.route !== '/about') router.push('');
-    }
 
     return (
         <div className={styles.treeContainer} style={{ backgroundColor: color }}>

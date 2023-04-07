@@ -20,7 +20,9 @@ export default function Lists({ list = [[{
                     <h2
                         style={{
                             backgroundColor: `${item[0].listColor}`,
-                            textTransform: 'capitalize'
+                            textTransform: 'capitalize',
+                            color: '#222',
+                            paddingLeft: '0.5em'
                         }}>
                         {item[0].list}
                     </h2>

@@ -5,6 +5,6 @@ export default function Router({ children, url }) {
     function route(url) {
         if (router.route !== url) router.push(url);
     }
-    
+
     return (<span onClick={() => route(url)}>{children}</span>);
 }

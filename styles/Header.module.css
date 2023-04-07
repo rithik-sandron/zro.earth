@@ -1,10 +1,29 @@
 #ken {
-  display: block;
-  width: 90%;
   font-weight: 700;
   font-size: 1.75em;
-  margin: 0 auto;
   letter-spacing: -2px;
   font-family: Poly Sans, Helvetica, Arial, sans-serif;
   color: #222;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.input {
+  display: block;
+  outline: none;
+  border: none;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  box-shadow: none;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  letter-spacing: 0.3px;
+  border-radius: 1em;
+  max-width: 900px;
 }

@@ -14,6 +14,7 @@ export default function Layout({ children,
     <>
       <Meta title={title} desc={desc} color={color}/>
       <main id={styles.common} >
+
         <Header search={search} setSearch={setSearch} color={color}/>
         {children}
         <Footer />

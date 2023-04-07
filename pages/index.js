@@ -52,7 +52,6 @@ export default function Index({
 
   return (
     <Layout search={search} setSearch={setSearch} color={feature.color}>
-        <input placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
 
       {
         (search !== "") &&
@@ -65,10 +64,12 @@ export default function Index({
 
           <div style={{ width: '90%', textAlign: 'center', maxWidth: '900px', margin: '2em auto' }}>No articles found. Please rephrase your search</div>)
       }
+
       {
         (search === "") &&
         <>
           <FeaturePost post={feature} />
+
           <Lists list={list} />
         </>
       }

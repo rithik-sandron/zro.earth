@@ -23,12 +23,6 @@
     font-weight: 600
 }
 
-.about p {
-    line-height: 1.8;
-    margin: 1em 0;
-    font-size: calc(0.9em + 0.1vw);
-}
-
 .about ul {
     font-size: calc(0.9em + 0.1vw);
     margin-left: 1.2em;
