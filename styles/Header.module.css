@@ -1,43 +1,10 @@
-.flex {
-  display: block;
-}
-
-.flexContainer {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 #ken {
   display: block;
-  text-decoration: none;
+  width: 90%;
   font-weight: 700;
   font-size: 1.75em;
-  width: fit-content;
-  padding: 0;
-  line-height: 0.9em;
-  color: var(--font-color);
-  margin-bottom: 0;
+  margin: 0 auto;
   letter-spacing: -2px;
-  font-family: Poly Sans,Helvetica,Arial,sans-serif;
-  margin-top: 1em;
+  font-family: Poly Sans, Helvetica, Arial, sans-serif;
   color: #222;
-}
-
-.search {
-  display: block;
-  outline: none;
-  border: none;
-  margin: 0.2em 0;
-  background-color: var(--bg-color);
-  color: var(--font-color);
-  box-shadow: none;
-  padding: 0.5em;
-  border: 1px solid var(--line-color);
-  font-size: 1.2em;
-  letter-spacing: 0.3px;
-  border-radius: 2em;
-  margin-top: 1.6em;
 }

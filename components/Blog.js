@@ -40,10 +40,6 @@ export default function Blog({ post = { 'title': "",
                         <div className={styles.date}>{post.wc}</div>
                     </div>
                 </div>
-                {/* {post.coverImage && <Image
-                    url={post.coverImage}
-                    alt={post.title}
-                />} */}
             </div>
             <details open id='article-toc' className={styles.articleToc} />
             <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />

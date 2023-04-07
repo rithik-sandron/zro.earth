@@ -1,8 +1,8 @@
 import styles from '../styles/Header.module.css'
 import React, { useEffect } from 'react';
-import { useRouter } from "next/router";
+import Router from './Router';
 
-export default function Header({ search, setSearch, color }) {
+export default function Header({ color }) {
 
   function setIsDarkTheme() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -23,22 +23,14 @@ export default function Header({ search, setSearch, color }) {
     return () => darkTheme.removeEventListener('change', setIsDarkTheme);
   }, []);
 
-  const router = useRouter();
-
-  function back() {
-    if (router.route !== '/') router.push('/');
-  }
-
   return (
-    <div className={styles.flex} id={styles.head} style={{ backgroundColor: color }}>
-      <div className={styles.flexContainer}>
-
-        <span className={styles.panel} id={styles.ken}
-          onClick={back}>
-          Zゼ<br />Rロ
-        </span>
-
-        <input className={styles.search} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
+    <div id={styles.head} style={{ backgroundColor: color }}>
+      <div className='sub-container'>
+        <Router url='/'>
+          <span id={styles.ken}>
+            ZゼRロ
+          </span>
+        </Router>
       </div>
     </div>
   );
