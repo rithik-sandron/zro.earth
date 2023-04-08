@@ -3,18 +3,20 @@
     font-size: calc(1em + 0.1vw);
 }
 
+.blog,
+.articleToc {
+    width: 90%;
+    max-width: 634px;
+    margin: 0 auto;
+}
+
 .blog {
     display: block;
-    margin: 0 auto;
     letter-spacing: 0.03em;
-    max-width: 634px;
-    width: 90%;
 }
 
 .articleToc {
     display: none;
-    margin: 0 auto;
-    max-width: 634px;
     cursor: pointer;
 }
 
@@ -51,7 +53,7 @@
 }
 
 .articleToc a {
-    border-bottom: 0.5px solid var(--color-blue);
+    text-decoration: underline;
 }
 
 .blog hr {
@@ -68,18 +70,20 @@
 
 .blog h1 {
     display: flex;
-    margin-left: -0.6em;
     font-size: calc(1.8em + 0.3vw);
     text-decoration: none;
+    position: relative;
 }
 
-.blog h1:before {
+/* .blog h1:hover:before {
     content: '📎';
-    font-size: 0.4em;
+    font-size: 0.3em;
     max-width: 634px;
-    margin-top: 6px;
+    margin-top: 4px;
+    margin-left: -4px;
     padding-right: 2px;
-}
+    position: absolute;
+} */
 
 .blog h2 {
     font-size: calc(1.3em + 0.3vw);
@@ -141,8 +145,7 @@
 
 .blog code>pre,
 .blog *>code,
-.blog table tr,
-.blog span {
+.blog table tr {
     border: 0.07em solid var(--line-color);
 }
 
@@ -170,7 +173,6 @@
 }
 
 .blog sup::before,
-.blog span,
 .blog mark {
     border-radius: 1em;
 }
@@ -184,17 +186,17 @@
     background-color: #E10600;
 }
 
-.blog span,
 .blog mark {
     font-weight: 400;
     letter-spacing: 0.03em;
     margin-right: 0.4em;
-    padding: 0.3em 0.5em;
+    padding: 0.3em 0.2em;
 }
 
 .blog span {
     letter-spacing: 0.03em;
-    margin-right: 0.4em;
+    margin-right: 0.2em;
+    font-size: 0.86em;
 }
 
 .blog mark {
@@ -209,9 +211,10 @@
 
 .blog blockquote {
     letter-spacing: 0.01em;
-    background-size: 1.5px 1.2em;
+    background-size: 1.5px 1.5em;
     background-image: linear-gradient(transparent calc(100% - 1.5px), var(--line-color));
     font-style: italic;
+    line-height: 1.5em;
 }
 
 .blog blockquote:before,
