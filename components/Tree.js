@@ -8,20 +8,18 @@ export default function Tree({ color }) {
     return (
         <div className={styles.treeContainer} style={{ backgroundColor: color }}>
             <div className={styles.linkTree} >
-                <Router url='/about'>
+                <Router url='/about' className={styles.links}>
                     About
                 </Router>
-                <div className={styles.links}>
-                    <span>Instagram</span>
-                </div>
-
-                <div className={styles.links}>
-                    <span>Twitter</span>
-                </div>
-
-                <div className={styles.links}>
-                    <span>open Sea</span>
-                </div>
+                <Router className={styles.links}>
+                    Instagram
+                </Router>
+                <Router className={styles.links}>
+                    Twitter
+                </Router>
+                <Router className={styles.links}>
+                    Open Sea
+                </Router>
             </div >
         </div >
     )

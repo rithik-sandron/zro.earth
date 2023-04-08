@@ -67,17 +67,28 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 p {
-    line-height: 1.8;
+    line-height: 1.9;
     font-size: calc(1em + 0.1vw);
     font-weight: 300;
     padding: 0.6em 0;
 }
 
 h1,
-h2 {
-    line-height: 1.3;
-    margin: 0;
+h2,
+h3,
+blockquote {
+    display: block;
+    width: 100%;
+    line-height: 1.2;
     font-weight: 500;
     font-family: Poly Sans, Helvetica, Arial, sans-serif;
 }
@@ -87,12 +98,23 @@ h2:hover {
     text-decoration: underline;
 }
 
-h1 {
-    font-size: calc(2.1em + 0.5vw);
+h1,
+blockquote {
+    font-size: calc(1.8em + 0.5vw);
 }
 
 h2 {
     font-size: calc(1.2em + 0.5vw);
+}
+
+h3 {
+    font-size: calc(1.15em + 0.2vw);
+    margin: 0 auto;
+    margin-bottom: 0.3em;
+    text-transform: capitalize;
+    padding: 0.1em 0;
+    letter-spacing: 0.03em;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
 date {
@@ -100,12 +122,13 @@ date {
     font-size: calc(0.8em + 0.1vw);
     font-weight: 300;
     width: fit-content;
+    margin: 0.7em 0;
     font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
 date>span::after {
     content: '•';
-    margin: 0 0.6em;
+    margin: 0 0.8em;
 }
 
 date>span:last-child::after {
@@ -116,17 +139,17 @@ date>span:last-child::after {
 .sub-container {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    height: inherit;
-    max-width: 900px;
     cursor: pointer;
+    max-width: 900px;
     width: 90%;
 }
 
 .container {
-    margin: 3em auto;
+    margin: 2em auto;
+    margin-bottom: 0;
 }
 
 .sub-container {
-    padding: 1em 0;
+    padding: 0.5em 0;
+    margin: 0;
 }

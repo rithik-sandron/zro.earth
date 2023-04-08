@@ -59,10 +59,11 @@ _You **can** also combine them_
 
 - Item 1
 - Item 2
-  - Item 2.1
-    - Item 2.1a
-    - Item 2.1b
-  - Item 2.2
+1. Item 1
+2. Item 2
+-[x] this is a complete item 
+-[ ] this is an incomplete it
+
 
 ## Ordered
 ```

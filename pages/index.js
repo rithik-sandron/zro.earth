@@ -3,6 +3,7 @@ import { getAllPosts } from '../lib/api'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
 import Lists from '../components/Lists';
+import Tree from '../components/Tree';
 
 
 export default function Index({
@@ -68,8 +69,8 @@ export default function Index({
       {
         (search === "") &&
         <>
+          <Tree color={feature.color} />
           <FeaturePost post={feature} />
-
           <Lists list={list} />
         </>
       }

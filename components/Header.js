@@ -2,7 +2,7 @@ import styles from '../styles/Header.module.css'
 import React, { useEffect } from 'react';
 import Router from './Router';
 
-export default function Header({ search, setSearch, color }) {
+export default function Header({ search, setSearch, color, hideSearch }) {
 
   function setIsDarkTheme() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -29,7 +29,7 @@ export default function Header({ search, setSearch, color }) {
         <Router url='/'>
           <span id={styles.ken}>ZゼRロ</span>
         </Router>
-        <input className={styles.input} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
+        {!hideSearch && <input className={styles.input} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />}
       </div>
     </div>
   );

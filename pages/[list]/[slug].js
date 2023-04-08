@@ -5,22 +5,24 @@ import Blog from '../../components/Blog.js'
 import { useRouter } from 'next/router'
 
 export default function Post({
-  post = { 'title': "", 'date': "", 'slug': "", 
-  'gist': '', 
-  'author': { name: "", picture: "" }, 
-  'content': "", 
-  'wc': '',
-  'color': '' }
+  post = {
+    'title': "", 'date': "", 'slug': "",
+    'gist': '',
+    'author': { name: "", picture: "" },
+    'content': "",
+    'wc': '',
+    'color': ''
+  }
 }) {
 
-  const router = useRouter()
+  const router = useRouter();
+
   if (router.isFallback) {
     return <div>Loading...</div>
   }
 
   return (
-    <Layout bg={post.color.bg} fore={post.color.fore}
-      title={post.title} desc={post.gist} color={post.color}>
+    <Layout title={post.title} desc={post.gist} color={post.color} hideSearch>
       <Blog post={post} />
     </Layout >
   )
@@ -47,7 +49,6 @@ export async function getStaticProps({ params }) {
     'date',
     'list',
     'slug',
-    'gist',
     'author',
     'content',
     'wc',

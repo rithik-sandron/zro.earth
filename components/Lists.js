@@ -17,15 +17,15 @@ export default function Lists({ list = [[{
                 item.length > 0 &&
 
                 <div className='container' key={i}>
-                    <h2
+                    <h3
                         style={{
                             backgroundColor: `${item[0].listColor}`,
                             textTransform: 'capitalize',
                             color: '#222',
-                            paddingLeft: '0.5em'
+                            marginBottom: '0.6em'
                         }}>
                         {item[0].list}
-                    </h2>
+                    </h3>
 
                     {item.map(post => {
                         return (

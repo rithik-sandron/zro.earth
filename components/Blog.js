@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react'
 import styles from '../styles/Blog.module.css'
 
-export default function Blog({ post = { 'title': "", 
-    'date': "", 
-    'slug': "", 
-    'author': { name: "", picture: "" }, 
-    'content': "", 
-    'wc': 0, 
-    'color':'' }
+export default function Blog({ post = {
+    'title': "",
+    'date': "",
+    'slug': "",
+    'author': { name: "", picture: "" },
+    'content': "",
+    'wc': 0,
+    'color': ''
+}
 }) {
 
     useEffect(() => {
-        var toc =
-            `<summary>On this article</summary><ul>`;
+        var toc = `<summary>On this article</summary><ul>`;
         let headings = document.querySelectorAll('.table-content-h1');
         if (headings.length > 3) {
             headings.forEach(heading => {
@@ -31,14 +32,20 @@ export default function Blog({ post = { 'title': "",
 
     return (
         <article>
-            <div>
-                <div key={post.slug} className={styles.container} style={{backgroundColor: post.color}}>
-                    <h1>{post.title}</h1>
-                    <div className={styles.dateContainer}>
-                        <div className={styles.date}>{post.author.name}</div>
-                        <div className={styles.date}>{post.date}</div>
-                        <div className={styles.date}>{post.wc}</div>
-                    </div>
+            <div style={{ backgroundColor: post.color }}>
+                <div key={post.slug} className='sub-container'
+                    style={{
+                        margin: '0 auto 2em auto',
+                        paddingBottom: '1.4em',
+                        color: '#222'
+                    }}>
+                    <h3>{post.list}</h3>
+                    <h1 >{post.title}</h1>
+                    <date>
+                        <span>{post.author.name}</span>
+                        <span>{post.date}</span>
+                        <span>{post.wc}</span>
+                    </date>
                 </div>
             </div>
             <details open id='article-toc' className={styles.articleToc} />

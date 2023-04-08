@@ -2,7 +2,7 @@ import Layout from "../components/Layout"
 import styles from '../styles/About.module.css'
 export default function About() {
     return (
-        <Layout>
+        <Layout color={'#fff'} hideSearch>
             <div className={styles.about}>
                 <h1 >
                     ZゼRロ ( Zero )
