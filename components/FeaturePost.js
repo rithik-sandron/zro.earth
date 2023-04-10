@@ -8,7 +8,6 @@ export default function FeaturePost({ post = {
     'list': '',
     'wc': '',
     'color': '',
-    'listColor': ''
 }
 }) {
 

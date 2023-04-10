@@ -69,6 +69,7 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 a:hover {
@@ -89,8 +90,7 @@ blockquote {
     display: block;
     width: 100%;
     line-height: 1.2;
-    font-weight: 500;
-    font-family: Poly Sans, Helvetica, Arial, sans-serif;
+    font-weight: 550;
 }
 
 h1:hover,
@@ -98,12 +98,12 @@ h2:hover {
     text-decoration: underline;
 }
 
-h1,
-blockquote {
-    font-size: calc(1.8em + 0.5vw);
+h1 {
+    font-size: calc(1.85em + 0.5vw);
 }
 
-h2 {
+h2,
+blockquote {
     font-size: calc(1.2em + 0.5vw);
 }
 
@@ -119,7 +119,7 @@ h3 {
 
 date {
     display: inline-block;
-    font-size: calc(0.8em + 0.1vw);
+    font-size: calc(0.7em + 0.1vw);
     font-weight: 300;
     width: fit-content;
     margin: 0.7em 0;
@@ -145,8 +145,8 @@ date>span:last-child::after {
 }
 
 .container {
-    margin: 2em auto;
-    margin-bottom: 0;
+    margin: 0 auto;
+    padding: 2em 0;
 }
 
 .sub-container {

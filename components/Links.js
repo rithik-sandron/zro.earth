@@ -3,14 +3,12 @@ import styles from '../styles/Link.module.css';
 import Router from './Router';
 
 
-export default function Tree({ color }) {
+export default function Links({ color }) {
 
     return (
         <div className={styles.treeContainer} style={{ backgroundColor: color }}>
             <div className={styles.linkTree} >
-                <Router url='/about' className={styles.links}>
-                    About
-                </Router>
+               
                 <Router className={styles.links}>
                     Instagram
                 </Router>

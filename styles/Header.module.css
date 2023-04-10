@@ -1,18 +1,16 @@
 #ken {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.3em;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   font-family: Poly Sans, Helvetica, Arial, sans-serif;
-  color: #222;
   cursor: pointer;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
-  padding: 1em;
+  padding: 1em 0.5em;
   width: 90%;
-  margin: 0 auto;
+  gap: 1em;
   max-width: 900px;
 }
 

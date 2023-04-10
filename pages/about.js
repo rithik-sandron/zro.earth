@@ -2,15 +2,11 @@ import Layout from "../components/Layout"
 import styles from '../styles/About.module.css'
 export default function About() {
     return (
-        <Layout color={'#fff'} hideSearch>
+        <Layout hideSearch>
             <div className={styles.about}>
-                <h1 >
-                    ZゼRロ ( Zero )
-                    is initiated to express our mind 🌍.
-                </h1>
-                <p >The name Zero (ゼロ in Japanese)
+                <h1>The name Zero (ゼロ in Japanese)
                  indicates the starting point of us. We started from 0.
-                </p>
+                </h1>
                 <p>
                     You can find certain words in Japanese because we watch a lot of Anime and we like using them, not that we know Japanese. 😅
                 </p>

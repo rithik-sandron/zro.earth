@@ -19,7 +19,7 @@ export default function Lists({ list = [[{
                 <div className='container' key={i}>
                     <h3
                         style={{
-                            backgroundColor: `${item[0].listColor}`,
+                            backgroundColor: `${item[0].color}`,
                             textTransform: 'capitalize',
                             color: '#222',
                             marginBottom: '0.6em'

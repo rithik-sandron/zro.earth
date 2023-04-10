@@ -3,7 +3,7 @@ import { getAllPosts } from '../lib/api'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
 import Lists from '../components/Lists';
-import Tree from '../components/Tree';
+import Links from '../components/Links';
 
 
 export default function Index({
@@ -16,9 +16,7 @@ export default function Index({
     'date': '',
     'slug': '',
     'wc': '',
-    'coverImage': '',
-    'listColor': ''
-
+    'coverImage': ''
   }],
   feature = {
     'color': '',
@@ -29,7 +27,6 @@ export default function Index({
     'content': '',
     'date': '',
     'slug': '',
-    'listColor': '',
     'wc': '',
   }
 }) {
@@ -69,7 +66,6 @@ export default function Index({
       {
         (search === "") &&
         <>
-          <Tree color={feature.color} />
           <FeaturePost post={feature} />
           <Lists list={list} />
         </>
@@ -85,11 +81,9 @@ export const getStaticProps = async () => {
     'list',
     'date',
     'slug',
-    'content',
     'gist',
     'wc',
     'color',
-    'listColor',
   ])
 
   return {

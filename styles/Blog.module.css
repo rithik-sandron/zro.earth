@@ -18,6 +18,7 @@
 .articleToc {
     display: none;
     cursor: pointer;
+    padding-bottom: 6em;
 }
 
 .articleToc>summary {
@@ -37,7 +38,9 @@
 .blog a {
     color: var(--color-blue);
     font-weight: 500;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-color: var(--line-color);
 }
 
 .articleToc a:hover,
@@ -47,7 +50,6 @@
     color: rgb(22, 80, 134);
 }
 
-.blog a,
 .blog hr {
     border-bottom: 1.5px solid var(--line-color);
 }
@@ -195,8 +197,14 @@
 
 .blog span {
     letter-spacing: 0.03em;
-    margin-right: 0.2em;
+    margin-right: 0.6em;
     font-size: 0.86em;
+    font-weight: 450;
+}
+
+.blog span:before {
+    content: '#';
+    padding-right: 1px;
 }
 
 .blog mark {
@@ -211,10 +219,14 @@
 
 .blog blockquote {
     letter-spacing: 0.01em;
-    background-size: 1.5px 1.5em;
+    background-size: 1.5px 2em;
     background-image: linear-gradient(transparent calc(100% - 1.5px), var(--line-color));
     font-style: italic;
     line-height: 1.5em;
+    border-top: 1em solid;
+    border-radius: 1px;
+    padding-top: 0.5em;
+
 }
 
 .blog blockquote:before,

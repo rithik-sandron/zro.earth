@@ -32,12 +32,11 @@ export default function Blog({ post = {
 
     return (
         <article>
-            <div style={{ backgroundColor: post.color }}>
+            <div>
                 <div key={post.slug} className='sub-container'
                     style={{
                         margin: '0 auto 2em auto',
-                        paddingBottom: '1.4em',
-                        color: '#222'
+                        padding: '0 0 1.4em 1em',
                     }}>
                     <h3>{post.list}</h3>
                     <h1 >{post.title}</h1>
