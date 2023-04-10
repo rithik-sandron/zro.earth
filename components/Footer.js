@@ -10,9 +10,9 @@ export default function Footer() {
     }
 
     return (
-        <footer className={styles.footer}>
+        <section className={styles.footer}>
             <span>Copyright © 2023 zro.earth, All rights reserved.</span>
             <a onClick={privacy}>Privacy Policy</a>
-        </footer>
+        </section>
     );
 }

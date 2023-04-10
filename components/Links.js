@@ -6,9 +6,8 @@ import Router from './Router';
 export default function Links({ color }) {
 
     return (
-        <div className={styles.treeContainer} style={{ backgroundColor: color }}>
-            <div className={styles.linkTree} >
-               
+        <section className={styles.treeContainer} style={{ backgroundColor: color }}>
+            <div className={styles.linkTree}>
                 <Router className={styles.links}>
                     Instagram
                 </Router>
@@ -19,6 +18,6 @@ export default function Links({ color }) {
                     Open Sea
                 </Router>
             </div >
-        </div >
+        </section >
     )
 }

@@ -1,11 +1,11 @@
 .blog,
 .articleToc li {
-    font-size: calc(1em + 0.1vw);
+    font-size: calc(0.97em + 0.1vw);
 }
 
 .blog,
 .articleToc {
-    width: 90%;
+    width: 86%;
     max-width: 634px;
     margin: 0 auto;
 }
@@ -18,7 +18,7 @@
 .articleToc {
     display: none;
     cursor: pointer;
-    padding-bottom: 6em;
+    padding: 3em;
 }
 
 .articleToc>summary {

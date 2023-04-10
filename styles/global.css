@@ -77,7 +77,7 @@ a:hover {
 }
 
 p {
-    line-height: 1.9;
+    line-height: 1.8;
     font-size: calc(1em + 0.1vw);
     font-weight: 300;
     padding: 0.6em 0;
@@ -91,11 +91,6 @@ blockquote {
     width: 100%;
     line-height: 1.2;
     font-weight: 550;
-}
-
-h1:hover,
-h2:hover {
-    text-decoration: underline;
 }
 
 h1 {
@@ -122,13 +117,13 @@ date {
     font-size: calc(0.7em + 0.1vw);
     font-weight: 300;
     width: fit-content;
-    margin: 0.7em 0;
+    margin: 0.8em 0;
     font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
 date>span::after {
     content: '•';
-    margin: 0 0.8em;
+    margin: 0 1em;
 }
 
 date>span:last-child::after {
@@ -146,10 +141,10 @@ date>span:last-child::after {
 
 .container {
     margin: 0 auto;
-    padding: 2em 0;
+    padding: 1em;
 }
 
 .sub-container {
-    padding: 0.5em 0;
+    padding: 1em 0;
     margin: 0;
 }

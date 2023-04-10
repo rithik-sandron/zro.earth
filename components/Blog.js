@@ -32,23 +32,18 @@ export default function Blog({ post = {
 
     return (
         <article>
-            <div>
-                <div key={post.slug} className='sub-container'
-                    style={{
-                        margin: '0 auto 2em auto',
-                        padding: '0 0 1.4em 1em',
-                    }}>
+            <section key={post.slug} className='container'>
+                <h1>{post.title}</h1>
+                <date style={{ paddingTop: '0.6em' }}>
                     <h3>{post.list}</h3>
-                    <h1 >{post.title}</h1>
-                    <date>
-                        <span>{post.author.name}</span>
-                        <span>{post.date}</span>
-                        <span>{post.wc}</span>
-                    </date>
-                </div>
-            </div>
+                    <span>{post.author.name}</span>
+                    <span>{post.date}</span>
+                    <span>{post.wc}</span>
+                </date>
+
+            </section>
             <details open id='article-toc' className={styles.articleToc} />
-            <div id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
+            <section id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />
         </article>
     );
 }

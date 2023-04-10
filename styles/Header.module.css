@@ -1,6 +1,6 @@
 #ken {
   font-weight: 500;
-  font-size: 1.3em;
+  font-size: 1.2em;
   letter-spacing: -0.4px;
   font-family: Poly Sans, Helvetica, Arial, sans-serif;
   cursor: pointer;
@@ -21,11 +21,9 @@
   background-color: var(--bg-color);
   color: var(--font-color);
   box-shadow: none;
-  padding: 0.2em 1em;
-  font-size: 1em;
+  padding: 0 1em;
   letter-spacing: 0.3px;
   border-radius: 1em;
   width: 20%;
   border: 0.07em solid var(--line-color);
-  margin-top: 1px;
 }
