@@ -1,3 +1,5 @@
+'use client';
+
 import styles from '../styles/Blog.module.css'
 
 export default function Blog({ post = {

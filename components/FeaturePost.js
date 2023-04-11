@@ -1,3 +1,5 @@
+'use client';
+
 import Router from './Router';
 
 export default function FeaturePost({ post = {
