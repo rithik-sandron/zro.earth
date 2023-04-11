@@ -18,6 +18,7 @@ export default function Meta({ title = '', desc = '', color = '' }) {
             <meta name="msapplication-TileColor" media="(prefers-color-scheme: dark)" content={"#050607"} />
             <meta name="theme-color" media="(prefers-color-scheme: light)" content={color !== '' ? `${color}` : '#fff'} />
             <meta name="theme-color" media="(prefers-color-scheme: dark)" content={color !== '' ? `${color}` : '#050607'} />
+            <link rel="preload" as="style" href="css/global.css" />
             {/* <link rel="shortcut icon" href="/favicon/favicon.ico" disabled media=/> */}
         </Head>
     );

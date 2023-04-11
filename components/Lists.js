@@ -1,5 +1,6 @@
 import React from 'react';
 import Router from './Router';
+import styles from '../styles/Lists.module.css'
 
 export default function Lists({ list = [[{
     'title': '',
@@ -15,28 +16,16 @@ export default function Lists({ list = [[{
         list.map((item, i) => {
             return (
                 item.length > 0 &&
-
-                <div className='container' key={i}>
-                    <h3
-                        style={{
-                            backgroundColor: `${item[0].color}`,
-                            textTransform: 'capitalize',
-                            color: '#222',
-                            marginBottom: '0.6em'
-                        }}>
-                        {item[0].list}
-                    </h3>
-
+                <div className={styles.list} key={i}>
+                    <h3>{item[0].list}</h3>
                     {item.map(post => {
                         return (
-                            <Router url={post.list + "/" + post.slug} key={post.slug}>
-                                <div className='sub-container'>
-                                    <h2>{post.title}</h2>
-                                    <date>
-                                        <span>{post.date}</span>
-                                        <span>{post.wc}</span>
-                                    </date>
-                                </div>
+                            <Router url={post.list + "/" + post.slug} key={post.slug} className={styles.item}>
+                                <h2>{post.title}</h2>
+                                <date>
+                                    <span>{post.date}</span>
+                                    <span>{post.wc}</span>
+                                </date>
                             </Router>
                         )
                     })}

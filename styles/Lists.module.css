@@ -1,0 +1,11 @@
+.list {
+    display: block;
+    width: 86%;
+    margin: 3em auto;
+    max-width: 900px;
+}
+
+.item {
+    display: block;
+    margin-bottom: 1.6em;
+}

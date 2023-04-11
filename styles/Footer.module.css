@@ -9,12 +9,12 @@
     padding: 0.5em 0 3em 0;
 }
 
-.footer > a {
+.footer>a {
     cursor: pointer;
     opacity: 0.9;
 }
 
-.footer > a:hover {
+.footer>a:hover {
     text-decoration: underline;
     opacity: 1;
 }

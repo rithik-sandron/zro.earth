@@ -219,13 +219,12 @@
 
 .blog blockquote {
     letter-spacing: 0.01em;
-    background-size: 1.5px 2em;
-    background-image: linear-gradient(transparent calc(100% - 1.5px), var(--line-color));
     font-style: italic;
     line-height: 1.5em;
-    border-top: 1em solid;
+    border-top: 0.6em solid;
     border-radius: 1px;
     padding-top: 0.5em;
+    margin: 2em auto;
 
 }
 

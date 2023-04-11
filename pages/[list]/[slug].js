@@ -51,6 +51,7 @@ export async function getStaticProps({ params }) {
     'slug',
     'author',
     'content',
+    'gist',
     'wc',
     'color',
   ])

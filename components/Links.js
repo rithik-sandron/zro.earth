@@ -3,10 +3,10 @@ import styles from '../styles/Link.module.css';
 import Router from './Router';
 
 
-export default function Links({ color }) {
+export default function Links() {
 
     return (
-        <section className={styles.treeContainer} style={{ backgroundColor: color }}>
+        <section className={styles.treeContainer}>
             <div className={styles.linkTree}>
                 <Router className={styles.links}>
                     Instagram

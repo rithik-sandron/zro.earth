@@ -4,12 +4,10 @@ export default function About() {
     return (
         <Layout hideSearch>
             <div className={styles.about}>
-
                 <h1>ZゼRロ is initiated to express our mind.</h1>
-
-                <h1>The name Zero (ゼロ in Japanese)
+                <h2>The name Zero (ゼロ in Japanese)
                     indicates the starting point of us. We started from 0.
-                </h1>
+                </h2>
                 <p>
                     You can find certain words in Japanese because we watch a lot of Anime and we like using them, not that we know Japanese. 😅
                 </p>
@@ -18,7 +16,7 @@ export default function About() {
                     The articles you find here are purely based on our perception. 🧠
                 </p>
 
-                <h2>We write about</h2>
+                <h3>We write about</h3>
                 <ul >
                     <li>Any news we find interesting.</li>
                     <li>Extensively researched or fun topics we find in web.</li>
@@ -30,17 +28,14 @@ export default function About() {
                     <li>Food.</li>
                 </ul>
 
-                <h2>Tip us</h2>
+                <h3>Tip us</h3>
                 <p>
                     If you notice any mistakes or alter view, kindly inform us.
-
                     If you want a topic to be researched and written about, you can contact us.
-
                     We will be creating a window to contact us through social media.
                 </p>
 
-
-                <h2 id='p'>Privacy Policy</h2>
+                <h3 id='p'>Privacy Policy</h3>
                 <p>
                     We do not collect any sort of data. Even the dark theme is based on your system theme.
                     We do not store anything in browser storage.

@@ -60,7 +60,7 @@ export default function Index({
           })
           :
 
-          <div style={{ width: '90%', textAlign: 'center', maxWidth: '900px', margin: '2em auto' }}>No articles found. Please rephrase your search</div>)
+          <span className='container'>No articles found. Please rephrase your search</span>)
       }
 
       {

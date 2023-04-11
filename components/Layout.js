@@ -18,8 +18,8 @@ export default function Layout({ children,
       <main id={styles.common}>
         <Header search={search} setSearch={setSearch} color={color} hideSearch={hideSearch} />
         {children}
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
