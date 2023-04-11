@@ -100,7 +100,8 @@ h3 {
     font-size: calc(1em + 0.2vw);
     text-transform: capitalize;
     letter-spacing: 0.03em;
-    padding-left: 0.1em;
+    padding: 0.5em;
+    width: calc(100% - 1em);
 }
 
 hr {
