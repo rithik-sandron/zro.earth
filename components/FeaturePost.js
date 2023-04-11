@@ -14,17 +14,19 @@ export default function FeaturePost({ post = {
 }) {
 
     return (
-        <Router url={post.list + "/" + post.slug}>
-            <section key={post.slug} className='container'>
+        <section key={post.slug} className='container'
+            style={{ backgroundColor: post.color }}
+        >
+            <Router url={post.list + "/" + post.slug}>
+                <h3>{post.list}</h3>
                 <h1>{post.title}</h1>
                 <p>{post.gist}</p>
+                <br />
                 <date>
-                    <h3>{post.list}</h3>
                     <span>{post.date}</span>
                     <span>{post.wc}</span>
                 </date>
-                <hr />
-            </section>
-        </Router>
+            </Router>
+        </section>
     );
 }

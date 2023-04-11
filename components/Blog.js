@@ -34,10 +34,11 @@ export default function Blog({ post = {
     return (
         <article>
             <section key={post.slug} className='container'>
+                <h3>{post.list}</h3>
                 <h1>{post.title}</h1>
                 <p>{post.gist}</p>
+                <br />
                 <date>
-                    <h3>{post.list}</h3>
                     <span>{post.date}</span>
                     <span>{post.wc}</span>
                 </date>

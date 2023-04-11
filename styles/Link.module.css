@@ -1,13 +1,14 @@
 .linkTree {
     display: flex;
     width: 90%;
-    padding: 2em 0;
-    gap: 1em;
+    padding: 1em 0;
+    gap: 1.4em;
     max-width: 634px;
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: column;
+
 }
 
 .links {
@@ -17,12 +18,11 @@
     width: 100%;
     text-align: center;
     cursor: pointer;
-    background-color: var(--bg-color);
     transition: all 0.02s ease-in-out;
     word-break: break-all;
     font-size: calc(1em + 0.1vw);
     letter-spacing: 0.2px;
-    border: 1px solid var(--line-color);
+    border: 0.5px solid;
 }
 
 .links:hover {

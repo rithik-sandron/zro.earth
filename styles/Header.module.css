@@ -1,9 +1,11 @@
 #ken {
+  display: block;
   font-weight: 500;
   font-size: 1.2em;
   letter-spacing: -0.4px;
   font-family: Poly Sans, Helvetica, Arial, sans-serif;
   cursor: pointer;
+  margin-top: 12px;
 }
 
 .header {
@@ -12,7 +14,7 @@
   padding-bottom: 1em;
   width: 90%;
   gap: 1em;
-  max-width: 634px;
+  justify-content: flex-start;
 }
 
 .input {
@@ -29,21 +31,18 @@
 }
 
 #logo {
+  font-family: Poly Sans, Helvetica, Arial, sans-serif;
   display: inline-block;
   font-size: 2em;
   font-weight: bold;
-  padding: 0.3em 0.4em;
-  margin-top: 1em;
-  display: inline-block;
-  width: calc(100% - 0.8em);
+  padding: 0.1em 1em;
+  width: fit-content;
   border-radius: 0.2em;
 }
 
-#logo {
-  font-size: 30px;
+.grad {
   background: linear-gradient(140deg, #d5d36895, #5dbaf097, #f3b54987, rgba(241, 103, 103, 0.732));
   background-size: 200% 200%;
-
   -webkit-animation: Animation 5s ease-in-out infinite;
   -moz-animation: Animation 5s ease-in-out infinite;
   animation: Animation 10s ease-in-out infinite;

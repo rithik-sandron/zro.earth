@@ -54,7 +54,6 @@
 .blog h1,
 .blog h2,
 .blog h3 {
-    margin-top: 1em;
     margin-bottom: 0.5em;
     line-height: normal;
 }
@@ -93,7 +92,7 @@
     line-height: 1.9;
     padding: 0;
     letter-spacing: 0.03em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .blog li,

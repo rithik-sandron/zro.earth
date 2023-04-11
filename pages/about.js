@@ -48,9 +48,6 @@ export default function About() {
                 </p>
 
                 <p>Made with love ♡ and passion 🔥 for writing.</p>
-
-                <hr />
-
             </div>
         </Layout>
     )

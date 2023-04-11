@@ -1,5 +1,6 @@
+'use client';
+
 import Header from "./Header";
-import Footer from "./Footer";
 import styles from '../styles/Layout.module.css'
 import Meta from "./Meta";
 
@@ -8,17 +9,18 @@ export default function Layout({ children,
   desc = '',
   search,
   setSearch,
-  hideSearch = false
+  hideSearch = false,
+  bgColor = false
 }) {
 
   return (
     <>
       <Meta title={title} desc={desc} />
-      <main id={styles.common}>
-        <Header search={search} setSearch={setSearch} hideSearch={hideSearch} />
+      <main id={styles.common} className={bgColor && styles.tree}>
+        <Header search={search} setSearch={setSearch} hideSearch={hideSearch} bgColor={bgColor} />
         {children}
       </main>
-      <Footer />
     </>
+
   );
 }

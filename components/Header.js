@@ -1,8 +1,10 @@
+'use client';
+
 import styles from '../styles/Header.module.css'
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Router from './Router';
 
-export default function Header({ search, setSearch, hideSearch }) {
+export default function Header({ search, setSearch, hideSearch, bgColor = false }) {
 
   function setIsDarkTheme() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -25,11 +27,11 @@ export default function Header({ search, setSearch, hideSearch }) {
 
   return (
     <section className='container'>
-      <span id={styles.logo}>0</span>
       <div className={styles.header}>
         <Router url='/'>
-          <span id={styles.ken}>Home</span>
+          <span className={!bgColor && styles.grad} id={styles.logo}>0</span>
         </Router>
+
         <Router url='/about'>
           <span id={styles.ken}>About</span>
         </Router>
@@ -37,6 +39,7 @@ export default function Header({ search, setSearch, hideSearch }) {
           <span id={styles.ken}>Tree</span>
         </Router>
         {!hideSearch && <input className={styles.input} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />}
+
       </div>
     </section>
   );
