@@ -8,12 +8,9 @@
 
 
 .tree {
-  background: linear-gradient(140deg, #d5d36895, #5dbaf097, #f3b54987, rgba(241, 103, 103, 0.732));
+  background: linear-gradient(170deg, #fbf98c95, #90d3fa97, #fad49487, rgba(252, 149, 149, 0.732));
   background-size: 200% 200%;
-
-  -webkit-animation: Animation 5s ease-in-out infinite;
-  -moz-animation: Animation 5s ease-in-out infinite;
-  animation: Animation 10s ease-in-out infinite;
+  animation: Animation 36s ease-in-out infinite;
 }
 
 @keyframes Animation {

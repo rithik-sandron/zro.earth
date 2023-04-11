@@ -15,7 +15,7 @@ export default function FeaturePost({ post = {
 
     return (
         <section key={post.slug} className='container'
-            style={{ backgroundColor: post.color }}
+            style={{ background: `linear-gradient(180deg, ${post.color}, var(--bg-color))` }}
         >
             <Router url={post.list + "/" + post.slug}>
                 <h3>{post.list}</h3>

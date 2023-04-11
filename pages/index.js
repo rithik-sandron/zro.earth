@@ -26,7 +26,8 @@ export default function Index({
     'date': '',
     'slug': '',
     'wc': '',
-  }
+  },
+  grad = ''
 }) {
   const [search, setSearch] = useState('');
   const [searchList, setSearchList] = useState([]);
@@ -45,7 +46,7 @@ export default function Index({
   }, [search])
 
   return (
-    <Layout search={search} setSearch={setSearch}>
+    <Layout search={search} setSearch={setSearch} grad={grad}>
 
       {
         (search !== "") &&
@@ -83,6 +84,6 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { list: list.list, feature: list.feature }
+    props: { list: list.list, feature: list.feature, grad: list.grad }
   }
 }

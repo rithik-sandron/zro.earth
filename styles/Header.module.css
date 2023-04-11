@@ -26,8 +26,8 @@
   box-shadow: none;
   padding: 0 1em;
   border-radius: 0.2em;
-  width: 25%;
   border: 0.07em solid var(--line-color);
+  width: inherit;
 }
 
 #logo {
@@ -35,17 +35,17 @@
   display: inline-block;
   font-size: 2em;
   font-weight: bold;
-  padding: 0.1em 1em;
+  padding: 0.1em 0;
   width: fit-content;
   border-radius: 0.2em;
 }
 
 .grad {
-  background: linear-gradient(140deg, #d5d36895, #5dbaf097, #f3b54987, rgba(241, 103, 103, 0.732));
+  background: linear-gradient(170deg, #fbf98c95, #90d3fa97, #fbcc7b87, rgba(252, 149, 149, 0.732));
   background-size: 200% 200%;
-  -webkit-animation: Animation 5s ease-in-out infinite;
-  -moz-animation: Animation 5s ease-in-out infinite;
-  animation: Animation 10s ease-in-out infinite;
+  animation: Animation 24s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes Animation {

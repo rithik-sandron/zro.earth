@@ -17,7 +17,9 @@ export default function Lists({ list = [[{
             return (
                 item.length > 0 &&
                 <div className={styles.list} key={i}>
-                    <h3 style={{ backgroundColor: item[0].color, borderRadius: '0.3em' }}>{item[0].list}</h3>
+                    <h3 style={{ 
+                        background: `linear-gradient(90deg, ${item[0].color}, var(--bg-color))`,
+                        borderRadius: '0.3em' }}>{item[0].list}</h3>
                     {item.map(post => {
                         return (
                             <Router url={post.list + "/" + post.slug} key={post.slug} className={styles.item}>

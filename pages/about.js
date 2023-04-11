@@ -5,9 +5,13 @@ export default function About() {
         <Layout hideSearch>
             <div className={styles.about}>
                 <h1>ZゼRロ is initiated to express our mind.</h1>
+                <br />
                 <h3>The name Zero (ゼロ in Japanese)
                     indicates the starting point of us. We started from 0.
                 </h3>
+                <br />
+                <br />
+
                 <p>
                     You can find certain words in Japanese because we watch a lot of Anime and we like using them, not that we know Japanese. 😅
                 </p>

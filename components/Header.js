@@ -4,7 +4,7 @@ import styles from '../styles/Header.module.css'
 import { useEffect } from 'react';
 import Router from './Router';
 
-export default function Header({ search, setSearch, hideSearch, bgColor = false }) {
+export default function Header({ search, setSearch, hideSearch, grad, bgColor = false }) {
 
   function setIsDarkTheme() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -29,7 +29,8 @@ export default function Header({ search, setSearch, hideSearch, bgColor = false 
     <section className='container'>
       <div className={styles.header}>
         <Router url='/'>
-          <span className={!bgColor && styles.grad} id={styles.logo}>0</span>
+          <span className={!bgColor && styles.grad} id={styles.logo}
+          >Zr0</span>
         </Router>
 
         <Router url='/about'>
