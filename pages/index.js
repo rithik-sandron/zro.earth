@@ -3,8 +3,6 @@ import { getAllPosts } from '../lib/api'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
 import Lists from '../components/Lists';
-import Links from '../components/Links';
-
 
 export default function Index({
   list = [{
@@ -37,9 +35,7 @@ export default function Index({
     if (search !== "") {
       const seachQuery = search.trim().toLowerCase();
       const res = list.flat().reduce(function (pV, cV) {
-        if (cV.title.toLowerCase().includes(seachQuery) ||
-          cV.content.toLowerCase().includes(seachQuery)
-        ) {
+        if (cV.title.toLowerCase().includes(seachQuery)) {
           pV.push(cV);
         }
         return pV;
@@ -49,7 +45,7 @@ export default function Index({
   }, [search])
 
   return (
-    <Layout search={search} setSearch={setSearch} color={feature.color}>
+    <Layout search={search} setSearch={setSearch}>
 
       {
         (search !== "") &&
@@ -83,7 +79,6 @@ export const getStaticProps = async () => {
     'slug',
     'gist',
     'wc',
-    'content',
     'color',
   ])
 

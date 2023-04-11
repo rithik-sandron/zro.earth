@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import styles from '../styles/Blog.module.css'
 
 export default function Blog({ post = {
@@ -40,6 +39,7 @@ export default function Blog({ post = {
                     <span>{post.date}</span>
                     <span>{post.wc}</span>
                 </date>
+                <hr />
             </section>
             {/* <details open id='article-toc' className={styles.articleToc} /> */}
             <section id='article' dangerouslySetInnerHTML={{ __html: post.content }} className={styles.blog} />

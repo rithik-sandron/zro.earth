@@ -8,15 +8,14 @@ export default function Layout({ children,
   desc = '',
   search,
   setSearch,
-  color,
   hideSearch = false
 }) {
 
   return (
     <>
-      <Meta title={title} desc={desc} color={color} />
+      <Meta title={title} desc={desc} />
       <main id={styles.common}>
-        <Header search={search} setSearch={setSearch} color={color} hideSearch={hideSearch} />
+        <Header search={search} setSearch={setSearch} hideSearch={hideSearch} />
         {children}
       </main>
       <Footer />

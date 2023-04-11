@@ -4,11 +4,10 @@ date: 'Feb 14, 2023'
 list: dev
 gist: 'This is a 3 part article. This part covers the basics - data types, variables, functions, statements etc...'
 ---
-
 # This is a 3 part series
-go to [[Java Part-1]](https://blog-six-rouge.vercel.app/dev/java-part-1)
-go to [[Java Part-2]](https://blog-six-rouge.vercel.app/dev/java-part-2)
-go to [[Java Part-3]](https://blog-six-rouge.vercel.app/dev/java-part-3)
+go to [[Java Part-1]](https://zro.earth/dev/java-part-1)
+go to [[Java Part-2]](https://zro.earth/dev/java-part-2)
+go to [[Java Part-3]](https://zro.earth/dev/java-part-3)
 
 # Data types
 According to Wikipedia - *"In the pursuit of knowledge, data is a collection of discrete values that convey information, describing quantity, quality, fact, statistics, other basic units of meaning, or simply sequences of symbols that may be further interpreted"*

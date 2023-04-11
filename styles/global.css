@@ -4,14 +4,9 @@
     --line-color: #78787857;
     --color-grey: #f4f4f4;
     /* text and background */
-    --text-cyan: rgba(101, 219, 213, 0.683);
     --text-cyan-select: rgba(101, 219, 213, 0.498);
     --text-blue: #53ccf8;
-
-    --color-red: #fd5d51;
-    --color-yellow: rgba(234, 223, 6, 0.387);
     --color-green: rgb(43, 176, 13);
-    --color-amber: rgb(240, 145, 3);
     --color-blue: rgb(41, 151, 255);
 }
 
@@ -20,16 +15,10 @@
     --bg-color: #050607;
     --line-color: #78787857;
     --color-grey: rgb(26, 26, 27);
-
     /* text and background */
-    --text-cyan: rgba(101, 219, 213, 0.683);
     --text-cyan-select: rgba(101, 219, 213, 0.498);
     --text-blue: #53ccf8;
-
-    --color-red: rgb(230, 84, 73);
-    --color-yellow: rgba(143, 143, 15, 0.855);
     --color-green: rgb(110, 202, 118);
-    --color-amber: rgba(222, 148, 37, 0.947);
     --color-blue: rgb(41, 151, 255);
 }
 
@@ -77,10 +66,9 @@ a:hover {
 }
 
 p {
-    line-height: 2;
+    line-height: 1.8;
     font-size: calc(1em + 0.1vw);
     font-weight: 300;
-    padding: 0.6em 0;
 }
 
 h1,
@@ -89,26 +77,37 @@ h3,
 blockquote {
     display: block;
     width: 100%;
-    line-height: 1.2;
-    font-weight: 550;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    line-height: 1.6;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
 }
 
 h1 {
-    font-size: calc(1.85em + 0.5vw);
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: calc(1.7em + 0.5vw);
 }
 
 h2,
 blockquote {
+    font-weight: 550;
     font-size: calc(1.3em + 0.5vw);
+    margin-bottom: 0;
 }
 
 h3 {
+    font-weight: 500;
     font-size: calc(1em + 0.2vw);
     text-transform: capitalize;
     letter-spacing: 0.03em;
+    color: #222;
+    padding-left: 0.1em;
     font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}
+
+hr {
+    border-bottom: 0.2em solid var(--color-grey);
+    margin: 2em 0;
 }
 
 date {
@@ -133,7 +132,7 @@ date>span:last-child::after {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    max-width: 900px;
+    max-width: 634px;
     width: 86%;
 }
 

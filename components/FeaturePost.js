@@ -17,9 +17,11 @@ export default function FeaturePost({ post = {
                 <h1>{post.title}</h1>
                 <p>{post.gist}</p>
                 <date>
+                    <h3>{post.list}</h3>
                     <span>{post.date}</span>
                     <span>{post.wc}</span>
                 </date>
+                <hr />
             </section>
         </Router>
     );

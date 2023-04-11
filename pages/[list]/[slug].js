@@ -1,8 +1,6 @@
 import { getPostBySlug, getAllPostsAsPath } from '../../lib/api.js'
-import markdownToHtml from '../../lib/markdownToHtml'
 import Layout from '../../components/Layout.js'
 import Blog from '../../components/Blog.js'
-import { useRouter } from 'next/router'
 
 export default function Post({
   post = {
@@ -15,14 +13,8 @@ export default function Post({
   }
 }) {
 
-  const router = useRouter();
-
-  if (router.isFallback) {
-    return <div>Loading...</div>
-  }
-
   return (
-    <Layout title={post.title} desc={post.gist} color={post.color} hideSearch>
+    <Layout title={post.title} desc={post.gist} hideSearch>
       <Blog post={post} />
     </Layout >
   )
@@ -56,15 +48,9 @@ export async function getStaticProps({ params }) {
     'color',
   ])
 
-  const content = await markdownToHtml(post.content || '');
-  post.gist = await markdownToHtml(post.gist || '');;
-
   return {
     props: {
-      post: {
-        ...post,
-        content
-      }
+      post: post
     },
   }
 }
