@@ -1,12 +1,18 @@
 .list {
     display: block;
-    width: 86%;
+    width: calc(100% - 2em);
     margin: 1em auto;
     margin-top: 4em;
     max-width: calc(634px + 2em);
+    border: 0.08em solid var(--line-color);
+    padding: 0.5em 1em;
 }
 
 .item {
     display: block;
-    margin-bottom: 1.6em;
+    padding-bottom: 2.2em;
+}
+
+.list>h3 {
+    border-bottom: 0.078em solid var(--line-color);
 }

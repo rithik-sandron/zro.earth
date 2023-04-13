@@ -5,8 +5,8 @@
 
 .blog,
 .articleToc {
-    width: 86%;
-    max-width: 634px;
+    width: 90%;
+    max-width: calc(634px + 2em);
     margin: 0 auto;
 }
 
@@ -61,6 +61,7 @@
 .blog h1 {
     display: flex;
     font-size: calc(1.65em + 0.3vw);
+    margin-top: 1em;
 }
 
 .blog h1:hover:before {

@@ -10,15 +10,13 @@ export default function Layout({ children,
   search,
   setSearch,
   hideSearch = false,
-  bgColor = false,
-  grad = ''
 }) {
 
   return (
     <>
       <Meta title={title} desc={desc} />
-      <main id={styles.common} className={bgColor && styles.tree}>
-        <Header search={search} setSearch={setSearch} hideSearch={hideSearch} grad={grad} bgColor={bgColor} />
+      <main id={styles.common}>
+        <Header search={search} setSearch={setSearch} hideSearch={hideSearch} />
         {children}
       </main>
     </>

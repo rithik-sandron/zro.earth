@@ -4,6 +4,8 @@ export default function About() {
     return (
         <Layout hideSearch>
             <div className={styles.about}>
+                <br />
+                <br />
                 <h1>ZゼRロ is initiated to express our mind.</h1>
                 <br />
                 <h3>The name Zero (ゼロ in Japanese)

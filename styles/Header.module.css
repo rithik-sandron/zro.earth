@@ -5,27 +5,27 @@
   letter-spacing: -0.4px;
   font-family: Poly Sans, Helvetica, Arial, sans-serif;
   cursor: pointer;
-  margin-top: 12px;
+  margin-top: 6px;
 }
 
 .header {
   display: flex;
   padding-top: 2em;
-  padding-bottom: 1em;
-  width: 90%;
+  width: 100%;
   gap: 1em;
-  justify-content: flex-start;
+  max-width: calc(634px + 4em);
+  margin: 0 auto;
 }
 
 .input {
   display: inline-block;
   outline: none;
   border: none;
-  background-color: var(--bg-color);
+  background-color: inherit;
   color: inherit;
   box-shadow: none;
   padding: 0 1em;
-  border-radius: 0.2em;
+  border-radius: 1em;
   border: 0.07em solid var(--line-color);
   width: inherit;
 }
@@ -33,31 +33,8 @@
 #logo {
   font-family: Poly Sans, Helvetica, Arial, sans-serif;
   display: inline-block;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: bold;
-  padding: 0.1em 0;
   width: fit-content;
-  border-radius: 0.2em;
-}
-
-.grad {
-  background: linear-gradient(170deg, #fbf98c95, #90d3fa97, #fbcc7b87, rgba(252, 149, 149, 0.732));
-  background-size: 200% 200%;
-  animation: Animation 24s ease-in-out infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes Animation {
-  0% {
-    background-position: 10% 0%
-  }
-
-  50% {
-    background-position: 91% 100%
-  }
-
-  100% {
-    background-position: 10% 0%
-  }
+  border-radius: 1em;
 }

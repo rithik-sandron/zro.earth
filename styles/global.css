@@ -1,6 +1,6 @@
 :root {
-    --font-color: rgb(33, 37, 41);
-    --bg-color: #ffffff;
+    --font-color: #1f1f1f;
+    --bg-color: rgb(239, 239, 239);
     --line-color: #78787857;
     --color-grey: #f4f4f4;
     /* text and background */
@@ -11,8 +11,8 @@
 }
 
 [data-theme="dark"] {
-    --font-color: rgb(225, 225, 225);
-    --bg-color: #050607;
+    --font-color: rgb(239, 239, 239);
+    --bg-color: #1f1f1f;
     --line-color: #78787857;
     --color-grey: rgb(26, 26, 27);
     /* text and background */
@@ -84,8 +84,9 @@ blockquote {
 h1 {
     line-height: 1.3;
     font-weight: 700;
-    font-size: calc(1.6em + 0.4vw);
+    font-size: calc(2em + 0.4vw);
     margin-bottom: 0.6em;
+    margin-top: 0.2em;
 }
 
 h2,
@@ -100,7 +101,7 @@ h3 {
     font-size: calc(1em + 0.2vw);
     text-transform: capitalize;
     letter-spacing: 0.03em;
-    padding: 0.5em;
+    padding: 0.5em 0;
     width: calc(100% - 1em);
 }
 
@@ -131,17 +132,22 @@ date>span:last-child::after {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    max-width: 634px;
-    width: 90%;
 }
 
 .container {
     margin: 0 auto;
-    border-radius: 1em;
     padding: 0 1em 2.4em 1em;
-    width: calc(90% - 2em);
+    width: calc(100% - 2em);
+    background-color: var(--font-color);
+    color: var(--bg-color);
 }
 
 .sub-container {
-    margin: 1em 0;
+    max-width: calc(634px + 4em);
+    margin: 1em auto;
+    width: calc(100% - 4em);
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    padding: 2em;
+    padding-top: 0;
 }

@@ -5,24 +5,3 @@
   min-height: 100vh;
   height: 100%;
 }
-
-
-.tree {
-  background: linear-gradient(170deg, #fbf98c95, #90d3fa97, #fad49487, rgba(252, 149, 149, 0.732));
-  background-size: 200% 200%;
-  animation: Animation 36s ease-in-out infinite;
-}
-
-@keyframes Animation {
-  0% {
-      background-position: 10% 0%
-  }
-
-  50% {
-      background-position: 91% 100%
-  }
-
-  100% {
-      background-position: 10% 0%
-  }
-}

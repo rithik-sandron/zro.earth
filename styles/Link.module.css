@@ -1,14 +1,13 @@
 .linkTree {
     display: flex;
     width: 90%;
-    padding: 1em 0;
+    padding: 4em 0;
     gap: 1.4em;
     max-width: 634px;
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: column;
-
 }
 
 .links {
