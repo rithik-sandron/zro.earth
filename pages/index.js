@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAllPosts } from '../lib/api'
+import { getAllPosts } from './api/api'
 import FeaturePost from '../components/FeaturePost'
 import Layout from '../components/Layout';
 import Lists from '../components/Lists';

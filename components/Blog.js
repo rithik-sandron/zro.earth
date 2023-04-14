@@ -35,16 +35,19 @@ export default function Blog({ post = {
         <article>
             <section key={post.slug} className='container'>
                 <div className='sub-container'
-                style={{ paddingLeft: '0', paddingRight: '0', 
-                backgroundColor: 'var(--font-color)', color: 'var(--bg-color)' }}>
-                <h3>{post.list}</h3>
-                <h1>{post.title}</h1>
-                <p>{post.gist}</p>
-                <br />
-                <date>
-                    <span>{post.date}</span>
-                    <span>{post.wc}</span>
-                </date>
+                    style={{
+                        paddingLeft: '0', paddingRight: '0',
+                        background: `inherit`,
+                        color: `inherit`
+                    }}>
+                    <h3>{post.list}</h3>
+                    <h1>{post.title}</h1>
+                    <p>{post.gist}</p>
+                    <br />
+                    <date>
+                        <span>{post.date}</span>
+                        <span>{post.wc}</span>
+                    </date>
                 </div>
             </section>
             {/* <details open id='article-toc' className={styles.articleToc} /> */}

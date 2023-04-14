@@ -5,8 +5,8 @@
 
 .blog,
 .articleToc {
-    width: 90%;
-    max-width: calc(634px + 2em);
+    width: 84%;
+    max-width: 634px;
     margin: 0 auto;
 }
 
@@ -71,7 +71,7 @@
     max-width: 634px;
     margin-left: -20px;
     position: absolute;
-    color: var(--line-color);
+    color: var(--line);
 }
 
 .blog h2 {
@@ -135,7 +135,7 @@
 .blog code>pre,
 .blog *>code,
 .blog table tr {
-    border: 0.07em solid var(--line-color);
+    border: 0.07em solid var(--line);
 }
 
 .blog code>pre,
@@ -231,7 +231,7 @@
 .blog .empty-row {
     height: 0.6em;
     padding: 0;
-    background-color: var(--line-color);
+    background-color: var(--line);
     opacity: 0.6;
 }
 

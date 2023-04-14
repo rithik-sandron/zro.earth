@@ -13,7 +13,7 @@
   padding-top: 2em;
   width: 100%;
   gap: 1em;
-  max-width: calc(634px + 4em);
+  max-width: 634px;
   margin: 0 auto;
 }
 
@@ -26,7 +26,7 @@
   box-shadow: none;
   padding: 0 1em;
   border-radius: 1em;
-  border: 0.07em solid var(--line-color);
+  border: 0.07em solid var(--line);
   width: inherit;
 }
 

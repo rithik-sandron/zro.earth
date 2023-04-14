@@ -1,4 +1,4 @@
-import { getPostBySlug, getAllPostsAsPath } from '../../lib/api.js'
+import { getPostBySlug, getAllPostsAsPath } from '../api/api'
 import Layout from '../../components/Layout.js'
 import Blog from '../../components/Blog.js'
 

@@ -15,10 +15,6 @@ export default function Meta({ title = '', desc = '' }) {
             <meta property="og:title" content={title !== '' ? title : 'Zro'} />
             <meta name="apple-mobile-web-app-title" content="Zro" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-            <meta name="msapplication-TileColor" media="(prefers-color-scheme: light)" content={"#1f1f1f"} />
-            <meta name="msapplication-TileColor" media="(prefers-color-scheme: dark)" content={"rgb(239, 239, 239)"} />
-            <meta name="theme-color" media="(prefers-color-scheme: light)" content={'#1f1f1f'} />
-            <meta name="theme-color" media="(prefers-color-scheme: dark)" content={'rgb(239, 239, 239)'} />
             <link rel="preload" as="style" href="css/global.css" />
             {/* <link rel="shortcut icon" href="/favicon/favicon.ico" disabled media=/> */}
         </Head>

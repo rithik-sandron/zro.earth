@@ -1,5 +1,6 @@
-
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
   images: {
     formats: ['image/webp'],
   },
@@ -19,7 +20,7 @@ module.exports = {
       },
     ]
   },
-};
+}
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
@@ -73,3 +74,5 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
   },
 ];
+
+module.exports = nextConfig
