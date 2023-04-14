@@ -1,14 +1,5 @@
-.list {
-    display: block;
-    width: inherit;
-    margin: 1em auto;
-    margin-top: 2em;
-    max-width: 634px;
-    border: 0.08em solid var(--line);
-    padding: 0.5em 16px;
-}
-
 .item {
     display: block;
     padding-bottom: 1em;
+    border-top: 0.08em solid var(--line);
 }
