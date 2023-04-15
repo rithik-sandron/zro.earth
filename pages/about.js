@@ -2,7 +2,7 @@ import Layout from "../components/Layout"
 import styles from '../styles/About.module.css'
 export default function About() {
     return (
-        <Layout hideSearch>
+        <Layout>
             <div className={styles.about}>
                 <br />
                 <br />

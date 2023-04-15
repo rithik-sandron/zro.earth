@@ -21,7 +21,7 @@
     word-break: break-all;
     font-size: calc(1em + 0.1vw);
     letter-spacing: 0.2px;
-    border: 0.5px solid;
+    border: 0.5px solid var(--line);
 }
 
 .links:hover {

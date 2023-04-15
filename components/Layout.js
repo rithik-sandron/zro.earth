@@ -7,16 +7,13 @@ import Meta from "./Meta";
 export default function Layout({ children,
   title = '',
   desc = '',
-  search,
-  setSearch,
-  hideSearch = false,
 }) {
 
   return (
     <>
       <Meta title={title} desc={desc} />
       <main id={styles.common}>
-        <Header search={search} setSearch={setSearch} hideSearch={hideSearch} />
+        <Header />
         {children}
       </main>
     </>

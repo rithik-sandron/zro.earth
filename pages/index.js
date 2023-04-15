@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { getAllPosts } from './api/api'
+import { getAllPosts } from './api/api';
 import FeaturePost from '../components/FeaturePost'
-import Layout from '../components/Layout';
+import Meta from '../components/Meta';
 import Lists from '../components/Lists';
+import styles from '../styles/Index.module.css';
+import Router from '../components/Router';
+import Main from '../components/Main';
+
 
 export default function Index({
   list = [{
@@ -46,28 +50,21 @@ export default function Index({
   }, [search])
 
   return (
-    <Layout search={search} setSearch={setSearch} grad={grad}>
-
-      {
-        (search !== "") &&
-
-        ((searchList.length !== 0) ?
-          searchList.map(x => {
-            return <FeaturePost post={x} />
-          })
-          :
-
-          <span className='container'>No articles found. Please rephrase your search</span>)
-      }
-
-      {
-        (search === "") &&
-        <>
-          <FeaturePost post={feature} />
-          <Lists list={list} />
-        </>
-      }
-    </Layout >
+    <>
+      <Main grad={grad} search={search} setSearch={setSearch}>
+        <section id={styles.home}>
+          {
+            (search !== "") &&
+            ((searchList.length !== 0) ?
+              searchList.map(x => <FeaturePost post={x} />)
+              :
+              <span className='container'>No articles found. Please rephrase your search</span>)
+          }
+          {(search === "") && <FeaturePost post={feature} />}
+        </section>
+      </Main>
+      <Lists list={list} />
+    </>
   )
 }
 

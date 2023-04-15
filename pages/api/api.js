@@ -3,14 +3,6 @@ import { join } from 'path'
 import matter from 'gray-matter'
 import { convert } from './converter'
 
-// export const config = {
-//   runtime: 'edge'
-// }
-
-// export default function handler(req) {
-//   return new Response("Hello World");
-// }
-
 const postsDirectory = join(process.cwd(), '/_posts');
 
 export function getPostsFromDirectory(dir) {
@@ -44,10 +36,10 @@ export function getAllPosts(fields = []) {
 
     grad: list.reduce(function (pV, cV) {
       cV.forEach(i => pV += cV[0].color + ',')
-      pV+= ','
+      pV += ','
       return pV.slice(0, -1);
-  }, []).slice(0, -1)
-}
+    }, []).slice(0, -1)
+  }
 }
 
 export function getAllPostsAsPath(fields = []) {
@@ -125,7 +117,7 @@ function hashCode(str) {
   let B = Math.floor((Math.random() * 127) + 127);
 
   let rgb = (R << 16) + (G << 8) + B;
-  return `#${rgb.toString(16)}3a`;
+  return `#${rgb.toString(16)}2b`;
 }
 
 function markdownToHtml(markdown) {

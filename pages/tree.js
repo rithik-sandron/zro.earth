@@ -1,9 +1,10 @@
-import Layout from "../components/Layout"
 import Links from "../components/Links"
+import Main from "../components/Main"
+
 export default function Tree() {
     return (
-        <Layout hideSearch>
+        <Main >
             <Links />
-        </Layout>
+        </Main>
     )
 }

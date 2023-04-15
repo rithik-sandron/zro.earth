@@ -136,15 +136,13 @@ date>span:last-child::after {
     margin: 0 auto;
 }
 
-.container {
-    padding-bottom: 2.4em;
-}
-
 .sub-container {
     background: linear-gradient(to bottom,
             transparent,
-            rgb(var(--foreground-rgb))) rgb(var(--foreground-rgb));
-    color: rgb(var(--background-end-rgb));
+            rgb(var(--background-start-rgb))) rgb(var(--background-end-rgb));
+    color: rgb(var(--foreground-rgb));
     padding: 2em;
     padding-top: 0;
+    border-radius: 1.2em;
+    margin-bottom: 2em;
 }
