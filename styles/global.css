@@ -4,25 +4,23 @@
 
 :root {
     --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-    --line: #55555550;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 240, 240, 245;
+    --line: #55555540;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 22, 22, 22;
-        --background-end-rgb: 17, 17, 17;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 1, 1, 5;
         --line: #55555550;
     }
 }
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
@@ -33,6 +31,7 @@ body {
     padding: 0;
     border: 0;
     font: inherit;
+    scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
@@ -131,18 +130,16 @@ date>span:last-child::after {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    width: 86%;
+    width: 90%;
     max-width: 634px;
     margin: 0 auto;
 }
 
 .sub-container {
-    background: linear-gradient(to bottom,
-            transparent,
-            rgb(var(--background-start-rgb))) rgb(var(--background-end-rgb));
+    background: linear-gradient(to bottom, rgb(var(--background-end-rgb)), transparent); 
     color: rgb(var(--foreground-rgb));
-    padding: 2em;
+    padding: 1.6em;
     padding-top: 0;
-    border-radius: 1.2em;
-    margin-bottom: 2em;
+    border-radius: 1em;
+    margin-top: 2em;
 }

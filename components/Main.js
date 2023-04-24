@@ -4,18 +4,14 @@ import Router from './Router';
 import Meta from './Meta';
 import styles from '../styles/Index.module.css';
 
-export default function Main({ grad, search, children, setSearch }) {
+export default function Main({ search, children, isSearch, setSearch, title, desc }) {
 
-    const title = 'Zero';
-    const desc = 'app';
+    title === '' && 'Zero';
+    desc === '' && 'app';
 
     return (
         <main>
-            <div style={{
-                background: `linear-gradient(to bottom,
-        transparent,
-        ${grad})`
-            }}>
+            <div>
                 <div className={styles.main}>
                     <Meta title={title} desc={desc} />
                     <section className={styles.home}>
@@ -28,7 +24,7 @@ export default function Main({ grad, search, children, setSearch }) {
                         <Router url='/tree'>
                             <span id={styles.ken}>Tree</span>
                         </Router>
-                        <input className={styles.input} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
+                        {isSearch && <input className={styles.input} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />}
                     </section>
                     {children}
                 </div>

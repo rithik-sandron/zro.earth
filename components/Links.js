@@ -1,12 +1,13 @@
 'use client';
 import styles from '../styles/Link.module.css';
+import Main from './Main';
 import Router from './Router';
 
 
 export default function Links() {
 
     return (
-        <section className={styles.treeContainer}>
+        <Main>
             <div className={styles.linkTree}>
                 <Router className={styles.links}>
                     Instagram
@@ -18,6 +19,6 @@ export default function Links() {
                     Open Sea
                 </Router>
             </div >
-        </section >
+        </Main>
     )
 }

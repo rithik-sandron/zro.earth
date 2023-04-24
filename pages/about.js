@@ -1,8 +1,8 @@
-import Layout from "../components/Layout"
+import Main from '../components/Main'
 import styles from '../styles/About.module.css'
 export default function About() {
     return (
-        <Layout>
+        <Main>
             <div className={styles.about}>
                 <br />
                 <br />
@@ -55,6 +55,6 @@ export default function About() {
 
                 <p>Made with love ♡ and passion 🔥 for writing.</p>
             </div>
-        </Layout>
+        </Main>
     )
 }

@@ -38,7 +38,7 @@ export async function convert(data, len) {
                     case h1.test(line):
                         line = boldAndItalics(line, '');
                         regReplaced = line.replace(h1, '');
-                        dataHtml += (`<h1 id='${i}' class='table-content-h1'><a style="color: inherit;" href='#${i}'>${regReplaced}</h1></a>`);
+                        dataHtml += (`<a href='#${i}'><h1 id='${i}' class='table-content-h1'>${regReplaced}</h1></a>`);
                         i++;
                         break;
 

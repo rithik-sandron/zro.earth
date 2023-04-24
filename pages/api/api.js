@@ -34,11 +34,11 @@ export function getAllPosts(fields = []) {
       return pV;
     }, [])[0],
 
-    grad: list.reduce(function (pV, cV) {
-      cV.forEach(i => pV += cV[0].color + ',')
-      pV += ','
-      return pV.slice(0, -1);
-    }, []).slice(0, -1)
+    // grad: list.reduce(function (pV, cV) {
+    //   cV.forEach(i => pV += cV[0].color + ',')
+    //   pV += ','
+    //   return pV.slice(0, -1);
+    // }, []).slice(0, -1)
   }
 }
 
@@ -67,13 +67,13 @@ export function getPostBySlug(dir, slug, fields = []) {
 
   fields.forEach(async (field) => {
 
-    if (field === 'color') {
-      items[field] = hashCode(data['list']);
-    }
-
-    else if (field === 'gist') {
+    if (field === 'gist') {
       items[field] = data['gist'];
     }
+
+    //else if (field === 'color') {
+    //   items[field] = hashCode(data['list']);
+    // }
 
     else if (field === 'wc') {
       items[field] = "☕️ " + Math.round(content.split(' ').length / 120) + ' min read';
@@ -101,23 +101,8 @@ export function getPostBySlug(dir, slug, fields = []) {
     } else {
       items[field] = data[field]
     }
-
   })
   return items;
-}
-
-function hashCode(str) {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = str.charCodeAt(i) + ((hash > 8) - hash);
-  }
-
-  let R = Math.floor((Math.random() * 127) + 127);
-  let G = Math.floor((Math.random() * 127) + 127);
-  let B = Math.floor((Math.random() * 127) + 127);
-
-  let rgb = (R << 16) + (G << 8) + B;
-  return `#${rgb.toString(16)}2b`;
 }
 
 function markdownToHtml(markdown) {

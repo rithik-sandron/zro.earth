@@ -1,6 +1,6 @@
 import { getPostBySlug, getAllPostsAsPath } from '../api/api'
-import Layout from '../../components/Layout.js'
 import Blog from '../../components/Blog.js'
+import Main from '../../components/Main'
 
 export default function Post({
   post = {
@@ -9,14 +9,13 @@ export default function Post({
     'author': { name: "", picture: "" },
     'content': "",
     'wc': '',
-    'color': ''
   }
 }) {
 
   return (
-    <Layout title={post.title} desc={post.gist} hideSearch>
+    <Main title={post.title} desc={post.gist} isSearch>
       <Blog post={post} />
-    </Layout >
+    </Main >
   )
 }
 
@@ -45,7 +44,6 @@ export async function getStaticProps({ params }) {
     'content',
     'gist',
     'wc',
-    'color',
   ])
 
   return {
