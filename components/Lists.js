@@ -17,7 +17,7 @@ export default function Lists({ list = [[{
             return (
                 item.length > 0 &&
                 <div className='container' key={i}
-                style={{ marginTop: '3em' }}>
+                style={{ marginTop: '2em' }}>
                     <h3>{item[0].list}</h3>
                     {item.map(post => {
                         return (

@@ -1,20 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 255, 255, 255;
-    --background-end-rgb: 240, 240, 245;
-    --line: #55555540;
+    --foreground-rgb: 45, 43, 44;
+    --background-start-rgb: 245, 240, 239;
+    --background-end-rgb: 247, 243, 237;
+    --line: #55555560;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 1, 1, 5;
-        --line: #55555550;
+        --foreground-rgb: 248, 242, 220;
+        --background-start-rgb: 17, 15, 16;
+        --background-end-rgb: 13, 11, 12;
+        --line: #55555580;
     }
 }
 
@@ -136,10 +132,9 @@ date>span:last-child::after {
 }
 
 .sub-container {
-    background: linear-gradient(to bottom, rgb(var(--background-end-rgb)), transparent); 
-    color: rgb(var(--foreground-rgb));
-    padding: 1.6em;
-    padding-top: 0;
-    border-radius: 1em;
+    /* background: linear-gradient(to bottom, rgb(231, 39, 57));  */
+    /* padding: 1.6em; */
+    /* padding-top: 0; */
+    border-radius: 1.4em;
     margin-top: 2em;
 }

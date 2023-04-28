@@ -11,12 +11,13 @@ export default function Main({ search, children, isSearch, setSearch, title, des
 
     return (
         <main>
+            <Meta title={title} desc={desc} />
             <div>
                 <div className={styles.main}>
-                    <Meta title={title} desc={desc} />
                     <section className={styles.home}>
                         <Router url='/'>
-                            <span id={styles.logo}>Zero</span>
+                            <span id={styles.logo1}>R</span>
+                            <span id={styles.logo}>Z_O</span>
                         </Router>
                         <Router url='/about'>
                             <span id={styles.ken}>About</span>

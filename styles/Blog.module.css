@@ -45,7 +45,7 @@
 
 .articleToc a,
 .blog a {
-    color: var(--color-blue);
+    color: rgba(40, 138, 231, 0.926);
     font-weight: 500;
 }
 
@@ -54,7 +54,7 @@
 .articleToc a:active,
 .blog a:hover,
 .blog a:active {
-    color: rgb(22, 80, 134);
+    color: rgb(26, 94, 156);
 }
 
 .articleToc a {
@@ -64,14 +64,16 @@
 .blog h1,
 .blog h2,
 .blog h3 {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
     line-height: normal;
+    font-weight: 800;
 }
 
 .blog h1 {
     display: flex;
     font-size: calc(1.65em + 0.3vw);
     margin-top: 1em;
+    color: rgba(249, 178, 59);
 }
 
 .blog h1:hover:before {
@@ -86,12 +88,16 @@
 
 .blog h2 {
     font-size: calc(1.3em + 0.3vw);
+    margin-bottom: 0.6em;
+
 }
 
 .blog h3 {
     font-size: calc(1.1em + 0.2vw);
     line-height: 1.4;
     text-decoration: none;
+    padding-bottom: 0;
+
 }
 
 .blog p,
@@ -103,7 +109,7 @@
     line-height: 1.9;
     padding: 0;
     letter-spacing: 0.03em;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .blog li,
