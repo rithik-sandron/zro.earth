@@ -1,5 +1,4 @@
 const { withContentlayer } = require('next-contentlayer');
-const { get } = require('@vercel/edge-config');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -8,13 +7,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  redirects() {
-    try {
-      return get('redirects');
-    } catch {
-      return [];
-    }
-  },
+ 
   headers() {
     return [
       {
