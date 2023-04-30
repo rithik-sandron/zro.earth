@@ -1,8 +1,9 @@
 // import React, { useState, useEffect } from 'react';
-import { getAllPosts } from '../pages/api/api';
+import { getAllPosts } from '../lib/api';
 import styles from './styles/Index.module.css';
 import Router from '../components/Router';
 import type { Metadata } from 'next';
+import PostMetaData from '../components/PostMetaData';
 
 async function getData() {
     let list = getAllPosts([
@@ -44,15 +45,8 @@ export default async function Index() {
 
     return (
         <>
-            <Router url={data.props.feature.list + "/" + data.props.feature.slug} className='sub-container'>
-                <h3>{data.props.feature.list}</h3>
-                <h1>{data.props.feature.title}</h1>
-                <p>{data.props.feature.gist}</p>
-                <br />
-                <ul>
-                    <li>{data.props.feature.date}</li>
-                    <li>{data.props.feature.wc}</li>
-                </ul>
+            <Router url={data.props.feature.list + "/" + data.props.feature.slug}>
+                <PostMetaData post={data.props.feature} />
             </Router>
             {
                 data.props.list.map((item, i) => {

@@ -13,11 +13,9 @@ export default function About() {
         <div className={styles.about}>
             <br />
             <br />
-            <h1>ZゼRロ is initiated to express our mind.</h1>
+            <h1>ZERO is initiated to express our mind.</h1>
             <br />
-            <h3>The name Zero (ゼロ in Japanese)
-                indicates the starting point of us. We started from 0.
-            </h3>
+            <h2>The name Zero indicates the starting point of us. We started from 0.</h2>
             <br />
             <br />
 
@@ -32,16 +30,14 @@ export default function About() {
             <hr />
 
             <h2>We write about</h2>
-            <ul >
-                <li>Any news we find interesting.</li>
-                <li>Extensively researched or fun topics we find in web.</li>
-                <li>Anime.</li>
-                <li>Movies & shows.</li>
-                <li>Games.</li>
-                <li>code.</li>
-                <li>Fan Fictions.</li>
-                <li>Food.</li>
-            </ul>
+            <li>Any news we find interesting.</li>
+            <li>Extensively researched or fun topics we find in web.</li>
+            <li>Anime.</li>
+            <li>Movies & shows.</li>
+            <li>Games.</li>
+            <li>code.</li>
+            <li>Fan Fictions.</li>
+            <li>Food.</li>
 
             <hr />
 

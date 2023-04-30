@@ -7,13 +7,6 @@ export const config = {
  
 export default function handler(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
- 
-    const hasTitle = searchParams.has('title');
-    const title = hasTitle
-      ? searchParams.get('Anime')?.slice(0, 100)
-      : 'Zero';
- 
     return new ImageResponse(
       (
         <div
@@ -58,7 +51,7 @@ export default function handler(request: NextRequest) {
               whiteSpace: 'pre-wrap',
             }}
           >
-            {title}
+            {'title'}
           </div>
         </div>
       ),
