@@ -1,17 +1,11 @@
-'use client';
+import Router from '../components/Router';
+import styles from './styles/Index.module.css';
+import './styles/global.css';
 
-import Router from './Router';
-import Meta from './Meta';
-import styles from '../styles/Index.module.css';
-
-export default function Main({ search, children, isSearch, setSearch, title, desc }) {
-
-    title === '' && 'Zero';
-    desc === '' && 'app';
+export default function Main({ children }) {
 
     return (
         <main>
-            <Meta title={title} desc={desc} />
             <div>
                 <div className={styles.main}>
                     <section className={styles.home}>
@@ -25,7 +19,6 @@ export default function Main({ search, children, isSearch, setSearch, title, des
                         <Router url='/tree'>
                             <span id={styles.ken}>Tree</span>
                         </Router>
-                        {isSearch && <input className={styles.input} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />}
                     </section>
                     {children}
                 </div>

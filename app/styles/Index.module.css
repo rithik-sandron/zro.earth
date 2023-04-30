@@ -57,3 +57,9 @@
     padding-left: 1.3em;
     position: absolute;
 }
+
+.item {
+    display: block;
+    padding-bottom: 2em;
+    border-top: 0.08em solid var(--line);
+}
