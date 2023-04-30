@@ -3,12 +3,14 @@
     max-width: 634px;
     margin: 0 auto;
     min-height: 100vh;
+    width: 86%;
+    padding-top: 2em;
 }
 
 .home {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 86%;
     margin: 0 auto;
     gap: 1em;
     padding: 1em 0;
@@ -28,8 +30,8 @@
 
 #ken {
     display: block;
-    font-weight: 500;
-    font-size: 1.2em;
+    font-weight: 300;
+    font-size: 1em;
     letter-spacing: -0.4px;
     font-family: Poly Sans, Helvetica, Arial, sans-serif;
     cursor: pointer;
@@ -47,14 +49,14 @@
 }
 
 #logo1 {
-    font-size: 1em;
+    font-size: 0.8em;
     width: fit-content;
     display: block;
     font-weight: 500;
     letter-spacing: -0.4px;
     font-family: Poly Sans, Helvetica, Arial, sans-serif;
     cursor: pointer;
-    padding-left: 1.3em;
+    padding-left: 1.65em;
     position: absolute;
 }
 

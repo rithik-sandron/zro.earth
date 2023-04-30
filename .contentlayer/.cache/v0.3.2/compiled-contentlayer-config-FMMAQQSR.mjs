@@ -38,7 +38,7 @@ var Blog = defineDocumentType(() => ({
       required: true
     },
     author: {
-      type: "json",
+      type: "nested",
       required: true
     }
   },
@@ -55,4 +55,4 @@ export {
   Blog,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-ACSI54XI.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-FMMAQQSR.mjs.map

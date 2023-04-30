@@ -17,7 +17,7 @@ export type Blog = {
   date: string
   gist: string
   list: string
-  author: any
+  author: string
   /** MDX file body */
   body: MDX
   slug: string

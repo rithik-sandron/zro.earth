@@ -1,5 +1,4 @@
 import PostMetaData from '../../../components/PostMetaData';
-// import { getPostBySlug, getallPostsAsPath } from '../../../lib/api'
 import styles from '../../styles/Blog.module.css'
 import { notFound } from 'next/navigation';
 import { allBlogs } from 'contentlayer/generated';
@@ -12,10 +11,10 @@ export async function generateStaticParams() {
 }
 
 // export async function generateMetadata({ params }) {
-//   let post = getPostBySlug(params.list, params.slug, [
-//     'title',
-//     'list',
-//   ])
+//   let post = allBlogs.find(post => post.slug === (params.list + "/" + params.slug));
+//   if (!post) {
+//     notFound();
+//   }
 
 //   return {
 //     title: post.title,
@@ -32,24 +31,6 @@ export async function generateStaticParams() {
 //   }
 // }
 
-// async function getData(list, slug) {
-//   let post = getPostBySlug(list, slug, [
-//     'title',
-//     'date',
-//     'list',
-//     'slug',
-//     'author',
-//     'content',
-//     'gist',
-//     'wc',
-//   ])
-
-//   return {
-//     props: {
-//       post: post
-//     },
-//   }
-// }
 
 export default async function Post({ params }) {
 
@@ -72,7 +53,6 @@ export default async function Post({ params }) {
   //     }
   // }, []);
   const post = allBlogs.find(post => post.slug === (params.list + "/" + params.slug));
-  console.log(allBlogs)
   if (!post) {
     notFound();
   }

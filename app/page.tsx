@@ -1,24 +1,9 @@
-// import React, { useState, useEffect } from 'react';
-import { getAllPosts } from '../lib/api';
 import styles from './styles/Index.module.css';
 import Router from '../components/Router';
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { allBlogs } from 'contentlayer/generated';
 import PostMetaData from '../components/PostMetaData';
-
-async function getData() {
-    let list = getAllPosts([
-        'title',
-        'list',
-        'date',
-        'slug',
-        'gist',
-        'wc',
-    ])
-
-    return {
-        props: { list: list.list, feature: list.feature }
-    }
-}
 
 export const metadata: Metadata = {
     title: 'ZRO',
@@ -26,7 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default async function Index() {
-    const data = await getData();
+    const post = allBlogs[0]
+    if (!post) {
+        notFound();
+    }
     // const [search, setSearch] = useState('');
     // const [searchList, setSearchList] = useState([]);
 
@@ -45,27 +33,22 @@ export default async function Index() {
 
     return (
         <>
-            <Router url={data.props.feature.list + '/' + data.props.feature.slug}>
-                <PostMetaData post={data.props.feature} />
+            <Router url={post.slug}>
+                <PostMetaData post={post} />
             </Router>
             {
-                data.props.list.map((item, i) => {
+                allBlogs.map((item, i) => {
                     return (
-                        item.length > 0 &&
                         <div className='container' key={i}
                             style={{ marginTop: '2em' }}>
-                            <h3>{item[0].list}</h3>
-                            {item.map(post => {
-                                return (
-                                    <Router url={post.list + "/" + post.slug} key={post.slug} className={styles.item}>
-                                        <h2>{post.title}</h2>
-                                        <span>
-                                            <li>{post.date}</li>
-                                            <li>{post.wc}</li>
-                                        </span>
-                                    </Router>
-                                )
-                            })}
+                            <h3>{item.list}</h3>
+                            <Router url={post.slug} key={post.slug} className={styles.item}>
+                                <h2>{post.title}</h2>
+                                <span>
+                                    <li>{post.date}</li>
+                                    {/* <li>{post.wc}</li> */}
+                                </span>
+                            </Router>
                         </div>
                     )
 

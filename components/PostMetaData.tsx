@@ -10,10 +10,9 @@ export default function PostMetaData({ post }) {
             <h3>{post.list}</h3>
             <h1>{post.title}</h1>
             <p>{post.gist}</p>
-            <br />
             <span>
                 <li>{post.date}</li>
-                <li>{post.wc}</li>
+                {/* <li>{post.wc}</li> */}
             </span>
             <hr />
         </section>

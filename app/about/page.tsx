@@ -1,7 +1,4 @@
-'use clinet'
-
 import type { Metadata } from 'next';
-import styles from '../styles/About.module.css';
 
 export const metadata: Metadata = {
     title: 'About ZRO',
@@ -10,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function About() {
     return (
-        <div className={styles.about}>
+        <div className='container'>
             <br />
             <br />
             <h1>ZERO is initiated to express our mind.</h1>
@@ -30,14 +27,16 @@ export default function About() {
             <hr />
 
             <h2>We write about</h2>
-            <li>Any news we find interesting.</li>
-            <li>Extensively researched or fun topics we find in web.</li>
-            <li>Anime.</li>
-            <li>Movies & shows.</li>
-            <li>Games.</li>
-            <li>code.</li>
-            <li>Fan Fictions.</li>
-            <li>Food.</li>
+            <ul>
+                <li>Any news we find interesting.</li>
+                <li>Extensively researched or fun topics we find in web.</li>
+                <li>Anime.</li>
+                <li>Movies & shows.</li>
+                <li>Games.</li>
+                <li>code.</li>
+                <li>Fan Fictions.</li>
+                <li>Food.</li>
+            </ul>
 
             <hr />
 

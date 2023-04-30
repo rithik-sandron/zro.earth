@@ -40,7 +40,7 @@ export const Blog = defineDocumentType(() => ({
       required: true,
     },
     author: {
-        type: 'json',
+        type:'string',
         required: true,
       }
 
