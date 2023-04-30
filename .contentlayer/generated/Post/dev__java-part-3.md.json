@@ -1,0 +1,16 @@
+{
+  "title": "Java part-3 [Collections, time complexity..]",
+  "date": "Feb 20, 2023",
+  "gist": "This is a 3 part article. This part covers collections - Lists, Map, Set, Queue and their time and space complexity.",
+  "list": "dev",
+  "_id": "dev/java-part-3.md",
+  "_raw": {
+    "sourceFilePath": "dev/java-part-3.md",
+    "sourceFileName": "java-part-3.md",
+    "sourceFileDir": "dev",
+    "contentType": "markdown",
+    "flattenedPath": "dev/java-part-3"
+  },
+  "type": "Post",
+  "slug": "dev/java-part-3"
+}

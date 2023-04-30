@@ -45,7 +45,7 @@ export default async function Index() {
 
     return (
         <>
-            <Router url={data.props.feature.list + "/" + data.props.feature.slug}>
+            <Router url={data.props.feature.list + '/' + data.props.feature.slug}>
                 <PostMetaData post={data.props.feature} />
             </Router>
             {
@@ -59,10 +59,10 @@ export default async function Index() {
                                 return (
                                     <Router url={post.list + "/" + post.slug} key={post.slug} className={styles.item}>
                                         <h2>{post.title}</h2>
-                                        <ul>
+                                        <span>
                                             <li>{post.date}</li>
                                             <li>{post.wc}</li>
-                                        </ul>
+                                        </span>
                                     </Router>
                                 )
                             })}

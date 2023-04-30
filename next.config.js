@@ -1,27 +1,34 @@
+const { withContentlayer } = require('next-contentlayer');
+const { get } = require('@vercel/edge-config');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
   experimental: {
     appDir: true,
   },
-  reactStrictMode: true,
-  images: {
-    formats: ['image/webp'],
+  redirects() {
+    try {
+      return get('redirects');
+    } catch {
+      return [];
+    }
   },
-  async headers() {
+  headers() {
     return [
       {
-        // Apply these headers to all routes in your application.
-        source: '/:path*',
+        source: '/(.*)',
         headers: securityHeaders,
       },
-    ]
+    ];
   },
-}
+};
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
-    default-src 'self';
-    script-src 'self' 'unsafe-eval' vitals.vercel-insights.com;
+    default-src 'self' vercel.live;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.vercel-insights.com vercel.live;
     style-src 'self' 'unsafe-inline';
     img-src * blob: data:;
     media-src 'none';
@@ -34,10 +41,6 @@ const securityHeaders = [
   {
     key: 'Content-Security-Policy',
     value: ContentSecurityPolicy.replace(/\n/g, ''),
-  },
-  {
-    key: 'X-XSS-Protection',
-    value: '1; mode=block'
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
   {
@@ -67,8 +70,8 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
+    value: 'camera=(), microphone=(), geolocation=()',
   },
 ];
 
-module.exports = nextConfig
+module.exports = withContentlayer(nextConfig);

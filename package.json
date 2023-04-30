@@ -13,13 +13,17 @@
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "@vercel/analytics": "^0.1.11",
+    "@vercel/edge-config": "^0.1.8",
     "@vercel/og": "^0.5.2",
+    "contentlayer": "^0.3.2",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "gray-matter": "^4.0.3",
     "next": "13.3.0",
+    "next-contentlayer": "^0.3.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "remark-gfm": "^3.0.1",
     "typescript": "5.0.4"
   }
 }

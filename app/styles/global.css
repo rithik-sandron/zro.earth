@@ -104,7 +104,7 @@
         margin-top: 2em;
     }
 
-    ul {
+    span{
         display: inline-block;
         font-size: calc(0.7em + 0.1vw);
         font-weight: 350;
@@ -112,18 +112,18 @@
         font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
     }
 
-    ul>li {
+    span>li {
         display: inline-block;
         list-style: none;
         padding-top: 0.4em;
     }
 
-    ul>li::after {
+    span>li::after {
         content: '•';
         margin: 0 1em;
     }
 
-    ul>li:last-child::after {
+    span>li:last-child::after {
         content: '';
     }
 

@@ -1,0 +1,26 @@
+{
+  "title": "Cheatsheet to create a markdown",
+  "date": "Jan 13 2023",
+  "gist": "",
+  "_id": "tutorial/cheatsheet-to-create-a-markdown.md",
+  "_raw": {
+    "sourceFilePath": "tutorial/cheatsheet-to-create-a-markdown.md",
+    "sourceFileName": "cheatsheet-to-create-a-markdown.md",
+    "sourceFileDir": "tutorial",
+    "contentType": "markdown",
+    "flattenedPath": "tutorial/cheatsheet-to-create-a-markdown"
+  },
+  "type": "Blog",
+  "slug": "tutorial/cheatsheet-to-create-a-markdown",
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "title": "Cheatsheet to create a markdown",
+    "date": "Jan 13 2023",
+    "description": "",
+    "author": {
+      "@type": "Person",
+      "name": "Rithik"
+    }
+  }
+}
