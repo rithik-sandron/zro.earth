@@ -2,7 +2,7 @@ import Router from '../components/Router';
 import styles from './styles/Index.module.css';
 import './styles/global.css';
 
-export default function Main({ children }) {
+export default function layout({ children }) {
 
     return (
         <main>
