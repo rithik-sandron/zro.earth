@@ -1,6 +1,25 @@
 import { getPostBySlug } from '../../../pages/api/api'
 import styles from '../../styles/Blog.module.css'
 
+async function getData(list, slug) {
+  let post = getPostBySlug(list, slug, [
+    'title',
+    'date',
+    'list',
+    'slug',
+    'author',
+    'content',
+    'gist',
+    'wc',
+  ])
+
+  return {
+    props: {
+      post: post
+    },
+  }
+}
+
 export default async function Post({ params: { list, slug } }) {
   const data = await getData(list, slug);
   // useEffect(() => {
@@ -38,23 +57,4 @@ export default async function Post({ params: { list, slug } }) {
       <section id='article' dangerouslySetInnerHTML={{ __html: data.props.post.content }} className={styles.blog} />
     </article>
   )
-}
-
-export async function getData(list, slug) {
-  let post = getPostBySlug(list, slug, [
-    'title',
-    'date',
-    'list',
-    'slug',
-    'author',
-    'content',
-    'gist',
-    'wc',
-  ])
-
-  return {
-    props: {
-      post: post
-    },
-  }
 }

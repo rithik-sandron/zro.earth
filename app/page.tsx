@@ -4,7 +4,7 @@ import styles from './styles/Index.module.css';
 import Router from '../components/Router';
 import type { Metadata } from 'next';
 
-export async function getData() {
+async function getData() {
     let list = getAllPosts([
         'title',
         'list',
