@@ -1,8 +1,8 @@
 .linkTree {
     display: flex;
-    width: 88%;
+    width: 90%;
     padding: 4em 0;
-    gap: 1.4em;
+    gap: 2em;
     max-width: 634px;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -12,7 +12,7 @@
 
 .links {
     display: block;
-    border-radius: 0.5em;
+    border-radius: 0.8em;
     padding: 1em 0;
     width: 100%;
     text-align: center;

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function About() {
     return (
-        <div className='container'>
+        <div className='sub-container'>
             <br />
             <br />
             <h1>ZERO is initiated to express our mind.</h1>
