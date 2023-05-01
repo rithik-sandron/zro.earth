@@ -5,7 +5,7 @@
 
 .blog,
 .articleToc {
-    width: 90%;
+    width: 92%;
     max-width: 634px;
     margin: 0 auto;
 }
@@ -173,7 +173,8 @@
 }
 
 .blog *>code {
-    padding: 0.4em;
+    display: inline-block;
+    padding: 0 0.4em;
     margin: 1em 0.5em;
     word-break: break-all;
 }
@@ -233,7 +234,7 @@
 }
 
 .blog blockquote>p {
-    line-height: 1.2;
+    line-height: 1.8;
 }
 
 .blog .empty-row {

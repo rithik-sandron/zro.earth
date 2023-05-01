@@ -56,7 +56,6 @@ a {
     color: inherit;
     border: none;
     outline: none;
-    padding: 0;
 }
 
 a:hover {
@@ -64,10 +63,10 @@ a:hover {
 }
 
 p {
-    line-height: 1.8;
-    font-size: calc(1em + 0.1vw);
-    font-weight: 400;
-    margin: 0;
+    line-height: 2;
+    font-size: calc(0.88em + 0.1vw);
+    font-weight: 300;
+    margin: 0.2em;
 }
 
 h1,
@@ -134,7 +133,7 @@ span>li:last-child::after {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    width: 90%;
+    width: 92%;
     max-width: 634px;
     margin: 0 auto;
 }

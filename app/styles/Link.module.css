@@ -1,7 +1,6 @@
 .linkTree {
     display: flex;
-    width: 90%;
-    padding: 4em 0;
+    width: 92%;
     gap: 2em;
     max-width: 634px;
     margin: 0 auto;

@@ -10,7 +10,7 @@ gist: 'Ever felt left behind when all your friends talk about Anime and you have
 # 1. Death Note
 `Action` `Thriller` `Supernatural` `Psychological`
 
-A 17 Year Old Extremist gets his hands on a Note - not just any note, but a***Death Note*** which kills people just by having their names written in it. Light Yagami, tired of this rotten world full of Brutal murders, petty thefts, and senseless violence; finds a way to cleanse the world by creating a contract with a Death God, Ryouk.
+A 17 Year Old Extremist gets his hands on a Note - not just any note, but a **Death Note** which kills people just by having their names written in it. Light Yagami, tired of this rotten world full of Brutal murders, petty thefts, and senseless violence; finds a way to cleanse the world by creating a contract with a Death God, Ryouk.
 
 ## Information
 - Episodes: 37
@@ -37,7 +37,7 @@ Mankind on the brink of extinction due to merciless man-eating titans marching a
 # 4. Beelzebub
 `Action` `Comedy` `Supernatural`
 
-Our Protagonist, Oga Tatsumi is a deliquent feared by all in Ishiyama High— A school flooded with deliquents where violence takes place on a daily basis. On a fine day by the riverbed, Oga encounters a strange man floating down the river and to his surprise, the man suddenly splits open revealing a baby. The baby latches onto to our***kind*** Oga Tatsumi forming a contract with him. Little did Oga know that the baby is no one but Kaiser de Emperana Beelzebub IV, or "Baby Beel" for short— the son of the **Demon Lord!**
+Our Protagonist, Oga Tatsumi is a deliquent feared by all in Ishiyama High— A school flooded with deliquents where violence takes place on a daily basis. On a fine day by the riverbed, Oga encounters a strange man floating down the river and to his surprise, the man suddenly splits open revealing a baby. The baby latches onto to our ***kind*** Oga Tatsumi forming a contract with him. Little did Oga know that the baby is no one but Kaiser de Emperana Beelzebub IV, or "Baby Beel" for short— the son of the **Demon Lord!**
 
 ## Information
 - Episodes: 60

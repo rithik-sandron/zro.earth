@@ -30,7 +30,6 @@ export default async function Index() {
     //         setSearchList(res)
     //     }
     // }, [search])
-    console.log(allBlogs)
     return (
         <>
             <Router url={post.slug}>
@@ -40,7 +39,7 @@ export default async function Index() {
                 allBlogs.map((item, i) => {
                     return (
                         <div className='container' key={i}
-                            style={{ marginTop: '2em' }}>
+                            style={{ marginTop: '3em' }}>
                             <h3>{item.list}</h3>
                             <Router url={item.slug} key={item.slug} className={styles.item}>
                                 <h2>{item.title}</h2>
