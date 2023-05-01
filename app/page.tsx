@@ -30,7 +30,7 @@ export default async function Index() {
     //         setSearchList(res)
     //     }
     // }, [search])
-
+    console.log(allBlogs)
     return (
         <>
             <Router url={post.slug}>
@@ -42,10 +42,10 @@ export default async function Index() {
                         <div className='container' key={i}
                             style={{ marginTop: '2em' }}>
                             <h3>{item.list}</h3>
-                            <Router url={post.slug} key={post.slug} className={styles.item}>
-                                <h2>{post.title}</h2>
+                            <Router url={item.slug} key={item.slug} className={styles.item}>
+                                <h2>{item.title}</h2>
                                 <span>
-                                    <li>{post.date}</li>
+                                    <li>{item.date}</li>
                                     {/* <li>{post.wc}</li> */}
                                 </span>
                             </Router>

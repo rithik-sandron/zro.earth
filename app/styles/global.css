@@ -133,7 +133,7 @@ span>li:last-child::after {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    width: 86%;
+    width: 88%;
     max-width: 634px;
     margin: 0 auto;
 }

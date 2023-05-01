@@ -3,17 +3,21 @@
     max-width: 634px;
     margin: 0 auto;
     min-height: 100vh;
-    width: 86%;
+    width: 88%;
     padding-top: 2em;
 }
 
 .home {
     display: flex;
     flex-direction: row;
-    width: 86%;
-    margin: 0 auto;
+    width: 88%;
+    margin: 0.8em auto 2em auto;
     gap: 1em;
-    padding: 1em 0;
+    font-weight: 300;
+    letter-spacing: -0.4px;
+    font-family: Poly Sans, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    font-size: calc(1.25em + 0.1vw);
 }
 
 .input {
@@ -26,16 +30,6 @@
     border-radius: 0.4em;
     width: inherit;
     margin-top: 8px;
-}
-
-#ken {
-    display: block;
-    font-weight: 300;
-    font-size: 1em;
-    letter-spacing: -0.4px;
-    font-family: Poly Sans, Helvetica, Arial, sans-serif;
-    cursor: pointer;
-    margin-top: 12px;
 }
 
 #logo {

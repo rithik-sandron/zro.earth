@@ -5,7 +5,7 @@
 
 .blog,
 .articleToc {
-    width: 86%;
+    width: 88%;
     max-width: 634px;
     margin: 0 auto;
 }
@@ -72,7 +72,7 @@
     display: flex;
     font-size: calc(1.65em + 0.3vw);
     margin-top: 2em;
-    color: rgba(249, 178, 59);
+    /* color: rgba(249, 178, 59); */
 }
 
 .blog h1:hover:before {
@@ -102,7 +102,7 @@
 .blog p,
 .blog li,
 .blog dl,
-.blog code>pre,
+.blog pre,
 .blog table th,
 .blog table td {
     line-height: 2;
@@ -125,7 +125,6 @@
 }
 
 .blog ol li {
-    margin-left: 1em;
     display: flex;
     counter-increment: number;
 }
@@ -137,7 +136,7 @@
 }
 
 .blog ul li {
-    margin-left: 1em;
+    margin-left: 1.4em;
     padding-left: 0.3em;
 }
 
@@ -149,32 +148,34 @@
     font-style: italic;
 }
 
-.blog code>pre,
+.blog pre,
 .blog *>code,
 .blog table tr {
     border: 0.07em solid var(--line);
 }
 
-.blog code>pre,
+/* .blog code>pre,
 .blog *>code,
 .blog table {
     background-color: var(--color-grey);
-}
+} */
 
-.blog code>pre,
+.blog pre,
 .blog *>code {
     border-radius: 0.5em;
     font-size: calc(0.9em + 0.1vw);
     font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
-.blog code>pre {
+.blog pre>code {
     padding: 1em;
     overflow-x: auto;
+    border: none;
 }
 
 .blog *>code {
     padding: 0.4em;
+    margin: 0.3em;
     word-break: break-all;
 }
 
@@ -218,7 +219,7 @@
 }
 
 .blog blockquote,
-.blog code>pre {
+.blog pre {
     margin: 1em 0;
 }
 
