@@ -5,8 +5,6 @@
 
 .blog,
 .articleToc {
-    width: 92%;
-    max-width: 634px;
     margin: 0 auto;
 }
 
@@ -71,7 +69,7 @@
 .blog h1 {
     display: flex;
     font-size: calc(1.65em + 0.3vw);
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .blog h1:hover:before {
@@ -95,7 +93,8 @@
     line-height: 1.4;
     text-decoration: none;
     padding-bottom: 0;
-
+    padding: 0;
+    background-color: transparent;
 }
 
 .blog p,
@@ -110,13 +109,8 @@
     font-weight: 300;
 }
 
-.blog li,
-.blog dd {
+.blog li {
     margin: 0.4em 0;
-}
-
-.blog dd {
-    display: flex;
 }
 
 .blog ol {
@@ -126,6 +120,7 @@
 .blog ol li {
     display: flex;
     counter-increment: number;
+    margin-left: 1.4em;
 }
 
 .blog ol li:before {
@@ -134,13 +129,13 @@
     margin-right: 0.7em;
 }
 
-.blog ul li {
-    margin-left: 1.4em;
-    padding-left: 0.3em;
+.blog ul>li::marker {
+    display: block ;
 }
 
-.blog dd {
-    margin-left: -8px;
+.blog ul li {
+    margin-left: 2.2em;
+    padding-left: 0.3em;
 }
 
 .blog em {
@@ -153,11 +148,9 @@
     border: 0.07em solid var(--line);
 }
 
-/* .blog code>pre,
-.blog *>code,
-.blog table {
-    background-color: var(--color-grey);
-} */
+.blog code>pre {
+   width: 100%;
+}
 
 .blog pre,
 .blog *>code {
@@ -166,17 +159,18 @@
     font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
-.blog pre {
-    padding: 1em;
-    overflow-x: auto;
-    border: none;
-}
-
 .blog *>code {
     display: inline-block;
     padding: 0 0.4em;
-    margin: 1em 0.5em;
+    margin: 0.4em 0.3em;
     word-break: break-all;
+}
+
+.blog pre>code {
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+    border: none;
 }
 
 .blog sup::before,
@@ -200,21 +194,8 @@
     padding: 0.3em 0.2em;
 }
 
-.blog span {
-    letter-spacing: 0.03em;
-    margin-right: 0.6em;
-    font-size: 0.86em;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.blog span:before {
-    content: '#';
-    padding-right: 1px;
-}
-
 .blog mark {
-    background-color: var(--color-yellow);
+    background-color: rgba(234, 227, 50, 0.817);
     color: var(--font-color);
 }
 
@@ -235,13 +216,6 @@
 
 .blog blockquote>p {
     line-height: 1.8;
-}
-
-.blog .empty-row {
-    height: 0.6em;
-    padding: 0;
-    background-color: var(--line);
-    opacity: 0.6;
 }
 
 .blog table {

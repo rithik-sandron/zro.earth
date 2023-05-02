@@ -3,15 +3,14 @@
     max-width: 634px;
     margin: 0 auto;
     min-height: 100vh;
-    width: 92%;
-    padding-top: 2em;
+    width: 94%;
+    padding-top: 1em;
 }
 
 .home {
     display: flex;
     flex-direction: row;
-    width: 92%;
-    margin: 0.8em auto 2em auto;
+    margin: 0.6em auto 1.8em auto;
     gap: 1em;
     font-weight: 300;
     letter-spacing: -0.4px;

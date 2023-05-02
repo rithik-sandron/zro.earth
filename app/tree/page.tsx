@@ -4,7 +4,7 @@ import Router from '../../components/Router';
 
 export default function Tree() {
     return (
-        <div className={styles.linkTree}>
+        <div id='widtht95' className={styles.linkTree}>
             <Router className={styles.links} url=''>
                 Instagram
             </Router>

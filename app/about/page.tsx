@@ -7,12 +7,9 @@ export const metadata: Metadata = {
 
 export default function About() {
     return (
-        <div className='sub-container'>
-            <br />
-            <br />
-            <h1>ZERO is initiated to express our mind.</h1>
-            <br />
-            <h2>The name Zero indicates the starting point of us. We started from 0.</h2>
+        <div className='container'>
+            <h1>ZERO is initiated to express our mind. The name Zero indicates the starting point of us. We started from 0.</h1>
+            
             <br />
             <br />
 
@@ -56,6 +53,8 @@ export default function About() {
             </p>
 
             <p>Made with love ♡ and passion 🔥 for writing.</p>
+            <br/>
+            <br/>
         </div>
     )
 }

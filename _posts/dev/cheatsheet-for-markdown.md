@@ -67,5 +67,5 @@ if (isAwesome) {
 | Content Cell  | Content Cell  |
 
 # Task Lists
--[x] this is a complete item 
--[ ] this is an incomplete it
+- [x] this is a complete item 
+- [ ] this is an incomplete it

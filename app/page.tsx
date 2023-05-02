@@ -34,12 +34,13 @@ export default async function Index() {
         <>
             <Router url={post.slug}>
                 <PostMetaData post={post} />
+                <br />
+                <br />
             </Router>
             {
                 allBlogs.map((item, i) => {
                     return (
-                        <div className='container' key={i}
-                            style={{ marginTop: '3em' }}>
+                        <div className='container' key={i}>
                             <h3>{item.list}</h3>
                             <Router url={item.slug} key={item.slug} className={styles.item}>
                                 <h2>{item.title}</h2>
