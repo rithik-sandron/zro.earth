@@ -1,17 +1,17 @@
 :root {
     --foreground-rgb: rgb(45, 43, 44);
     --background-start-rgb: #fff;
-    --background-end-rgb: rgb(232, 232, 232);
-    --line: rgba(229, 229, 229);
-    --line-bg: rgba(229, 229, 229, 0.845);
-    --wrap-bg: #dedede50;
+    --background-end-rgb: #fff;
+    --line: rgba(229, 229, 229, 0.8);
+    --line-bg: rgba(229, 229, 229, 0.645);
+    --wrap-bg: rgba(229, 229, 229, 0.545);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: #e8e8e8;
         --background-start-rgb: #000;
-        --background-end-rgb: #090909;
+        --background-end-rgb: #000;
         --line: #181818;
         --line-bg: #21212180;
         --wrap-bg: #25252550;

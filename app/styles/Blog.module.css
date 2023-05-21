@@ -61,7 +61,8 @@
 .blog h1,
 .blog h2,
 .blog h3 {
-    margin-bottom: 0.4em;
+    margin-bottom: 0.6em;
+    margin-top: 1em;
     line-height: normal;
     font-weight: 800;
 }
@@ -69,7 +70,7 @@
 .blog h1 {
     display: flex;
     font-size: calc(1.65em + 0.3vw);
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .blog h1:hover:before {
@@ -84,7 +85,6 @@
 
 .blog h2 {
     font-size: calc(1.3em + 0.3vw);
-    margin-bottom: 0.6em;
 
 }
 
@@ -164,6 +164,7 @@
     padding: 0 0.4em;
     margin: 0.4em 0.3em;
     word-break: break-all;
+    margin-left: 0;
 }
 
 .blog pre>code {
@@ -211,8 +212,9 @@
     font-style: italic;
     border-radius: 1px;
     padding-left: 0.8em;
-    border-left: 1px solid var(--line);
-    margin: 2em 0;
+    border-left: 0.5em solid var(--line);
+    margin: 3em 0;
+    font-weight: 700;
 }
 
 .blog blockquote>p {

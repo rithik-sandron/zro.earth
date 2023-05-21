@@ -21,11 +21,12 @@ export default function Main({ children }) {
         <html>
             <body>
                 <main className={styles.main}>
-                    <Router url='/' className='sub-container'>
-                        <span id={styles.logo}>zro.earth</span>
-                    </Router>
-                    <section className={styles.home}>
 
+                    <section className={styles.home}>
+                        <Router url='/'>
+                            <span id={styles.logo}>zro.earth</span>
+                        </Router>
+                        <div id={styles.line}/>
                         <Router url='/about'>
                             <span id={styles.item}>About</span>
                         </Router>
