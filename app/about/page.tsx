@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'About ZRO',
-    description: 'ZRO is initiated to express our mind.',
+    openGraph: {
+        title: 'About zro.earth',
+        description: 'zro.earth is initiated to express our mind.',
+        url: 'https://zro.earth/about',
+    }
 };
 
 export default function About() {
     return (
         <div className='container'>
-            <h1>ZERO is initiated to express our mind. The name Zero indicates the starting point of us. We started from 0.</h1>
-            
+            <p>ZERO is initiated to express our mind. The name Zero indicates the starting point of us. We started from 0.</p>
             <br />
-            <br />
-
             <p>
                 You can find certain words in Japanese because we watch a lot of Anime and we like using them, not that we know Japanese. 😅
             </p>

@@ -9,18 +9,20 @@
 
 .links {
     display: block;
-    border-radius: 0.6em;
+    border-radius: 0.44em;
     padding: 1em 0;
-    width: 100%;
+    width: 55%;
+    margin: 0 auto;
     text-align: center;
     cursor: pointer;
     transition: all 0.02s ease-in-out;
     word-break: break-all;
     font-size: calc(1em + 0.1vw);
     letter-spacing: 0.2px;
-    border: 0.5px solid var(--line);
+    border: 1px solid var(--line);
+    transition: all 0.2s ease-in-out;
 }
 
 .links:hover {
-    opacity: 0.8;
+    background-color: var(--line-bg);
 }

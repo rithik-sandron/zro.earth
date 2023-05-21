@@ -1,14 +1,15 @@
 'use client';
-export default function PostMetaData({ post }) {
+export default function PostMetaData({ post, doNeedGist }) {
     return (
         <section key={post.slug} className='container'>
-            <h1>{post.title}</h1>
-            <p>{post.gist}</p>
+            {doNeedGist ? <h1>{post.title}</h1> : <h2>{post.title}</h2>}
+            {doNeedGist && <p>{post.gist}</p>}
             <span>
                 <li>{post.list}</li>
                 <li>{post.date}</li>
-                {/* <li>{post.wc}</li> */}
+                {doNeedGist && <hr />}
             </span>
+            {!doNeedGist && <hr />}
         </section>
 
     );

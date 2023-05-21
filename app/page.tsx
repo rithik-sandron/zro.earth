@@ -1,14 +1,8 @@
 import styles from './styles/Index.module.css';
 import Router from '../components/Router';
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { allBlogs } from 'contentlayer/generated';
 import PostMetaData from '../components/PostMetaData';
-
-export const metadata: Metadata = {
-    title: 'ZRO',
-    description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
-};
 
 export default async function Index() {
     const post = allBlogs[0]
@@ -33,27 +27,26 @@ export default async function Index() {
     return (
         <>
             <Router url={post.slug}>
-                <PostMetaData post={post} />
-                <br />
-                <br />
+                <PostMetaData post={post} doNeedGist={true} />
             </Router>
-            {
-                allBlogs.map((item, i) => {
-                    return (
-                        <div className='container' key={i}>
-                            <h3>{item.list}</h3>
-                            <Router url={item.slug} key={item.slug} className={styles.item}>
-                                <h2>{item.title}</h2>
-                                <span>
-                                    <li>{item.date}</li>
-                                    {/* <li>{post.wc}</li> */}
-                                </span>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h1>All posts</h1>
+            <hr/>
+            <div className='wrap-container'>
+                {
+                    allBlogs.map((item, i) => {
+                        return (
+                            <Router url={item.slug}>
+                                <PostMetaData post={item} doNeedGist={false} />
                             </Router>
-                        </div>
-                    )
+                        )
 
-                })
-            }
+                    })
+                }
+            </div>
             {/* <input className={styles.input} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} /> */}
 
             {/* <section id={styles.home}>

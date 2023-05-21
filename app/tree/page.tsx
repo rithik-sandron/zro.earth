@@ -1,6 +1,14 @@
-'use client';
 import styles from '../styles/Link.module.css';
 import Router from '../../components/Router';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    openGraph: {
+        title: 'Link tree',
+        description: 'quicks links to things we made',
+        url: 'https://zro.earth/tree',
+    }
+};
 
 export default function Tree() {
     return (

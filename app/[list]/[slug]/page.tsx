@@ -59,7 +59,7 @@ export default async function Post({ params }) {
 
   return (
     <article>
-      <PostMetaData post={post} />
+      <PostMetaData post={post} doNeedGist={true}/>
       <section id='article width95' className={styles.blog}>
         <Mdx code={post.body.code} />
       </section>

@@ -10,13 +10,24 @@
 .home {
     display: flex;
     flex-direction: row;
-    margin: 0.6em auto 1.8em auto;
+    margin: 1em auto 1.8em auto;
     gap: 1em;
     font-weight: 300;
     letter-spacing: -0.4px;
     font-family: Poly Sans, Helvetica, Arial, sans-serif;
     cursor: pointer;
     font-size: calc(1.25em + 0.1vw);
+}
+
+#item {
+    padding: 0.3em;
+    padding-bottom: 0.2em;
+    border-radius: 0.34em;
+    border: 1px solid var(--line);
+}
+
+#item:hover {
+    background-color: var(--line-bg);
 }
 
 .input {
@@ -39,20 +50,4 @@
     letter-spacing: -0.4px;
     font-family: Poly Sans, Helvetica, Arial, sans-serif;
     cursor: pointer;
-}
-
-#logo1 {
-    font-size: 0.8em;
-    width: fit-content;
-    display: block;
-    font-weight: 500;
-    letter-spacing: -0.4px;
-    font-family: Poly Sans, Helvetica, Arial, sans-serif;
-    cursor: pointer;
-    padding-left: 1.65em;
-    position: absolute;
-}
-
-.item {
-    display: block;
 }

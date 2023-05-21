@@ -145,7 +145,7 @@
 .blog pre,
 .blog *>code,
 .blog table tr {
-    border: 0.07em solid var(--line);
+    border: 1px solid var(--line);
 }
 
 .blog code>pre {
@@ -211,7 +211,8 @@
     font-style: italic;
     border-radius: 1px;
     padding-left: 0.8em;
-    border-left: 0.4em solid var(--line);
+    border-left: 1px solid var(--line);
+    margin: 2em 0;
 }
 
 .blog blockquote>p {

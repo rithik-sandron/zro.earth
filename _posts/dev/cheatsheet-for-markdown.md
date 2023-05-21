@@ -1,6 +1,6 @@
 ---
 title: 'Cheatsheet to create a markdown'
-date: 'Jan 13 2023'
+date: 'Jan 13, 2023'
 list: tutorial
 gist: 'A quick cheat sheet for markdown content'
 author: Ryuu
