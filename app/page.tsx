@@ -29,12 +29,8 @@ export default async function Index() {
             <Router url={post.slug}>
                 <PostMetaData post={post} doNeedGist={true} />
             </Router>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <h1>All posts</h1>
             <hr/>
+            <h2>All posts</h2>
             <div className='wrap-container'>
                 {
                     allBlogs.map((item, i) => {
@@ -43,7 +39,6 @@ export default async function Index() {
                                 <PostMetaData post={item} doNeedGist={false} />
                             </Router>
                         )
-
                     })
                 }
             </div>

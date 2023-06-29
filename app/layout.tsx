@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
     themeColor: [
         { media: '(prefers-color-scheme: light)', color: 'white' },
-        { media: '(prefers-color-scheme: dark)', color: 'black' },
+        { media: '(prefers-color-scheme: dark)', color: '#0f0f0f' },
     ],
     openGraph: {
         title: 'zro.earth',
@@ -24,7 +24,7 @@ export default function Main({ children }) {
 
                     <section className={styles.home}>
                         <Router url='/'>
-                            <span id={styles.logo}>zro.earth</span>
+                            <span id={styles.logo}>zro. 🌍</span>
                         </Router>
                         <div id={styles.line}/>
                         <Router url='/about'>
