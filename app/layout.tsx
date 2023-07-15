@@ -21,18 +21,19 @@ export default function Main({ children }) {
         <html>
             <body>
                 <main className={styles.main}>
-
                     <section className={styles.home}>
                         <Router url='/'>
-                            <span id={styles.logo}>zro. 🌍</span>
+                            <span id={styles.logo}>zro.🌍</span>
                         </Router>
                         <div id={styles.line}/>
-                        <Router url='/about'>
-                            <span id={styles.item}>About</span>
-                        </Router>
-                        <Router url='/tree'>
-                            <span id={styles.item}>Tree</span>
-                        </Router>
+                        <div style={{ display: 'flex', gap: '1em' }}>
+                            <Router url='/about'>
+                                <span id={styles.item}>About</span>
+                            </Router>
+                            <Router url='/tree'>
+                                <span id={styles.item}>Tree</span>
+                            </Router>
+                        </div>
                     </section>
                     {children}
                 </main>

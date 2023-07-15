@@ -1,14 +1,14 @@
-import styles from './styles/Index.module.css';
 import Router from '../components/Router';
 import { notFound } from 'next/navigation';
 import { allBlogs } from 'contentlayer/generated';
 import PostMetaData from '../components/PostMetaData';
 
+const recent_post = allBlogs[0];
 export default async function Index() {
-    const post = allBlogs[0]
-    if (!post) {
+    if (!recent_post) {
         notFound();
     }
+   
     // const [search, setSearch] = useState('');
     // const [searchList, setSearchList] = useState([]);
 
@@ -26,14 +26,15 @@ export default async function Index() {
     // }, [search])
     return (
         <>
-            <Router url={post.slug}>
-                <PostMetaData post={post} doNeedGist={true} />
+            <Router url={recent_post.slug}>
+                <PostMetaData post={recent_post} doNeedGist={true} />
             </Router>
             <hr/>
             <h2>All posts</h2>
             <div className='wrap-container'>
                 {
                     allBlogs.map((item, i) => {
+                        if(i>0)
                         return (
                             <Router url={item.slug}>
                                 <PostMetaData post={item} doNeedGist={false} />
