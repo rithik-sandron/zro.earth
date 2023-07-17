@@ -1,5 +1,6 @@
 
 node_modules/*
+.contentlayer
 build/*
 .DS_store
 .next

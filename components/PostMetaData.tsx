@@ -1,8 +1,9 @@
 'use client';
+
 export default function PostMetaData({ post, doNeedGist }) {
     return (
         <section key={post.slug} className={doNeedGist ? 'container' : 'sub-container'}>
-             <span>
+            <span>
                 <li>{post.list}</li>
                 {/* <li>{post.date}</li> */}
                 {/* {doNeedGist && <hr />} */}

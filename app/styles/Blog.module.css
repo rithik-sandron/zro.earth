@@ -43,6 +43,7 @@
 
 .articleToc a,
 .blog a {
+    display: inline-block;
     color: rgba(40, 138, 231, 0.926);
     font-weight: 500;
 }

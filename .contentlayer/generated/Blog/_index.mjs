@@ -2,5 +2,9 @@
 
 import anime__animeSeriesForBeginnersMd from './anime__anime-series-for-beginners.md.json' assert { type: 'json' }
 import dev__cheatsheetForMarkdownMd from './dev__cheatsheet-for-markdown.md.json' assert { type: 'json' }
+import dev__javaPart_1Md from './dev__java-part-1.md.json' assert { type: 'json' }
+import dev__javaPart_2Md from './dev__java-part-2.md.json' assert { type: 'json' }
+import dev__javaPart_3Md from './dev__java-part-3.md.json' assert { type: 'json' }
+import dev__linuxBasicsMd from './dev__linux-basics.md.json' assert { type: 'json' }
 
-export const allBlogs = [anime__animeSeriesForBeginnersMd, dev__cheatsheetForMarkdownMd]
+export const allBlogs = [anime__animeSeriesForBeginnersMd, dev__cheatsheetForMarkdownMd, dev__javaPart_1Md, dev__javaPart_2Md, dev__javaPart_3Md, dev__linuxBasicsMd]
