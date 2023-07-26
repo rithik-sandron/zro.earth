@@ -13,15 +13,6 @@ go to [Java Part-2](/dev/java-part-2)
 
 go to [Java Part-3](/dev/java-part-3)
 
-will cover
-- static keyword
-- this keyword
-- super keyword
-- final keyword in classes
-- Memory - heap & stack
-- gc
-- destructor for class
-
 
 # OOP
 **Object Oriented Programming** is a whole concept itself. Here's a gist of it.
@@ -221,4 +212,13 @@ here wrapper is converting automativally to a primitive. Internally
 ## Wrappers are Immutable
 When arithmetic operations are performed on primitive types, they yield a new value. By Nature primitive types are **Pass by value** and they are immutable. To replicate the behavior, Wrappers of the primitive are also immutable. So when an arithmetic operation is performed on a wrapper, a new object is returned, existing objects are not modified. **Wrappers are also pass by value in nature**.
 
-We will continue covering the basics about Java  in the [Java Part-3](/dev/java-part-3) of this series.
+will cover
+- static keyword
+- this keyword
+- super keyword
+- final keyword in classes
+- Memory - heap & stack
+- gc
+- destructor for class
+
+goto [Java Part-3](/dev/java-part-3) of this series.

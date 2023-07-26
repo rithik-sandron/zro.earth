@@ -85,7 +85,7 @@
 }
 
 .blog h2 {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .blog h3 {
@@ -93,7 +93,7 @@
     line-height: 1.4;
     border-bottom: 2.5px solid var(--line);
     width: fit-content;
-    font-weight: 500;
+    font-weight: 700;
     padding-bottom: 2px;
 }
 
@@ -234,6 +234,7 @@
     max-width: 100%;
     font-size: 0.9em;
     table-layout: fixed;
+    margin: 2em 0;
 }
 
 .blog table th,
@@ -244,7 +245,6 @@
 
 .blog table th,
 .blog strong {
-    font-weight: 600;
+    font-weight: 700;
     padding-bottom: 1px;
-    border-bottom: 2px solid var(--line);
 }
