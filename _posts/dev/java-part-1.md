@@ -16,7 +16,7 @@ go to [Java Part-3](/dev/java-part-3)
 # Data types
 According to Wikipedia - *"In the pursuit of knowledge, data is a collection of discrete values that convey information, describing quantity, quality, fact, statistics, other basic units of meaning, or simply sequences of symbols that may be further interpreted"*
 
-Like we store data in our brain or write it down ad a note, *computers use memory*. This Meory stores the data based on its type. for example, *"This car looks good"* is a String. *"10"* is a number. Basically in Java these data types are classified into two primary types. 
+similar to human brain, **computers use memory**. This Memory stores the data based on its type. for example, "This car looks good" is a *String*. "10" is a *number*. Basically in Java these data types are classified into two types. 
 
 - Primitive
 - Non Primitive
@@ -38,9 +38,7 @@ Primitive types are basic types which covers **characters, numbers and so on**. 
 - Array
 - Classes
 
-- 1 bit of memory is like a one word of space in a paper.
-- 1 byte = 8 bits
-- 2 byte = 16 bits and so on
+Each type of data is stored in memory which occupies some space
   
 | Type    | Size in memory | It stores                                                            |
 | :------ | :------------- | :------------------------------------------------------------------- |
@@ -53,6 +51,10 @@ Primitive types are basic types which covers **characters, numbers and so on**. 
 | double  | 8 byte         | decimal numbers. Can use to store 10-12 decimal digits               |
 | char    | 2 byte         | a single character/letter or ASCII values                            |
 
+- 1 bit of memory is like a one word of space in a paper.
+- 1 byte = 8 bits
+- 2 byte = 16 bits and so on
+  
 # Variables and Constants
 Its no use if we store values in memory and dont use them anywhere. To use them we assign these values to a container. When this container is accessed, we get the actual value we stored in the memory. These containers are known variables and constants.
 
