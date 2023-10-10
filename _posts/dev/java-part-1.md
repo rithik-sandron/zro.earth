@@ -57,7 +57,7 @@ Primitive types are basic types which covers **characters, numbers and so on**. 
 No gain can be obtained if we store values in memory and do not use them anywhere. To use them we assign these values to a container. When this container is accessed, we get the actual value we stored in the memory. These containers are known *variables and constants*.
 
 ## Variables
-variables are containers that can change the values they hold over time. Whereas constants are containers whose values remain constant once initialized.
+variables are containers that can change the values they hold over time. Whereas constants are containers whose values remain constant once initialised.
 
 ```
 boolean flag = true;
@@ -103,10 +103,10 @@ java Main
 12
 ```
 
-> **javac** commnad is for compiling the code. From Java version 9 we can directly run the file without the need to compile it.
+> **javac** command is for compiling the code. From Java version 9 we can directly run the file without the need to compile it.
 
 # Conditional statements
-statements are more concept specific and not lanuage specific. You can find statements similar across all programming languages. Conditional Statements are used to run a bunch of instructions only on a specific condition.
+statements are more concept specific and not language specific. You can find statements similar across all programming languages. Conditional Statements are used to run a bunch of instructions only on a specific condition.
 
 Following is the syntax for to declare a statement. The instructions or each line of code mentioned inside the **block { }** will only be executed if the mentioned condition returns true.
 
@@ -117,7 +117,7 @@ if (20 > 18) {
 }
 ```
 
-here `20 > 18` is the condition. since 20 is greater than 18, the sinstructions mentioned inside that block.
+here `20 > 18` is the condition. since 20 is greater than 18, the instructions mentioned inside that block.
 
 ## if else
 ```
@@ -216,7 +216,7 @@ String fight(String arg1, int arg2) {
 }
 ```
 
-here `String` is the return data type of the value it returns by excuting the instructions. `fight` is the method name, `arg1` and `arg2` are arguments/inputs passed to the function and `{ }` indicates its a code block.
+here `String` is the return data type of the value it returns by executing the instructions. `fight` is the method name, `arg1` and `arg2` are arguments/inputs passed to the function and `{ }` indicates its a code block.
 
 Now that we declared a function, It will not be executed until it is called upon. To call the function we can run the following command.
 
@@ -250,22 +250,22 @@ All primitive data types are stored in **Stack memory**. These are basically **V
 
 ## Pass by value
 When primitive data types are passed to a function, its value is passed and changing it will only reflect inside the block and not else where.
-This behavior is called **pass by value**.
+This behaviour is called **pass by value**.
 
 ## Pass by reference
 **Java is strictly pass by value**. but some types of data such as String & arrays when passed, the reference is passed to functions and not the actual value the variable holds.
 So making changes to the variable will not reflect in the main function where the variable was passed as args to the function.
 
 # String
-String is the most widely used data type. When a String is initialized its value is stored in **Heap memory**.
+String is the most widely used data type. When a String is initialised its value is stored in **Heap memory**.
 ```
 String a = "hero";
 String b = "hero"
 ```
 
-In the above example both `a` and `b` have the same value. In this case, Java does not create two seperate memory boxes to store the values. Instead it creates one memory box where `hero` is stored and variables `a` and `b` will point to that same memory box. This special string memory space is called **String pool**. Caching the String literals and reusing them saves a lot of **heap space** because different String variables refer to the same object in the String pool.
+In the above example both `a` and `b` have the same value. In this case, Java does not create two separate memory boxes to store the values. Instead it creates one memory box where `hero` is stored and variables `a` and `b` will point to that same memory box. This special string memory space is called **String pool**. Caching the String literals and reusing them saves a lot of **heap space** because different String variables refer to the same object in the String pool.
 
-Since **Strings are immutable in Java**, the JVM optimizes the amount of memory allocated for them by storing only one copy of each literal String in the pool. This process is called **interning**. If String was mutable, many variables would be pointing to that one value and changing that value would reflect in all other variables poiting to it. For this reason String are Immutable in Java.
+Since **Strings are immutable in Java**, the JVM optimises the amount of memory allocated for them by storing only one copy of each literal String in the pool. This process is called **interning**. If String was mutable, many variables would be pointing to that one value and changing that value would reflect in all other variables pointing to it. For this reason String are Immutable in Java.
 
 So when you pass a String to a method/function, only the reference to the memory box in String pool is passed and not the value itself. When that reference is changed, the Sting would point to different memory box. So by default String **passes the reference(memory address) of the value**.
 
@@ -274,10 +274,10 @@ String a = "ice cream";
 a = "milk shake";
 ```
 
-here `a` is reassigned to a different value. So `a` instead of pointing to *"ice cream"*, now points to *"milk shake"* in the string pool. *"ice cream"* if not used by any other string variable, will be garbage colelcted by JVM automatically.
+here `a` is reassigned to a different value. So `a` instead of pointing to *"ice cream"*, now points to *"milk shake"* in the string pool. *"ice cream"* if not used by any other string variable, will be garbage collected by JVM automatically.
 
 # Array
-Array is a collection of variables or constants of same data type. Sometimes we want to have a list of items say a checklist. In that scenario, creating an array would be more ideal that creating individual variables seperately. Arrays are declared in a similar way to that of other variables. *Arrays have consecutive memory allocation*.
+Array is a collection of variables or constants of same data type. Sometimes we want to have a list of items say a checklist. In that scenario, creating an array would be more ideal that creating individual variables separately. Arrays are declared in a similar way to that of other variables. *Arrays have consecutive memory allocation*.
 
 ```
 String[] hero = String[5];
@@ -291,7 +291,7 @@ we can also do this in one step
 String[] hero = {"archer", "Brute", "Ninja" };
 ```
 
-Array size is immutable. Meaning the size once declared cannot be decreased or increased. Here in this case, pushing elements more than declared size **5** would result in runtime error. `hero[index]` can be to used access elements at a specific index. `hero[0] = "magitian"` is how you assign elements to the array. `hero.length` gives you the size of the array.
+Array size is immutable. Meaning the size once declared cannot be decreased or increased. Here in this case, pushing elements more than declared size **5** would result in runtime error. `hero[index]` can be to used access elements at a specific index. `hero[0] = "magician"` is how you assign elements to the array. `hero.length` gives you the size of the array.
 
 Similar to String, **Arrays also passes the reference(memory address) of the starting value it stores**.
 
@@ -307,7 +307,7 @@ When this array is passed to a function/method, reference(the memory address)  o
 
 > Both Arrays and String are immutable and passes only the reference.(the memory address)
 
-# Synchronization
+# Synchronisation
 **Being immutable automatically makes the String thread safe** since they won't be changed when accessed by multiple threads. Hence immutable objects in general, can be shared across multiple threads running simultaneously. They're also thread-safe because if a thread changes the value, then instead of modifying the same, a new String would be created in the String pool. Hence, Strings are safe for multi-threading and so are arrays.
 
 > immutable objects are thread safe.
@@ -330,7 +330,7 @@ but a class can be declared final. when a class is declared final, it cannot be 
 ## Attribute level modifier:
 Methods, variables and constants can have all four levels of access modifiers.
 
-## Acccess modifiers cheat sheet
+## Access modifiers cheat sheet
 | Modifier  | w Class | w Package | w Subclass | all  |
 | :-------- | :------ | :-------- | :--------- | :--- |
 | public    | Y       | Y         | Y          | Y    |

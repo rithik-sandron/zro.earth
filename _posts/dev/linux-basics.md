@@ -14,7 +14,7 @@ author: Ryuu
 | create a file                      | touch abc.md                             |
 | create a hidden file               | touch .defs                              |
 | create a directory                 | mkdir abc                                |
-| goto a drectory                    | cd /var/tmp                              |
+| goto a directory                    | cd /var/tmp                              |
 | goto root directory                | cd ~                                     |
 | list files                         | ls                                       |
 | list files - with permissions      | ls -ltr                                  |
@@ -160,7 +160,7 @@ elif (( $AGE > 25 ))
 fi
 ```
 
-## conditonal operators
+## conditional operators
 | condition | cmd  |
 | :-------- | :--- |
 | and &&    | -a   |

@@ -19,11 +19,11 @@ go to [Java Part-3](/dev/java-part-3)
 Why do we need OOP? ideally before OOP, we provide steps and those steps are executed sequentially. Lets say you want to restrict few sets of instruction only for a certain entity. For instance, In a car its engine, tyre, every other parts are specific to that car. Most times we want to replicate this real time entities in our code. In that sense how do we encapsulate things like a car? well we use Class. 
 
 # Class
-Classes encapsulates **attributes**(variables, constants and methods) togher as one entity and only the objects that are created from that class can have those attributes.
+Classes encapsulates **attributes**(variables, constants and methods) together as one entity and only the objects that are created from that class can have those attributes.
 
 > Classes are like blueprints (a car design) from which we create objects (cars) and all the attributes(boy parts of the car) is unique to that object.
 
-Lets look at an example to understand clearly. Ideally each class is declared in its seperate file.
+Lets look at an example to understand clearly. Ideally each class is declared in its separate file.
 
 ```
 public class Hero {
@@ -62,14 +62,14 @@ public Hero() {
 
 - Constructors have the same name as the class.
 - It should be **public**, so that we can use it inside others classes where we need this object.
-- It can aso be **private**. If a constructor is private that respective class cannot be inherited.
+- It can also be **private**. If a constructor is private that respective class cannot be inherited.
 - if access modifier is left undeclared, a default modifier is applied.
 
 ### Default constructor
 Mostly developers wont declare a default constructor unless its necessary in some cases. when a constructor is not provided for a class, JVM creates a **default constructor with a default access modifier**. Default constructor does not have parameters.
 
-### Parameterized constructor
-A name suggests, it is a constructor with parameters. sometimes we want to pass some values during object creation and we want some set of instructions to be done. FOr that purposes we can use parameterized constructors.
+### Parameterised constructor
+A name suggests, it is a constructor with parameters. sometimes we want to pass some values during object creation and we want some set of instructions to be done. For that purpose, we can use parameterised constructors.
 
 ```
 public Hero(int a, int b) {
@@ -85,7 +85,7 @@ Variables inside a block =={ }== is local variable to that block.
 Variables inside a class that are non-static are called instance variables.
 
 ### Static Variables
-Static varibles are one true source variables. no matter how many instance of objects are created, all objects share one common static variable.
+Static variables are one true source variables. no matter how many instance of objects are created, all objects share one common static variable.
 Changes made to a static variable by one instance object will reflect on other objects too. 
 
 ```
@@ -105,7 +105,7 @@ public class Hero {
 ```
 
 # Inheritance
-We need inheritance to reuse some the features that coes with OOP. Lets say we want create some classes indicating different shapes. Yes the same old example, bare with me. Basic shapes like square, triangle have certain similarities like name of the shape, no of edges and so on. Since these **similarities apply to all basic shapes it would be redundant to include same set of attributes and instructions inside each Shape class we create**. And if there is a change we need to do we might have to do in all the classes we created. This would be a nightmare. In this scenario, we could use inheritance to create a ==Super class== called **Shape** and have all the common attributes declared here. All the other shapes we create can be a ==sub class== to this super class. 
+We need inheritance to reuse some the features that comes with OOP. Lets say we want create some classes indicating different shapes. Yes the same old example, bare with me. Basic shapes like square, triangle have certain similarities like name of the shape, no of edges and so on. Since these **similarities apply to all basic shapes it would be redundant to include same set of attributes and instructions inside each Shape class we create**. And if there is a change we need to do we might have to do in all the classes we created. This would be a nightmare. In this scenario, we could use inheritance to create a ==Super class== called **Shape** and have all the common attributes declared here. All the other shapes we create can be a ==sub class== to this super class. 
 
 ## Extending
 ```
@@ -153,13 +153,13 @@ pubic abstract class Shape {
 
 public class Triangle **extends Shape** {
   void draw() {
-    // methid definition / body
+    // method definition / body
   }
 }
 ```
 
 ## Interface
-Interface is similar to abstract classes. INterface came into picture because multiple inheritance is not allowed in Java. Lets say we want a class to inherit from multiple super classes using *extends* keyword. That is simply not possible. but a class can implement multiple interfaces using ==implements keyword==.
+Interface is similar to abstract classes. Interface came into picture because multiple inheritance is not allowed in Java. Lets say we want a class to inherit from multiple super classes using *extends* keyword. That is simply not possible. but a class can implement multiple interfaces using ==implements keyword==.
 
 ## Implementing interfaces
 ```
@@ -174,7 +174,7 @@ public class Triangle extends Shape
 Consider Interface and abstract class as a menu card in a restaurant. The menu has a basic list of all food items the restaurant has. You can order food by looking at the menu. But food will arrive at your table only when chef completes the order. Likewise interfaces and abstract classes have abstract attributes which a class can implement. But when the class implements it, It should define all the methods.
 
 # Wrapper classes
-As the name suggests, **wrapper classes are classes encapsulating primitive Java data type from which objcts can be created**. The first question that strikes us is that, why do we need to use Wrappers when we already have primitives?
+As the name suggests, **wrapper classes are classes encapsulating primitive Java data type from which objects can be created**. The first question that strikes us is that, why do we need to use Wrappers when we already have primitives?
 
 - ==Generics== only work with objects and not with primitive types.
 - Java ==Collections== basically involves objects and generics.
@@ -206,11 +206,11 @@ Here 12 is a primitive literal, that is converted automatically into a n Integer
 Integer i = new Integer(10);
 int number = i;
 ```
-here wrapper is converting automativally to a primitive. Internally
+here wrapper is converting automatically to a primitive. Internally
 `i.intValue()` is what JVM runs to auto unbox.
 
 ## Wrappers are Immutable
-When arithmetic operations are performed on primitive types, they yield a new value. By Nature primitive types are **Pass by value** and they are immutable. To replicate the behavior, Wrappers of the primitive are also immutable. So when an arithmetic operation is performed on a wrapper, a new object is returned, existing objects are not modified. **Wrappers are also pass by value in nature**.
+When arithmetic operations are performed on primitive types, they yield a new value. By Nature primitive types are **Pass by value** and they are immutable. To replicate the behaviour, Wrappers of the primitive are also immutable. So when an arithmetic operation is performed on a wrapper, a new object is returned, existing objects are not modified. **Wrappers are also pass by value in nature**.
 
 will cover
 - static keyword

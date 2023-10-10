@@ -22,7 +22,7 @@ List<E>, RandomAccess, Cloneable, Serializable
 ```
 
 ArrayList is a RandomAccess collection often known as ==Resizable-array==. ArrayList is one of the List implementations built atop an array. Unlike arrays, ArrayList can grow and shrink in size dynamically.
-Size is increased automatically based on the capacity of the array. but to encure a minimum size user can define the size beforehand.
+Size is increased automatically based on the capacity of the array. but to ensure a minimum size user can define the size beforehand.
 
 ```
 List<String> heroes = new ArrayList<>();
@@ -30,7 +30,7 @@ heroes.add("Archer");
 heroes.ensureCapacity(50);
 ```
 
-- Not thread safe (unsynchronized).
+- Not thread safe (unsynchronised).
 - Allows null as an element.
 - size, isEmpty, get, set, iterator, and listIterator operations runs in constant.
 
@@ -48,8 +48,8 @@ List list = Collections.synchronizedList(new ArrayList(...));
 When we take about ArrayList, there is a legacy class `Vector<E>` which is similar to arrayList. 
 
 ### ArrayList 
-1. Not Thread safe a.k.a. Unsynchronized.
-2. Thread safe a.k.a. Synchronized.
+1. Not Thread safe a.k.a. Unsynchronised.
+2. Thread safe a.k.a. Synchronised.
 
 ### Vectors
 1. ArrayList increases its size based on capacity factor.
@@ -70,19 +70,19 @@ implements Deque<E>, Cloneable, Serializable
 | void clear() |
 | boolean isEmpty() |
 
-Hands down the most used data structure for me atleast is ==Stack==. But in Java stacks are extended from `Vectors<E>`. The common alternative to a Stack is ==Deque==. Similar to stacks Deque is also a FIFO data structure.
+Hands down the most used data structure for me at least is ==Stack==. But in Java stacks are extended from `Vectors<E>`. The common alternative to a Stack is ==Deque==. Similar to stacks Deque is also a FIFO data structure.
 
 - Deque is an interface, the concrete is ==ArrayDeque==
-- Array deques have no capacity restrictions; they grow as necessary to support usage.
+- Array deque has no capacity restrictions; they grow as necessary to support usage.
 - Not thread safe.
 - If the deque is modified at any time after the iterator is created, in any way except through the iterator's own remove method, the iterator will generally throw a ==ConcurrentModificationException==. (fail-fast)
 
-## To Synchronize ArrayDeque:
+## To Synchronise ArrayDeque:
 ```
 Collections.synchronizedCollections(new ArrayDeque(...));
 ``` 
 
-Most ArrayDeque operations run in amortized constant time. Exceptions include remove, removeFirstOccurrence, removeLastOccurrence, contains, iterator.remove(), and the bulk operations, all of which run in linear time.
+Most ArrayDeque operations run in amortised constant time. Exceptions include remove, removeFirstOccurrence, removeLastOccurrence, contains, iterator.remove(), and the bulk operations, all of which run in linear time.
 
 ## Time Complexity
 | Queue                   |  push    | pop  |   peek   | Remove | Size | Data Structure |
@@ -97,7 +97,7 @@ implements List<E>, Deque<E>, Cloneable, Serializable
 
 Linked List in Java is a doubly LinkedList implementation of List and Deque. so it can traverse from the beginning or from the end in both ways based on the index (whichever is closer to the index).
 
-- Not thread safe (unsynchronized).
+- Not thread safe (unsynchronised).
 - Allows null as an element.
 - fail-fast similar to Deque mentioned above.
 - size, isEmpty, get, set, iterator, and listIterator operations runs in constant.
@@ -131,7 +131,7 @@ Hashing is the mechanism to convert an arbitrary string to a numeric value with 
 When you provide same keys for different values, HashMap generates same hash from that key and stores all the values to that particular bucket.
 These values are stored ideally in a LinkedList and reference is attached as a value to that particular key. so avoid using same keys to get a better performance. In some cases you would need HashMap and dictionaries working together in a big chunk of key value items.
 
-Hash table based implementation of the Map interface. The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls.
+Hash table based implementation of the Map interface. The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronised and permits nulls.
 
 This implementation provides constant-time performance for the basic operations (get and put), assuming the hash function disperses the elements properly among the buckets.
 
@@ -148,15 +148,15 @@ The **load factor is a measure of how full the hash table is allowed to get befo
 
 
 ## Rehashing
-Once the capacity of the hashmap is increased, It brings the overhead of rearranging all the key-value pairs in the hash table. It is because we use the modulo of map capacity to get the proper bucket index from the hash, but by the change in capacity, most of earlier stored pair locations will not be accessible and changed.
+Once the capacity of the Hashmap is increased, It brings the overhead of rearranging all the key-value pairs in the hash table. It is because we use the modulo of map capacity to get the proper bucket index from the hash, but by the change in capacity, most of earlier stored pair locations will not be accessible and changed.
 
-As a general rule, the default load factor ==(.75)== offers a good tradeoff between time and space costs. Higher values decrease the space overhead but increase the lookup cost (reflected in most of the operations of the HashMap class, including get and put). The expected number of entries in the map and its load factor should be taken into account when setting its initial capacity, so as to minimize the number of rehash operations. If the initial capacity is greater than the maximum number of entries divided by the load factor, no rehash operations will ever occur.
+As a general rule, the default load factor ==(.75)== offers a good tradeoff between time and space costs. Higher values decrease the space overhead but increase the lookup cost (reflected in most of the operations of the HashMap class, including get and put). The expected number of entries in the map and its load factor should be taken into account when setting its initial capacity, so as to minimise the number of rehash operations. If the initial capacity is greater than the maximum number of entries divided by the load factor, no rehash operations will ever occur.
 
 - The default initial capacity of HashMap is 16
 - This class permits null element.
 - HashMap also allows us to have null as a key.
-- **Not thread safe** (unsynchronized)
-- **fail-fast** behavior is not guaranteed.
+- **Not thread safe** (unsynchronised)
+- **fail-fast** behaviour is not guaranteed.
 
 ## To make HashMap thread safe
 ```
@@ -180,7 +180,7 @@ implements Set<E>, Cloneable, Serializable
 This class implements the Set interface, backed by a hash table (actually a HashMap instance). This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly among the buckets. Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important.
 
 - This class permits null element.
-- **Not thread safe** (unsynchronized)
+- **Not thread safe** (unsynchronised)
 - The iterators returned by this class's iterator method are **fail-fast** like other collections.
 
 ## To make Hashset thread safe
