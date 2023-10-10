@@ -2,6 +2,7 @@ import styles from './styles/Index.module.css';
 import Router from '../components/Router';
 import type { Metadata } from 'next';
 import './styles/global.css';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
     description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
@@ -36,6 +37,7 @@ export default function Main({ children }) {
                         </div>
                     </section>
                     {children}
+                    <Analytics />
                 </main>
             </body>
         </html>
