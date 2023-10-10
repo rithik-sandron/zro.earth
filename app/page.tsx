@@ -30,7 +30,7 @@ export default async function Index() {
                 <PostMetaData post={recent_post} doNeedGist={true} />
             </Router>
             <hr />
-            <h2>All posts</h2>
+            {/* <h2>All posts</h2> */}
             <div className='wrap-container'>
                 {
                     allBlogs.map((item, i) => {
