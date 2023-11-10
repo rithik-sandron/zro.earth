@@ -1,8 +1,12 @@
 import styles from './styles/Index.module.css';
-import Router from '../components/Router';
 import type { Metadata } from 'next';
 import './styles/global.css';
 import { Analytics } from '@vercel/analytics/react';
+import { allBlogs } from 'contentlayer/generated';
+import Router from 'components/Router';
+
+const recent_post = allBlogs[0];
+
 
 export const metadata: Metadata = {
     description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
@@ -22,20 +26,19 @@ export default function Main({ children }) {
         <html>
             <body>
                 <main className={styles.main}>
-                    <section className={styles.home}>
-                        <Router url='/'>
-                            <span id={styles.logo}>zro.🌍</span>
+                <section className={styles.home} >
+                    <Router url='/'>
+                        <span id={styles.logo}>zro.🌍</span>
+                    </Router>
+                    <div style={{ display: 'flex', gap: '1em' }}>
+                        <Router url='/about'>
+                            <span id={styles.item}>About</span>
                         </Router>
-                        <div id={styles.line}/>
-                        <div style={{ display: 'flex', gap: '1em' }}>
-                            <Router url='/about'>
-                                <span id={styles.item}>About</span>
-                            </Router>
-                            <Router url='/tree'>
-                                <span id={styles.item}>Tree</span>
-                            </Router>
+                        <Router url='/tree'>
+                            <span id={styles.item}>Tree</span>
+                        </Router>
                         </div>
-                    </section>
+                </section>
                     {children}
                     <Analytics />
                 </main>

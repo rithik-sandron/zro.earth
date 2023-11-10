@@ -18,6 +18,7 @@ export type Blog = {
   gist: string
   list: string
   author: string
+  color: string
   /** MDX file body */
   body: MDX
   slug: string

@@ -4,6 +4,7 @@ date: 'Feb 20, 2023'
 list: dev
 gist: 'This is a 3 part article. This part covers - OOP, class, objects, inheritance, wrapper classes etc...'
 author: Ryuu
+color: rgb(207, 87, 2)
 ---
 
 # This is a 3 part series

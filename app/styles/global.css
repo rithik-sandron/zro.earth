@@ -19,6 +19,8 @@
 }
 
 body {
+    color: rgb(221, 62, 62);
+    margin: 0;
     color: var(--foreground-rgb);
     background: linear-gradient(to bottom, var(--background-start-rgb), var(--background-end-rgb));
     font-size: 16px;
@@ -78,7 +80,7 @@ blockquote {
 h1 {
     line-height: 1.3;
     font-weight: 700;
-    font-size: calc(1.7em + 0.4vw);
+    font-size: calc(1.9em + 1.8vw);
     margin-bottom: 0.2em;
     margin-top: 0;
 }
@@ -125,18 +127,27 @@ span>li {
     border: 0.5px solid var(--line);
 }
 
+.container {
+    max-width: 772px;
+    width: 90%;
+}
+
 .container,
 .sub-container {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin: 0 auto;
+    padding: 2em 0;
+    margin: auto;
+    padding-top: calc(2em + 102px);
 }
 
 .sub-container {
     padding: 0.6em 1em 1em 1em;
     border-radius: 0.4em;
-    margin: 2em 0;
+    margin: 2em auto;
+    width: calc(90% - 2em);
+    max-width: calc(772px - 2em);
 }
 
 .sub-container>span,
@@ -144,10 +155,9 @@ span>li {
     display: flex;
     gap: 2em;
     font-size: calc(0.7em + 0.1vw);
-    font-weight: 600;
+    font-weight: 300;
     width: 100%;
     letter-spacing: 0.04em;
-    color: #1e92dfda;
 }
 
 .container>ul {
@@ -167,4 +177,5 @@ hr {
 
 .wrap-container {
     font-size: 0.9em;
+
 }

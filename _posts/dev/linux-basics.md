@@ -4,6 +4,7 @@ date: 'Feb 22, 2023'
 list: dev
 gist: 'Know about basic commands, bash scripting, cron jobs etc...'
 author: Ryuu
+color: green
 ---
 
 # Basic commands

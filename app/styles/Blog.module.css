@@ -1,16 +1,18 @@
 .blog,
 .articleToc li {
-    font-size: calc(0.89em + 0.1vw);
+    font-size: calc(0.81em + 0.1vw);
 }
 
 .blog,
 .articleToc {
+    width: 90%;
+    max-width: 772px;
     margin: 0 auto;
 }
 
 .blog {
     display: block;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.025em;
     margin-top: 4em;
 }
 
@@ -89,12 +91,11 @@
 }
 
 .blog h3 {
-    font-size: calc(1.1em + 0.2vw);
+    font-size: calc(1em + 0.2vw);
     line-height: 1.4;
-    border-bottom: 2.5px solid var(--line);
+    border-bottom: 0.5px solid var(--line);
     width: fit-content;
     font-weight: 700;
-    padding-bottom: 2px;
 }
 
 .blog p,
@@ -103,14 +104,14 @@
 .blog pre,
 .blog table th,
 .blog table td {
-    line-height: 2;
+    line-height: 1.8;
     padding: 0;
     letter-spacing: 0.03em;
     font-weight: 300;
 }
 
 .blog li {
-    margin: 0.4em 0;
+    margin: 0.25em 0;
 }
 
 .blog ol {
@@ -134,7 +135,7 @@
 }
 
 .blog ul li {
-    margin-left: 2.2em;
+    margin-left: 1.2em;
     padding-left: 0.3em;
 }
 
@@ -176,6 +177,7 @@
     padding: 1em;
     overflow-x: auto;
     border: none;
+
 }
 
 .blog sup::before,

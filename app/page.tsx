@@ -2,35 +2,35 @@ import Router from '../components/Router';
 import { notFound } from 'next/navigation';
 import { allBlogs } from 'contentlayer/generated';
 import PostMetaData from '../components/PostMetaData';
+import type { Metadata } from 'next';
+import './styles/global.css';
+
+const recent_post = allBlogs[0];
+
+export const metadata: Metadata = {
+    description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
+    themeColor: [
+        { media: '(prefers-color-scheme: light)', color: recent_post.color },
+        { media: '(prefers-color-scheme: dark)', color: recent_post.color },
+    ],
+    openGraph: {
+        title: 'zro.earth',
+        description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
+        url: 'https://zro.earth',
+    }
+};
 
 export default async function Index() {
-    const recent_post = allBlogs[0];
+    
     if (!recent_post) {
         notFound();
     }
-
-    // const [search, setSearch] = useState('');
-    // const [searchList, setSearchList] = useState([]);
-
-    // useEffect(() => {
-    //     if (search !== "") {
-    //         const seachQuery = search.trim().toLowerCase();
-    //         const res = list.flat().reduce(function (pV, cV) {
-    //             if (cV.title.toLowerCase().includes(seachQuery)) {
-    //                 pV.push(cV);
-    //             }
-    //             return pV;
-    //         }, [])
-    //         setSearchList(res)
-    //     }
-    // }, [search])
+    
     return (
         <>
             <Router url={recent_post.slug}>
                 <PostMetaData post={recent_post} doNeedGist={true} />
             </Router>
-            <hr />
-            {/* <h2>All posts</h2> */}
             <div className='wrap-container'>
                 {
                     allBlogs.map((item, i) => {
@@ -43,24 +43,6 @@ export default async function Index() {
                     })
                 }
             </div>
-            {/* <input className={styles.input} placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} /> */}
-
-            {/* <section id={styles.home}>
-                {
-                    (search !== "") &&
-                    ((searchList.length !== 0) ?
-                        searchList.map(x => <FeaturePost post={x} />)
-                        :
-                        <span className='container'>No articles found. Please rephrase your search</span>)
-                }
-
-                {(search === "") &&
-                    <>
-                        <FeaturePost post={feature} />
-                        <Lists list={list} />
-                    </>
-                }
-            </section> */}
         </>
     )
 }
