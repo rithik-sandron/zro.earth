@@ -4,7 +4,7 @@ date: 'Feb 14, 2023'
 list: dev
 gist: 'This is a 3 part article. This part covers the basics - data types, variables, functions, statements etc...'
 author: Ryuu
-color: 'rgb(207, 87, 2)'
+color: rgb(187, 117, 30, 0.5, 0.5)
 ---
 
 # This is a 3 part series

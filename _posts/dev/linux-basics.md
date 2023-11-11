@@ -4,7 +4,7 @@ date: 'Feb 22, 2023'
 list: dev
 gist: 'Know about basic commands, bash scripting, cron jobs etc...'
 author: Ryuu
-color: green
+color: rgb(59, 190, 76, 0.5)
 ---
 
 # Basic commands

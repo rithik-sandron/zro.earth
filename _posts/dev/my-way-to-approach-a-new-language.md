@@ -1,10 +1,10 @@
 ---
 title: 'My way to approach a new programming language'
-date: 'Oct 19, 2023'
+date: 'Nov 10, 2023'
 list: dev
 gist: 'This is how i would approach any language or concepts'
 author: Ryuu
-color: rgb(82, 0, 225)
+color: rgb(82, 80, 200, 0.5)
 ---
 Think why you want to use a specific language. Each language has it's own purpose and usage. For example if I want to automate some process in my computer I would go for `shell`. So knowing & understanding a language's purpose would solve a lot of issues even before you start typing your code.
 
@@ -26,7 +26,7 @@ step wise do this
 - Dive deeper. 
 
 
-## Sequential programming 
+## Sequential programming
 - Know if a language is statically typed or inferred. Based on this your errors & debugging would change a bit.
 - Datatypes and their limits.
 - Constants & literals.

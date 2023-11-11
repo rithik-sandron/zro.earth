@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Tree() {
     return (
-        <div id='widtht95' className={styles.linkTree}>
+        <div className={styles.linkTree}>
             <p style={{ textAlign: 'center' }}>Links will be updated soon..</p>
             <Router className={styles.links} url=''>
                 Instagram

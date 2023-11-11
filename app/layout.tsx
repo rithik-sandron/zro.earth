@@ -2,11 +2,7 @@ import styles from './styles/Index.module.css';
 import type { Metadata } from 'next';
 import './styles/global.css';
 import { Analytics } from '@vercel/analytics/react';
-import { allBlogs } from 'contentlayer/generated';
 import Router from 'components/Router';
-
-const recent_post = allBlogs[0];
-
 
 export const metadata: Metadata = {
     description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',

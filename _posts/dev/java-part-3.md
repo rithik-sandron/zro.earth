@@ -1,10 +1,10 @@
 ---
 title: 'Java part-3 [Collections, time complexity..]'
-date: 'Feb 20, 2023'
+date: 'Feb 21, 2023'
 list: dev
 gist: 'This is a 3 part article. This part covers collections - Lists, Map, Set, Queue and their time and space complexity.'
 author: Ryuu
-color: rgb(207, 87, 2)
+color: rgb(187, 117, 30, 0.5)
 ---
 
 # This is a 3 part series
