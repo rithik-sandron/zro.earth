@@ -3,7 +3,7 @@
 export default function PostMetaData({ post, doNeedGist }) {
 
     return (
-        <div >
+        <div style={{ backgroundColor: doNeedGist && post.color }}>
             <section key={post.slug} className={doNeedGist ? 'container' : 'sub-container'}>
                 <span>
                     <li>{post.list}</li>

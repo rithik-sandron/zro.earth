@@ -17,10 +17,7 @@ const recent_post = posts[0];
 
 export const metadata: Metadata = {
     description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
-    themeColor: [
-        { media: '(prefers-color-scheme: light)', color: recent_post.color },
-        { media: '(prefers-color-scheme: dark)', color: recent_post.color },
-    ],
+    
     openGraph: {
         title: 'zro.earth',
         description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
