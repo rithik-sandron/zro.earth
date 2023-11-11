@@ -80,7 +80,7 @@ blockquote {
 h1 {
     line-height: 1.15;
     font-weight: 600;
-    font-size: calc(1.9em + 1.8vw);
+    font-size: calc(1.9em + 1.6vw);
     margin-bottom: 0.2em;
     margin-top: 0;
 }
@@ -139,7 +139,7 @@ span>li {
     cursor: pointer;
     padding: 2em 0;
     margin: auto;
-    padding-top: calc(2em + 72px);
+    padding-top: calc(2em + 24px + 1vw);
 }
 
 .sub-container {

@@ -23,10 +23,10 @@ export default function Main({ children }) {
             <body>
                 <main className={styles.main}>
                 <section className={styles.home} >
-                    <Router url='/'>
-                        <span id={styles.logo}>zro.🌍</span>
-                    </Router>
                     <div style={{ display: 'flex', gap: '1em' }}>
+                        <Router url='/'>
+                            <span id={styles.item}>Home</span>
+                        </Router>
                         <Router url='/about'>
                             <span id={styles.item}>About</span>
                         </Router>

@@ -19,10 +19,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   }
   
   return {
-    themeColor: [
-      { media: '(prefers-color-scheme: light)', color: post.color },
-      { media: '(prefers-color-scheme: dark)', color: post.color },
-  ],
+   
   }
 }
 
