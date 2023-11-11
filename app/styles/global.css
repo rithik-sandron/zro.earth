@@ -20,8 +20,6 @@
 
 
 body {
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: none;
     margin: 0;
     color: var(--foreground-rgb);
     background: linear-gradient(to bottom, var(--background-start-rgb), var(--background-end-rgb));
