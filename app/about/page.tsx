@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function About() {
     return (
         <div className='about container'>
-            <p>Hey there! {" "}
+            <p>Hey there! 👋 {" "}
                 <strong><u>The story of Zero</u></strong> began when we needed a space to share our thoughts and get creative.
                 Zero has become our cozy corner to let our imaginations run wild and we'd like to let you all in on it.
                 Feel right at home and dive into our short, fun reads on just about anything!
@@ -42,7 +42,7 @@ export default function About() {
             <h2 id='p'>Privacy Policy</h2>
             <p>
                 We do not collect any data.
-                The dark theme is designed to align with your system theme, and we ensure that nothing is stored in browser storage.
+                The theme color is designed to align with your system theme, and we ensure that nothing is stored in browser storage.
             </p>
 
             <p>Made with love ♡ and passion 🔥 for writing & sharing.</p>
