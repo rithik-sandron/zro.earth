@@ -1,0 +1,1 @@
+            Hey there! The story of Zero began when we needed a space to share our thoughts and get creative. Zero has become our cozy corner to let our imaginations run wild and we'd like to let you all in on it. Feel right at home and dive into our short, fun reads on just about anything! The name Zero signifies the starting point for all of us!

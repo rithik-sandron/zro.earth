@@ -3,7 +3,7 @@ title: 'My way to approach a new programming language'
 date: 'Nov 10, 2023'
 list: dev
 gist: 'This is how i would approach any language or concepts'
-author: Ryuu
+author: Rithik
 color: rgb(82, 80, 200, 0.5)
 ---
 Think why you want to use a specific language. Each language has it's own purpose and usage. For example if I want to automate some process in my computer I would go for `shell`. So knowing & understanding a language's purpose would solve a lot of issues even before you start typing your code.

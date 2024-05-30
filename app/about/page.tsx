@@ -2,59 +2,50 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     openGraph: {
-        title: 'About zro.earth',
-        description: 'zro.earth is initiated to express our mind.',
+        title: 'About',
+        description: 'Zero has become our cozy corner to let our imaginations run wild.',
         url: 'https://zro.earth/about',
     }
 };
 
 export default function About() {
     return (
-        <div className='container'>
-            <p>ZERO is initiated to express our mind. The name Zero indicates the starting point of us. We started from 0.</p>
+        <div className='about container'>
+            <p>Hey there! {" "}
+                <strong><u>The story of Zero</u></strong> began when we needed a space to share our thoughts and get creative.
+                Zero has become our cozy corner to let our imaginations run wild and we'd like to let you all in on it.
+                Feel right at home and dive into our short, fun reads on just about anything!
+                The name Zero signifies the starting point for all of us!</p>
+            <p>
+                You might come across a few Japanese words here and there.
+                That's because we're huge anime fans and we like using these fancy little words, not that we actually know Japanese, haha. 😅
+            </p>
+            <p>
+                We're a team of enthusiastic individuals passionate about researching 🔎 and writing ✍️ on various topics.
+                The articles you find here are based solely on our perspectives 🧠
+            </p>
+
+            <h2>Team</h2>
+            <li>Rithik Sandron</li>
+            <li>Bhavana</li>
             <br />
-            <p>
-                You can find certain words in Japanese because we watch a lot of Anime and we like using them, not that we know Japanese. 😅
-            </p>
-            <p>
-                We are a group of 2 who likes researching topics 🔎 & writing ✍️ about them.
-                The articles you find here are purely based on our perception. 🧠
-            </p>
-
-            <hr />
-
-            <h2>We write about</h2>
-            <ul>
-                <li>Any news we find interesting.</li>
-                <li>Extensively researched or fun topics we find in web.</li>
-                <li>Anime.</li>
-                <li>Movies & shows.</li>
-                <li>Games.</li>
-                <li>code.</li>
-                <li>Fan Fictions.</li>
-                <li>Food.</li>
-            </ul>
-
-            <hr />
 
             <h2>Tip us</h2>
             <p>
-                If you notice any mistakes or alter view, kindly inform us.
-                If you want a topic to be researched and written about, you can contact us.
-                We will be creating a window to contact us through social media.
+                If you see any mistakes or want to share your thoughts, please let us know.
+                If you have a topic in mind that you'd like us to explore and write about, feel free to reach out to us.
+                We're also working on setting up a way to connect with us through social media.
             </p>
 
             <hr />
 
             <h2 id='p'>Privacy Policy</h2>
             <p>
-                We do not collect any sort of data. Even the dark theme is based on your system theme.
-                We do not store anything in browser storage.
+                We do not collect any data.
+                The dark theme is designed to align with your system theme, and we ensure that nothing is stored in browser storage.
             </p>
 
-            <p>Made with love ♡ and passion 🔥 for writing.</p>
-            <br/>
-            <br/>
+            <p>Made with love ♡ and passion 🔥 for writing & sharing.</p>
         </div>
     )
 }

@@ -12,33 +12,34 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }): Promise<Metadata> {
-  
+
   const post = allBlogs.find(post => post.slug === (params.list + "/" + params.slug));
   if (!post) {
     notFound();
   }
-  
+
   return {
-   
+
   }
 }
 
 
 export default async function Post({ params }) {
-  
+
   const post = allBlogs.find(post => post.slug === (params.list + "/" + params.slug));
   if (!post) {
     notFound();
   }
 
-    return (
-      <div>
-        <article>
-          <PostMetaData post={post} doNeedGist={true} />
-          <section id='article' className={styles.blog}>
-            <Mdx code={post.body.code} />
-          </section>
-        </article>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <article>
+        <PostMetaData post={post} doNeedGist={true} />
+        <hr style={{ width: "54%", margin: "0 auto" }} />
+        <section id='article' className={styles.blog}>
+          <Mdx code={post.body.code} />
+        </section>
+      </article>
+    </div>
+  )
+}

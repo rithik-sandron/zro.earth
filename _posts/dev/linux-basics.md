@@ -3,7 +3,7 @@ title: 'Linux cheatsheet & basics'
 date: 'Feb 22, 2023'
 list: dev
 gist: 'Know about basic commands, bash scripting, cron jobs etc...'
-author: Ryuu
+author: Rithik
 color: rgb(59, 190, 76, 0.5)
 ---
 

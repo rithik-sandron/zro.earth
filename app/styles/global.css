@@ -23,7 +23,7 @@ body {
     margin: 0;
     color: var(--foreground-rgb);
     background: linear-gradient(to bottom, var(--background-start-rgb), var(--background-end-rgb));
-    font-size: 16px;
+    font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
@@ -32,7 +32,6 @@ body {
     /* margin: 0; */
     padding: 0;
     border: 0;
-    font: inherit;
     scroll-behavior: smooth;
 }
 
@@ -64,7 +63,7 @@ p {
     line-height: 1.5;
     font-size: calc(1em + 0.2vw);
     font-weight: 300;
-    margin: 0.2em;
+    margin: 0;
 }
 
 h1,
@@ -81,7 +80,7 @@ h1 {
     line-height: 1.15;
     font-weight: 600;
     font-size: calc(1.9em + 1.6vw);
-    margin-bottom: 0.2em;
+    margin-bottom: 0;
     margin-top: 0;
 }
 
@@ -123,10 +122,6 @@ span>li {
     border-radius: 0.4em;
 }
 
-.sub-container {
-    border: 0.5px solid var(--line);
-}
-
 .container {
     max-width: 772px;
     width: 90%;
@@ -140,11 +135,11 @@ span>li {
     padding: 2em 0;
     margin: auto;
     padding-top: calc(2em + 24px + 1vw);
+    border-bottom: 0.5px solid var(--line);
 }
 
 .sub-container {
-    padding: 0.6em 1em 1em 1em;
-    border-radius: 0.4em;
+    padding: 1em 1em 1em 1em;
     margin: 2em auto;
     width: calc(90% - 2em);
     max-width: calc(772px - 2em);
@@ -175,7 +170,19 @@ hr {
     margin: 2em 0;
 }
 
+.about li {
+    padding-bottom: 2mm;
+}
+
+.about h2 {
+    margin-bottom: 3mm;
+}
+
 .wrap-container {
     font-size: 0.9em;
 
+}
+
+.about p {
+    margin: 2mm 0 4mm 0;
 }

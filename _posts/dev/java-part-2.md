@@ -3,7 +3,7 @@ title: 'Java part-2 [OOP, stack, heap, gc..]'
 date: 'Feb 20, 2023'
 list: dev
 gist: 'This is a 3 part article. This part covers - OOP, class, objects, inheritance, wrapper classes etc...'
-author: Ryuu
+author: Rithik
 color: rgb(207, 87, 20, 0.5)
 ---
 

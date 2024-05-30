@@ -30,9 +30,9 @@ export default function Main({ children }) {
                         <Router url='/about'>
                             <span id={styles.item}>About</span>
                         </Router>
-                        <Router url='/tree'>
+                        {/* <Router url='/tree'>
                             <span id={styles.item}>Tree</span>
-                        </Router>
+                        </Router> */}
                         </div>
                 </section>
                     {children}
