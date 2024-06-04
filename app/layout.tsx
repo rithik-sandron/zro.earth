@@ -6,10 +6,10 @@ import Router from 'components/Router';
 
 export const metadata: Metadata = {
     description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
-    themeColor: [
-        { media: '(prefers-color-scheme: light)', color: 'white' },
-        { media: '(prefers-color-scheme: dark)', color: '#0f0f0f' },
-    ],
+    // themeColor: [
+    //     { media: '(prefers-color-scheme: light)', color: 'white' },
+    //     { media: '(prefers-color-scheme: dark)', color: '#0f0f0f' },
+    // ],
     openGraph: {
         title: 'zro.earth',
         description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',

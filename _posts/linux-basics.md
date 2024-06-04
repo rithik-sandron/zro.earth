@@ -1,21 +1,20 @@
 ---
 title: 'Linux cheatsheet & basics'
-date: 'Feb 22, 2023'
-list: dev
-gist: 'Know about basic commands, bash scripting, cron jobs etc...'
+publishedAt: 'Feb 22, 2023'
+category: dev
+summary: 'Know about basic commands, bash scripting, cron jobs etc...'
 author: Rithik
-color: rgb(59, 190, 76, 0.5)
 ---
 
 # Basic commands
 | Purpose                            | Command                                  |
-| :--------------------------------- | :--------------------------------------- |
+| ---------------------------------- | ---------------------------------------- |
 | print in terminal                  | echo "Hello"                             |
 | print current working directory    | pwd                                      |
 | create a file                      | touch abc.md                             |
 | create a hidden file               | touch .defs                              |
 | create a directory                 | mkdir abc                                |
-| goto a directory                    | cd /var/tmp                              |
+| goto a directory                   | cd /var/tmp                              |
 | goto root directory                | cd ~                                     |
 | list files                         | ls                                       |
 | list files - with permissions      | ls -ltr                                  |

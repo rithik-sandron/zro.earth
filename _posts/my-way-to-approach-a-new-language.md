@@ -1,22 +1,16 @@
 ---
 title: 'My way to approach a new programming language'
-date: 'Nov 10, 2023'
-list: dev
-gist: 'This is how i would approach any language or concepts'
+publishedAt: 'Nov 10, 2023'
+category: dev
+description: 'This is how i would approach any language or concepts'
 author: Rithik
-color: rgb(82, 80, 200, 0.5)
 ---
-Think why you want to use a specific language. Each language has it's own purpose and usage. For example if I want to automate some process in my computer I would go for `shell`. So knowing & understanding a language's purpose would solve a lot of issues even before you start typing your code.
 
-<br />
+Think why you want to use a specific language. Each language has it's own purpose and usage. For example if I want to automate some process in my computer I would go for `shell`. So knowing & understanding a language's purpose would solve a lot of issues even before you start typing your code.
 
 After you choose you language, Don't jump into using dedicated IDEs and Frameworks. Yes I mean it.
 
-<br />
-
 Learn from basics and type things out in a text file and run your code manually.
-
-<br />
 
 So where do you start from?
 All programming languages pretty much has same set of concepts, only logics & syntax differs.

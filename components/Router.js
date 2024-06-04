@@ -1,7 +1,11 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-export default function Router({ children, url, className = '' }) {
-    return (<Link className={className} href={`${url}`}>{children}</Link>);
+export default function Router({ children, url, className = "" }) {
+  return (
+    <Link className={className} href={`${url}`}>
+      {children}
+    </Link>
+  );
 }

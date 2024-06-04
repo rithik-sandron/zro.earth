@@ -1,15 +1,19 @@
-import { useMDXComponent } from 'next-contentlayer/hooks';
+import { MDXRemote } from "next-mdx-remote/rsc";
 
-interface MdxProps {
-  code: string;
+const components = {
+  table: (props) => (
+    <table {...props}>
+      {props.children}
+    </table>
+  ),
 }
 
-export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code);
 
+export default function Mdx(props) {
   return (
-    <article >
-      <Component />
-    </article>
+    <MDXRemote
+      {...props}
+      components={{ ...components, ...(props.components || {}) }}
+    />
   );
 }

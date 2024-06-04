@@ -1,10 +1,9 @@
 ---
 title: 'Java part-2 [OOP, stack, heap, gc..]'
-date: 'Feb 20, 2023'
-list: dev
-gist: 'This is a 3 part article. This part covers - OOP, class, objects, inheritance, wrapper classes etc...'
+publishedAt: 'Feb 20, 2023'
+category: dev
+decription: 'This is a 3 part article. This part covers - OOP, class, objects, inheritance, wrapper classes etc...'
 author: Rithik
-color: rgb(207, 87, 20, 0.5)
 ---
 
 # This is a 3 part series
@@ -22,7 +21,7 @@ Why do we need OOP? ideally before OOP, we provide steps and those steps are exe
 # Class
 Classes encapsulates **attributes**(variables, constants and methods) together as one entity and only the objects that are created from that class can have those attributes.
 
-> Classes are like blueprints (a car design) from which we create objects (cars) and all the attributes(boy parts of the car) is unique to that object.
+> Classes are like blueprints (a car design) from which we create objects (cars) and all the attributes(body parts of the car) is unique to that object.
 
 Lets look at an example to understand clearly. Ideally each class is declared in its separate file.
 

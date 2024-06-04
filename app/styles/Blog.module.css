@@ -1,101 +1,46 @@
-.blog,
-.articleToc li {
-    font-size: calc(0.81em + 0.1vw);
-}
-
-.blog,
-.articleToc {
-    width: 90%;
-    max-width: 772px;
-    margin: 0 auto;
-}
-
 .blog {
-    display: block;
-    letter-spacing: 0.025em;
-    margin-top: 4em;
+  display: block;
+  width: 90%;
+  max-width: 772px;
+  margin: 0 auto;
+  margin-bottom: 8mm;
 }
 
-.articleToc {
-    display: none;
-    cursor: pointer;
-    padding: 3em;
-}
-
-.articleToc>summary {
-    font-size: 1.08em;
-}
-
-.articleToc li,
 .blog ol {
-    list-style: none;
+  list-style: none;
 }
 
-.articleToc li {
-    margin-top: 0.6em;
+.blog a,
+.blog * > a {
+  display: inline;
+  border-bottom: 0.4mm solid var(--wrap-bg);
+  font-weight: 500;
 }
 
-.blog a>h1 {
-    text-decoration: none;
+.blog hr {
+  border-bottom: 0.2mm solid var(--line);
 }
 
-.blog *>a {
-    text-decoration: underline;
-}
-
-.articleToc a,
-.blog a {
-    display: inline-block;
-    color: rgba(40, 138, 231, 0.926);
-    font-weight: 500;
-}
-
-.articleToc a:hover,
-.articleToc a:active,
 .blog a:hover,
 .blog a:active {
-    color: rgb(26, 94, 156);
-}
-
-.articleToc a {
-    text-decoration: underline;
+  color: rgb(26, 94, 156);
 }
 
 .blog h1,
 .blog h2,
 .blog h3 {
-    margin-bottom: 0.6em;
-    margin-top: 1em;
-    line-height: normal;
+  font-weight: 500;
 }
 
 .blog h1 {
-    display: flex;
-    font-size: calc(1.65em + 0.3vw);
-    margin-top: 2em;
-    font-weight: 800;
-}
-
-.blog h1:hover:before {
-    content: '#';
-    font-size: 0.8em;
-    margin-top: 6px;
-    max-width: 772px;
-    margin-left: -20px;
-    position: absolute;
-    color: var(--line);
+  font-size: calc(5mm + 0.1vw);
+  margin-top: 12mm;
+  margin-bottom: 1mm;
 }
 
 .blog h2 {
-    font-weight: 700;
-}
-
-.blog h3 {
-    font-size: calc(1em + 0.2vw);
-    line-height: 1.4;
-    border-bottom: 0.5px solid var(--line);
-    width: fit-content;
-    font-weight: 700;
+  font-size: calc(4mm + 0.1vw);
+  margin: 6mm 0 1mm 0;
 }
 
 .blog p,
@@ -104,149 +49,117 @@
 .blog pre,
 .blog table th,
 .blog table td {
-    line-height: 1.8;
-    padding: 0;
-    letter-spacing: 0.03em;
-    font-weight: 300;
-}
-
-.blog li {
-    margin: 0.25em 0;
+  line-height: 1.7;
+  padding: 0;
+  letter-spacing: 0.02em;
+  font-weight: 300;
 }
 
 .blog ol {
-    counter-reset: number;
+  counter-reset: number;
 }
 
 .blog ol li {
-    display: flex;
-    counter-increment: number;
-    margin-left: 1.4em;
+  display: flex;
+  counter-increment: number;
+  margin-left: 4mm;
 }
 
 .blog ol li:before {
-    content: counters(number, ".") ". ";
-    font-weight: 600;
-    margin-right: 0.7em;
+  content: counters(number, ".") ". ";
+  font-weight: 500;
+  margin-right: 3mm;
 }
 
-.blog ul>li::marker {
-    display: block;
+.blog ul > li::marker {
+  display: block;
+  font-size: 4.6mm;
+  color: var(--wrap-bg);
 }
 
 .blog ul li {
-    margin-left: 1.2em;
-    padding-left: 0.3em;
+  margin-left: 8mm;
+  padding-left: 2mm;
 }
 
 .blog em {
-    font-style: italic;
-    border-bottom: 2px solid var(--line);
-    width: fit-content;
+  font-style: italic;
 }
 
 .blog pre,
 .blog table tr {
-    border: 1px solid var(--line);
-    background-color: var(--line-bg);
+  border: 1px solid var(--line);
+  background-color: var(--line-bg);
 }
 
-.blog code>pre {
-    width: 100%;
+.blog code > pre {
+  width: 100%;
 }
 
-.blog pre,
-.blog *>code {
-    border-radius: 0.5em;
-    font-size: calc(0.9em + 0.1vw);
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-}
-
-.blog *>code {
-    display: inline-block;
-    padding: 0 0.4em;
-    margin: 0.3em;
-    word-break: break-all;
-    margin-left: 0;
-    border: 1px solid var(--line);
-    font-size: calc(0.8em + 0.1vw);
-}
-
-.blog pre>code {
-    display: block;
-    padding: 1em;
-    overflow-x: auto;
-    border: none;
-
-}
-
-.blog sup::before,
-.blog mark {
-    border-radius: 1em;
-}
-
-.blog sup::before {
-    content: '';
-    display: inline-block;
-    height: 0.8em;
-    width: 0.8em;
-    margin-right: 0.6em;
-    background-color: #E10600;
-}
-
-.blog mark {
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    margin-right: 0.4em;
-    padding: 0.3em 0.2em;
-}
-
-.blog mark {
-    background-color: rgba(234, 227, 50, 0.817);
-    color: var(--font-color);
-}
-
-.blog blockquote,
 .blog pre {
-    margin: 1em 0;
+  border-radius: 2mm;
+}
+
+.blog * > code {
+  border: 1px solid var(--line);
+  padding: 0 1.6mm;
+  border-radius: 1.4mm;
+  color: rgb(244, 112, 103);
+  word-break: break-all;
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+  font-size: 3.2mm;
+  font-weight: 400;
+}
+
+.blog pre > code {
+  display: block;
+  word-wrap: normal;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+  color: inherit;
+  border: none;
+  font-size: 3.2mm;
+  padding: 0 0.4em;
+  margin: 3mm;
+  font-weight: 300;
 }
 
 .blog blockquote {
-    display: block;
-    width: calc(100% - 1.1em);
-    letter-spacing: 0.01em;
-    font-style: italic;
-    border-radius: 1px;
-    padding-left: 0.8em;
-    border-left: 0.5em solid var(--line);
-    margin: 3em 0;
-    font-weight: 700;
-}
-
-.blog blockquote>p {
-    line-height: 1.8;
+  display: block;
+  width: calc(100% - 1.1em);
+  letter-spacing: 0.01em;
+  border-radius: 1px;
+  padding-left: 0.8em;
+  border-left: 2mm solid var(--wrap-bg);
+  margin: 2em 0;
 }
 
 .blog table {
-    display: block;
-    border-collapse: collapse;
-    overflow-y: hidden;
-    overflow-x: auto;
-    width: fit-content;
-    max-width: 100%;
-    font-size: 0.9em;
-    table-layout: fixed;
-    margin: 2em 0;
+  display: block;
+  flex-direction: column;
+  border-collapse: collapse;
+  overflow-y: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+  font-size: 3.2mm;
+  margin: 2em 0;
 }
 
 .blog table th,
 .blog table td {
-    padding: 0.4em 1em;
-    text-align: left;
+  padding: 0.4em 1em;
+  border-right: 1px solid var(--line);
+}
+
+.blog table th:last-child,
+.blog table td:last-child {
+  border-right: none;
 }
 
 .blog table th,
 .blog strong {
-    font-weight: 700;
-    padding-bottom: 1px;
+  font-weight: 500;
 }
