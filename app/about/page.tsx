@@ -12,6 +12,8 @@ export async function generateMetadata({}): Promise<Metadata | undefined> {
       description:
         "Zero has become our cozy corner to let our imaginations run wild.",
       url: "https://zro.earth/about",
+      siteName: "about-zro",
+      type: "website",
       images: [
         {
           url: ogImage,

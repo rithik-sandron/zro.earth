@@ -21,6 +21,13 @@ export async function generateMetadata({}): Promise<Metadata | undefined> {
 
   return {
     openGraph: {
+      title: "zro.earth",
+      description:
+        "A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..",
+      url: "https://zro.earth",
+      siteName: "zro",
+      locale: "en_US",
+      type: "website",
       images: [
         {
           url: ogImage,
