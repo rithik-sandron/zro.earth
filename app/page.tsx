@@ -16,17 +16,19 @@ const posts = allBlogs.sort(function compareFn(a, b) {
 
 const recent_post = posts[0];
 
-export const metadata: Metadata = {
-  description:
-    "A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..",
+export async function generateMetadata({}): Promise<Metadata | undefined> {
+  let ogImage = `https://zro.earth/og?title=zro.earth`;
 
-  openGraph: {
-    title: "zro.earth",
-    description:
-      "We're a team of enthusiastic individuals passionate about researching 🔎 and writing ✍️ on various topics. The articles you find here are based solely on our perspectives 🧠",
-    url: "https://zro.earth",
-  },
-};
+  return {
+    openGraph: {
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+  };
+}
 
 export default async function Index() {
   if (!recent_post) {

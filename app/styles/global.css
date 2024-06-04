@@ -104,7 +104,7 @@ span > li {
 
 .container {
   max-width: 772px;
-  padding: 16mm 0 8mm 0;
+  padding: 16mm 8mm;
   margin: 8mm auto;
   border-bottom: 0.2mm solid var(--line);
 }

@@ -4,7 +4,7 @@ import createMDX from '@next/mdx'
 
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  pageExtensions: ["js", "jsx", "md", "ts", "tsx"],
   images: {
     formats: ["image/avif", "image/webp"],
   },

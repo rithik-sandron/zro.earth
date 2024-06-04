@@ -5,12 +5,6 @@ import { notFound } from "next/navigation";
 import Mdx from "../../components/Mdx";
 import { Metadata } from "next";
 
-// export async function generateStaticParams() {
-//   return allBlogs.map((post) => ({
-//     slug: post.slug,
-//   }));
-// }
-
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
@@ -21,6 +15,8 @@ export async function generateMetadata({
 
   let { title, publishedAt: publishedTime, description } = post.metadata;
 
+  let ogImage = `https://zro.earth/og?title=${title}`;
+
   return {
     title,
     description,
@@ -30,11 +26,11 @@ export async function generateMetadata({
       type: "article",
       publishedTime,
       url: `https://zro.earth/${post.slug}`,
-      // images: [
-      //   {
-      //     url: ogImage,
-      //   },
-      // ],
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
     },
   };
 }

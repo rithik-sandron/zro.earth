@@ -14,7 +14,25 @@ export const metadata: Metadata = {
         title: 'zro.earth',
         description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
         url: 'https://zro.earth',
-    }
+        siteName: 'zro',
+        locale: 'en_US',
+        type: 'website',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      twitter: {
+        title: 'zro.earth',
+        card: 'summary_large_image',
+      },
 };
 
 export default function Main({ children }) {
