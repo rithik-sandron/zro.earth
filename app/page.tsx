@@ -17,7 +17,7 @@ const posts = allBlogs.sort(function compareFn(a, b) {
 const recent_post = posts[0];
 
 export async function generateMetadata({}): Promise<Metadata | undefined> {
-  let ogImage = `https://zro.earth/og?title=zro.earth`;
+  let ogImage = `https://zro.earth/api/og?title=zro.earth`;
 
   return {
     openGraph: {

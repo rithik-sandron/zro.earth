@@ -15,7 +15,7 @@ export async function generateMetadata({
 
   let { title, publishedAt: publishedTime, description } = post.metadata;
 
-  let ogImage = `https://zro.earth/og?title=${title}`;
+  let ogImage = `https://zro.earth/api/og?title=${title}`;
 
   return {
     title,

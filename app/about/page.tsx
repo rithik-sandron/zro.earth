@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export async function generateMetadata({}): Promise<Metadata | undefined> {
-  let ogImage = `https://zro.earth/og?title=zro.earth`;
+  let ogImage = `https://zro.earth/api/og?title=zro.earth`;
 
   return {
     title: "About",
