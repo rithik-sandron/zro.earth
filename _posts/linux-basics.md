@@ -52,13 +52,11 @@ refer this link from freecodecamp - [Bash scripting basics](https://www.freecode
 [root@host ~]#
 ``` 
 
-If terminal has `#` it means we are logged in as `root/super user`
+If terminal has `#` it means we are logged in as `root/super user`. If terminal has `$` it means we are logged in as `normal user`.
 
 ```bash
 [root@host ~]$
 ```
-
-If terminal has `$` it means we are logged in as `normal user`
 
 # Gists
 ```bash

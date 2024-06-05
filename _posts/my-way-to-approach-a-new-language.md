@@ -1,14 +1,18 @@
 ---
-title: 'My way to approach a new programming language'
+title: 'A roadmap to learn any programming language'
 publishedAt: 'Nov 10, 2023'
 category: dev
-description: 'This is how i would approach any language or concepts'
+description: 'To learn a language effectively, it's crucial to adopt a holistic approach that combines various methods and techniques. Here's an abstract roadmap.'
 author: Rithik
 ---
 
 Think why you want to use a specific language. Each language has it's own purpose and usage. For example if I want to automate some process in my computer I would go for `shell`. So knowing & understanding a language's purpose would solve a lot of issues even before you start typing your code.
 
+<br/>
+
 After you choose you language, Don't jump into using dedicated IDEs and Frameworks. Yes I mean it.
+
+<br/>
 
 Learn from basics and type things out in a text file and run your code manually.
 
