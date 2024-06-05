@@ -15,23 +15,23 @@ Learn from basics and type things out in a text file and run your code manually.
 So where do you start from?
 All programming languages pretty much has same set of concepts, only logics & syntax differs.
 step wise do this
-- Sequential programming.
-- Object Oriented. (OOP)
-- Dive deeper. 
+1. Sequential programming.
+2. Object Oriented. (OOP)
+3. Dive deeper. 
 
 
 ## Sequential programming
 - Know if a language is statically typed or inferred. Based on this your errors & debugging would change a bit.
 - Datatypes and their limits.
 - Constants & literals.
-- operators. 
-- keywords.
-- statements.
+- Operators. 
+- Keywords.
+- Statements.
 - Strings.
 - Arrays.
 - Control flow. 
-  - conditionals.
-  - loops.
+  - Conditionals.
+  - Loops.
 - Functions - declarations & definitions 
 - Memory basics. how things are stored, retrieved and passed(pass by value / reference).
 - Pointers (if c/c++)
@@ -52,20 +52,17 @@ step wise do this
 
 ## Dive deeper
 - Regex.
-- basics of data structures & their existence.
-- lambda expressions.
+- Basics of data structures & their existence.
 - Stack.
 - List.
 - Dictionaries / Map.
-- Map.
 - Set.
-- weak map / set.
-- time & space complexities.
+- Weak map / set.
+- Time & space complexities.
 - Memory & garbage collection in deep.
 - In-built Libraries. Some are os layer libraries, input output libraries, etc..
 
 ## Other topics you might want to explore
-- Aspect oriented programming.
 - Other Data structures & Algorithms.
 - Design patterns.
-- working on open source liraries.
+- Aspect oriented programming.

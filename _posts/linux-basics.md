@@ -7,6 +7,7 @@ author: Rithik
 ---
 
 # Basic commands
+```bash
 | Purpose                            | Command                                  |
 | ---------------------------------- | ---------------------------------------- |
 | print in terminal                  | echo "Hello"                             |
@@ -25,9 +26,11 @@ author: Rithik
 | display hostname                   | hostname                                 |
 | display userid & details           | id                                       |
 | terminal calculator                | bc  `[+ - * / * ** % ]` `quit - to quit` |
+```
  
  
 # Medium level commands
+```bash
 | Purpose                              | Command                                                |
 | :----------------------------------- | :----------------------------------------------------- |
 | to display bash location             | which bash                                             |
@@ -40,19 +43,25 @@ author: Rithik
 | view a file - last 100 lines         | tail -100 abc.md                                       |
 | view a file - in vim                 | vi abc.md                                              |
 | secure copy between host             | scp /var/tmp/abc.md user@.host.com:path/to/destination |
+```
 
-# basics of bashing
-refer this link from freecodecamp - [[Bash scripting basics]](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/)
+# Basics of bashing
+refer this link from freecodecamp - [Bash scripting basics](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/)
 
-`[root@host ~]#` 
+```bash
+[root@host ~]#
+``` 
 
-if terminal has `#` it means we are logged in as `root/super user`
+If terminal has `#` it means we are logged in as `root/super user`
 
-`[root@host ~]$`
+```bash
+[root@host ~]$
+```
 
-if terminal has `$` it means we are logged in as `normal user`
+If terminal has `$` it means we are logged in as `normal user`
 
-# gists
+# Gists
+```bash
 | purpose                                               | cmd                                 |
 | :---------------------------------------------------- | :---------------------------------- |
 | single line comment                                   | #string to be commented             |
@@ -61,14 +70,15 @@ if terminal has `$` it means we are logged in as `normal user`
 | echo into a file - append string                      | echo "string" >> test.txt           |
 | open a file and let ur enter string - replace content | cat > test.txt `ctrl + d - to quit` |
 | open a file and let ur enter string - append string   | cat >> test.txt                     |
-
-# bash file starts with
 ```
+
+# Bash file starts with
+```bash
 #! usr/bin/bash
 ```
 
-# export
-```
+# Export
+```bash
 #! usr/bin/bash
 msg = "string"
 export msg
@@ -76,7 +86,7 @@ export msg
 ```
 
 # Heredoc delimeter - this will display content inside the anyText in the terminal 
-```
+```bash
 cat << anyText
 this is a text
 multi line
@@ -84,7 +94,7 @@ anyText
 ```
 
 # Fetching value from parameter
-```
+```bash
 terminal: ./run.sh param1 param2 param3
 
 #! usr/bin/bash
@@ -92,8 +102,8 @@ echo $1 $2 $3
 ```
 
 # Fetching value from parameter into array
-$@ will fetch unlimited params passed
-```
+`$@` will fetch unlimited params passed
+```bash
 terminal: ./run.sh param1 param2 param3
 
 #! usr/bin/bash
@@ -105,7 +115,7 @@ echo $# - will print the array length
 ```
 
 # Declaring variable and accessing them
-```
+```bash
 #! usr/bin/bash
 USER = abc
 AGE = 30
@@ -113,9 +123,9 @@ AGE = 30
 echo "`$USER` is of age `$AGE`"
 ```
 
-# conditional statements
-## if
-```
+# Conditional statements
+## If
+```bash
 #! usr/bin/bash
 if [ $AGE -gt 18 ]
 then
@@ -123,8 +133,8 @@ then
 fi
 ```
 
-## if, else
-```
+## If, else
+```bash
 #! usr/bin/bash
 if [ "$AGE" -gt 18 ]
 then
@@ -134,8 +144,8 @@ else
 fi
 ```
 
-## if, else if, else
-```
+## If, else if, else
+```bash
 #! usr/bin/bash
 if [ "$AGE" > 18 ] && [ "$AGE" -lt 25 ]
 then
@@ -147,8 +157,8 @@ elif (( $AGE > 25 ))
 fi
 ```
 
-### another example
-```
+### Another example
+```bash
 #! usr/bin/bash
 if [ "$AGE" > 18 -a "$AGE" -lt 25 ]
 then
@@ -160,25 +170,29 @@ elif (( $AGE > 25 ))
 fi
 ```
 
-## conditional operators
-| condition | cmd  |
-| :-------- | :--- |
-| and &&    | -a   |
-| or        | -o   |
-
-## logical operators
-| condition               | cmd  |
-| :---------------------- | :--- |
-| equal >                 | -eq  |
-| not equal >             | -ne  |
-| greater than >          | -gt  |
-| less than >             | -lt  |
-| greater than or equal > | -ge  |
-| less than or equal >    | -le  |
-
-# looping statements
-## while
+## Conditional operators
+```bash
+| condition | cmd |
+| --------- | --- |
+| and &&    | -a  |
+| or        | -o  |
 ```
+
+## Logical operators
+```bash
+| condition               | cmd |
+| ----------------------- | --- |
+| equal >                 | -eq |
+| not equal >             | -ne |
+| greater than >          | -gt |
+| less than >             | -lt |
+| greater than or equal > | -ge |
+| less than or equal >    | -le |
+```
+
+# Looping statements
+## While
+```bash
 #! usr/bin/bash
 number = 1
 while [ $number -le 10 ]
@@ -188,9 +202,9 @@ do
 done
 ```
 
-## until
+## Until
 until runs until the condition becomes true and breaks out if condition is true.
-```
+```bash
 #! usr/bin/bash
 number = 1
 until [ $number -ge 10 ]
@@ -200,8 +214,8 @@ do
 done
 ```
 
-## for
-```
+## For
+```bash
 #! usr/bin/bash
 for i in 1 2 3 4 5
 do
@@ -210,7 +224,7 @@ done
 ```
 
 ### Another example
-```
+```bash
 #! usr/bin/bash
 for i in {0..10}
 do
@@ -219,7 +233,7 @@ done
 ```
 
 ### Another example
-```
+```bash
 #! usr/bin/bash
 for ((i = 0; i<10; i++))
 do
@@ -228,7 +242,7 @@ done
 ```
 
 ## Read file line by line
-```
+```bash
 #! usr/bin/bash
 while read line
 do
@@ -236,11 +250,9 @@ do
 done < "file_name.txt"
 ```
 
-
 # cron job scheduling
-```
+```bash
 5 0 * 8 *  => At 00:05 in August                                       
 5 4 * * 6 => At 04:05 on Sunday                                       
 0 22 * * 1-5 => At 22:00 on every day-of-week from Monday through Friday 
 ```
-

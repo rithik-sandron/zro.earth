@@ -14,7 +14,7 @@ author: Rithik
 --- 
 
 # Data types
-Computers, similar to the human brain, utilize memory to store data based on its type. For example, "This car looks good" is a **String**, while "10" is a **number**. In Java, these data types are broadly classified into two categories.
+Computers, similar to the human brain, utilize memory to store data based on its type. For example, "This car looks good" is a `String`, while "10" is a `number`. In Java, these data types are broadly classified into two categories.
 
 - Primitive
 - Non Primitive
@@ -39,13 +39,27 @@ Primitive types include letters, numbers, and so on. There are 8 primitive data 
 ## Data types and their memory allocation
 > 1 bit of memory is like one word in a piece of paper. 8 bits combine to form 1 byte.
 
+```bash
+| Type    | Size in memory | It stores                                                              |
+| ------- | -------------- | ---------------------------------------------------------------------- |
+| boolean | 1 bit          | true or false (1 / 0)                                                  |
+| byte    | 1 byte         | numbers from `-128 to 127`                                             |
+| short   | 2 byte         | numbers from `-32,768 to 32,767`                                       |
+| int     | 4 byte         | numbers from `-2,147,483,648 to 2,147,483,647`                         |
+| long    | 8 byte         | numbers from `-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807` |
+| float   | 4 byte         | decimal numbers. Can use to store `6-7 decimal` digits                 |
+| double  | 8 byte         | decimal numbers. Can use to store `10-12 decimal` digits               |
+| char    | 2 byte         | a single `character/letter/ASCII`                                      |
+```
+
+
 # Variables and Constants
 It's important to remember that storing values in memory without using them doesn't result in any gain. To use these values, we need to assign them to a container. When we access this container, we retrieve the actual value stored in the memory. These containers are known as **variables and constants**.
 
 ## Variables
 Variables are containers that can **change their values** over time.
 
-```
+```java
 boolean flag = true;
 byte b = 20;
 short no = 10;
@@ -61,8 +75,7 @@ String name = "John";
 
 ## Constants
 Constants are containers whose values **remain constant** once initialised. To declare a constant, include `final` keyword before a variable.
-
-```
+```java
 final double pi = 3.14d;
 ```
 
@@ -80,7 +93,7 @@ public class Main {
 
 Now in terminal we can run this by typing the following command.
 
-```
+```bash
 java -XX:+UseZGC Main.java
 
 [terminal output]:
@@ -93,7 +106,7 @@ java -XX:+UseZGC Main.java
 Statements are more concept-specific and not language-specific. Similar statements can be found across all programming languages. Conditional statements are used to run a set of instructions only when a specific condition is met. The instructions or each line of code mentioned inside the block will not be executed otherwise.
 
 ## If
-```
+```java
 if (20 > 18) {
   System.out.println("true");
 }
@@ -103,7 +116,7 @@ here `20 > 18` is the condition. since 20 is greater than 18, so the instruction
 
 ## If, Else
 If condition is met, `if` block is executed, otherwise the `else` block.
-```
+```java
 if (condition) {
   
 } else {
@@ -112,7 +125,7 @@ if (condition) {
 ```
 
 ## Else If, Else
-```
+```java
 if (condition1) {
   
 } else if (condition2) {
@@ -124,7 +137,7 @@ if (condition1) {
 
 ## Nested If Else
 `if, else` blocks can also be nested inside other blocks.
-```
+```java
 if (condition1) {
    if (condition2) {
      
@@ -136,7 +149,7 @@ if (condition1) {
 
 ## Switch
 Switch statement contains several `case` conditions. Only a case block that meets the condition will be executed.
-```
+```java
 switch(expression) {
   case 1:
     break;
@@ -155,7 +168,7 @@ switch(expression) {
 Sometimes, we may need to execute a set of instructions repeatedly until a certain condition is met or fails. In such cases, we use looping statements.
 
 ## For
-```
+```java
 int[] numbers = {1, 2, 3, 4, 5};
 
 for (int i = 0; i < numbers.length; i++) {  
@@ -164,7 +177,7 @@ for (int i = 0; i < numbers.length; i++) {
 ```
 
 ## Enhanced for
-```
+```java
 int[] numbers = {1, 2, 3, 4, 5};
 
 for (int num : numbers) {  
@@ -173,7 +186,7 @@ for (int num : numbers) {
 ```
 
 ## While
-```
+```java
 int[] numbers = {1, 2, 3, 4, 5};
 int count = 0;
 
@@ -183,7 +196,7 @@ while (numbers.length < 5) {
 ```
 
 ## Do, while
-```
+```java
 int[] numbers = {1, 2, 3, 4, 5};
 int count = 0;
 
@@ -196,14 +209,14 @@ do {
 # Functions
 Functions are essentially a block `{ }` of code that only runs when the function is called.
 
-```
+```java
 String name(String arg1, int arg2) { 
 
 }
 ```
 
 here `String` is the return data type of the value the function returns by executing the instructions. `name` is the function name, `arg1` and `arg2` are arguments/parameters passed to the function. Now that we declared a function, It will not be executed until it is called upon. To call a function, we call the fucntion **name and pass the required arguments**.
-```
+```java
 public void fight() {
   System.out.println("fight");
 }
@@ -220,8 +233,8 @@ fight
 
 # Value and Reference
 Memory can be classified into two types.
-- Heap
-- Stack
+1. Heap
+2. Stack
 
 All primitive data types are stored in **stack**. Non-primitive data is stored in the **heap**, and only the address of the data in the heap is stored in the stack as a pointer. Memory & management itself is a whole concept which we will take about later.
 
@@ -235,7 +248,7 @@ When primitive data types are passed to a function, the function receives a copy
 
 # String
 String is the most widely used data type. When a String variable is initialised, its value is stored in **heap** and the variable holds the reference along with other meta values of that data in stack.
-```
+```java
 String a = "hero";
 String b = "hero"
 ```
@@ -251,7 +264,7 @@ If strings were mutable, multiple variables pointing to the same string value co
 <br />
 When you pass a string to a function, only the reference to the memory box in the String pool is passed, not the actual value itself. If the string is reassigned within the function, JVM will create another memory box in the string pool and the string will point to this instead of the old memory box.
 
-```
+```java
 String a = "ice cream";
 a = "milk shake";
 ```
@@ -259,57 +272,67 @@ a = "milk shake";
 here `a` is reassigned to a different value. So `a` instead of pointing to *"ice cream"*, now points to *"milk shake"* in the string pool. *"ice cream"* if not used by any other string variable, will be garbage collected by JVM automatically.
 
 # Array
-An array is a collection of data of the same data type. It is useful when you want to have a list of items, such as a checklist, as it avoids creating individual variables separately and has consecutive memory allocation. 
+An array is a collection of data of the same data type. It is useful when you want to have a list of items, such as a checklist, as it avoids creating individual variables separately and has consecutive memory allocation.
 
 ```java
-String[] hero = new String[5]; hero[0] = "archer"; hero[1] = "Brute";
+String[] hero = new String[5]; // array initialisation
+hero[0] = "archer"; // array value assign
+hero[1] = "Brute";
 ``` 
 
 You can also do this in one step. 
 
 ```java 
-String[] hero = {"archer", "Brute", "Ninja" };
-hero[0] = "magician";
-int length = hero.length;
+String[] hero = {"archer", "Brute", "Ninja" }; // array initialisation
+hero[0] = "magician"; // reassign values
+int length = hero.length; // get array length
  ```
 
-Array size is immutable. Meaning the size once declared cannot be decreased or increased. Here in this case, pushing elements more than declared size **5** would result in runtime error. `hero[index]` can be to used access elements at a specific index. `hero[0] = "magician"` is how you assign elements to the array. `hero.length` gives you the size of the array.
+Array **size is immutable**. Meaning the size once declared cannot be changed. Pushing elements more than declared size would result in runtime error. Similar to String, **Arrays also passes the reference of the starting value(element at index 0) it holds**.
 
-Similar to String, **Arrays also passes the reference(memory address) of the starting value it stores**.
-
-for example:
-```
-int[] numbers = new int[3];
-numbers[0] = 1;
-numbers[1] = 2;
-numbers[2] = 3;
+For example:
+```java
+int[] num = {1, 2, 3 };
 ```
 
-When this array is passed to a function/method, reference(the memory address)  of the `numbers[0]` is passed. Since array memory allocation is sequential, you can fetch the next element in the array with the first index reference.
+When this array is passed to a function, reference of `num[0]` is passed. Since array memory allocation is sequential, you can fetch the next element in the array with the first index reference.
 
-> Both Arrays and String are immutable and passes only the reference.(the memory address)
+> Both Array and String are immutable and passes only the reference.
 
 # Synchronisation
-**Being immutable automatically makes the String thread safe** since they won't be changed when accessed by multiple threads. Hence immutable objects in general, can be shared across multiple threads running simultaneously. They're also thread-safe because if a thread changes the value, then instead of modifying the same, a new String would be created in the String pool. Hence, Strings are safe for multi-threading and so are arrays.
+**String eeing immutable automatically makes a variable thread safe**. Each thread operates on its own copy of the string, ensuring thread safety. Hence immutable objects in general, can be shared across multiple concurrent threads. Strings are safe for multi-threading and so are array of strings.
 
-> immutable objects are thread safe.
+> Immutable objects are thread safe.
 
 # Access Modifiers
-Access Modifiers by its name can be used to modify the access to a variable, method or even a class. There are 2 levels of modifiers.
+Access Modifiers allows you to modify the access to a variable, function or even a class. There are 2 levels of modifiers.
 - **Class level modifier** - modifiers added to a class.
-- **Attribute level modifier** - modifiers added to attributes.
+- **Attribute level modifier** - modifiers added to attributes(variables and functions).
 
-We can use 4 different types of modifiers based on the requirements.
-- public
-- protected
-- default (no need to declare explicitly, if left undeclared: default modifier is applied)
-- private
-  
+We can use four different types of modifiers:
+1. public
+2. protected
+3. default (no need to declare explicitly; if left undeclared, the default modifier is applied)
+4. private
+
+
 ## Class level modifier 
-classes can have **only public or default** modifiers and not any other types.
-but a class can be declared final. when a class is declared final, it cannot be inherited. We can look at classes in detail later on.
+classes can have **only public or default** modifiers and not any other types. A class can be declared `final` which is not an access modifier but it retricts other classes from inheriting it. We can look at classes in detail later on. Nested classes declared inside another class can be declared as `private`.
 
 ## Attribute level modifier:
-Methods, variables and constants can have all four levels of access modifiers.
+Functions, variables and constants can have all the above mentioned levels of access modifiers.
+
+## Access modifiers cheat sheet
+
+```bash
+| Modifier  | within Class | within Package | within Subclass | anyone can access |
+| --------- | ------------ | -------------- | --------------- | ----------------- |
+| public    | Y            | Y              | Y               | Y                 |
+| protected | Y            | Y              | Y               | N                 |
+| default   | Y            | Y              | N               | N                 |
+| private   | Y            | N              | N               | N                 |
+```
+
+<br />
 
 goto [Java Part-2](/java-part-2) of this series.

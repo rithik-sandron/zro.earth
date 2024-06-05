@@ -1,3 +1,22 @@
+.blog pre code {
+  counter-reset: sh-line-number;
+}
+
+.sh__line::before {
+  counter-increment: sh-line-number 1;
+  content: counter(sh-line-number);
+  margin-right: 24px;
+  text-align: right;
+  color: #a4a4a4;
+}
+
+.sh__line:nth-child(5) {
+  background: #f5f5f5;
+}
+
+.sh__token--keyword {
+  background: #f47067;
+}
 .blog {
   display: block;
   width: 90%;
@@ -33,14 +52,19 @@
 }
 
 .blog h1 {
-  font-size: calc(5mm + 0.1vw);
+  font-size: 16pt;
   margin-top: 12mm;
   margin-bottom: 1mm;
 }
 
 .blog h2 {
-  font-size: calc(4mm + 0.1vw);
-  margin: 6mm 0 1mm 0;
+  font-size: 14pt;
+  margin: 4mm 0 1mm 0;
+}
+
+.blog h3 {
+  font-size: 11pt;
+  margin: 2mm 0 0 0;
 }
 
 .blog p,
@@ -49,9 +73,8 @@
 .blog pre,
 .blog table th,
 .blog table td {
-  line-height: 1.7;
+  line-height: 1.8;
   padding: 0;
-  letter-spacing: 0.02em;
   font-weight: 300;
 }
 
@@ -62,24 +85,30 @@
 .blog ol li {
   display: flex;
   counter-increment: number;
-  margin-left: 4mm;
+  margin-left: 3mm;
 }
 
 .blog ol li:before {
   content: counters(number, ".") ". ";
-  font-weight: 500;
+  font-weight: 600;
   margin-right: 3mm;
+  font-size: 10pt;
+  padding-top: 0.4mm;
+  color: var(--wrap-bg);
+}
+
+.blog ul {
+  margin: 2mm 0;
 }
 
 .blog ul > li::marker {
   display: block;
-  font-size: 4.6mm;
   color: var(--wrap-bg);
 }
 
 .blog ul li {
   margin-left: 8mm;
-  padding-left: 2mm;
+  padding-left: 1mm;
 }
 
 .blog em {
@@ -104,12 +133,9 @@
   border: 1px solid var(--line);
   padding: 0 1.6mm;
   border-radius: 1.4mm;
-  color: rgb(244, 112, 103);
   word-break: break-all;
   display: inline-block;
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-    Liberation Mono, monospace;
-  font-size: 3.2mm;
+  font-size: 10pt;
   font-weight: 400;
 }
 
@@ -117,11 +143,8 @@
   display: block;
   word-wrap: normal;
   overflow-x: auto;
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-    Liberation Mono, monospace;
-  color: inherit;
   border: none;
-  font-size: 3.2mm;
+  font-size: 10pt;
   padding: 0 0.4em;
   margin: 3mm;
   font-weight: 300;
@@ -144,7 +167,7 @@
   overflow-y: hidden;
   overflow-x: auto;
   max-width: 100%;
-  font-size: 3.2mm;
+  font-size: 10pt;
   margin: 2em 0;
 }
 

@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
-import remarkGfm from 'remark-gfm'
-import createMDX from '@next/mdx'
 
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ["next-mdx-remote"],
   pageExtensions: ["js", "jsx", "md", "ts", "tsx"],
   images: {
     formats: ["image/avif", "image/webp"],
@@ -16,7 +15,6 @@ const nextConfig = {
       fullUrl: true,
     },
   },
-  transpilePackages: ['next-mdx-remote'],
   headers() {
     return [
       {
@@ -26,14 +24,6 @@ const nextConfig = {
     ];
   },
 };
-
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [],
-  },
-})
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
@@ -84,4 +74,4 @@ const securityHeaders = [
   },
 ];
 
-export default withMDX(nextConfig);
+export default nextConfig;

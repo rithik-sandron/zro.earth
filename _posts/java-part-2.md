@@ -6,12 +6,10 @@ decription: 'This is a 3 part article. This part covers - OOP, class, objects, i
 author: Rithik
 ---
 
-# This is a 3 part series
-go to [Java Part-1](/dev/java-part-1)
-
-go to [Java Part-2](/dev/java-part-2)
-
-go to [Java Part-3](/dev/java-part-3)
+## This is a 3 part series
+- Go to [Java Part-1](/java-part-1)
+- Go to [Java Part-2](/java-part-2)
+- Go to [Java Part-3](/java-part-3)
 
 
 # OOP
@@ -24,8 +22,7 @@ Classes encapsulates **attributes**(variables, constants and methods) together a
 > Classes are like blueprints (a car design) from which we create objects (cars) and all the attributes(body parts of the car) is unique to that object.
 
 Lets look at an example to understand clearly. Ideally each class is declared in its separate file.
-
-```
+```java
 public class Hero {
   public String type;
 
@@ -44,25 +41,23 @@ Here `Hero.java` is the file name, `Hero` is the class name and `String type` an
 
 # Object and its creation
 Now that we declared a class, lets create an object from it.
-
-```
+```java
 Hero object = new Hero();
 ```
 
-This single line does quite a lot of things. Firstly when **new** keyword is used it means its creating a new object by calling its ==constructor==.
+This single line does quite a lot of things. Firstly when **new** keyword is used it means its creating a new object by calling its `constructor`.
 
 ## Constructors
 Constructors are special methods inside a class that is used to create an object.
-
-```
+```java
 public Hero() {
 
 }
 ```
 
 - Constructors have the same name as the class.
-- It should be **public**, so that we can use it inside others classes where we need this object.
-- It can also be **private**. If a constructor is private that respective class cannot be inherited.
+- It should be `public`, so that we can use it inside others classes where we need this object.
+- It can also be `private`. If a constructor is private that respective class cannot be inherited.
 - if access modifier is left undeclared, a default modifier is applied.
 
 ### Default constructor
@@ -71,7 +66,7 @@ Mostly developers wont declare a default constructor unless its necessary in som
 ### Parameterised constructor
 A name suggests, it is a constructor with parameters. sometimes we want to pass some values during object creation and we want some set of instructions to be done. For that purpose, we can use parameterised constructors.
 
-```
+```java
 public Hero(int a, int b) {
 
 }
@@ -79,7 +74,7 @@ public Hero(int a, int b) {
 
 # Java Variable types
 ### Local Variables
-Variables inside a block =={ }== is local variable to that block. 
+Variables inside a block `{ }` is local variable to that block. 
 
 ### Instance Variables
 Variables inside a class that are non-static are called instance variables.
@@ -88,7 +83,7 @@ Variables inside a class that are non-static are called instance variables.
 Static variables are one true source variables. no matter how many instance of objects are created, all objects share one common static variable.
 Changes made to a static variable by one instance object will reflect on other objects too. 
 
-```
+```java
 public class Hero {
   public static int strength = 100; // static variable
   public String type; // instance variable
@@ -105,16 +100,14 @@ public class Hero {
 ```
 
 # Inheritance
-We need inheritance to reuse some the features that comes with OOP. Lets say we want create some classes indicating different shapes. Yes the same old example, bare with me. Basic shapes like square, triangle have certain similarities like name of the shape, no of edges and so on. Since these **similarities apply to all basic shapes it would be redundant to include same set of attributes and instructions inside each Shape class we create**. And if there is a change we need to do we might have to do in all the classes we created. This would be a nightmare. In this scenario, we could use inheritance to create a ==Super class== called **Shape** and have all the common attributes declared here. All the other shapes we create can be a ==sub class== to this super class. 
+We need inheritance to reuse some the features that comes with OOP. Lets say we want create some classes indicating different shapes. Yes the same old example, bare with me. Basic shapes like square, triangle have certain similarities like name of the shape, no of edges and so on. Since these **similarities apply to all basic shapes it would be redundant to include same set of attributes and instructions inside each Shape class we create**. And if there is a change we need to do we might have to do in all the classes we created. This would be a nightmare. In this scenario, we could use inheritance to create a **Super class** called `Shape` and have all the common attributes declared here. All the other shapes we create can be a **sub class** to this super class. 
 
 ## Extending
-```
+```java
 public class Shape {
   String name;
   int noOfEdges;
-  
   void draw() {
-
   }
 }
 
@@ -123,35 +116,35 @@ public class Triangle extends Shape {
 }
 ```
 
-When a class inherits a class with **extends keyword** it means that all the attributes of the super class(Shape) is applicable to the sub class(Triangle). so the attributes `name, noOfEdges, draw()` belongs to the sub class when we create an object from it.
+When a class inherits a class with `extends` keyword it means that all the attributes of the super class(Shape) is applicable to the sub class(Triangle). so the attributes `name, noOfEdges, draw()` belongs to the sub class when we create an object from it.
 
 > Classes in Java only supports single inheritance. multiple inheritance is not supported meaning a class cannot extend more than one class.
 
 # Types of classes
 There are several types of classes we can create in Java, which comes based on the inheritance we talked about.
-
-- concrete class
-- abstract class 
-- interface
+1. Concrete class
+2. Abstract class 
+3. Interface
 
 ## Concrete class
-classes we normally declare are generally called as concrete classes in Java. In a concrete class ==all methods should be declared and should have a method body==.
+classes we normally declare are generally called as concrete classes in Java. In a concrete class **all methods should be declared and should have a method body**.
 
 ## Abstract class
 Class where we can have abstract methods are called abstract classes. **Abstract methods are normal methods that are declared as abstract. Abstract methods do not have a method body**. 
-
-`void draw();`
+```java
+void draw();
+```
 
 Generally concrete classes that inherits the abstract class provides the method definition(body) to the abstract methods declared in the respective abstract class it inherited from.
 
 > concrete classes cannot have abstract methods. concrete class extending an abstract class should provide method definition for all abstract methods.
 
-```
+```java
 pubic abstract class Shape {
   void draw();
 }
 
-public class Triangle **extends Shape** {
+public class Triangle extends Shape {
   void draw() {
     // method definition / body
   }
@@ -159,10 +152,10 @@ public class Triangle **extends Shape** {
 ```
 
 ## Interface
-Interface is similar to abstract classes. Interface came into picture because multiple inheritance is not allowed in Java. Lets say we want a class to inherit from multiple super classes using *extends* keyword. That is simply not possible. but a class can implement multiple interfaces using ==implements keyword==.
+Interface is similar to abstract classes. Interface came into picture because multiple inheritance is not allowed in Java. Lets say we want a class to inherit from multiple super classes using *extends* keyword. That is simply not possible. but a class can implement multiple interfaces using `implements` keyword.
 
 ## Implementing interfaces
-```
+```java
 public class Triangle extends Shape 
     implements Clonable, Iteratable {
 
@@ -176,24 +169,28 @@ Consider Interface and abstract class as a menu card in a restaurant. The menu h
 # Wrapper classes
 As the name suggests, **wrapper classes are classes encapsulating primitive Java data type from which objects can be created**. The first question that strikes us is that, why do we need to use Wrappers when we already have primitives?
 
-- ==Generics== only work with objects and not with primitive types.
-- Java ==Collections== basically involves objects and generics.
+- **Generics** only work with objects and not with primitive types.
+- Java **Collections** basically involves objects and generics.
 
 All 8 primitive data types have its own wrapper classes. **Since String being a class and not a primitive, we can use String class directly.**
 
-| boolean | Boolean |
-| byte | Byte |
-| short | Short |
-| int | Integer |
-| long | Long |
-| float | Float |
-| double | Double |  
-| char | Character |
+```bash
+| Primitive | Wrapper   |
+| --------- | --------- |
+| boolean   | Boolean   |
+| byte      | Byte      |
+| short     | Short     |
+| int       | Integer   |
+| long      | Long      |
+| float     | Float     |
+| double    | Double    |
+| char      | Character |
+```
 
 ## Auto Boxing
 **Automatic boxing** refers to steps that JVM does to convert the primitive values automatically to Wrappers.
 
-```
+```java
 Integer number = 12;
 Character ch = 'a';
 ```
@@ -202,7 +199,7 @@ Here 12 is a primitive literal, that is converted automatically into a n Integer
 ## Unboxing
 **Automatic unboxing** of wrapper classes to primitive values.
 
-```
+```java
 Integer i = new Integer(10);
 int number = i;
 ```
@@ -221,4 +218,4 @@ will cover
 - gc
 - destructor for class
 
-goto [Java Part-3](/dev/java-part-3) of this series.
+goto [Java Part-3](/java-part-3) of this series.
