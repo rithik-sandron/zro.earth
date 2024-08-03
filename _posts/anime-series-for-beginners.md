@@ -8,13 +8,13 @@ description: 'Ever felt left behind when all your friends talk about Anime and y
 
 > Here's a list of handpicked Anime thats easy on the beginners.
 
-
 # 1. Death Note 
 > Action, Thriller, Supernatural, Psychological
 >
 > Episodes: 37
 >
 > Watch on: Netflix, Crunchyroll
+
 A 17 Year Old Extremist gets his hands on a Note - not just any note, but a **Death Note** which kills people just by having their names written in it. Light Yagami, tired of this rotten world full of Brutal murders, petty thefts, and senseless violence; finds a way to cleanse the world by creating a contract with a Death God, Ryouk.
 
 
@@ -74,8 +74,7 @@ Fuu, a waitress encounters a wild samurai— Mugen and a traditional samurai— 
 > 
 > Watch on: Crunchyroll
 
-Centered around Sanada North High— an All-Boys School, watch the trio-idiots— Hidenori, Yoshitake and Tadakuni kill their time by fooling around with the people around them. from imagining RPGs in real life to riverbed encounters of classic **Boy meets Girl**, the trio ensures to make their everyday life is everything but normal. 
-### Information
-
-
+Centered around Sanada North High— an All-Boys School, watch the trio-idiots— Hidenori, Yoshitake and Tadakuni kill their time by fooling around with the people around them. from imagining RPGs in real life to riverbed encounters of classic **Boy meets Girl**, the trio ensures to make their everyday life is everything but normal.
+<Br />
+<Br />
 This concludes the list of anime series for the newbies who would like to enter the World of Anime. Brace yourself, as you're about to enter a realm with no return.

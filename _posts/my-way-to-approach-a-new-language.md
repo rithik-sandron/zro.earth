@@ -2,17 +2,13 @@
 title: 'A roadmap to learn any programming language'
 publishedAt: 'Nov 10, 2023'
 category: dev
-description: 'To learn a language effectively, it's crucial to adopt a holistic approach that combines various methods and techniques. Here's an abstract roadmap.'
+description: "To learn a language effectively, it's crucial to adopt a holistic approach that combines various methods and techniques. Here's an abstract roadmap."
 author: Rithik
 ---
 
 Think why you want to use a specific language. Each language has it's own purpose and usage. For example if I want to automate some process in my computer I would go for `shell`. So knowing & understanding a language's purpose would solve a lot of issues even before you start typing your code.
 
-<br/>
-
 After you choose you language, Don't jump into using dedicated IDEs and Frameworks. Yes I mean it.
-
-<br/>
 
 Learn from basics and type things out in a text file and run your code manually.
 
@@ -22,7 +18,6 @@ step wise do this
 1. Sequential programming.
 2. Object Oriented. (OOP)
 3. Dive deeper. 
-
 
 ## Sequential programming
 - Know if a language is statically typed or inferred. Based on this your errors & debugging would change a bit.
@@ -47,12 +42,11 @@ step wise do this
 - Constructors / destructors. (some language might not have these)
 - Static, global & local variables difference & importance of existence.
 - Lambdas.
-
-    ### Concepts & syntax
-    - Abstraction.
-    - Inheritance.
-    - Polymorphism.
-    - Overloading (for c++).
+- Concepts & syntax
+  - Abstraction.
+  - Inheritance.
+  - Polymorphism.
+  - Overloading (for c++).
 
 ## Dive deeper
 - Regex.

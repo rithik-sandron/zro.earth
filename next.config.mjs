@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["next-mdx-remote"],
-  pageExtensions: ["js", "jsx", "md", "ts", "tsx"],
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     formats: ["image/avif", "image/webp"],
   },

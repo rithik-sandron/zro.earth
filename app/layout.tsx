@@ -3,8 +3,6 @@ import './styles/global.css';
 import { Analytics } from '@vercel/analytics/react';
 import Router from 'components/Router';
 import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
-
 
 export const metadata: Metadata = {
     description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',

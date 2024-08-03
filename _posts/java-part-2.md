@@ -7,9 +7,9 @@ author: Rithik
 ---
 
 ## This is a 3 part series
-- Go to [Java Part-1](/java-part-1)
-- Go to [Java Part-2](/java-part-2)
-- Go to [Java Part-3](/java-part-3)
+- Go to [Java Part-1](/blog/java-part-1)
+- Go to [Java Part-2](/blog/java-part-2)
+- Go to [Java Part-3](/blog/java-part-3)
 
 
 # OOP
@@ -169,9 +169,8 @@ As the name suggests, **wrapper classes are classes encapsulating primitive Java
 
 All 8 primitive data types has its own wrapper classes. **Since String being a class and not a primitive, we can use String class directly.**
 
-```bash
+<Table>
 | Primitive | Wrapper   |
-| --------- | --------- |
 | boolean   | Boolean   |
 | byte      | Byte      |
 | short     | Short     |
@@ -180,7 +179,7 @@ All 8 primitive data types has its own wrapper classes. **Since String being a c
 | float     | Float     |
 | double    | Double    |
 | char      | Character |
-```
+</Table>
 
 ## Auto Boxing
 **Automatic boxing** refers to the process in which the JVM automatically converts primitive values to their corresponding wrapper objects.
@@ -213,4 +212,5 @@ will cover
 - gc
 - destructor for class
 
-Head to [Java Part-3](/java-part-3) of this series.
+<Br />
+Head to [Java Part-3](/blog/java-part-3) of this series.

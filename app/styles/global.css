@@ -1,5 +1,4 @@
 :root {
-  --font-geist-mono: "__GeistMono_8a4d12", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
 
   --foreground-rgb: #374151;
   --background-start-rgb: #fff;
@@ -96,7 +95,6 @@ html {
   tab-size: 4;
   font-feature-settings: normal;
   font-variation-settings: normal;
-  font-family: var(--font-geist-mono);
   transition-property: all;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   transition-duration: .15s;
@@ -107,7 +105,6 @@ html {
   display: flex;
   gap: 1em;
   cursor: pointer;
-  font-family: 400;
 }
 
 .container {

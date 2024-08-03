@@ -7,9 +7,9 @@ author: Rithik
 ---
 
 ## This is a 3 part series
-- Go to [Java Part-1](/java-part-1)
-- Go to [Java Part-2](/java-part-2)
-- Go to [Java Part-3](/java-part-3)
+- Go to [Java Part-1](/blog/java-part-1)
+- Go to [Java Part-2](/blog/java-part-2)
+- Go to [Java Part-3](/blog/java-part-3)
 
 --- 
 
@@ -39,18 +39,18 @@ Primitive types include letters, numbers, and so on. There are 8 primitive data 
 ## Data types and their memory allocation
 > 1 bit of memory is like one word in a piece of paper. 8 bits combine to form 1 byte.
 
-```bash
-| Type    | Size in memory | It stores                                                              |
-| ------- | -------------- | ---------------------------------------------------------------------- |
-| boolean | 1 bit          | true or false (1 / 0)                                                  |
-| byte    | 1 byte         | numbers from `-128 to 127`                                             |
-| short   | 2 byte         | numbers from `-32,768 to 32,767`                                       |
-| int     | 4 byte         | numbers from `-2,147,483,648 to 2,147,483,647`                         |
-| long    | 8 byte         | numbers from `-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807` |
-| float   | 4 byte         | decimal numbers. Can use to store `6-7 decimal` digits                 |
-| double  | 8 byte         | decimal numbers. Can use to store `10-12 decimal` digits               |
-| char    | 2 byte         | a single `character/letter/ASCII`                                      |
-```
+
+<Table>
+| Type    | Size in memory | It stores               |
+| boolean | 1 bit          | true or false (1 / 0)   |
+| byte    | 1 byte         | 2^8 numbers             |
+| short   | 2 byte         | 2^16 numbers            |
+| int     | 4 byte         | 2^32 numbers            |
+| long    | 8 byte         | 2^64 numbers            |
+| float   | 4 byte         | 2^32 numbers            |
+| double  | 8 byte         | 2^64 numbers            |
+| char    | 2 byte         | 2^16 unicode characters |
+</Table>
 
 
 # Variables and Constants
@@ -324,15 +324,13 @@ Functions, variables and constants can have all the above mentioned levels of ac
 
 ## Access modifiers cheat sheet
 
-```bash
+<Table>
 | Modifier  | within Class | within Package | within Subclass | anyone can access |
-| --------- | ------------ | -------------- | --------------- | ----------------- |
 | public    | Y            | Y              | Y               | Y                 |
 | protected | Y            | Y              | Y               | N                 |
 | default   | Y            | Y              | N               | N                 |
 | private   | Y            | N              | N               | N                 |
-```
+</Table>
 
-<br />
-
-goto [Java Part-2](/java-part-2) of this series.
+<Br />
+goto [Java Part-2](/blog/java-part-2) of this series.
