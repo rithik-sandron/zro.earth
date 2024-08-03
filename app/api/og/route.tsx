@@ -3,7 +3,6 @@ import { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
-  console.log(searchParams)
   const postTitle = searchParams.get("title");
   return new ImageResponse(
     (

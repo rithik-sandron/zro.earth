@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getBlogPosts } from "app/lib/db";
 import "./styles/global.css";
-import PostMetaDataHome from "components/PostMetaDataHome";
+import PostMetaData from "components/PostMetaData";
 
 let allBlogs = getBlogPosts();
 const posts = allBlogs.sort(function compareFn(a, b) {
@@ -16,7 +16,7 @@ const posts = allBlogs.sort(function compareFn(a, b) {
 
 const recent_post = posts[0];
 
-export async function generateMetadata({}): Promise<Metadata | undefined> {
+export async function generateMetadata({ }): Promise<Metadata | undefined> {
   let ogImage = `https://zro.earth/api/og?title=zro.earth`;
 
   return {
@@ -44,15 +44,16 @@ export default async function Index() {
 
   return (
     <>
-      <Router url={recent_post.slug}>
-        <PostMetaDataHome post={recent_post} doNeedGist={true} />
+      <Router url={`blog/${recent_post.slug}`}>
+        <PostMetaData post={recent_post} doNeedGist={true} />
       </Router>
-      <div className="wrap-container">
+      <hr />
+      <div>
         {posts.map((item, i) => {
           if (i > 0)
             return (
-              <Router url={item.slug}>
-                <PostMetaDataHome post={item} doNeedGist={false} />
+              <Router url={`blog/${item.slug}`}>
+                <PostMetaData post={item} doNeedGist={false} />
               </Router>
             );
         })}

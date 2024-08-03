@@ -1,15 +1,13 @@
-import styles from './styles/Index.module.css';
 import type { Metadata } from 'next';
 import './styles/global.css';
 import { Analytics } from '@vercel/analytics/react';
 import Router from 'components/Router';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
+
 
 export const metadata: Metadata = {
     description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
-    // themeColor: [
-    //     { media: '(prefers-color-scheme: light)', color: 'white' },
-    //     { media: '(prefers-color-scheme: dark)', color: '#0f0f0f' },
-    // ],
     openGraph: {
         title: 'zro.earth',
         description: 'A place where you can find articles related to Anime, Movies, TV shows, Game, Food, Restaurants etc..',
@@ -22,37 +20,29 @@ export const metadata: Metadata = {
         index: true,
         follow: true,
         googleBot: {
-          index: true,
-          follow: true,
-          'max-video-preview': -1,
-          'max-image-preview': 'large',
-          'max-snippet': -1,
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
         },
-      },
-      twitter: {
+    },
+    twitter: {
         title: 'zro.earth',
         card: 'summary_large_image',
-      },
+    },
 };
 
 export default function Main({ children }) {
     return (
-        <html>
+        <html lang="en" className={`${GeistSans.className}`}>
             <body>
-                <main className={styles.main}>
-                <section className={styles.home} >
-                    <div style={{ display: 'flex', gap: '1em' }}>
-                        <Router url='/'>
-                            <span id={styles.item}>Home</span>
-                        </Router>
-                        <Router url='/about'>
-                            <span id={styles.item}>About</span>
-                        </Router>
-                        {/* <Router url='/tree'>
-                            <span id={styles.item}>Tree</span>
-                        </Router> */}
-                        </div>
-                </section>
+                <main>
+                    <section className="home">
+                        <Router url='/'>home</Router>
+                        <Router url='/about'>about</Router>
+                        {/* <Router url='/tree'>tree</Router> */}
+                    </section>
                     {children}
                     <Analytics />
                 </main>

@@ -1,13 +1,11 @@
-import PostMetaData from "../../components/PostMetaData";
-import styles from "../styles/Blog.module.css";
+import PostMetaData from "../../../components/PostMetaData";
+import styles from "../../styles/Blog.module.css";
 import { getBlogPosts } from "app/lib/db";
 import { notFound } from "next/navigation";
-import Mdx from "../../components/Mdx";
+import Mdx from "../../../components/Mdx";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}): Promise<Metadata | undefined> {
+export async function generateMetadata({ params }): Promise<Metadata | undefined> {
   let post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
     return;

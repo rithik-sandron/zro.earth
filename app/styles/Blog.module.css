@@ -1,26 +1,6 @@
-.blog pre code {
-  counter-reset: sh-line-number;
-}
-
-.sh__line::before {
-  counter-increment: sh-line-number 1;
-  content: counter(sh-line-number);
-  margin-right: 24px;
-  text-align: right;
-  color: #a4a4a4;
-}
-
-.sh__line:nth-child(5) {
-  background: #f5f5f5;
-}
-
-.sh__token--keyword {
-  background: #f47067;
-}
 .blog {
   display: block;
-  width: 90%;
-  max-width: 772px;
+  max-width: 672px;
   margin: 0 auto;
   margin-bottom: 8mm;
 }
@@ -30,7 +10,7 @@
 }
 
 .blog a,
-.blog * > a {
+.blog *>a {
   display: inline;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -50,22 +30,23 @@
 .blog h2,
 .blog h3 {
   font-weight: 500;
+  margin-bottom: 0.5em;
 }
 
 .blog h1 {
-  font-size: 16pt;
-  margin-top: 12mm;
-  margin-bottom: 1mm;
+  font-size: 22pt;
+  margin-top: 2em;
 }
 
 .blog h2 {
-  font-size: 14pt;
-  margin: 6mm 0 1mm 0;
+  font-size: 18pt;
+  margin-top: 1.5em;
 }
 
 .blog h3 {
-  font-size: 11pt;
-  margin: 2mm 0 0 0;
+  font-size: 14pt;
+  margin-top: 0.8em;
+
 }
 
 .blog p,
@@ -74,9 +55,9 @@
 .blog pre,
 .blog table th,
 .blog table td {
-  line-height: 1.9;
+  line-height: 1.8;
   padding: 0;
-  font-weight: 250;
+  font-weight: 350;
 }
 
 .blog ol {
@@ -98,11 +79,12 @@
   color: var(--wrap-bg);
 }
 
-.blog ul {
+.blog ul,
+.blog ol {
   margin: 2mm 0;
 }
 
-.blog ul > li::marker {
+.blog ul>li::marker {
   display: block;
   color: var(--wrap-bg);
 }
@@ -117,20 +99,18 @@
 }
 
 .blog pre,
-.blog table tr {
+.blog table tr,
+.blog code {
   border: 1px solid var(--line);
   background-color: var(--line-bg);
 }
 
-.blog code > pre {
-  width: 100%;
-}
-
 .blog pre {
   border-radius: 2mm;
+  margin: 1.7em 0 1.7em 0;
 }
 
-.blog * > code {
+.blog *>code {
   border: 1px solid var(--line);
   padding: 0 1.6mm;
   border-radius: 1.4mm;
@@ -139,14 +119,27 @@
   font-size: 9.8pt;
 }
 
-.blog pre > code {
+.blog pre>code {
   display: block;
   word-wrap: normal;
   overflow-x: auto;
   border: none;
   font-size: 9.8pt;
-  padding: 0 0.4em;
-  margin: 3mm;
+  margin: 3.4mm 1.7mm;
+  counter-reset: sh-line-number;
+}
+
+.blog pre>code>span::before {
+  display: inline-block;
+  counter-increment: sh-line-number 1;
+  width: 2em;
+  content: counter(sh-line-number);
+  font-size: 0.75em;
+  padding-right: 1em;
+  margin-right: 1em;
+  text-align: right;
+  color: var(--sh-comment);
+  justify-content: flex-end;
 }
 
 .blog blockquote {
@@ -156,7 +149,7 @@
   border-radius: 1px;
   padding-left: 0.8em;
   border-left: 2mm solid var(--wrap-bg);
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 .blog table {
@@ -183,5 +176,5 @@
 
 .blog table th,
 .blog strong {
-  font-weight: 500;
+  font-weight: 600;
 }
