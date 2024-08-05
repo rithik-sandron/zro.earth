@@ -26,7 +26,7 @@
     --background-end-rgb: #0f0f0f;
     --line: rgba(56, 56, 56);
     --line-bg: #22222250;
-    --wrap-bg: #88888880;
+    --wrap-bg: rgba(246, 80, 80, 0.533);
 
     --sh-class: #2d5e9d;
     --sh-identifier: #1eb1a7;

@@ -63,6 +63,10 @@
   margin: 1.25em 0;
 }
 
+.blog li {
+  margin: 0.8em 0;
+}
+
 .blog ol {
   counter-reset: number;
 }
@@ -77,7 +81,7 @@
   content: counters(number, ".") ". ";
   font-weight: 600;
   margin-right: 3mm;
-  font-size: 10pt;
+  font-size: 11pt;
   padding-top: 0.4mm;
   color: var(--wrap-bg);
 }
@@ -90,6 +94,7 @@
 .blog ul>li::marker {
   display: block;
   color: var(--wrap-bg);
+  font-size: 14pt;
 }
 
 .blog ul li {
@@ -97,11 +102,14 @@
   padding-left: 1mm;
 }
 
+.blog li {
+  line-height: 1.5;
+}
+
 .blog em {
   font-style: italic;
 }
 
-.blog pre,
 .blog table tr,
 .blog code {
   border: 1px solid var(--line);
@@ -109,13 +117,10 @@
 }
 
 .blog pre {
-  border-radius: 2mm;
   margin: 1.7em 0 1.7em 0;
-
 }
 
 .blog *>code {
-  border: 1px solid var(--line);
   padding: 0 1.6mm;
   border-radius: 1.4mm;
   word-break: break-all;
@@ -129,8 +134,9 @@
   overflow-x: auto;
   border: none;
   font-size: 9.8pt;
-  margin: 3.4mm 1.7mm;
+  padding: 3.4mm;
   counter-reset: sh-line-number;
+  border: 1px solid var(--line);
 }
 
 .blog pre>code>span::before {
@@ -150,9 +156,8 @@
   display: block;
   width: calc(100% - 1.1em);
   letter-spacing: 0.01em;
-  border-radius: 1px;
   padding-left: 0.8em;
-  border-left: 2mm solid var(--wrap-bg);
+  border-left: 1.8mm solid var(--wrap-bg);
   margin: 1em 0;
 }
 
