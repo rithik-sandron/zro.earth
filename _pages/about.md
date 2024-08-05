@@ -19,7 +19,7 @@ and writing ✍️ on various topics. The articles you find here are based
 solely on our perspectives 🧠
 
 ## Team
-- Rithik Sandron
+- Rithik Sandron - [GitHub](https://github.com/rithik-sandron), [Linkedin](https://linkedin.com/in/rithik-sandron)
 - Bhavana
 
 ## Tip us
