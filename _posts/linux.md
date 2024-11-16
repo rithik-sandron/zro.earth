@@ -218,7 +218,7 @@ mail root seki ryuu <<EOF
 > EOF 
 ```
 
-## File Permissions
+### File Permissions
 Linux file permissions are a crucial aspect of the operating system's security model, allowing users to control access to files and directories. Understanding these permissions is essential for maintaining system integrity and protecting sensitive data. In Linux, file permissions determine who can read, write, or execute a file. These permissions are associated with three types of users:
 ```bash
 -   r w x  r w x  r - -                     # (types of permissions)
@@ -227,24 +227,64 @@ Linux file permissions are a crucial aspect of the operating system's security m
 |   owner  group  other                     # (types of users)
 |    
 |   "-" regular file,  "d" directory        # File type
-
 ```
 
-> # Yet to cover topics in this article Will be covered in next upcoming weeks.
+When we run the long listing command `ls -l`, we can see the list of files and directories present in the current directory. This also displays the file permissions associated with the files with looks something like this. The first set of `rw-` describes that the owner of the file has all read, write but not the execute access. In this case the ownser of the file is `azula`. Second set of `rw-` denotes access permissions for the group. So whoever belongs to the group can have access to the file. In this case the group name is `staff`. Third set of `r--` denotes that others only have read access.
+```bash
+-rw-rw-r-- 1 joe sales 4983 Jan 18 22:13 file.txt 
+drwxr-xr-x 2 joe sales 1024 Jan 24 13:47 dir
 
+# - = a file
+# d = a directory
+
+# r = read
+# w = write
+# x = execute
+```
+
+### Changing File Permission
+We can change the file permissions associated with a file using the `chmod` command. Each permission (Read, Write, Execute) is associated with a number `r=4, w=2, x=1`. For example if you want only the owner of the file to have all access you would run `chmod 700 file.txt`. If you want the permit group users and other users to only have read and write access, you would run `chmod 766 file.txt`. There is also a verbose way of changing permisions using letters. I do not cover that in this post.
+```bash
+chmod 700 file.txt    # owner(rwx), group(---), other(---)
+chmod 744 file.txt    # owner(rwx), group(r--), other(r--)
+chmod 654 file.txt    # owner(rw-), group(r-x), other(r--)
+chown 755 -R /abc/    # changes ownership recursively for all files
+```
+
+### Set default file permissions
+When you create a file as a regular user, the default permission it is assgned with is `rw-rw-r--`. A directory is given the permission `rwxrwxr-x`. For the root user, file and directory permission are `rw-r--r--` and `rwxr-xr-x`, respectively. These default values are derived from the value of `umask`. Umask masks the value for a file(666) and directory(777). The value `0002` if we ignore the preceding 0 for now, for a file means `666 - 002 = 664`. For directory it means `777 - 002 = 775`
 ```bash
 umask
-chmod
-chown
+# 0002
 ```
 
-## Searching Texts, Files, and Directories
+### Changing File Ownership
+We can change the ownership of a file or a directory using `chown`
 ```bash
-updatedb # /var/db/locate.database in mac
-locate
-find
-grep
-wc
+chown root file.txt                # changing ownership from azula to root user.
+chown -R azula:staff /media/myusb  # changes ownership recursively for all files
+```
+
+## Locate, Find, Grep, Wc
+`locate` command loactes and displays the path to the file or directory that you are searching for. Locate finds the file not by looking thorugh all the files but it searches a database created in linux. This db is updated once per day automatically to include latest path of files and folders. We can also manually update the db by using `updatedb` command. `Find` command does the same job but instead of looking in a db, it searches through the linux file system. `Find` is very versatile we can wuery the file system based on filters. `Grep` is used to search text/term inside files. `Wc` is used to count words or lines.
+```bash
+locate hello                           # locate hello
+locate -i hello                        # case insensitive
+updatedb                               # \var\db\locate.database in Mac
+find /etc 2> /dev/null                 # find and redrect errors to \dev\null
+find /etc -name passwd                 # find by name
+# \etc\pam.d\passwd
+# \etc\passwd
+find /etc -iname '*passwd*' 
+# \etc\pam.d\passwd \etc\passwd-
+# \etc\passwd.OLD \etc\passwd \etc\MYPASSWD \etc\security\opasswd
+find /usr/share/ -size +10M           # find by size larger than 10Mb
+find /mostlybig -size -1M             # find by size less than 1Mb
+find /bigdata -size +500M -size -5G   # between 500Mb - 5Gb
+grep -ri --color root /etc/sysconfig/
+grep -vi tcp /etc/services
+ip addr show | grep inet
+ls -la | wc -l
 ```
 
 ## Linux files
